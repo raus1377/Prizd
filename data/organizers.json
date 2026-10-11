@@ -603,15 +603,6 @@
     "website": "https://gesh.iitb.ac.in/event-details/atomic-hack-india-2026"
   },
   {
-    "id": "custom-cern",
-    "name": "CERN",
-    "kind": "Organization",
-    "prestige": 50,
-    "monogram": "C",
-    "color": "#444444",
-    "website": "https://careers.cern/jobs/short-term-internship/"
-  },
-  {
     "id": "custom-developerweek",
     "name": "DeveloperWeek",
     "kind": "Organization",
