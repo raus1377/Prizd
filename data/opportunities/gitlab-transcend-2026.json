@@ -1,0 +1,32 @@
+{
+  "id": "gitlab-transcend-2026",
+  "title": "GitLab Transcend — Life After Code",
+  "category": "Hackathon",
+  "organizerId": "gitlab",
+  "summary": "Build post-code automation, agent workflows and deployment tools with GitLab.",
+  "deadline": "2026-10-27T18:30:00+05:30",
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Check the official rules for age, country and student eligibility.",
+  "team": null,
+  "prize": {
+    "amount": 45000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "Cash prize pool reported in the supplied research."
+  },
+  "tags": [
+    "DevOps",
+    "Backend",
+    "AI agents"
+  ],
+  "url": "https://gitlab-transcend.devpost.com/?utm_source=chatgpt.com",
+  "entryStatus": "open",
+  "notes": [
+    "Required new work begins on or after 5 October 2026. Check full eligibility and sponsor requirements."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "sourceUrl": "https://gitlab-transcend.devpost.com/rules"
+}

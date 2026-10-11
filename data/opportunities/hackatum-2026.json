@@ -1,0 +1,33 @@
+{
+  "id": "hackatum-2026",
+  "title": "hackaTUM 2026",
+  "category": "Hackathon",
+  "organizerId": "custom-technical-university-of-munich",
+  "summary": "In-person Munich university hackathon featuring software challenges and mentorship.",
+  "deadline": null,
+  "location": "Garching, Germany",
+  "format": "In person",
+  "eligibility": "Open to applicants beyond TUM; apply individually and form a team of 2–4.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Hackathon"
+  ],
+  "url": "https://hack.tum.de/",
+  "entryStatus": "check",
+  "notes": [
+    "Application deadline not published; travel and hotel funding not offered.",
+    "Event 27–29 November."
+  ],
+  "eventEndDate": "2026-11-29",
+  "eventTimezone": "Etc/GMT+12",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

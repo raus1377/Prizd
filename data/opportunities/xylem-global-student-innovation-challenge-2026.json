@@ -1,0 +1,30 @@
+{
+  "id": "xylem-global-student-innovation-challenge-2026",
+  "title": "Xylem Global Student Innovation Challenge 2026",
+  "category": "Engineering",
+  "organizerId": "custom-xylem",
+  "summary": "Global student competition to build practical water-resilience innovations.",
+  "deadline": "2026-11-21T01:30:00+05:30",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Global student teams ages 13–25.",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 20000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "Reported total advertised prize pool; see official terms for breakdown."
+  },
+  "tags": [
+    "Engineering"
+  ],
+  "url": "https://xyleminnovationchallenge.bemyapp.com/",
+  "entryStatus": "check",
+  "notes": [
+    "Source reported a conflicting UTC conversion; earlier IST deadline is used conservatively."
+  ],
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "3rd-qiskit-fall-fest-2026-iit-jodhpur-hackathon",
+  "title": "3rd Qiskit Fall Fest 2026 — IIT Jodhpur Hackathon",
+  "category": "Hackathon",
+  "organizerId": "custom-iit-jodhpur-quantum-club",
+  "summary": "Online quantum-computing hackathon with Basic and Advanced Qiskit tracks.",
+  "deadline": null,
+  "location": "Online",
+  "format": "Online",
+  "eligibility": "Students, researchers, professionals and beginners. Rules do not state a country restriction.",
+  "team": {
+    "min": 1,
+    "max": 3
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Hackathon"
+  ],
+  "url": "https://events.iitj.ac.in/qff/",
+  "entryStatus": "check",
+  "notes": [
+    "Registration ends 12 October at 11:59 PM local event time; current submission form was not verified.",
+    "Submission is scheduled for 16 October at 12:00 AM."
+  ],
+  "deadlineDate": "2026-10-12",
+  "deadlineTimezone": "Asia/Kolkata",
+  "eventEndDate": "2026-10-18",
+  "eventTimezone": "Etc/GMT+12",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

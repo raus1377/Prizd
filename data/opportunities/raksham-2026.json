@@ -1,0 +1,36 @@
+{
+  "id": "raksham-2026",
+  "title": "RAKSHAM — AI Cybersecurity Hackathon",
+  "category": "Hackathon",
+  "organizerId": "iit-delhi",
+  "summary": "Design a technical solution for scam or deepfake detection.",
+  "deadline": "2026-10-12T23:59:00+05:30",
+  "deadlineLabel": "Entry deadline",
+  "location": "Online + IIT Delhi, India",
+  "format": "Hybrid",
+  "eligibility": "Indian undergraduate / postgraduate students advertised; independent confirmation remains incomplete.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": 400000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "Cash prize pool reported in the supplied research."
+  },
+  "tags": [
+    "AI security",
+    "Deepfakes",
+    "Scams"
+  ],
+  "url": "https://unstop.com/o/1761331?utm_source=chatgpt.com",
+  "entryStatus": "check",
+  "notes": [
+    "Header and description conflict on deadline and team size. Check current admission rules before applying.",
+    "Reported onsite final 24–25 October; travel support claims remain unconfirmed."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "sourceUrl": "https://ariesiitd.com/events?utm_source=chatgpt.com"
+}

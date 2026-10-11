@@ -1,0 +1,35 @@
+{
+  "id": "nibs-case-2027",
+  "title": "NIBS Worldwide Case Competition 2027",
+  "category": "Case competition",
+  "organizerId": "nibs",
+  "summary": "Compete in international undergraduate business case analysis and presentations.",
+  "deadline": null,
+  "deadlineLabel": "Qualifying-round registration deadline",
+  "location": "Online qualifier + Cluj-Napoca, Romania",
+  "format": "Hybrid",
+  "eligibility": "Undergraduate university teams; institutional participation requirements apply.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize details were not established in the supplied research; check the official page."
+  },
+  "tags": [
+    "Consulting",
+    "Strategy"
+  ],
+  "url": "https://www.nibsweb.org/competitions/case-competition/",
+  "entryStatus": "open",
+  "notes": [
+    "Qualifying fee €250; championship fee €1,300 reported.",
+    "Final 7–12 February 2027; arrange travel and institutional support."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-10-23",
+  "categories": [
+    "Consulting"
+  ]
+}

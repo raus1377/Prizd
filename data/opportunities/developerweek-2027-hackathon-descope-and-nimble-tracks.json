@@ -1,0 +1,31 @@
+{
+  "id": "developerweek-2027-hackathon-descope-and-nimble-tracks",
+  "title": "DeveloperWeek 2027 Hackathon — Descope and Nimble tracks",
+  "category": "Hackathon",
+  "organizerId": "custom-developerweek",
+  "summary": "Online web and mobile app-building hackathon with Descope and Nimble startup tracks.",
+  "deadline": "2027-02-11T23:30:00+05:30",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Ages 18+, international students and professionals.",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 2000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "Reported total advertised prize pool; see official terms for breakdown."
+  },
+  "tags": [
+    "Hackathon"
+  ],
+  "url": "https://developerweek-2027-hackathon.devpost.com/",
+  "entryStatus": "open",
+  "notes": [
+    "Final submission 11 February 2027 at 11:30 PM IST.",
+    "Devpost and Eventbrite registration may both be required; verify any ticket cost."
+  ],
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

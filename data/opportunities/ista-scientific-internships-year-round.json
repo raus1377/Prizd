@@ -1,0 +1,28 @@
+{
+  "id": "ista-scientific-internships-year-round",
+  "title": "ISTA Scientific Internships — Year-Round",
+  "category": "Internship",
+  "organizerId": "custom-ista",
+  "summary": "Host-arranged scientific internships in Austria in natural sciences, mathematics and computing.",
+  "deadline": null,
+  "location": "Klosterneuburg, Austria",
+  "format": "In person",
+  "eligibility": "Current/completed bachelor’s or master’s students in eligible science and related disciplines.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Internship"
+  ],
+  "url": "https://phd.pages.ista.ac.at/scientific-internships/",
+  "entryStatus": "open",
+  "notes": [
+    "Rolling host-contact process; register formally at least two months before arrival.",
+    "Minimum reported gross monthly pay €1,583; no promised flight or housing funding."
+  ],
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

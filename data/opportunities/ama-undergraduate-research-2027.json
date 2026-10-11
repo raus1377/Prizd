@@ -1,0 +1,34 @@
+{
+  "id": "ama-undergraduate-research-2027",
+  "title": "AMA Undergraduate Research Competition 2027",
+  "category": "Marketing",
+  "organizerId": "ama",
+  "summary": "Present marketing or consumer-behavior research from coursework, client work or industry projects.",
+  "deadline": null,
+  "deadlineLabel": "Research submission deadline",
+  "location": "Check conference presentation requirements",
+  "format": "To confirm",
+  "eligibility": "Undergraduates; AMA membership and conference / institutional conditions need checking.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize details were not established in the supplied research; check the official page."
+  },
+  "tags": [
+    "Consumer psychology",
+    "Market research"
+  ],
+  "url": "https://www.ama.org/collegiate-competitions/icc-undergraduate-research-poster-session/",
+  "entryStatus": "open",
+  "notes": [
+    "Submissions opened 16 September 2026. Verify whether in-person conference presentation and registration are required."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2027-01-13",
+  "categories": [
+    "Psychology"
+  ]
+}

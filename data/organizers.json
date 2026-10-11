@@ -1,0 +1,785 @@
+[
+  {
+    "id": "meta",
+    "name": "Meta",
+    "kind": "Company",
+    "prestige": 100,
+    "monogram": "M",
+    "color": "#1769e0",
+    "website": "https://start-developer-competition-26.devpost.com"
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon",
+    "kind": "Company",
+    "prestige": 100,
+    "monogram": "a",
+    "color": "#a56609",
+    "website": "https://amazonappdev2026.devpost.com"
+  },
+  {
+    "id": "nebius",
+    "name": "Nebius × NVIDIA",
+    "kind": "Company",
+    "prestige": 98,
+    "monogram": "N",
+    "color": "#497919",
+    "website": "https://nebiusglobalaihackathon.devpost.com"
+  },
+  {
+    "id": "gitlab",
+    "name": "GitLab",
+    "kind": "Company",
+    "prestige": 94,
+    "monogram": "GL",
+    "color": "#c85424",
+    "website": "https://gitlab-transcend.devpost.com"
+  },
+  {
+    "id": "perfect",
+    "name": "Perfect Corp.",
+    "kind": "Company",
+    "prestige": 88,
+    "monogram": "PC",
+    "color": "#242424",
+    "website": "https://youcam-api-skin-ai-ecommerce.devpost.com"
+  },
+  {
+    "id": "apertus",
+    "name": "Hack Apertus",
+    "kind": "Organization",
+    "prestige": 90,
+    "monogram": "HA",
+    "color": "#242424",
+    "website": "https://hackapertus.devpost.com"
+  },
+  {
+    "id": "genai",
+    "name": "GenAI Works",
+    "kind": "Company",
+    "prestige": 87,
+    "monogram": "AI",
+    "color": "#242424",
+    "website": "https://hackathon.genai.works"
+  },
+  {
+    "id": "colosseum",
+    "name": "Colosseum",
+    "kind": "Company",
+    "prestige": 87,
+    "monogram": "C",
+    "color": "#242424",
+    "website": "https://colosseum.com"
+  },
+  {
+    "id": "devpost",
+    "name": "Devpost",
+    "kind": "Company",
+    "prestige": 86,
+    "monogram": "DP",
+    "color": "#242424",
+    "website": "https://learn-ai-basics.devpost.com"
+  },
+  {
+    "id": "next-founders",
+    "name": "Next Founders",
+    "kind": "Organization",
+    "prestige": 78,
+    "monogram": "NF",
+    "color": "#242424",
+    "website": "https://next-founders.devpost.com"
+  },
+  {
+    "id": "iit-mandi",
+    "name": "IIT Mandi · KamandPrompt",
+    "kind": "College",
+    "prestige": 93,
+    "monogram": "IIT",
+    "color": "#242424",
+    "website": "https://multimodal-ai-hackathon-2026-7.devpost.com"
+  },
+  {
+    "id": "hackyard",
+    "name": "Hackyard",
+    "kind": "Community",
+    "prestige": 78,
+    "monogram": "HY",
+    "color": "#242424",
+    "website": "https://hackyard.org"
+  },
+  {
+    "id": "dev",
+    "name": "DEV Community",
+    "kind": "Community",
+    "prestige": 83,
+    "monogram": "DEV",
+    "color": "#242424",
+    "website": "https://dev.to"
+  },
+  {
+    "id": "ieee",
+    "name": "IEEE",
+    "kind": "Organization",
+    "prestige": 94,
+    "monogram": "IEEE",
+    "color": "#00629b",
+    "website": "https://ieeextreme.org"
+  },
+  {
+    "id": "pennylane",
+    "name": "PennyLane · QHack",
+    "kind": "Company",
+    "prestige": 87,
+    "monogram": "Q",
+    "color": "#242424",
+    "website": "https://qhack.ai"
+  },
+  {
+    "id": "amd",
+    "name": "AMD · lablab.ai",
+    "kind": "Company",
+    "prestige": 97,
+    "monogram": "AMD",
+    "color": "#9b2323",
+    "website": "https://lablab.ai"
+  },
+  {
+    "id": "techex",
+    "name": "TechEx Events · lablab.ai",
+    "kind": "Organization",
+    "prestige": 83,
+    "monogram": "TX",
+    "color": "#242424",
+    "website": "https://lablab.ai"
+  },
+  {
+    "id": "vultr",
+    "name": "Vultr · lablab.ai",
+    "kind": "Company",
+    "prestige": 88,
+    "monogram": "V",
+    "color": "#242424",
+    "website": "https://lablab.ai"
+  },
+  {
+    "id": "odoo",
+    "name": "Odoo",
+    "kind": "Company",
+    "prestige": 89,
+    "monogram": "O",
+    "color": "#714b67",
+    "website": "https://hackathon.odoo.com"
+  },
+  {
+    "id": "tcs",
+    "name": "Tata Consultancy Services",
+    "kind": "Company",
+    "prestige": 96,
+    "monogram": "TCS",
+    "color": "#242424",
+    "website": "https://codevita.tcsapps.com"
+  },
+  {
+    "id": "opencv",
+    "name": "OpenCV · AWS",
+    "kind": "Organization",
+    "prestige": 94,
+    "monogram": "CV",
+    "color": "#242424",
+    "website": "https://opencv26.devpost.com"
+  },
+  {
+    "id": "iit-delhi",
+    "name": "IIT Delhi · ARIES / DevClub",
+    "kind": "College",
+    "prestige": 96,
+    "monogram": "IIT",
+    "color": "#242424",
+    "website": "https://unstop.com"
+  },
+  {
+    "id": "huntress",
+    "name": "Huntress",
+    "kind": "Company",
+    "prestige": 84,
+    "monogram": "H",
+    "color": "#242424",
+    "website": "https://ctf.huntress.com"
+  },
+  {
+    "id": "infinisynapse",
+    "name": "InfiniSynapse",
+    "kind": "Company",
+    "prestige": 76,
+    "monogram": "IS",
+    "color": "#242424",
+    "website": "https://infinisynapse.com"
+  },
+  {
+    "id": "uc-anr",
+    "name": "UC ANR · AI Institute NGFS",
+    "kind": "College",
+    "prestige": 96,
+    "monogram": "UC",
+    "color": "#242424",
+    "website": "https://www.farmroboticschallenge.ai"
+  },
+  {
+    "id": "ieee-cass",
+    "name": "IEEE Circuits and Systems Society",
+    "kind": "Organization",
+    "prestige": 94,
+    "monogram": "CAS",
+    "color": "#242424",
+    "website": "https://ieee-cas.org"
+  },
+  {
+    "id": "imeche",
+    "name": "Institution of Mechanical Engineers",
+    "kind": "Organization",
+    "prestige": 93,
+    "monogram": "IME",
+    "color": "#242424",
+    "website": "https://imeche-uas-challenge-2027.eventsairsite.com"
+  },
+  {
+    "id": "dubai-chambers",
+    "name": "Dubai Chambers",
+    "kind": "Organization",
+    "prestige": 88,
+    "monogram": "DC",
+    "color": "#242424",
+    "website": "https://www.dubaichambers.com"
+  },
+  {
+    "id": "lablab",
+    "name": "lablab.ai",
+    "kind": "Company",
+    "prestige": 83,
+    "monogram": "LL",
+    "color": "#242424",
+    "website": "https://lablab.ai"
+  },
+  {
+    "id": "renderjuice",
+    "name": "RenderJuice",
+    "kind": "Company",
+    "prestige": 77,
+    "monogram": "RJ",
+    "color": "#242424",
+    "website": "https://www.renderjuice.com"
+  },
+  {
+    "id": "apart",
+    "name": "Apart Research",
+    "kind": "Organization",
+    "prestige": 85,
+    "monogram": "AR",
+    "color": "#242424",
+    "website": "https://apartresearch.com"
+  },
+  {
+    "id": "stripe",
+    "name": "Stripe · Briefcase AI",
+    "kind": "Company",
+    "prestige": 94,
+    "monogram": "S",
+    "color": "#242424",
+    "website": "https://luma.com"
+  },
+  {
+    "id": "daytona",
+    "name": "Daytona · Arize AI",
+    "kind": "Company",
+    "prestige": 86,
+    "monogram": "D",
+    "color": "#242424",
+    "website": "https://daytona-hacksprint-nyc.devpost.com"
+  },
+  {
+    "id": "seapoint",
+    "name": "Seapoint",
+    "kind": "Company",
+    "prestige": 75,
+    "monogram": "SP",
+    "color": "#242424",
+    "website": "https://luma.com"
+  },
+  {
+    "id": "cline",
+    "name": "Cline · Composio",
+    "kind": "Company",
+    "prestige": 84,
+    "monogram": "CL",
+    "color": "#242424",
+    "website": "https://luma.com"
+  },
+  {
+    "id": "crusoe",
+    "name": "Crusoe · Cerebral Valley",
+    "kind": "Company",
+    "prestige": 87,
+    "monogram": "CR",
+    "color": "#242424",
+    "website": "https://cerebralvalley.ai"
+  },
+  {
+    "id": "shipyard",
+    "name": "Shipyard London",
+    "kind": "Community",
+    "prestige": 78,
+    "monogram": "SY",
+    "color": "#242424",
+    "website": "https://shipyard.london"
+  },
+  {
+    "id": "lovable",
+    "name": "Light · Lovable · Everphone",
+    "kind": "Company",
+    "prestige": 83,
+    "monogram": "L",
+    "color": "#242424",
+    "website": "https://luma.com"
+  },
+  {
+    "id": "hkcert",
+    "name": "HKCERT · HKPC",
+    "kind": "Organization",
+    "prestige": 91,
+    "monogram": "HK",
+    "color": "#242424",
+    "website": "https://forms.hkcert.org"
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "kind": "Company",
+    "prestige": 100,
+    "monogram": "MS",
+    "color": "#267fb4",
+    "website": "https://imaginecup.microsoft.com"
+  },
+  {
+    "id": "serpapi",
+    "name": "SerpApi",
+    "kind": "Company",
+    "prestige": 82,
+    "monogram": "SA",
+    "color": "#242424",
+    "website": "https://serpapi.github.io"
+  },
+  {
+    "id": "forgehacks",
+    "name": "ForgeHacks",
+    "kind": "Community",
+    "prestige": 76,
+    "monogram": "FH",
+    "color": "#242424",
+    "website": "https://forgehacks-2026.devpost.com"
+  },
+  {
+    "id": "wearedev",
+    "name": "WeAreDevelopers · BAND",
+    "kind": "Company",
+    "prestige": 82,
+    "monogram": "WD",
+    "color": "#242424",
+    "website": "https://lablab.ai"
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "kind": "Company",
+    "prestige": 88,
+    "monogram": "R",
+    "color": "#242424",
+    "website": "https://luma.com"
+  },
+  {
+    "id": "cogent",
+    "name": "Cogent · Modal · LangChain",
+    "kind": "Company",
+    "prestige": 83,
+    "monogram": "AI",
+    "color": "#242424",
+    "website": "https://www.tech-week.com"
+  },
+  {
+    "id": "cognition",
+    "name": "Cognition",
+    "kind": "Company",
+    "prestige": 88,
+    "monogram": "C",
+    "color": "#242424",
+    "website": "https://www.tech-week.com"
+  },
+  {
+    "id": "dwelly",
+    "name": "Dwelly",
+    "kind": "Company",
+    "prestige": 76,
+    "monogram": "DW",
+    "color": "#242424",
+    "website": "https://luma.com"
+  },
+  {
+    "id": "junction",
+    "name": "JunctionX Lisbon",
+    "kind": "Community",
+    "prestige": 82,
+    "monogram": "JX",
+    "color": "#242424",
+    "website": "https://hackjunction.app"
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "kind": "Company",
+    "prestige": 87,
+    "monogram": "S",
+    "color": "#242424",
+    "website": "https://suno.com"
+  },
+  {
+    "id": "revenuecat",
+    "name": "RevenueCat",
+    "kind": "Company",
+    "prestige": 84,
+    "monogram": "RC",
+    "color": "#242424",
+    "website": "https://www.revenuecat.com"
+  },
+  {
+    "id": "cbs",
+    "name": "Copenhagen Business School · CBS Case Competition",
+    "kind": "College",
+    "prestige": 97,
+    "monogram": "CBS",
+    "color": "#242424",
+    "website": "https://signup.casecompetition.com"
+  },
+  {
+    "id": "thinkcell",
+    "name": "think-cell",
+    "kind": "Company",
+    "prestige": 90,
+    "monogram": "TC",
+    "color": "#242424",
+    "website": "https://www.think-cell.com"
+  },
+  {
+    "id": "hsbc",
+    "name": "HSBC · India Business Case Programme",
+    "kind": "Company",
+    "prestige": 96,
+    "monogram": "HSBC",
+    "color": "#ac2330",
+    "website": "https://indiabusinesscaseprogramme.com"
+  },
+  {
+    "id": "cdsl",
+    "name": "CDSL",
+    "kind": "Company",
+    "prestige": 91,
+    "monogram": "CDSL",
+    "color": "#242424",
+    "website": "https://ideathon.cdslindia.com"
+  },
+  {
+    "id": "cim",
+    "name": "Chartered Institute of Marketing",
+    "kind": "Organization",
+    "prestige": 90,
+    "monogram": "CIM",
+    "color": "#242424",
+    "website": "https://www.cim.co.uk"
+  },
+  {
+    "id": "athens",
+    "name": "Athens Institute",
+    "kind": "Organization",
+    "prestige": 85,
+    "monogram": "AI",
+    "color": "#242424",
+    "website": "https://www.atiner.gr"
+  },
+  {
+    "id": "nibs",
+    "name": "Network of International Business Schools",
+    "kind": "Organization",
+    "prestige": 90,
+    "monogram": "NIBS",
+    "color": "#242424",
+    "website": "https://www.nibsweb.org"
+  },
+  {
+    "id": "ama",
+    "name": "American Marketing Association",
+    "kind": "Organization",
+    "prestige": 91,
+    "monogram": "AMA",
+    "color": "#242424",
+    "website": "https://www.ama.org"
+  },
+  {
+    "id": "loreal",
+    "name": "L’Oréal",
+    "kind": "Company",
+    "prestige": 97,
+    "monogram": "L",
+    "color": "#654a4a",
+    "website": "https://brandstorm.loreal.com"
+  },
+  {
+    "id": "hksi",
+    "name": "Hong Kong Securities and Investment Institute",
+    "kind": "Organization",
+    "prestige": 89,
+    "monogram": "HKSI",
+    "color": "#242424",
+    "website": "https://www.hksi.org"
+  },
+  {
+    "id": "mmsi",
+    "name": "MMSI · University of Michigan Ross",
+    "kind": "College",
+    "prestige": 97,
+    "monogram": "M",
+    "color": "#242424",
+    "website": "https://www.themmsi.com"
+  },
+  {
+    "id": "stanford",
+    "name": "Stanford-led Global Sustainability Challenge",
+    "kind": "College",
+    "prestige": 99,
+    "monogram": "ST",
+    "color": "#242424",
+    "website": "https://www.globalsustainabilitychallenge.org"
+  },
+  {
+    "id": "wye",
+    "name": "World Young Economist",
+    "kind": "Organization",
+    "prestige": 79,
+    "monogram": "WYE",
+    "color": "#242424",
+    "website": "https://worldyoungeconomist.org"
+  },
+  {
+    "id": "pdma",
+    "name": "Product Development and Management Association",
+    "kind": "Organization",
+    "prestige": 88,
+    "monogram": "PDMA",
+    "color": "#242424",
+    "website": "https://www.pdma.org"
+  },
+  {
+    "id": "harvard",
+    "name": "Harvard-affiliated student organizers",
+    "kind": "College",
+    "prestige": 99,
+    "monogram": "H",
+    "color": "#242424",
+    "website": "https://www.thecasecompetition.org"
+  },
+  {
+    "id": "custom-iit-jodhpur-quantum-club",
+    "name": "IIT Jodhpur Quantum Club",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IJQ",
+    "color": "#444444",
+    "website": "https://events.iitj.ac.in/qff/"
+  },
+  {
+    "id": "custom-gesh-iit-bombay-rosatom",
+    "name": "GESH IIT Bombay / ROSATOM",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "GIB",
+    "color": "#444444",
+    "website": "https://gesh.iitb.ac.in/event-details/atomic-hack-india-2026"
+  },
+  {
+    "id": "custom-cern",
+    "name": "CERN",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "C",
+    "color": "#444444",
+    "website": "https://careers.cern/jobs/short-term-internship/"
+  },
+  {
+    "id": "custom-developerweek",
+    "name": "DeveloperWeek",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "D",
+    "color": "#444444",
+    "website": "https://developerweek-2027-hackathon.devpost.com/"
+  },
+  {
+    "id": "custom-elevenlabs",
+    "name": "ElevenLabs",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "E",
+    "color": "#444444",
+    "website": "https://join.elevenlabs.io/campaign/worlds-catchiest-ad"
+  },
+  {
+    "id": "custom-epfl",
+    "name": "EPFL",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "E",
+    "color": "#444444",
+    "website": "https://eee.epfl.ch/apply/"
+  },
+  {
+    "id": "custom-fetch-ai",
+    "name": "Fetch.ai",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "F",
+    "color": "#444444",
+    "website": "https://www.fetch.ai/events/fetch-a-thon-3"
+  },
+  {
+    "id": "custom-technical-university-of-munich",
+    "name": "Technical University of Munich",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "TUO",
+    "color": "#444444",
+    "website": "https://hack.tum.de/"
+  },
+  {
+    "id": "custom-pravrutti-elevenlabs",
+    "name": "Pravrutti / ElevenLabs",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "PE",
+    "color": "#444444",
+    "website": "https://www.pravrutti.tech/events/hacktivate"
+  },
+  {
+    "id": "custom-ista",
+    "name": "ISTA",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://phd.pages.ista.ac.at/scientific-internships/"
+  },
+  {
+    "id": "custom-max-planck-institutes",
+    "name": "Max Planck Institutes",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "MPI",
+    "color": "#444444",
+    "website": "https://www.cis.mpg.de/internships/"
+  },
+  {
+    "id": "custom-ade-lab-music-hackspace",
+    "name": "ADE Lab / Music Hackspace",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "ALM",
+    "color": "#444444",
+    "website": "https://musichackspace.org/events/hackathon-amsterdam-october-2026?tab=overview"
+  },
+  {
+    "id": "custom-paypal",
+    "name": "PayPal",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "P",
+    "color": "#444444",
+    "website": "https://paypalaihackathon.devpost.com/rules"
+  },
+  {
+    "id": "custom-aiqt-polish-japanese-academy",
+    "name": "AIQT / Polish-Japanese Academy",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "APA",
+    "color": "#444444",
+    "website": "https://qfest2026.com/"
+  },
+  {
+    "id": "custom-bpit-n8n",
+    "name": "BPIT / n8n",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "BN",
+    "color": "#444444",
+    "website": "https://reforged.anveshan.dev/"
+  },
+  {
+    "id": "custom-tum-robo-innovate",
+    "name": "TUM robo.innovate",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "TR",
+    "color": "#444444",
+    "website": "https://roboinnovate.mirmi.tum.de/hackathon/hackathon-2026/"
+  },
+  {
+    "id": "custom-schubki-serenedb",
+    "name": "SchubKI / SereneDB",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "SS",
+    "color": "#444444",
+    "website": "https://schubki.com/hackathons/national-ai-hackathon-2026"
+  },
+  {
+    "id": "custom-indian-science-academies",
+    "name": "Indian Science Academies",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "ISA",
+    "color": "#444444",
+    "website": "https://webjapps.ias.ac.in/fellowship2027/index.html"
+  },
+  {
+    "id": "custom-shell",
+    "name": "Shell",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "S",
+    "color": "#444444",
+    "website": "https://register.makethefuture.shell"
+  },
+  {
+    "id": "custom-sumoth-association",
+    "name": "SuMoth Association",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SA",
+    "color": "#444444",
+    "website": "https://sumoth.org/editions/2027-edition/"
+  },
+  {
+    "id": "custom-vercel",
+    "name": "Vercel",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "V",
+    "color": "#444444",
+    "website": "https://luma.com/fastforwardhack"
+  },
+  {
+    "id": "custom-xylem",
+    "name": "Xylem",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "X",
+    "color": "#444444",
+    "website": "https://xyleminnovationchallenge.bemyapp.com/"
+  }
+]

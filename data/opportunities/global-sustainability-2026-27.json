@@ -1,0 +1,37 @@
+{
+  "id": "global-sustainability-2026-27",
+  "title": "Global Sustainability Challenge 2026–27",
+  "category": "Product",
+  "organizerId": "stanford",
+  "summary": "Design, build and test a real-world sustainability solution with a Stanford-led international network.",
+  "deadline": null,
+  "deadlineLabel": "Initial project-phase milestone",
+  "location": "Online + regional finals + Hangzhou, China",
+  "format": "Hybrid",
+  "eligibility": "Global university students; at least one member 18 by 1 January 2027; account-holder age conditions also apply.",
+  "team": {
+    "min": 1,
+    "max": 6
+  },
+  "prize": {
+    "amount": 35000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "Over US$35,000 reported prize pool; verify the current division / reward rules."
+  },
+  "tags": [
+    "Sustainability",
+    "Product",
+    "Innovation"
+  ],
+  "url": "https://www.globalsustainabilitychallenge.org/challenge-details/",
+  "entryStatus": "check",
+  "notes": [
+    "Challenge-hub signup is available, but separate team registration needs confirmation.",
+    "22 November is the initial project-phase milestone, not an independently established application cutoff.",
+    "Reported cash pool over US$35,000; finalist travel funding is not guaranteed."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-11-22"
+}
