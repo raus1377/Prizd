@@ -1,5 +1,32 @@
 [
   {
+    "id": "custom-paypal",
+    "name": "PayPal",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "P",
+    "color": "#444444",
+    "website": "https://paypalaihackathon.devpost.com/rules"
+  },
+  {
+    "id": "custom-tum-robo-innovate",
+    "name": "TUM robo.innovate",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "TR",
+    "color": "#444444",
+    "website": "https://roboinnovate.mirmi.tum.de/hackathon/hackathon-2026/"
+  },
+  {
+    "id": "custom-pravrutti-elevenlabs",
+    "name": "Pravrutti / ElevenLabs",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "PE",
+    "color": "#444444",
+    "website": "https://www.pravrutti.tech/events/hacktivate"
+  },
+  {
     "id": "meta",
     "name": "Meta",
     "kind": "Company",
@@ -7,6 +34,15 @@
     "monogram": "M",
     "color": "#1769e0",
     "website": "https://start-developer-competition-26.devpost.com"
+  },
+  {
+    "id": "custom-elevenlabs",
+    "name": "ElevenLabs",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "E",
+    "color": "#444444",
+    "website": "https://join.elevenlabs.io/campaign/worlds-catchiest-ad"
   },
   {
     "id": "amazon",
@@ -612,15 +648,6 @@
     "website": "https://developerweek-2027-hackathon.devpost.com/"
   },
   {
-    "id": "custom-elevenlabs",
-    "name": "ElevenLabs",
-    "kind": "Company",
-    "prestige": 50,
-    "monogram": "E",
-    "color": "#444444",
-    "website": "https://join.elevenlabs.io/campaign/worlds-catchiest-ad"
-  },
-  {
     "id": "custom-epfl",
     "name": "EPFL",
     "kind": "College",
@@ -648,15 +675,6 @@
     "website": "https://hack.tum.de/"
   },
   {
-    "id": "custom-pravrutti-elevenlabs",
-    "name": "Pravrutti / ElevenLabs",
-    "kind": "Organization",
-    "prestige": 50,
-    "monogram": "PE",
-    "color": "#444444",
-    "website": "https://www.pravrutti.tech/events/hacktivate"
-  },
-  {
     "id": "custom-ista",
     "name": "ISTA",
     "kind": "Organization",
@@ -666,15 +684,6 @@
     "website": "https://phd.pages.ista.ac.at/scientific-internships/"
   },
   {
-    "id": "custom-max-planck-institutes",
-    "name": "Max Planck Institutes",
-    "kind": "Organization",
-    "prestige": 50,
-    "monogram": "MPI",
-    "color": "#444444",
-    "website": "https://www.cis.mpg.de/internships/"
-  },
-  {
     "id": "custom-ade-lab-music-hackspace",
     "name": "ADE Lab / Music Hackspace",
     "kind": "Organization",
@@ -682,15 +691,6 @@
     "monogram": "ALM",
     "color": "#444444",
     "website": "https://musichackspace.org/events/hackathon-amsterdam-october-2026?tab=overview"
-  },
-  {
-    "id": "custom-paypal",
-    "name": "PayPal",
-    "kind": "Company",
-    "prestige": 50,
-    "monogram": "P",
-    "color": "#444444",
-    "website": "https://paypalaihackathon.devpost.com/rules"
   },
   {
     "id": "custom-aiqt-polish-japanese-academy",
@@ -711,15 +711,6 @@
     "website": "https://reforged.anveshan.dev/"
   },
   {
-    "id": "custom-tum-robo-innovate",
-    "name": "TUM robo.innovate",
-    "kind": "College",
-    "prestige": 50,
-    "monogram": "TR",
-    "color": "#444444",
-    "website": "https://roboinnovate.mirmi.tum.de/hackathon/hackathon-2026/"
-  },
-  {
     "id": "custom-schubki-serenedb",
     "name": "SchubKI / SereneDB",
     "kind": "Company",
@@ -727,15 +718,6 @@
     "monogram": "SS",
     "color": "#444444",
     "website": "https://schubki.com/hackathons/national-ai-hackathon-2026"
-  },
-  {
-    "id": "custom-indian-science-academies",
-    "name": "Indian Science Academies",
-    "kind": "Organization",
-    "prestige": 50,
-    "monogram": "ISA",
-    "color": "#444444",
-    "website": "https://webjapps.ias.ac.in/fellowship2027/index.html"
   },
   {
     "id": "custom-shell",
