@@ -8,7 +8,11 @@ export function validDay(value) {
   return typeof value === 'string' && /^\d{4}-\d\d-\d\d$/.test(value) && Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0,10) === value;
 }
 export function safeUrl(value) {
-  try { return ['https:', 'http:'].includes(new URL(value).protocol); } catch { return false; }
+  try {
+    return new URL(value).protocol === 'https:';
+  } catch {
+    return false;
+  }
 }
 export function validateSettings(settings, organizers) {
   if (!settings.name || !Array.isArray(settings.categories) || !settings.categories.length) throw new Error('settings: name and categories are required');
@@ -29,8 +33,8 @@ export function validateOpportunity(o, file, settings, organizers) {
   if (!settings.categories.includes(o.category)) fail(`category must be one of ${settings.categories.join(', ')}`);
   if (!organizers.some(x => x.id === o.organizerId)) fail(`unknown organizerId: ${o.organizerId}; add it to data/organizers.json`);
   if (!['Online','In person','Hybrid','To confirm'].includes(o.format)) fail('format must be Online, In person, Hybrid, or To confirm');
-  if (!safeUrl(o.url)) fail('url must use https:// or http://');
-  if (o.sourceUrl !== undefined && !safeUrl(o.sourceUrl)) fail('sourceUrl must use https:// or http://');
+  if (!safeUrl(o.url)) fail('url must use https://');
+  if (o.sourceUrl !== undefined && !safeUrl(o.sourceUrl)) fail('sourceUrl must use https://');
   if (o.deadline !== null && !validDate(o.deadline)) fail('deadline must be null or a timestamp with timezone, e.g. 2026-11-02T18:00:00+05:30');
   if (o.addedAt !== undefined && !validDate(o.addedAt)) fail('addedAt must be an ISO timestamp with timezone');
   if (o.deadlineDate !== undefined && !validDay(o.deadlineDate)) fail('deadlineDate must be a real YYYY-MM-DD date');
