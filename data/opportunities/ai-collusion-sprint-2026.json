@@ -1,0 +1,34 @@
+{
+  "id": "ai-collusion-sprint-2026",
+  "title": "AI Collusion Research Sprint",
+  "category": "Hackathon",
+  "organizerId": "apart",
+  "summary": "Research AI-agent collusion and methods to detect or prevent it.",
+  "deadline": "2026-10-26T17:29:00+05:30",
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Check the official rules for age, country and student eligibility.",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 2000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "Cash prize pool reported in the supplied research."
+  },
+  "tags": [
+    "AI safety",
+    "Research",
+    "Agents"
+  ],
+  "url": "https://apartresearch.com/sprints/ai-collusion-research-sprint-2026-10-23-to-2026-10-25?utm_source=chatgpt.com",
+  "entryStatus": "check",
+  "notes": [
+    "Advertised 23–25 October sprint. Page shows signup alongside a conflicting submission-closed notice."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10"
+}

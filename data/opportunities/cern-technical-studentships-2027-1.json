@@ -1,0 +1,28 @@
+{
+  "id": "cern-technical-studentships-2027-1",
+  "title": "CERN Technical Studentships 2027-1",
+  "category": "Internship",
+  "organizerId": "custom-cern",
+  "summary": "CERN technical studentship in electronics, applied physics, computing, materials or mechanical engineering.",
+  "deadline": "2026-10-17T03:29:00+05:30",
+  "location": "Geneva, Switzerland",
+  "format": "In person",
+  "eligibility": "Enrolled students meeting minimum completed-semester and discipline requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Internship"
+  ],
+  "url": "https://careers.cern/jobs/tsc-el/",
+  "entryStatus": "open",
+  "notes": [
+    "Requires 18 months or three completed semesters by selection.",
+    "Programme lasts 4–12 months; reported allowance CHF 3,486 per month before insurance contribution."
+  ],
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

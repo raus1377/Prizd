@@ -1,0 +1,39 @@
+{
+  "id": "wye-essay-2026",
+  "title": "World Young Economist Essay Prize 2026",
+  "category": "Economics",
+  "organizerId": "wye",
+  "summary": "Write an original argument on economics, behavioral economics or public policy.",
+  "deadline": null,
+  "deadlineLabel": "Reported additional deadline — conflicting",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Worldwide writers under the published education-neutral wording; current submission status unresolved.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize details were not established in the supplied research; check the official page."
+  },
+  "tags": [
+    "Economics",
+    "Behavioral economics",
+    "Writing"
+  ],
+  "url": "https://worldyoungeconomist.org/essay-prize-level1-en.dc.html",
+  "entryStatus": "check",
+  "notes": [
+    "One official section says 2 December; the FAQ says 5 October was the only deadline with no late entries. New submissions are not verified as open.",
+    "First essay entry was reported free."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-12-02",
+  "categories": [
+    "Psychology"
+  ]
+}

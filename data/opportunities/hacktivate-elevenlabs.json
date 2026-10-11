@@ -1,0 +1,35 @@
+{
+  "id": "hacktivate-elevenlabs",
+  "title": "Hacktivate — ElevenLabs",
+  "category": "Hackathon",
+  "organizerId": "custom-pravrutti-elevenlabs",
+  "summary": "Bengaluru in-person voice and AI hackathon supported by ElevenLabs.",
+  "deadline": null,
+  "location": "Bengaluru, India",
+  "format": "In person",
+  "eligibility": "Entry approval required; see organizer terms.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Hackathon"
+  ],
+  "url": "https://www.pravrutti.tech/events/hacktivate",
+  "entryStatus": "check",
+  "notes": [
+    "Registration date 12 October, time not stated.",
+    "₹200 per team according to the source report."
+  ],
+  "deadlineDate": "2026-10-12",
+  "deadlineTimezone": "Asia/Kolkata",
+  "eventEndDate": "2026-10-15",
+  "eventTimezone": "Etc/GMT+12",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

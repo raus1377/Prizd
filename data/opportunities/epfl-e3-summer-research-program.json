@@ -1,0 +1,27 @@
+{
+  "id": "epfl-e3-summer-research-program",
+  "title": "EPFL E3 Summer Research Program",
+  "category": "Research",
+  "organizerId": "custom-epfl",
+  "summary": "EPFL summer research programme; see official selection criteria and application opening.",
+  "deadline": null,
+  "location": "Lausanne, Switzerland",
+  "format": "In person",
+  "eligibility": "Requires successful completion of the second bachelor year when applying.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Research"
+  ],
+  "url": "https://eee.epfl.ch/apply/",
+  "entryStatus": "check",
+  "notes": [
+    "Application opening announced for 12 October; current application link was not verified."
+  ],
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

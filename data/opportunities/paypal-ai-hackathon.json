@@ -1,0 +1,27 @@
+{
+  "id": "paypal-ai-hackathon",
+  "title": "PayPal AI Hackathon",
+  "category": "Hackathon",
+  "organizerId": "custom-paypal",
+  "summary": "Build a working AI-powered app that integrates the PayPal sandbox API.",
+  "deadline": "2026-11-13T01:30:00+05:30",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Adult entrants from eligible countries, subject to published contest exclusions.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Hackathon"
+  ],
+  "url": "https://paypalaihackathon.devpost.com/rules",
+  "entryStatus": "open",
+  "notes": [
+    "Free, worldwide software-build challenge; noncash prizes are separate from cash awards."
+  ],
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

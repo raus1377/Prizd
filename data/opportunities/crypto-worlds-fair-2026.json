@@ -1,0 +1,36 @@
+{
+  "id": "crypto-worlds-fair-2026",
+  "title": "Crypto World’s Fair",
+  "category": "Hackathon",
+  "organizerId": "colosseum",
+  "summary": "Build a blockchain product with a credible business proposition.",
+  "deadline": null,
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "International legal adults; solo founders welcome.",
+  "team": {
+    "min": 1,
+    "max": null
+  },
+  "prize": {
+    "amount": 840000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "Cash prize pool reported in the supplied research."
+  },
+  "tags": [
+    "Blockchain",
+    "Solana",
+    "Startups"
+  ],
+  "url": "https://colosseum.com/worldsfair?trk=public_post_comment-text&utm_source=chatgpt.com",
+  "entryStatus": "open",
+  "notes": [
+    "The latest supplied report gives 12 October without an official cutoff clock.",
+    "Seed funding and accelerator consideration are investment opportunities, not guaranteed prize cash."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-10-12"
+}

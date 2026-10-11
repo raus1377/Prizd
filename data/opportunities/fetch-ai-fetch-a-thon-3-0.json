@@ -1,0 +1,30 @@
+{
+  "id": "fetch-ai-fetch-a-thon-3-0",
+  "title": "Fetch.ai — Fetch-A-Thon 3.0",
+  "category": "Hackathon",
+  "organizerId": "custom-fetch-ai",
+  "summary": "Build and demonstrate an AI agent using ASI:One, Agentverse and Agent Chat Protocol.",
+  "deadline": null,
+  "location": "Jaipur / Roorkee / Mandi / Noida / Gurugram / Bengaluru",
+  "format": "In person",
+  "eligibility": "India-based students, developers and founders are invited; specific age and team rules require checking.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Hackathon"
+  ],
+  "url": "https://www.fetch.ai/events/fetch-a-thon-3",
+  "entryStatus": "check",
+  "notes": [
+    "Registration cutoff was not published; online participation is unconfirmed.",
+    "Prize amounts conflict between organizer materials."
+  ],
+  "eventEndDate": "2026-10-24",
+  "eventTimezone": "Etc/GMT+12",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

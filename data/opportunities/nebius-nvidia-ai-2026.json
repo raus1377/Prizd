@@ -1,0 +1,32 @@
+{
+  "id": "nebius-nvidia-ai-2026",
+  "title": "Nebius × NVIDIA Global AI Hackathon",
+  "category": "Hackathon",
+  "organizerId": "nebius",
+  "summary": "Ship a working AI system using open infrastructure and the required Nebius / NVIDIA stack.",
+  "deadline": "2026-10-30T22:30:00+05:30",
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Legal adults worldwide, including India subject to the official exclusions.",
+  "team": null,
+  "prize": {
+    "amount": 50000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$50,000 cash pool; US$20,000 grand prize reported."
+  },
+  "tags": [
+    "AI",
+    "Open models",
+    "GPU",
+    "Infrastructure"
+  ],
+  "url": "https://nebiusglobalaihackathon.devpost.com/?utm_source=chatgpt.com",
+  "entryStatus": "open",
+  "notes": [],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "sourceUrl": "https://nebiusglobalaihackathon.devpost.com/rules",
+  "checkedAt": "2026-10-11"
+}

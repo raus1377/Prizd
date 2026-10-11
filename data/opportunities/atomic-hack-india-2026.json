@@ -1,0 +1,35 @@
+{
+  "id": "atomic-hack-india-2026",
+  "title": "Atomic Hack India 2026",
+  "category": "Engineering",
+  "organizerId": "custom-gesh-iit-bombay-rosatom",
+  "summary": "Model nuclear/renewable power grids and design transmission-line protection.",
+  "deadline": null,
+  "location": "India · IIT Bombay final",
+  "format": "Hybrid",
+  "eligibility": "Engineering, science and technology university students studying in India; age/consent conditions apply.",
+  "team": {
+    "min": 3,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Engineering"
+  ],
+  "url": "https://gesh.iitb.ac.in/event-details/atomic-hack-india-2026",
+  "entryStatus": "open",
+  "notes": [
+    "Free; finalist travel and accommodation funding not stated.",
+    "Online qualification 20–28 October; in-person finale 4–6 December."
+  ],
+  "deadlineDate": "2026-10-20",
+  "deadlineTimezone": "Asia/Kolkata",
+  "eventEndDate": "2026-12-06",
+  "eventTimezone": "Asia/Kolkata",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

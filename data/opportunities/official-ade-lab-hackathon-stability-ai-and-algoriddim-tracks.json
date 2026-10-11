@@ -1,0 +1,33 @@
+{
+  "id": "official-ade-lab-hackathon-stability-ai-and-algoriddim-tracks",
+  "title": "Official ADE Lab Hackathon — Stability AI and Algoriddim tracks",
+  "category": "Hackathon",
+  "organizerId": "custom-ade-lab-music-hackspace",
+  "summary": "Amsterdam music-technology hackathon with Stability AI and Algoriddim challenge tracks.",
+  "deadline": null,
+  "location": "Amsterdam, Netherlands",
+  "format": "In person",
+  "eligibility": "International students and builders age 18+; onsite attendance.",
+  "team": {
+    "min": 3,
+    "max": 6
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Hackathon"
+  ],
+  "url": "https://musichackspace.org/events/hackathon-amsterdam-october-2026?tab=overview",
+  "entryStatus": "check",
+  "notes": [
+    "€50 per participant. Team size 3–6 is typical, not a confirmed hard limit.",
+    "Registration cutoff and award details are partly unpublished."
+  ],
+  "eventEndDate": "2026-10-23",
+  "eventTimezone": "Etc/GMT+12",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

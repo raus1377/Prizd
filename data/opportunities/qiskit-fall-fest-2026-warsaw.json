@@ -1,0 +1,30 @@
+{
+  "id": "qiskit-fall-fest-2026-warsaw",
+  "title": "Qiskit Fall Fest 2026 — Warsaw",
+  "category": "Hackathon",
+  "organizerId": "custom-aiqt-polish-japanese-academy",
+  "summary": "Online Qiskit quantum-computing lectures and 48-hour coding challenge.",
+  "deadline": null,
+  "location": "Online; optional Warsaw event",
+  "format": "Online",
+  "eligibility": "Students and beginners welcome; international eligibility and team rules not confirmed.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Hackathon"
+  ],
+  "url": "https://qfest2026.com/",
+  "entryStatus": "check",
+  "notes": [
+    "Online hackathon 23–25 October with onsite Warsaw day 26 October.",
+    "Registration cutoff unpublished."
+  ],
+  "eventEndDate": "2026-10-25",
+  "eventTimezone": "Etc/GMT+12",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}
