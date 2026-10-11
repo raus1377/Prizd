@@ -1,0 +1,35 @@
+{
+  "id": "serpapi-india-2026",
+  "title": "SerpApi India Hackathon 2026",
+  "category": "Hackathon",
+  "organizerId": "serpapi",
+  "summary": "Build an application with live search data from SerpApi.",
+  "deadline": "2026-10-10T23:59:00+05:30",
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "India residents aged 18+.",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 210000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "Cash prize pool reported in the supplied research."
+  },
+  "tags": [
+    "Search",
+    "Agents",
+    "API"
+  ],
+  "url": "https://serpapi.github.io/serpapi-india-hackathon-2026/?utm_source=chatgpt.com",
+  "entryStatus": "closed",
+  "notes": [
+    "Existing projects allowed with disclosure and meaningful SerpApi integration. Credits are separate from cash."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "sourceUrl": "https://serpapi.github.io/serpapi-india-hackathon-2026/rules.html?utm_source=chatgpt.com"
+}

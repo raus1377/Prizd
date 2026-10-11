@@ -1,0 +1,36 @@
+{
+  "id": "stripe-briefcase-london-2026",
+  "title": "Stripe × Briefcase AI FinTech Hackathon",
+  "category": "Finance",
+  "organizerId": "stripe",
+  "summary": "Build a practical fintech application in an approval-based London event.",
+  "deadline": null,
+  "deadlineLabel": "Event date",
+  "location": "London, UK",
+  "format": "In person",
+  "eligibility": "Check the official rules for age, country and student eligibility.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 2000,
+    "currency": "GBP",
+    "kind": "pool",
+    "description": "Cash prize pool reported in the supplied research."
+  },
+  "tags": [
+    "FinTech",
+    "AI",
+    "Software"
+  ],
+  "url": "https://luma.com/3k1pazop?utm_source=chatgpt.com",
+  "entryStatus": "check",
+  "notes": [
+    "Approval required. Separate application deadline and India-specific admission conditions were not established.",
+    "£2,000 overall cash award plus credits; foreign travel is required."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-10-15"
+}

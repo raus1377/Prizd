@@ -1,0 +1,32 @@
+{
+  "id": "forgehacks-2026",
+  "title": "ForgeHacks Online 2026",
+  "category": "Hackathon",
+  "organizerId": "forgehacks",
+  "summary": "Student hackathon for a working AI or software project.",
+  "deadline": "2026-10-10T21:30:00+05:30",
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Global students, including India under the supplied rules.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize details were not established in the supplied research; check the official page."
+  },
+  "tags": [
+    "Student",
+    "AI"
+  ],
+  "url": "https://forgehacks-2026.devpost.com/",
+  "entryStatus": "closed",
+  "notes": [],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "sourceUrl": "https://forgehacks-2026.devpost.com/rules?utm_source=chatgpt.com"
+}

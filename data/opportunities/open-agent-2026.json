@@ -1,0 +1,38 @@
+{
+  "id": "open-agent-2026",
+  "title": "Open Agent Hackathon 2026",
+  "category": "Hackathon",
+  "organizerId": "genai",
+  "summary": "Build a practical agent that works across fragmented data, reasons clearly or explains its conclusions.",
+  "deadline": "2026-10-23T05:29:00+05:30",
+  "deadlineLabel": "Registration deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Worldwide, ages 16+. Organizer and judging-sponsor employees cannot win cash prizes.",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 15000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$15,000 cash plus US$5,000 in-kind benefits."
+  },
+  "tags": [
+    "Agents",
+    "Memory",
+    "Reasoning",
+    "Zetaris",
+    "Meterless"
+  ],
+  "url": "https://hackathon.genai.works/event/open-agent-hackathon-2026?utm_source=chatgpt.com",
+  "entryStatus": "open",
+  "notes": [
+    "Build opens 22 October. Final submission closes 28 October at 05:15 IST.",
+    "Required sponsor integrations apply. This replaces the earlier 13 October registration date."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "checkedAt": "2026-10-11"
+}

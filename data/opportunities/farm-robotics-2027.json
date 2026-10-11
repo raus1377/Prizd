@@ -1,0 +1,35 @@
+{
+  "id": "farm-robotics-2027",
+  "title": "Farm Robotics Challenge 2027",
+  "category": "Hackathon",
+  "organizerId": "uc-anr",
+  "summary": "Develop agricultural robotics, sensing, AI, control or automation with an adviser-backed team.",
+  "deadline": null,
+  "deadlineLabel": "Registration and proposal deadline",
+  "location": "Local development + virtual awards",
+  "format": "Hybrid",
+  "eligibility": "Global university / technical-school students. Excluded institutional affiliations apply; graduate members at most 50%.",
+  "team": null,
+  "prize": {
+    "amount": 25000,
+    "currency": "USD",
+    "kind": "first",
+    "description": "University Division I cash: US$25,000 / 10,000 / 5,000, paid through the institution or adviser."
+  },
+  "tags": [
+    "Robotics",
+    "EEE",
+    "Control",
+    "Agriculture"
+  ],
+  "url": "https://www.farmroboticschallenge.ai/participate?utm_source=chatgpt.com",
+  "entryStatus": "open",
+  "notes": [
+    "US$100/team entry fee; teams fund equipment. Member-count limit was not established.",
+    "Final video / report due 2 May 2027; virtual awards in June.",
+    "The US$200,000+ headline includes startup support and other benefits."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-11-13"
+}

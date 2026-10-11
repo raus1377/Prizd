@@ -1,0 +1,32 @@
+{
+  "id": "ai-heist-sf-2026",
+  "title": "AI Heist Challenge — Cogent × Modal × LangChain",
+  "category": "Hackathon",
+  "organizerId": "cogent",
+  "summary": "Work on an AI-agent security challenge at SF Tech Week.",
+  "deadline": null,
+  "deadlineLabel": "Event date",
+  "location": "San Francisco, USA",
+  "format": "In person",
+  "eligibility": "Check the official rules for age, country and student eligibility.",
+  "team": {
+    "min": 1,
+    "max": 2
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Smart-glasses award advertised; cash not established."
+  },
+  "tags": [
+    "AI security",
+    "Agents"
+  ],
+  "url": "https://www.tech-week.com/calendar/sf/events/ai-heist-challenge-with-cogent-x-modal-x-langchain-104b50cb-f03c-4118-a98d-405ef18a47de?utm_source=chatgpt.com",
+  "entryStatus": "closed",
+  "notes": [],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-10-06"
+}

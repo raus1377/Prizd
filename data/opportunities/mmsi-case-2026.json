@@ -1,0 +1,39 @@
+{
+  "id": "mmsi-case-2026",
+  "title": "MMSI 2026 Case Competition",
+  "category": "Case competition",
+  "organizerId": "mmsi",
+  "summary": "Analyze a strategy case and present to McKinsey consultants and Michigan Ross faculty.",
+  "deadline": "2026-10-12T09:29:00+05:30",
+  "deadlineLabel": "Application deadline",
+  "location": "University of Michigan Ross, USA",
+  "format": "In person",
+  "eligibility": "Undergraduate teams from accredited universities; confirm international attendance conditions.",
+  "team": {
+    "min": 3,
+    "max": 4
+  },
+  "prize": {
+    "amount": 1750,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "Cash prize pool reported in the supplied research."
+  },
+  "tags": [
+    "Consulting",
+    "Strategy",
+    "McKinsey"
+  ],
+  "url": "https://www.themmsi.com/case-competition-1?utm_source=chatgpt.com",
+  "entryStatus": "open",
+  "notes": [
+    "US attendance and travel funding require confirmation. Reported $30 team fee.",
+    "Current official page gives a 15 November competition date, differing from the earlier report’s 13 November."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "categories": [
+    "Consulting"
+  ],
+  "checkedAt": "2026-10-11"
+}

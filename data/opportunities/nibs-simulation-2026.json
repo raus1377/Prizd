@@ -1,0 +1,38 @@
+{
+  "id": "nibs-simulation-2026",
+  "title": "NIBS International Business Simulation",
+  "category": "Case competition",
+  "organizerId": "nibs",
+  "summary": "Manage a simulated business across finance, marketing, operations and strategy.",
+  "deadline": "2026-10-21T04:29:00+05:30",
+  "deadlineLabel": "Registration deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "International university teams; institutional and nonmember eligibility must be confirmed.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize details were not established in the supplied research; check the official page."
+  },
+  "tags": [
+    "Marketing",
+    "Sales",
+    "Strategy",
+    "Finance"
+  ],
+  "url": "https://www.nibsweb.org/competitions/business-simulation-competition/",
+  "entryStatus": "open",
+  "notes": [
+    "Listed fees: €100 members / €120 nonmembers. Entirely virtual.",
+    "The latest supplied report converts the registration cutoff to 21 October at 04:29 IST."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "categories": [
+    "Marketing",
+    "Sales",
+    "Finance"
+  ]
+}

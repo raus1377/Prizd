@@ -1,0 +1,35 @@
+{
+  "id": "hackyard-build-2026",
+  "title": "Hackyard Build 2026 / Agent37",
+  "category": "Hackathon",
+  "organizerId": "hackyard",
+  "summary": "Apply with an idea for a working application, agent or developer product.",
+  "deadline": "2026-10-10T23:45:00+05:30",
+  "deadlineLabel": "Entry deadline",
+  "location": "Online application + IIT Guwahati, India",
+  "format": "Hybrid",
+  "eligibility": "Ages 13+; every team member applies individually.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize details were not established in the supplied research; check the official page."
+  },
+  "tags": [
+    "Agents",
+    "Software"
+  ],
+  "url": "https://hackyard.org/build2026/apply?utm_source=chatgpt.com",
+  "entryStatus": "closed",
+  "notes": [
+    "Selected builders attend 24–25 October. Joining Devpost alone does not complete the application.",
+    "No travel funding; food / accommodation charges unresolved. Render / ElevenLabs rewards are non-cash."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "sourceUrl": "https://hackyardbuild2026.devpost.com/?utm_source=chatgpt.com"
+}

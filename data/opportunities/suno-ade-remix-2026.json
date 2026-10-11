@@ -1,0 +1,31 @@
+{
+  "id": "suno-ade-remix-2026",
+  "title": "Suno × Todd Terry ADE Remix Contest",
+  "category": "Design",
+  "organizerId": "suno",
+  "summary": "Remix the specified track for an ADE-themed music challenge.",
+  "deadline": null,
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Check the official rules for age, country and student eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize details were not established in the supplied research; check the official page."
+  },
+  "tags": [
+    "Music",
+    "AI"
+  ],
+  "url": "https://suno.com/collab/ade-toddterry?utm_source=chatgpt.com",
+  "entryStatus": "closed",
+  "notes": [
+    "Winners announced 9 October. India / age / collaboration rules and cash were not established."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-10-05"
+}

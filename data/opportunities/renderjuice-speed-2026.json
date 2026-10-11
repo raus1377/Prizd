@@ -1,0 +1,35 @@
+{
+  "id": "renderjuice-speed-2026",
+  "title": "RenderJuice “Speed” Animation Contest",
+  "category": "Design",
+  "organizerId": "renderjuice",
+  "summary": "Create a 5–30 second Blender animation for the Speed theme.",
+  "deadline": "2026-11-01T05:29:00+05:30",
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Check the official rules for age, country and student eligibility.",
+  "team": {
+    "min": 1,
+    "max": null
+  },
+  "prize": {
+    "amount": 1500,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$1,500 cash plus US$3,500 render credits."
+  },
+  "tags": [
+    "Blender",
+    "Animation",
+    "3D"
+  ],
+  "url": "https://www.renderjuice.com/contests/speed?utm_source=chatgpt.com",
+  "entryStatus": "upcoming",
+  "notes": [
+    "Entries open 15 October at 05:30 IST under the supplied schedule. Check current age and country terms."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "opensOn": "2026-10-15"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ctrl-escape-sf-2026",
+  "title": "CTRL Escape Room Hackathon",
+  "category": "Hackathon",
+  "organizerId": "cognition",
+  "summary": "Build agents in a Cognition-sponsored escape-room challenge.",
+  "deadline": null,
+  "deadlineLabel": "Event date",
+  "location": "San Francisco, USA",
+  "format": "In person",
+  "eligibility": "Check the official rules for age, country and student eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize details were not established in the supplied research; check the official page."
+  },
+  "tags": [
+    "Agents",
+    "Software"
+  ],
+  "url": "https://www.tech-week.com/calendar/sf/events/ctrl-escape-room-hackathon-355e20c1-645b-4e5b-837d-fc470fbe1e4a?utm_source=chatgpt.com",
+  "entryStatus": "closed",
+  "notes": [],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-10-07"
+}

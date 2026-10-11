@@ -1,0 +1,34 @@
+{
+  "id": "qhack-2026",
+  "title": "QHack 2026",
+  "category": "Hackathon",
+  "organizerId": "pennylane",
+  "summary": "Compete in quantum coding and technical problem solving.",
+  "deadline": "2026-10-24T03:30:00+05:30",
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "India permitted; published exclusions include Quebec, Russia, Iran, North Korea and Belarus.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 67000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "Cash prize pool reported in the supplied research."
+  },
+  "tags": [
+    "Quantum computing",
+    "Algorithms"
+  ],
+  "url": "https://qhack.ai/?utm_source=chatgpt.com",
+  "entryStatus": "open",
+  "notes": [
+    "Coding window opens 16 October at 19:30 IST. The listed amount is for coding cash awards."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "sourceUrl": "https://qhack.ai/terms-and-conditions?utm_source=chatgpt.com"
+}

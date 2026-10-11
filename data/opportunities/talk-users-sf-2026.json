@@ -1,0 +1,29 @@
+{
+  "id": "talk-users-sf-2026",
+  "title": "Talk to Users Hackathon",
+  "category": "Product",
+  "organizerId": "cognition",
+  "summary": "Build and test a product with real users in a limited-team event.",
+  "deadline": null,
+  "deadlineLabel": "Event date",
+  "location": "San Francisco, USA",
+  "format": "In person",
+  "eligibility": "Check the official rules for age, country and student eligibility.",
+  "team": null,
+  "prize": {
+    "amount": 10000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$10,000+ advertised rewards and credits; breakdown requires official checking."
+  },
+  "tags": [
+    "Product",
+    "Customer research"
+  ],
+  "url": "https://www.tech-week.com/calendar/sf/events/talk-to-users-hackathon-2ea9ffb9-d4c2-410f-b45c-94eab588be96?utm_source=chatgpt.com",
+  "entryStatus": "closed",
+  "notes": [],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-10-10"
+}

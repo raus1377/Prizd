@@ -1,0 +1,29 @@
+{
+  "id": "replit-chennai-2026",
+  "title": "Replit Buildathon Chennai",
+  "category": "Hackathon",
+  "organizerId": "replit",
+  "summary": "Build with Replit in an approval-based campus event.",
+  "deadline": null,
+  "deadlineLabel": "Event date",
+  "location": "IIT Madras Research Park, Chennai, India",
+  "format": "In person",
+  "eligibility": "Check the official rules for age, country and student eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Replit credits and three months of Replit Core for the top three teams; no cash established."
+  },
+  "tags": [
+    "AI",
+    "Applications"
+  ],
+  "url": "https://luma.com/0n9lo7sv?utm_source=chatgpt.com",
+  "entryStatus": "closed",
+  "notes": [],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-10-10"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "junctionx-lisbon-2026",
+  "title": "JunctionX Lisbon 2026",
+  "category": "Hackathon",
+  "organizerId": "junction",
+  "summary": "Build for an onsite AI / product challenge in Lisbon.",
+  "deadline": "2026-10-11T17:30:00+05:30",
+  "deadlineLabel": "Final submission deadline",
+  "location": "IST Taguspark, Lisbon, Portugal",
+  "format": "In person",
+  "eligibility": "Ages 16+; nationality / residency unrestricted, but admitted-entry and onsite requirements apply.",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 2500,
+    "currency": "EUR",
+    "kind": "pool",
+    "description": "Cash prize pool reported in the supplied research."
+  },
+  "tags": [
+    "AI",
+    "Software"
+  ],
+  "url": "https://hackjunction.app/hackathons/junctionx-lisbon-2026?utm_source=chatgpt.com",
+  "entryStatus": "closed",
+  "notes": [
+    "New applications closed before the 10–11 October event. The displayed cutoff is the final submission time, not an open application deadline.",
+    "Overall awards €1,500 / €750 / €250; travel reimbursement is capped."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10"
+}

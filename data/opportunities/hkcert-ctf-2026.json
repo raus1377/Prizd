@@ -1,0 +1,37 @@
+{
+  "id": "hkcert-ctf-2026",
+  "title": "HKCERT CTF 2026 — International Category",
+  "category": "Hackathon",
+  "organizerId": "hkcert",
+  "summary": "Compete in exploitation, cryptography, forensics, reverse engineering and web security.",
+  "deadline": null,
+  "deadlineLabel": "Registration deadline",
+  "location": "Online qualifier + Hong Kong final",
+  "format": "Hybrid",
+  "eligibility": "International participants 18+ by registration deadline; Indian undergraduates eligible.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 16000,
+    "currency": "HKD",
+    "kind": "first",
+    "description": "HKD16,000 / 13,000 / 11,000 per international team."
+  },
+  "tags": [
+    "Cybersecurity",
+    "CTF"
+  ],
+  "url": "https://forms.hkcert.org/hkcertctf2026?utm_source=chatgpt.com",
+  "entryStatus": "open",
+  "notes": [
+    "Online qualifier 6–7 November. Exact registration cutoff time not announced.",
+    "Final date conflicts between official pages; the current homepage says 7 January 2027.",
+    "Overseas finalist hotel / travel subsidy is discretionary and funding-dependent."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-10-20",
+  "sourceUrl": "https://ctf.hkcert.org/eligibility?utm_source=chatgpt.com"
+}
