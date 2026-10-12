@@ -1,0 +1,14 @@
+OPEN CALL — Ranking update
+
+This patch contains only the listed files, not your separate open.yml workflow.
+
+1. Extract this ZIP and copy the extracted folder contents to the repository root (where package.json sits), merging and replacing matching files.
+2. Keep all other repository files, including open.yml.
+3. Commit and push to main. GitHub Pages workflow rebuilds the site.
+4. Hard refresh (Ctrl+Shift+R), and open the page with no ?sort=prestige URL parameter to see the new default.
+
+Default: Featured: top & recent — places recently added high-tier organizers before older ones in the same tier, without privileging any category.
+Strict organizer priority: use Top companies & colleges from Sort by.
+PayPal and other imported organizers were upgraded from neutral placeholder priority 50.
+
+No upstream GitHub changes were made automatically.
