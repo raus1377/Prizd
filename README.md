@@ -66,7 +66,7 @@ The workflow identifies invalid files and fields. The last successful website st
 
 ## New and status filters
 
-**New** uses the first Git commit that added each file, following renames. Files added within the last seven days appear in New. Editing a deadline or prize does not reset this date. The workflow uses `fetch-depth: 0` to retain history. Without Git, the build falls back to `addedAt`, then the build time.
+**New** uses the explicit `addedAt` recorded when a listing was imported; without this field, it uses the first Git commit that added the file (following renames), then the build time. Editing a deadline or prize does not reset this date. The workflow uses `fetch-depth: 0` to retain history.
 
 The browser compares addition dates and deadlines with the current time. No daily scheduled build is required for entries to leave New or expire. Exact timestamps close at their specified instant. Calendar-only deadlines close after the stated date in the configured timezone, without displaying a made-up cutoff time.
 
@@ -74,13 +74,15 @@ The default collection shows open entries. **Filters → Status** also offers up
 
 ## Ranking
 
-The homepage and default results sort by:
+The **default** is **Featured: top & recent**, which keeps opportunities from well-established organizers visible without leaving the same brands permanently at the top. It sorts by:
 
-1. Organizer `prestige`, descending, with companies and colleges on the same scale.
-2. Estimated USD prize value, descending.
-3. Soonest known deadline, then title.
+1. Curator-assigned organizer quality tier (95–100, 85–94, 70–84, below 70), regardless of opportunity category.
+2. Most recently added opportunity within the same tier.
+3. Organizer priority, estimated USD prize value, then soonest deadline and title.
 
-Organizer priorities are editable curator choices. Choose **Highest prizes**, **Closing soon** or **Newest added** to change the order. Prize pools and first prizes have separate labels. Currency comparison rates in settings are estimates; update them or specify `prize.usdEquivalent`.
+For **strict organizer priority**, select **Top companies & colleges** instead. Other options are **Highest prizes**, **Closing soon** and **Newest added**. No hackathon-only preference is applied in the Featured view. Organizer priority is an editable editorial value in `data/organizers.json`, **not an objective score or organizer endorsement**. Newly imported unfamiliar organizers may initially receive an unreviewed placeholder priority; set their score after review. The importer should not be assumed to recognize prestige automatically.
+
+`addedAt` in the opportunity file is the original curator-supplied addition time (so batch uploads do not give every item an identical Git timestamp). If it is missing, the build uses the first Git addition date, following renames, then build time. Editing a listing does not itself change its `addedAt`. The New tab uses a seven-day window.
 
 ## Features and local use
 
