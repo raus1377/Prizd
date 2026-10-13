@@ -1,59 +1,58 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtemp,mkdir,writeFile,readFile,readdir,rm} from 'node:fs/promises';
-import {tmpdir} from 'node:os';
+import { mkdtemp, mkdir, readFile, writeFile, copyFile, readdir, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { spawnSync } from 'node:child_process';
 import path from 'node:path';
-import {expired,syncOpportunities,researchToOpportunity} from '../scripts/sync.mjs';
+import { fileURLToPath } from 'node:url';
+const sourceRoot = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
+async function fixtureRoot() {
+  const dest = await mkdtemp(path.join(tmpdir(),'open-call-sync-'));
+  for(const folder of ['scripts','data','data/opportunities','data/archive','updates','updates/inbox']) await mkdir(path.join(dest,folder),{recursive:true});
+  for (const file of ['scripts/model.mjs','scripts/sync.mjs','data/settings.json','data/organizers.json']) await copyFile(path.join(sourceRoot,file),path.join(dest,file));
+  const record=JSON.parse(await readFile(path.join(sourceRoot,'data/opportunities/qhack-2026.json'),'utf8'));
+  const old={...record,id:'example-existing',deadline:'2099-11-04T19:00:00+05:30',addedAt:'2026-01-02T00:00:00Z'};
+  const expired={...old,id:'example-expired',deadline:'2020-01-01T19:00:00+05:30'};
+  await writeFile(path.join(dest,'data/opportunities/example-existing.json'),JSON.stringify(old,null,2)+'\n');
+  await writeFile(path.join(dest,'data/opportunities/example-expired.json'),JSON.stringify(expired,null,2)+'\n');
+  return dest;
+}
+const run=dir=>spawnSync(process.execPath,['scripts/sync.mjs'],{cwd:dir,encoding:'utf8'});
 
-const date = text => Date.parse(text);
-const settings={name:'Open Call',categories:['Hackathon','Case competition','Marketing','Research','Engineering'],newWindowDays:7,defaultSort:'prestige',prizeUsdRates:{USD:1}};
-const organizer={id:'old',name:'Example',kind:'Organization',prestige:50,monogram:'E',color:'#444444',website:'https://example.org'};
-const item=(id,title,deadline=null,more={})=>({id,title,category:'Hackathon',organizerId:'old',summary:'Build practical software',deadline,location:'Worldwide',format:'Online',eligibility:'Students',team:null,prize:{amount:null,currency:'USD',kind:'undisclosed',description:'Unconfirmed'},tags:[],url:`https://example.org/${id}`,entryStatus:'open',addedAt:'2026-10-01T00:00:00Z',...more});
-
-test('expiry respects timezone, exact timestamps, date-only, event-end fallback, unknown dates',()=>{
-  const now=date('2026-10-11T18:30:00Z');
-  assert.equal(expired(item('one','One','2026-10-11T18:29:00Z'),now),true);
-  assert.equal(expired(item('two','Two','2026-10-11T18:31:00Z'),now),false);
-  assert.equal(expired(item('three','Three',null,{deadlineDate:'2026-10-11',deadlineTimezone:'Asia/Kolkata'}),now),true);
-  assert.equal(expired(item('four','Four',null,{deadlineDate:'2026-10-11',deadlineTimezone:'Etc/GMT+12'}),now),false);
-  assert.equal(expired(item('five','Five',null,{eventEndDate:'2026-10-11'}),now),true);
-  assert.equal(expired(item('six','Six',null),now),false);
-  assert.equal(expired(item('seven','Seven',null,{entryStatus:'closed'}),now),true);
+test('Sync merges and creates organizers, removes processed inputs and archives expired listings', async () => {
+  const dest=await fixtureRoot();
+  try {
+    const upload={upsert:[
+      {id:'example-existing',summary:'Updated summary without replacing the original addition date.'},
+      {id:'new-example',title:'New Opportunity',category:'Hackathon',organizer:{name:'New Organizer',kind:'Company',website:'https://www.nasa.gov',prestige:52},url:'https://www.nasa.gov',deadline:'2099-10-30T09:15:00+05:30'}
+    ]};
+    await writeFile(path.join(dest,'updates/inbox/upload.json'),JSON.stringify(upload));
+    const done=run(dest);
+    assert.equal(done.status,0,done.stderr || done.stdout);
+    const updated=JSON.parse(await readFile(path.join(dest,'data/opportunities/example-existing.json'),'utf8'));
+    const created=JSON.parse(await readFile(path.join(dest,'data/opportunities/new-example.json'),'utf8'));
+    const organizer=JSON.parse(await readFile(path.join(dest,'data/organizers.json'),'utf8'));
+    assert.equal(updated.summary,upload.upsert[0].summary);
+    assert.equal(updated.addedAt,'2026-01-02T00:00:00Z');
+    assert.equal(created.entryStatus,'check');
+    assert.equal(created.deadline,'2099-10-30T09:15:00+05:30');
+    assert.ok(organizer.some(x=>x.id==='new-organizer'&&x.prestige===52));
+    assert.ok((await readdir(path.join(dest,'data/archive'))).includes('example-expired.json'));
+    assert.deepEqual(await readdir(path.join(dest,'updates/inbox')),[]);
+    assert.equal(run(dest).status,0,'Second run must be idempotent');
+  } finally { await rm(dest,{recursive:true,force:true}); }
 });
 
-test('sync imports native and sanitized research, skips duplicates, prunes expired, consumes uploads',async()=>{
-  const root=await mkdtemp(path.join(tmpdir(),'open-call-sync-'));
-  const mkdirs=async()=>{
-    await mkdir(path.join(root,'data/opportunities'),{recursive:true});await mkdir(path.join(root,'data/inbox'),{recursive:true});
-    await writeFile(path.join(root,'data/settings.json'),JSON.stringify(settings));
-    await writeFile(path.join(root,'data/organizers.json'),JSON.stringify([organizer]));
-  };
+test('Invalid input fails before writing or deleting the inbox file', async () => {
+  const dest=await fixtureRoot();
   try {
-    await mkdirs();
-    const old=item('old-event','Old event','2026-10-10T00:00:00Z');
-    const existing=item('same-event','Existing',null,{url:'https://example.org/existing'});
-    await writeFile(path.join(root,'data/opportunities/old-event.json'),JSON.stringify(old));
-    await writeFile(path.join(root,'data/opportunities/same-event.json'),JSON.stringify(existing));
-    const incoming=item('new-event','New event',null,{deadlineDate:'2026-10-20',deadlineTimezone:'Asia/Kolkata'});
-    const duplicate={id:'duplicate',name:'Existing',primary_url:'https://example.org/existing?utm_source=something',verification_status:'confirmed'};
-    const research={id:'research-thing',name:'Research thing',primary_url:'https://example.edu/event',verification_status:'unverified',details_from_source:'User studies at secret university and has a 6.8 CGPA'};
-    await writeFile(path.join(root,'data/inbox/batch.json'),JSON.stringify([incoming,duplicate,research]));
-    const at=date('2026-10-12T00:00:00Z');
-    const dry=await syncOpportunities({root,now:at,dryRun:true});
-    assert.deepEqual(dry.removedExpired,['Old event']);
-    assert.equal((await readdir(path.join(root,'data/inbox'))).length,1);
-    const report=await syncOpportunities({root,now:at});
-    assert.equal(report.imported.length,2);
-    assert.equal(report.duplicates.length,1);
-    assert.equal(report.removedExpired.length,1);
-    assert.equal((await readdir(path.join(root,'data/inbox'))).length,0);
-    const names=await readdir(path.join(root,'data/opportunities'));
-    assert.equal(names.includes('old-event.json'),false);
-    assert.equal(names.includes('new-event.json'),true);
-    const parsed=JSON.parse(await readFile(path.join(root,'data/opportunities/research-thing.json')));
-    assert.equal(parsed.entryStatus,'check');
-    assert.equal(parsed.deadline,null);
-    assert.ok(!JSON.stringify(parsed).includes('CGPA'));
-    assert.ok(!JSON.stringify(parsed).includes('secret university'));
-  } finally {await rm(root,{recursive:true,force:true});}
+    const target=path.join(dest,'data/opportunities/example-existing.json');
+    const original=await readFile(target,'utf8');
+    await writeFile(path.join(dest,'updates/inbox/bad.json'),JSON.stringify({id:'bad-event',title:'Bad Event',category:'Impossible',organizerId:'pennylane',url:'javascript:alert(1)'}));
+    const result=run(dest);
+    assert.notEqual(result.status,0);
+    assert.equal(await readFile(target,'utf8'),original);
+    assert.ok((await readdir(path.join(dest,'updates/inbox'))).includes('bad.json'));
+    assert.deepEqual(await readdir(path.join(dest,'data/archive')),[]);
+  } finally { await rm(dest,{recursive:true,force:true}); }
 });

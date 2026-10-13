@@ -4,7 +4,7 @@ A GitHub-ready opportunity board for hackathons, case competitions, product, fin
 
 The board contains the supplied competition listings. Card titles, featured picks and **Visit event** links open the event’s official page directly. **Details** shows the deadline, eligibility, reward breakdown and notes.
 
-**Daily maintenance is one JSON file per opportunity.** Add or edit a file in GitHub; the included workflow validates the data, rebuilds the site and publishes it to GitHub Pages. No database, API key or npm package installation is required.
+**New one-folder maintenance:** after the one-time upgrade, upload JSON, JSONL or structured text only into `updates/inbox/`. GitHub Actions imports changes, synchronizes organizer records, archives expired competitions, rebuilds the site and publishes it automatically. Read **[UPDATES_GUIDE.md](UPDATES_GUIDE.md)**. No database, API key or npm package installation is required.
 
 ## Publish on GitHub Pages
 
@@ -19,6 +19,9 @@ Every subsequent commit to `main` rebuilds and publishes the board automatically
 Official setup reference: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 
 ## Add or update opportunities
+
+**Preferred method: use `updates/inbox/` only.** See [UPDATES_GUIDE.md](UPDATES_GUIDE.md) for bulk upload, structured TXT and automatic expiry. The legacy manual process below still works for individual edits, but is no longer required.
+
 
 1. Copy `templates/opportunity.json`.
 2. In GitHub, open `data/opportunities/` → **Add file → Create new file**.
@@ -66,23 +69,21 @@ The workflow identifies invalid files and fields. The last successful website st
 
 ## New and status filters
 
-**New** uses the explicit `addedAt` recorded when a listing was imported; without this field, it uses the first Git commit that added the file (following renames), then the build time. Editing a deadline or prize does not reset this date. The workflow uses `fetch-depth: 0` to retain history.
+**New** uses the first Git commit that added each file, following renames. Files added within the last seven days appear in New. Editing a deadline or prize does not reset this date. The workflow uses `fetch-depth: 0` to retain history. Without Git, the build falls back to `addedAt`, then the build time.
 
-The browser compares addition dates and deadlines with the current time. No daily scheduled build is required for entries to leave New or expire. Exact timestamps close at their specified instant. Calendar-only deadlines close after the stated date in the configured timezone, without displaying a made-up cutoff time.
+The browser compares addition dates and deadlines with the current time. The scheduled GitHub Action additionally archives expired catalog entries every day. Exact timestamps close at their specified instant. Calendar-only deadlines close after the stated date in the configured timezone, without displaying a made-up cutoff time.
 
-The default collection shows open entries. **Filters → Status** also offers upcoming entries, entries whose terms need checking, past/closed entries and all statuses. Saved listings remain accessible after their deadlines. Uncertain eligibility is preserved in the listing’s notes.
+The default collection shows open entries. **Filters → Status** also offers upcoming entries, entries whose terms need checking, past/closed entries and all statuses. The automated daily sync archives expired listings; saved links to archived items will no longer appear in the active board. Uncertain eligibility is preserved in the listing’s notes.
 
 ## Ranking
 
-The **default** is **Featured: top & recent**, which keeps opportunities from well-established organizers visible without leaving the same brands permanently at the top. It sorts by:
+The homepage and default results sort by:
 
-1. Curator-assigned organizer quality tier (95–100, 85–94, 70–84, below 70), regardless of opportunity category.
-2. Most recently added opportunity within the same tier.
-3. Organizer priority, estimated USD prize value, then soonest deadline and title.
+1. Organizer `prestige`, descending, with companies and colleges on the same scale.
+2. Estimated USD prize value, descending.
+3. Soonest known deadline, then title.
 
-For **strict organizer priority**, select **Top companies & colleges** instead. Other options are **Highest prizes**, **Closing soon** and **Newest added**. No hackathon-only preference is applied in the Featured view. Organizer priority is an editable editorial value in `data/organizers.json`, **not an objective score or organizer endorsement**. Newly imported unfamiliar organizers may initially receive an unreviewed placeholder priority; set their score after review. The importer should not be assumed to recognize prestige automatically.
-
-`addedAt` in the opportunity file is the original curator-supplied addition time (so batch uploads do not give every item an identical Git timestamp). If it is missing, the build uses the first Git addition date, following renames, then build time. Editing a listing does not itself change its `addedAt`. The New tab uses a seven-day window.
+Organizer priorities are editable curator choices. Choose **Highest prizes**, **Closing soon** or **Newest added** to change the order. Prize pools and first prizes have separate labels. Currency comparison rates in settings are estimates; update them or specify `prize.usdEquivalent`.
 
 ## Features and local use
 
@@ -92,7 +93,7 @@ For **strict organizer priority**, select **Top companies & colleges** instead. 
 - Saved shortlists in the visitor’s browser and shareable opportunity-detail links.
 - Mobile layouts, keyboard focus, accessible dialogs and reduced-motion support.
 
-The glass forms are built in code. Shortlists are specific to the browser/device. You maintain the daily listing files; the site does not gather opportunities automatically.
+The glass forms are built in code. Shortlists are specific to the browser/device. You upload verified incoming listings to `updates/inbox/`; the site does not discover new opportunities automatically.
 
 Install Node.js 22 or newer, then run:
 
@@ -114,7 +115,10 @@ npm test
 
 | Path | Purpose |
 | --- | --- |
-| `data/opportunities/*.json` | Daily opportunity files |
+| `updates/inbox/` | **Only folder you edit routinely**: add/update/remove inputs |
+| `scripts/sync.mjs` | Inbox import, organizer sync, validation and expiry archive |
+| `data/archive/` | Previously active, expired or manually removed listings |
+| `data/opportunities/*.json` | Generated/synchronized active opportunity files |
 | `data/organizers.json` | Organizer names, types and ranking priorities |
 | `data/settings.json` | Categories, New window and prize comparison rates |
 | `templates/opportunity.json` | Copyable listing template |
@@ -125,39 +129,3 @@ npm test
 | `dist/` | Ready-to-view build, regenerated by the workflow |
 
 Syntax, build and behavior checks are included. Browser-based visual verification was unavailable for this update.
-
-## Bulk upload + automatic expiry (October 2026 update)
-
-**Use `data/inbox/` as the upload folder, not `data/opportunities/`.**
-You can upload several `.json` files at once or a JSON array saved as one `.json` file.
-This importer accepts both the full website-format records and the brief research-format
-records (`name`, `primary_url`, `verification_status`, etc.). Do not upload ZIP files directly.
-
-1. In GitHub, go to `data/inbox/` and choose **Add file → Upload files**. Upload all new `.json` files and commit to the `main` branch. You can also clone the repository and copy the JSONs into this folder using Git.
-2. `.github/workflows/pages.yml` runs **npm run sync** on each main-branch push, on manual dispatch, and every day at about **07:00 IST** (GitHub Actions scheduling is not exact).
-3. The sync merges non-duplicate opportunities, adds unknown organizers with neutral ranking, permanently deletes past-deadline files and consumes the uploaded inbox files. A bot commit records these changes.
-4. The **same workflow run** validates, builds and deploys `dist/` to Pages. A push made by `GITHUB_TOKEN` will not initiate another workflow, so the publish step must stay in this workflow.
-5. See **Actions → Build and publish opportunity board** for errors, and inspect `data/opportunities/` after a successful run.
-
-For updates to an existing event, upload a **full website-format JSON** with the matching `id`, title or event URL. It replaces the matching record, retaining the existing ID and original addition date. Brief research-format duplicates are skipped to avoid overwriting curated fields.
-
-**Expiry policy:** A known timestamp expires at the exact instant. A date-only deadline expires *after that calendar date* in `deadlineTimezone` (default `Asia/Kolkata`). If there is no deadline but a confirmed `eventEndDate`, the listing expires after the event end date in `eventTimezone` (default `Asia/Kolkata`). Explicitly `closed` entries are removed. If no end or deadline can be established, the listing is **not** deleted automatically: edit it when verified. The importer never fabricates a cutoff.
-
-**Research JSON conversion is intentionally conservative:** bare research records become `entryStatus: "check"`, with `deadline: null` and generic eligibility/reward text. They will appear under the **Check entry** filter until the real deadline, prize and other facts are supplied using the website-format JSON fields. Free-text source reports and personal assessments are not copied into published records. Records explicitly marked `excluded_or_restricted` are not imported.
-
-The additional `open.yml` workflow you already have on GitHub is **not included and is not edited**. If it also deploys GitHub Pages, keep only one workflow responsible for publishing; otherwise two deployments might race. Ensure GitHub Actions has permission to push its bot-maintenance commits (check branch protection if it fails).
-
-Local preview without making changes:
-
-```sh
-npm run sync:check
-```
-
-Run the import and purge for real, then test and build:
-
-```sh
-npm run sync
-npm run check
-npm test
-npm run build
-```
