@@ -2,6 +2,8 @@
  * Idempotent OPEN CALL inbox ingestion and expiration maintenance.
  * No API keys or dependencies. Reads ONLY updates/inbox and existing catalog.
  * Fail-closed: all incoming records are parsed and validated before any writes.
+ * Existing listings are archived ONLY after their verified deadline has passed.
+ * Missing organizer references are repaired with provisional organizer records.
  */
 import { readFile, readdir, mkdir, writeFile, unlink } from 'node:fs/promises';
 import path from 'node:path';
@@ -17,7 +19,6 @@ const runAt = new Date();
 const now = runAt.toISOString();
 const defaultColor = '#242424';
 const slug = text => String(text).toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-const asList = value => Array.isArray(value) ? value : [value];
 const isObject = value => value && typeof value === 'object' && !Array.isArray(value);
 const readJson = async (...parts) => JSON.parse(await readFile(location(...parts),'utf8'));
 const organizerList = await readJson('data','organizers.json');
@@ -98,6 +99,32 @@ for (const file of (await readdir(INBOX)).sort()) {
   processed.push(filePath);
 }
 
+// A catalog entry may refer to an organizer that has not yet been added to
+// data/organizers.json. Create a conservative provisional record instead of
+// failing the whole daily sync. Prefer explicitly supplied metadata when known.
+function provisionalOrganizerName(id) {
+  const parts = String(id).replace(/^custom-/, '').split('-').filter(Boolean);
+  return parts.map(word => word.toLowerCase() === 'iit' ? 'IIT'
+    : word.toLowerCase() === 'mit' ? 'MIT'
+    : word.toLowerCase() === 'ieee' ? 'IEEE'
+    : word.charAt(0).toUpperCase() + word.slice(1)).join(' ') || id;
+}
+function ensureOrganizer(id, opportunity, supplied = {}) {
+  if (organizers.has(id)) return;
+  if (typeof id !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) {
+    throw Error(`Invalid organizerId for ${opportunity.id ?? opportunity.title}: ${id}`);
+  }
+  const name = supplied.name || opportunity.organizerName || provisionalOrganizerName(id);
+  const website = supplied.website || opportunity.organizerWebsite || opportunity.url;
+  // Invalid URLs remain fatal during validation; no invented website links.
+  const created = {
+    id, name, kind:supplied.kind || 'Organization', prestige:40,
+    monogram:String(name).slice(0,2).toUpperCase(), color:defaultColor, website
+  };
+  organizers.set(id,created);
+  console.warn(`Registered missing organizer ${id} as provisional "${name}"; verify its name, website and ranking when convenient.`);
+}
+
 function resolveOrganizer(input, record) {
   // Existing organizerId wins; can optionally supply extra metadata in the same record.
   const spec = isObject(input.organizer) ? input.organizer : {};
@@ -107,15 +134,16 @@ function resolveOrganizer(input, record) {
   if(!id) throw Error(`${input.title || input.id || 'New listing'}: provide organizerId or organizerName`);
   if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) throw Error(`Invalid organizer id: ${id}`);
   const previous = organizers.get(id);
-  if(!previous && !name) throw Error(`New organizer ${id}: include organizerName (or organizer object with name)`);
-  const url = input.organizerWebsite ?? spec.website ?? previous?.website ?? input.url ?? record?.url;
-  const kind = input.organizerKind ?? spec.kind ?? previous?.kind ?? 'Organization';
-  const prestige = input.organizerPrestige ?? spec.prestige ?? previous?.prestige ?? 40;
-  const label = (input.organizerName || (isObject(input.organizer) && input.organizer.name)) ?? previous?.name ?? name;
+  if(!previous && !name) ensureOrganizer(id, {...record, ...input}, spec);
+  const existing = organizers.get(id);
+  const url = input.organizerWebsite ?? spec.website ?? existing?.website ?? input.url ?? record?.url;
+  const kind = input.organizerKind ?? spec.kind ?? existing?.kind ?? 'Organization';
+  const prestige = input.organizerPrestige ?? spec.prestige ?? existing?.prestige ?? 40;
+  const label = (input.organizerName || (isObject(input.organizer) && input.organizer.name)) ?? existing?.name ?? name;
   const updated = {
-    ...(previous||{}), id, name:label, kind, prestige, 
-    monogram:spec.monogram ?? previous?.monogram ?? String(label).slice(0,2).toUpperCase(),
-    color:spec.color ?? previous?.color ?? defaultColor,
+    ...(existing||{}), id, name:label, kind, prestige, 
+    monogram:spec.monogram ?? existing?.monogram ?? String(label).slice(0,2).toUpperCase(),
+    color:spec.color ?? existing?.color ?? defaultColor,
     website:url
   };
   organizers.set(id,updated);
@@ -146,11 +174,9 @@ function upsert(input) {
 }
 for (const entry of upserts) upsert(entry);
 
-// Deletion is explicit by immutable ID, not by fuzzy title.
-for (const id of removals) {
-  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) throw Error(`Invalid removal ID: ${id}`);
-  records.delete(id);
-}
+// User policy: the only reason to archive a listing is an elapsed deadline.
+// Ignore legacy .remove/remove.txt commands rather than deleting active data.
+if (removals.length) console.warn(`Ignored ${removals.length} removal instruction(s); listings are archived only after their deadlines pass.`);
 
 function localDay(date,zone) {
   const parts = new Intl.DateTimeFormat('en-GB',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date);
@@ -158,7 +184,6 @@ function localDay(date,zone) {
   return `${obj.year}-${obj.month}-${obj.day}`;
 }
 function expired(o) {
-  if(o.entryStatus === 'closed') return true;
   if(o.deadline) return validDate(o.deadline) && Date.parse(o.deadline) <= runAt.getTime();
   if(o.deadlineDate) return localDay(runAt,o.deadlineTimezone ?? 'Asia/Kolkata') > o.deadlineDate;
   return false;
@@ -196,6 +221,14 @@ function reconcileSecondaryCategories(item) {
   }
 }
 
+// Repair stale organizer references in all PRE-EXISTING catalog records too.
+// This also handles runs with an empty updates/inbox/ directory.
+for (const item of records.values()) {
+  if (item.organizerId && !organizers.has(item.organizerId)) {
+    ensureOrganizer(item.organizerId, item);
+  }
+}
+
 // Validate entire target state before mutating disk.
 const completeOrganizers = [...organizers.values()];
 validateSettings(settings,completeOrganizers);
@@ -217,13 +250,6 @@ for(const id of archiveIds) {
   await writeChanged(path.join(ARCHIVE,`${id}.json`),JSON.stringify(item,null,2)+'\n');
   records.delete(id);
 }
-// Explicit removals are also archived instead of lost permanently.
-for (const id of removals) {
-  if(stored.has(id) && !archiveIds.includes(id)) {
-    const original=await readJson('data','opportunities',stored.get(id));
-    await writeChanged(path.join(ARCHIVE,`${id}.json`),JSON.stringify(original,null,2)+'\n');
-  }
-}
 await writeChanged(location('data','organizers.json'),JSON.stringify(completeOrganizers,null,2)+'\n');
 for(const [id,item] of records) {
   const filename=stored.get(id) ?? `${id}.json`;
@@ -236,4 +262,4 @@ for(const [id,file] of stored) {
   if(!records.has(id)) { await unlink(path.join(LIVE,file));changed++; }
 }
 for(const file of processed) await unlink(file);
-console.log(`Inbox: ${processed.length} files; upserts: ${upserts.length}; explicit removals: ${removals.length}; expired: ${archiveIds.length}; modified files: ${changed}.`);
+console.log(`Inbox: ${processed.length} files; upserts: ${upserts.length}; ignored removals: ${removals.length}; expired: ${archiveIds.length}; modified files: ${changed}.`);
