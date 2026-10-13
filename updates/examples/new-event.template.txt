@@ -1,0 +1,21 @@
+# TEMPLATE ONLY: Copy and edit this file before using in updates/inbox.
+Title: Your verified opportunity name 2026
+Category: Hackathon
+Organizer: Verified organizer name
+Organizer Kind: Organization
+Organizer Website: https://example.org
+Organizer Prestige: 40
+Summary: What applicants will do and submit, verified from the official page.
+Deadline: unknown
+Location: Worldwide
+Format: To confirm
+Eligibility: Eligibility is not confirmed; check the official rules.
+Team Min: 1
+Team Max: unknown
+Prize Amount: unknown
+Prize Currency: USD
+Prize Kind: undisclosed
+Prize Description: Rewards have not been confirmed.
+Tags: AI, Software
+URL: https://example.org
+Entry Status: check

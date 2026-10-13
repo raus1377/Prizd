@@ -1,148 +1,206 @@
 /**
- * Import JSON uploads from data/inbox and permanently remove expired listings.
- * Run: node scripts/sync.mjs [--dry-run]
- * Supports complete OPEN CALL opportunity JSON or conservative research records.
- * No third-party dependencies, API keys or external requests.
+ * Idempotent OPEN CALL inbox ingestion and expiration maintenance.
+ * No API keys or dependencies. Reads ONLY updates/inbox and existing catalog.
+ * Fail-closed: all incoming records are parsed and validated before any writes.
  */
-import { readFile, readdir, mkdir, writeFile, rm } from 'node:fs/promises';
+import { readFile, readdir, mkdir, writeFile, unlink } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { validateSettings, validateOpportunity } from './model.mjs';
+import { validateSettings, validateOpportunity, validDate } from './model.mjs';
 
-const defaultRoot = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
-const safeSlug = input => String(input || '').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0, 100);
-const canonicalUrl = input => {
-  try {
-    const u = new URL(input);
-    if (!['https:','http:'].includes(u.protocol)) return '';
-    const host = u.hostname.toLowerCase().replace(/^www\./, '');
-    let pathname = decodeURI(u.pathname).toLowerCase().replace(/\/+$/, '') || '/';
-    return `${host}${pathname}`;
-  } catch { return ''; }
+const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
+const location = (...parts) => path.join(root, ...parts);
+const INBOX = location('updates','inbox');
+const LIVE = location('data','opportunities');
+const ARCHIVE = location('data','archive');
+const runAt = new Date();
+const now = runAt.toISOString();
+const defaultColor = '#242424';
+const slug = text => String(text).toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const asList = value => Array.isArray(value) ? value : [value];
+const isObject = value => value && typeof value === 'object' && !Array.isArray(value);
+const readJson = async (...parts) => JSON.parse(await readFile(location(...parts),'utf8'));
+const organizerList = await readJson('data','organizers.json');
+const settings = await readJson('data','settings.json');
+validateSettings(settings, organizerList);
+const organizers = new Map(organizerList.map(x => [x.id, {...x}]));
+const stored = new Map();
+const records = new Map();
+const allFiles = (await readdir(LIVE)).filter(f => f.endsWith('.json')).sort();
+for (const file of allFiles) {
+  const o = await readJson('data','opportunities',file);
+  if (records.has(o.id)) throw Error(`Existing duplicate id: ${o.id}`);
+  stored.set(o.id,file);records.set(o.id,o);
+}
+
+// Structured TXT format supports repeated "Key: value" blocks separated by ---.
+const convertValue = (key, value) => {
+  if (['deadline','deadlineDate','opensOn','sourceUrl'].includes(key) && /^(unknown|none|null)$/i.test(value)) return null;
+  if (key === 'tags' || key === 'notes' || key === 'categories') return value.split(',').map(x => x.trim()).filter(Boolean);
+  if (['teamMin','teamMax','prizeAmount','organizerPrestige'].includes(key)) return /^(none|unknown|null)$/i.test(value) ? null : Number(value);
+  return value;
 };
-const normalizeTitle = input => String(input || '').normalize('NFKD').toLowerCase().replace(/[^a-z0-9]/g, '');
-const dateInZone = (now, zone) => {
-  const parts = new Intl.DateTimeFormat('en-US', {timeZone:zone, year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now);
-  return ['year','month','day'].map(key => parts.find(x=>x.type===key).value).join('-');
+const txtKeys = {
+  id:'id',title:'title',category:'category',summary:'summary',deadline:'deadline',
+  deadlinedate:'deadlineDate',deadlinetimezone:'deadlineTimezone',deadlinelabel:'deadlineLabel',
+  location:'location',format:'format',eligibility:'eligibility',url:'url',sourceurl:'sourceUrl',
+  entrystatus:'entryStatus',openson:'opensOn',tags:'tags',notes:'notes',categories:'categories',
+  organizer:'organizer',organizerid:'organizerId',organizername:'organizerName',
+  organizerkind:'organizerKind',organizerwebsite:'organizerWebsite',organizerprestige:'organizerPrestige',
+  teammin:'teamMin',teammax:'teamMax',teamtext:'teamText',
+  prizeamount:'prizeAmount',prizecurrency:'prizeCurrency',prizekind:'prizeKind',prizedescription:'prizeDescription'
 };
-export function expired(o, now=Date.now()) {
-  if (o.entryStatus === 'closed') return true;
-  if (o.deadline && Date.parse(o.deadline) <= now) return true;
-  if (o.deadlineDate && dateInZone(now, o.deadlineTimezone || 'Asia/Kolkata') > o.deadlineDate) return true;
-  // When no deadline was supplied, a documented event end can be used as a fallback.
-  if (!o.deadline && !o.deadlineDate && o.eventEndDate && dateInZone(now, o.eventTimezone || 'Asia/Kolkata') > o.eventEndDate) return true;
+function parseStructuredText(text, source) {
+  const blocks = text.split(/^\s*---\s*$/m).map(x => x.trim()).filter(Boolean);
+  return blocks.map((block,index) => {
+    const record = {};
+    for(const line of block.split(/\r?\n/)) {
+      if (!line.trim() || line.trim().startsWith('#')) continue;
+      const match = line.match(/^\s*([^:=]+?)\s*[:=]\s*(.*?)\s*$/);
+      if(!match) throw Error(`${source} block ${index+1}: expected Key: value, got ${line}`);
+      const mapped = txtKeys[match[1].toLowerCase().replace(/[^a-z]/g,'')];
+      if(!mapped) throw Error(`${source} block ${index+1}: unknown field ${match[1]}`);
+      record[mapped] = convertValue(mapped,match[2]);
+    }
+    return record;
+  });
+}
+function unpackJson(data, source) {
+  if (Array.isArray(data)) return {upsert:data, remove:[]};
+  if (!isObject(data)) throw Error(`${source}: expected JSON object or array`);
+  if ('upsert' in data || 'remove' in data) {
+    const add = data.upsert ?? [];
+    const remove = data.remove ?? [];
+    if(!Array.isArray(add) || !Array.isArray(remove)) throw Error(`${source}: upsert and remove must be arrays`);
+    return {upsert:add,remove};
+  }
+  return {upsert:[data],remove:[]};
+}
+const upserts = [];
+const removals = [];
+const processed = [];
+for (const file of (await readdir(INBOX)).sort()) {
+  if (file.startsWith('.') || file === 'README.md') continue;
+  const filePath = path.join(INBOX,file);
+  const text = await readFile(filePath,'utf8');
+  if (file.endsWith('.remove') || file === 'remove.txt') {
+    removals.push(...text.split(/\r?\n/).map(x => x.trim()).filter(x=>x && !x.startsWith('#')));
+  } else if (file.endsWith('.json')) {
+    const batch = unpackJson(JSON.parse(text),file);upserts.push(...batch.upsert);removals.push(...batch.remove);
+  } else if (file.endsWith('.jsonl')) {
+    for(const [n,line] of text.split(/\r?\n/).entries()) {
+      if(!line.trim()) continue;
+      const batch = unpackJson(JSON.parse(line),`${file}:${n+1}`);upserts.push(...batch.upsert);removals.push(...batch.remove);
+    }
+  } else if (file.endsWith('.txt')) {
+    upserts.push(...parseStructuredText(text,file));
+  } else throw Error(`Unsupported file updates/inbox/${file}. Supported: .json, .jsonl, structured .txt, .remove`);
+  processed.push(filePath);
+}
+
+function resolveOrganizer(input, record) {
+  // Existing organizerId wins; can optionally supply extra metadata in the same record.
+  const spec = isObject(input.organizer) ? input.organizer : {};
+  const name = input.organizerName ?? (typeof input.organizer === 'string' ? input.organizer : spec.name);
+  const namedMatch = name ? [...organizers.values()].find(x => slug(x.name) === slug(name)) : null;
+  const id = input.organizerId || spec.id || namedMatch?.id || (name ? slug(name) : record?.organizerId);
+  if(!id) throw Error(`${input.title || input.id || 'New listing'}: provide organizerId or organizerName`);
+  if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) throw Error(`Invalid organizer id: ${id}`);
+  const previous = organizers.get(id);
+  if(!previous && !name) throw Error(`New organizer ${id}: include organizerName (or organizer object with name)`);
+  const url = input.organizerWebsite ?? spec.website ?? previous?.website ?? input.url ?? record?.url;
+  const kind = input.organizerKind ?? spec.kind ?? previous?.kind ?? 'Organization';
+  const prestige = input.organizerPrestige ?? spec.prestige ?? previous?.prestige ?? 40;
+  const label = (input.organizerName || (isObject(input.organizer) && input.organizer.name)) ?? previous?.name ?? name;
+  const updated = {
+    ...(previous||{}), id, name:label, kind, prestige, 
+    monogram:spec.monogram ?? previous?.monogram ?? String(label).slice(0,2).toUpperCase(),
+    color:spec.color ?? previous?.color ?? defaultColor,
+    website:url
+  };
+  organizers.set(id,updated);
+  return id;
+}
+function upsert(input) {
+  if (!isObject(input)) throw Error('Each upsert must be an object');
+  const inputId = input.id || (input.title ? slug(input.title) : null);
+  if(!inputId) throw Error('Upsert needs id or title');
+  const old = records.get(inputId);
+  const organizerId = resolveOrganizer(input,old);
+  const overrides = {...input};
+  for (const key of ['organizer','organizerName','organizerKind','organizerWebsite','organizerPrestige','teamMin','teamMax','prizeAmount','prizeCurrency','prizeKind','prizeDescription']) delete overrides[key];
+  const team = input.team !== undefined ? input.team : input.teamMin !== undefined || input.teamMax !== undefined ? {min:input.teamMin ?? old?.team?.min ?? 1, max:input.teamMax ?? old?.team?.max ?? null} : old?.team ?? null;
+  const prize = {
+    ...(old?.prize ?? {amount:null,currency:'USD',kind:'undisclosed',description:'Prize information has not been verified.'}),
+    ...(input.prize ?? {})
+  };
+  for(const [key,to] of [['prizeAmount','amount'],['prizeCurrency','currency'],['prizeKind','kind'],['prizeDescription','description']]) if(input[key] !== undefined) prize[to] = input[key];
+  const data = {
+    ...(!old ? {id:inputId,summary:'Details not yet verified.',deadline:null,location:'Not specified',format:'To confirm',eligibility:'Check official eligibility requirements.',tags:[],entryStatus:'check'} : old),
+    ...overrides,id:inputId,organizerId,team,prize,
+    // A correction must not masquerade as a newly added event.
+    addedAt: old?.addedAt ?? input.addedAt ?? now
+  };
+  if(input.deadlineDate !== undefined && input.deadline === undefined && !old) data.deadline = null;
+  records.set(data.id,data);
+}
+for (const entry of upserts) upsert(entry);
+
+// Deletion is explicit by immutable ID, not by fuzzy title.
+for (const id of removals) {
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) throw Error(`Invalid removal ID: ${id}`);
+  records.delete(id);
+}
+
+function localDay(date,zone) {
+  const parts = new Intl.DateTimeFormat('en-GB',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date);
+  const obj = Object.fromEntries(parts.map(p=>[p.type,p.value]));
+  return `${obj.year}-${obj.month}-${obj.day}`;
+}
+function expired(o) {
+  if(o.entryStatus === 'closed') return true;
+  if(o.deadline) return validDate(o.deadline) && Date.parse(o.deadline) <= runAt.getTime();
+  if(o.deadlineDate) return localDay(runAt,o.deadlineTimezone ?? 'Asia/Kolkata') > o.deadlineDate;
   return false;
 }
-const readJson = async file => JSON.parse(await readFile(file,'utf8'));
-const websiteUrl = input => {
-  const candidates = [input.primary_url, ...(input.official_and_reference_urls || [])].filter(Boolean);
-  return candidates.find(x=>{try {let h=new URL(x).hostname.toLowerCase();return !/linkedin\.com$|facebook\.com$|instagram\.com$/.test(h) && !x.includes('.pdf')}catch{return false}})
-    || candidates.find(x=>{try {return /^https?:$/.test(new URL(x).protocol)}catch{return false}}) || null;
-};
-// Unstructured research files do not reliably encode dates, prizes or entry criteria.
-// Keep these as CHECK records rather than manufacture missing fields.
-export function researchToOpportunity(raw) {
-  const title = String(raw.name || '').trim();
-  const id = safeSlug(raw.id || title);
-  const url = websiteUrl(raw);
-  if (!id || !title || !url) throw new Error('Research record requires name, id and an official HTTP(S) URL');
-  const host = new URL(url).hostname.toLowerCase().replace(/^www\./,'');
-  const isCase = /case competition|case league|stock pitch|business simulation/i.test(title);
-  const isResearch = /internship|studentship|fellowship|research program/i.test(title);
-  const category = isResearch ? 'Research' : isCase ? 'Case competition' : /ad competition|catchiest ad|marketing/i.test(title) ? 'Marketing' : 'Hackathon';
-  return {
-    id, title, category, organizerId: `import-${safeSlug(host).slice(0,65)}`,
-    summary: 'Opportunity details are available from the linked event organizer. Check the official rules before applying.',
-    deadline: null, location:'To confirm', format:'To confirm',
-    eligibility:'See the official rules for participation and location restrictions.',
-    team:null, prize:{amount:null,currency:'USD',kind:'undisclosed',description:'Award details require verification.'},
-    tags:[category], url, entryStatus:'check',
-    notes:['Imported from a research summary. Deadline, eligibility and rewards need structured confirmation before it can be marked open.'],
-    // Store only neutral event metadata. Do NOT copy source-report prose or personal assessments.
-    _organizer:{id:`import-${safeSlug(host).slice(0,65)}`,name:host,kind:'Organization',prestige:50,monogram:host.slice(0,2).toUpperCase(),color:'#444444',website:`https://${host}`}
-  };
+
+// Validate entire target state before mutating disk.
+const completeOrganizers = [...organizers.values()];
+validateSettings(settings,completeOrganizers);
+const archiveIds = [];
+for(const [id,item] of records) {
+  validateOpportunity(item,`listing ${id}`,settings,completeOrganizers);
+  if(expired(item)) archiveIds.push(id);
 }
-export async function syncOpportunities({root=defaultRoot,now=Date.now(),dryRun=false}={}) {
-  const dir=path.join(root,'data','opportunities');
-  const inbox=path.join(root,'data','inbox');
-  await mkdir(inbox,{recursive:true});
-  await mkdir(dir,{recursive:true});
-  const settings=await readJson(path.join(root,'data/settings.json'));
-  const organizers=await readJson(path.join(root,'data/organizers.json'));
-  validateSettings(settings,organizers);
-  const organizerById=new Map(organizers.map(x=>[x.id,x]));
-  const tracked=new Map();
-  const byId=new Map(),byTitle=new Map(),byUrl=new Map();
-  const index = (file, opportunity) => {
-    tracked.set(file,opportunity);
-    byId.set(opportunity.id,file);
-    byTitle.set(normalizeTitle(opportunity.title),file);
-    byUrl.set(canonicalUrl(opportunity.url),file);
-  };
-  for(const name of (await readdir(dir)).filter(x=>x.endsWith('.json')).sort()) {
-    const file=path.join(dir,name);const obj=await readJson(file);
-    validateOpportunity(obj,name,settings,organizers);
-    index(file,obj);
-  }
-  const report={imported:[],updated:[],duplicates:[],skippedRestricted:[],removedExpired:[],reviewNeeded:[],consumedInbox:[],dryRun};
-  const uploads=(await readdir(inbox)).filter(x=>x.endsWith('.json') && x!=='index.json').sort();
-  const pendingWrites=new Map();
-  let organizersChanged=false;
-  for(const name of uploads) {
-    const incoming=path.join(inbox,name);
-    const object=await readJson(incoming);
-    const batch=Array.isArray(object)?object:[object];
-    for (const raw of batch) {
-      if (raw.verification_status === 'excluded_or_restricted') {report.skippedRestricted.push(raw.name||raw.id);continue;}
-      const isNative=typeof raw.title === 'string' && raw.organizerId;
-      const opportunity=isNative?{...raw}:researchToOpportunity(raw);
-      const newOrganizer=opportunity._organizer;
-      delete opportunity._organizer;
-      const key=byId.get(opportunity.id) || byTitle.get(normalizeTitle(opportunity.title)) || byUrl.get(canonicalUrl(opportunity.url));
-      if (key && !isNative) {
-        report.duplicates.push(opportunity.title);
-        continue;
-      }
-      if (newOrganizer && !organizerById.has(newOrganizer.id)) {
-        organizerById.set(newOrganizer.id,newOrganizer);
-        organizers.push(newOrganizer);
-        organizersChanged=true;
-      }
-      // A native-format upload may update an existing record. Preserve its stable id and addition date.
-      if(key) {
-        const previous=tracked.get(key);
-        opportunity.id=previous.id;
-        if(previous.addedAt) opportunity.addedAt=previous.addedAt;
-      }
-      if (!organizerById.has(opportunity.organizerId)) throw new Error(`${name}: unknown organizerId ${opportunity.organizerId}; add it to data/organizers.json`);
-      if (!opportunity.addedAt) opportunity.addedAt=new Date(now).toISOString();
-      validateOpportunity(opportunity,name,settings,organizers);
-      const target=key || path.join(dir, `${opportunity.id}.json`);
-      // Detect collisions between different records when two files share an ID.
-      if(!key && tracked.has(target)) throw new Error(`${name}: filename collision ${target}`);
-      pendingWrites.set(target,opportunity);
-      index(target,opportunity);
-      report[key?'updated':'imported'].push(opportunity.title);
-      if (opportunity.entryStatus==='check') report.reviewNeeded.push(opportunity.title);
-    }
-    report.consumedInbox.push(name);
-  }
-  for (const [file,obj] of tracked) {
-    if(expired(obj,now)) {
-      report.removedExpired.push(obj.title);
-      pendingWrites.delete(file);
-    }
-  }
-  if(!dryRun) {
-    if(organizersChanged) await writeFile(path.join(root,'data/organizers.json'),JSON.stringify(organizers,null,2)+'\n');
-    for(const [file,obj] of pendingWrites) if(!expired(obj,now)) await writeFile(file,JSON.stringify(obj,null,2)+'\n');
-    for (const [file,obj] of tracked) if(expired(obj,now)) await rm(file,{force:true});
-    for(const name of report.consumedInbox) await rm(path.join(inbox,name),{force:true});
-  }
-  return report;
+await mkdir(ARCHIVE,{recursive:true});
+let changed=0;
+async function writeChanged(file,content) {
+  let existing=null;
+  try { existing=await readFile(file,'utf8'); } catch(error) { if(error.code !== 'ENOENT') throw error; }
+  if(existing !== content) { await writeFile(file,content);changed++; }
 }
-if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
-  const dryRun=process.argv.includes('--dry-run');
-  const report=await syncOpportunities({dryRun});
-  console.log(JSON.stringify({counts:Object.fromEntries(Object.entries(report).filter(([,v])=>Array.isArray(v)).map(([k,v])=>[k,v.length])),...report},null,2));
+for(const id of archiveIds) {
+  const item = records.get(id);
+  await writeChanged(path.join(ARCHIVE,`${id}.json`),JSON.stringify(item,null,2)+'\n');
+  records.delete(id);
 }
+// Explicit removals are also archived instead of lost permanently.
+for (const id of removals) {
+  if(stored.has(id) && !archiveIds.includes(id)) {
+    const original=await readJson('data','opportunities',stored.get(id));
+    await writeChanged(path.join(ARCHIVE,`${id}.json`),JSON.stringify(original,null,2)+'\n');
+  }
+}
+await writeChanged(location('data','organizers.json'),JSON.stringify(completeOrganizers,null,2)+'\n');
+for(const [id,item] of records) {
+  const filename=stored.get(id) ?? `${id}.json`;
+  await writeChanged(path.join(LIVE,filename),JSON.stringify(item,null,2)+'\n');
+  // Returning an archived opportunity makes it active again.
+  const archiveFile=path.join(ARCHIVE,`${id}.json`);
+  try { await unlink(archiveFile);changed++; } catch(e) { if(e.code !== 'ENOENT') throw e; }
+}
+for(const [id,file] of stored) {
+  if(!records.has(id)) { await unlink(path.join(LIVE,file));changed++; }
+}
+for(const file of processed) await unlink(file);
+console.log(`Inbox: ${processed.length} files; upserts: ${upserts.length}; explicit removals: ${removals.length}; expired: ${archiveIds.length}; modified files: ${changed}.`);
