@@ -754,5 +754,23 @@
     "monogram": "X",
     "color": "#444444",
     "website": "https://xyleminnovationchallenge.bemyapp.com/"
+  },
+  {
+    "id": "custom-max-planck-institutes",
+    "name": "Max Planck Institutes",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "MA",
+    "color": "#242424",
+    "website": "https://www.cis.mpg.de/internships/"
+  },
+  {
+    "id": "custom-indian-science-academies",
+    "name": "Indian Science Academies",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "IN",
+    "color": "#242424",
+    "website": "https://webjapps.ias.ac.in/fellowship2027/index.html"
   }
 ]
