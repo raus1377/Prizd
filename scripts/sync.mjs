@@ -164,11 +164,44 @@ function expired(o) {
   return false;
 }
 
+// Non-critical, free-form secondary categories must never stop the entire
+// publishing pipeline. Canonicalize recognized labels and keep unfamiliar
+// labels searchable as tags. Primary category remains strictly validated.
+const canonicalCategories = new Map(settings.categories.map(label => [label.toLowerCase(), label]));
+function reconcileSecondaryCategories(item) {
+  if (item.categories === undefined) return;
+  const original = item.categories;
+  const values = Array.isArray(original) ? original
+    : typeof original === 'string' ? original.split(',') : [];
+  const recognized = [];
+  const extraTags = [];
+  for (const candidate of values) {
+    if (typeof candidate !== 'string' || !candidate.trim()) continue;
+    const label = candidate.trim();
+    const configured = canonicalCategories.get(label.toLowerCase());
+    if (configured) {
+      if (!recognized.includes(configured)) recognized.push(configured);
+    } else {
+      extraTags.push(label);
+    }
+  }
+  if (recognized.length) item.categories = recognized;
+  else delete item.categories;
+  if (extraTags.length) {
+    const existingTags = Array.isArray(item.tags) ? item.tags : [];
+    item.tags = [...new Set([...existingTags, ...extraTags])];
+  }
+  if (JSON.stringify(original) !== JSON.stringify(item.categories)) {
+    console.warn(`Normalized secondary categories for ${item.id}; unmatched labels preserved as tags: ${extraTags.join(', ') || 'none'}`);
+  }
+}
+
 // Validate entire target state before mutating disk.
 const completeOrganizers = [...organizers.values()];
 validateSettings(settings,completeOrganizers);
 const archiveIds = [];
 for(const [id,item] of records) {
+  reconcileSecondaryCategories(item);
   validateOpportunity(item,`listing ${id}`,settings,completeOrganizers);
   if(expired(item)) archiveIds.push(id);
 }
