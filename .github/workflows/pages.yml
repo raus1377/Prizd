@@ -1,57 +1,142 @@
 name: Sync data and publish opportunity board
+
 on:
   push:
     branches: [main]
   schedule:
-    # 07:17 Asia/Kolkata (01:47 UTC), approximately; hosted jobs may be delayed.
+    # Approximately 07:17 IST (01:47 UTC); GitHub may delay scheduled runs.
     - cron: '47 1 * * *'
   workflow_dispatch:
+
+# The bot can update its own PR branch, but cannot push changes to protected main.
 permissions:
   contents: write
+  pull-requests: write
   pages: write
   id-token: write
+
 concurrency:
   group: open-call-sync-and-pages
   cancel-in-progress: false
+
 jobs:
-  build:
+  prepare:
     runs-on: ubuntu-latest
+    outputs:
+      catalog_changed: ${{ steps.changes.outputs.catalog_changed }}
+      catalog_merged: ${{ steps.merge.outputs.catalog_merged }}
     steps:
-      - uses: actions/checkout@v6
+      - name: Check out protected main
+        uses: actions/checkout@v6
         with:
+          ref: main
           fetch-depth: 0
           persist-credentials: true
-      - uses: actions/setup-node@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
           package-manager-cache: false
+
       - name: Process inbox and archive expired entries
         run: npm run sync
+
       - name: Check and test
         run: npm run check && npm test
-      - name: Build updated website
+
+      - name: Build website
         run: npm run build
-      - name: Commit generated catalog changes
+
+      # Exclude dist/: the build embeds a new timestamp on every run.
+      # These canonical catalog files are the only changes that belong in a PR.
+      - name: Check for catalog changes
+        id: changes
+        shell: bash
         run: |
-          git config user.name "open-call-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data/organizers.json data/opportunities data/archive updates/inbox dist
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: synchronize opportunities and archive expired listings"
-            git push origin HEAD:main
+          if [[ -n "$(git status --porcelain --untracked-files=all -- data/organizers.json data/opportunities data/archive updates/inbox)" ]]; then
+            echo "catalog_changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "catalog_changed=false" >> "$GITHUB_OUTPUT"
           fi
-      # Deploy in THIS run. GITHUB_TOKEN commits don't trigger another workflow.
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v4
+
+      - name: Create or update catalog pull request
+        id: catalog_pr
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          branch: automation/opportunity-catalog
+          delete-branch: true
+          add-paths: |
+            data/organizers.json
+            data/opportunities
+            data/archive
+            updates/inbox
+          commit-message: "chore: synchronize opportunities and archive expired listings"
+          title: "chore: update OPEN CALL opportunities"
+          body: |
+            Automatically generated opportunity catalog update.
+
+            - Process new records from `updates/inbox/`.
+            - Preserve active opportunities and archive records past their deadlines.
+            - Update missing organizer records and normalize secondary categories.
+            - No direct push to the protected `main` branch.
+
+            The bot will merge this PR if allowed by branch protection. Otherwise, complete any required review/checks and merge it.
+
+      # This is a NORMAL PR merge, never an admin bypass. It succeeds automatically
+      # only if GitHub's branch protection requirements already permit the merge.
+      # Otherwise the PR stays open for the required human review/checks.
+      - name: Merge catalog PR if repository rules permit
+        id: merge
+        if: ${{ steps.catalog_pr.outputs.pull-request-number != '' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.catalog_pr.outputs.pull-request-number }}
+        shell: bash
+        run: |
+          if gh pr merge "$PR_NUMBER" --squash; then
+            # The API confirms the PR merged; do not mistake a queued merge
+            # for a completed one.
+            merged_at="$(gh pr view "$PR_NUMBER" --json mergedAt --jq '.mergedAt // ""')"
+            if [[ -n "$merged_at" ]]; then
+              echo "catalog_merged=true" >> "$GITHUB_OUTPUT"
+              echo "Catalog PR merged through branch protection."
+            else
+              echo "catalog_merged=false" >> "$GITHUB_OUTPUT"
+              echo "::notice::Catalog PR is queued or awaiting GitHub requirements."
+            fi
+          else
+            echo "catalog_merged=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Catalog PR is open. Merge it after required reviews/checks pass."
+          fi
+
+      - name: Show pull request link
+        if: ${{ steps.catalog_pr.outputs.pull-request-url != '' }}
+        run: echo "Review catalog PR at ${{ steps.catalog_pr.outputs.pull-request-url }}"
+
+      # Never publish unmerged PR changes. Deploy immediately after an allowed
+      # bot PR merge (bot merges do not trigger another workflow), or rebuild
+      # and deploy on push to main after a human merges a reviewed PR.
+      - name: Configure GitHub Pages
+        if: ${{ steps.changes.outputs.catalog_changed == 'false' || steps.merge.outputs.catalog_merged == 'true' }}
+        uses: actions/configure-pages@v5
+
+      - name: Upload reviewed site artifact
+        if: ${{ steps.changes.outputs.catalog_changed == 'false' || steps.merge.outputs.catalog_merged == 'true' }}
+        uses: actions/upload-pages-artifact@v4
         with:
           path: dist
+
   deploy:
-    needs: build
+    needs: prepare
+    if: ${{ needs.prepare.outputs.catalog_changed == 'false' || needs.prepare.outputs.catalog_merged == 'true' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy
+      - name: Deploy reviewed catalog
         id: deployment
         uses: actions/deploy-pages@v4
