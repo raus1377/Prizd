@@ -80,6 +80,7 @@
     now = Date.now();
     observer?.disconnect();
     renderCategories();
+    renderHero();
     const open = opportunities.filter(o => regionOf(o) === state.region && isActionable(o,now));
     const newItems = open.filter(o => isNew(o,now,settings.newWindowDays));
     const savedCount = opportunities.filter(o => saved.has(o.id)).length;
@@ -161,8 +162,14 @@
   document.addEventListener('keydown',e => { if (e.key === 'Escape') closeMenu();if (e.key === '/' && !e.ctrlKey && !e.metaKey && !e.altKey && !e.target.matches('input,textarea,select') && !e.target.isContentEditable && !$('detail-dialog').open) { e.preventDefault();$('search').focus();$('opportunities').scrollIntoView({behavior:'smooth'}); } });
   function setLayout(layout) { currentLayout = layout; $('opportunity-grid').classList.toggle('list',layout === 'list');$('grid-view').classList.toggle('active',layout === 'grid');$('list-view').classList.toggle('active',layout === 'list');$('grid-view').setAttribute('aria-pressed',layout === 'grid');$('list-view').setAttribute('aria-pressed',layout === 'list');try{localStorage.setItem('open-call-layout',layout);}catch{} }
   $('grid-view').addEventListener('click',() => setLayout('grid'));$('list-view').addEventListener('click',() => setLayout('list'));
-  const topPicks = rank(opportunities.filter(o => o.url && isActionable(o,now))).slice(0,3);
-  $('hero-shortlist').innerHTML=topPicks.map((o,i)=>`<a class="hero-pick" href="${escape(o.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${escape(o.title)}"><span class="pick-number">0${i+1}</span><span><span class="pick-label">${escape(o.organizer.name).toUpperCase()} / ${escape(o.category).toUpperCase()}</span><span class="pick-name">${escape(o.title)}</span></span><span class="pick-arrow" aria-hidden="true">↗</span></a>`).join('');
+  let heroKey = '';
+  function renderHero() {
+    const topPicks = rank(opportunities.filter(o => regionOf(o) === state.region && o.url && isActionable(o,now))).slice(0,3);
+    const key = state.region + '|' + topPicks.map(o => o.id).join(',');
+    if (key === heroKey) return;
+    heroKey = key;
+    $('hero-shortlist').innerHTML=topPicks.map((o,i)=>`<a class="hero-pick" href="${escape(o.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${escape(o.title)}"><span class="pick-number">0${i+1}</span><span><span class="pick-label">${escape(o.organizer.name).toUpperCase()} / ${escape(o.category).toUpperCase()}</span><span class="pick-name">${escape(o.title)}</span></span><span class="pick-arrow" aria-hidden="true">↗</span></a>`).join('');
+  }
   if (state.kind !== 'all' || state.format !== 'all' || state.team !== 'all' || state.status !== 'open') { $('advanced-filters').hidden = false; $('filter-toggle').setAttribute('aria-expanded',true); }
   render();setLayout(currentLayout);
   if (params.get('opportunity')) openDetail(params.get('opportunity'));
