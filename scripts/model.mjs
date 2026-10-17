@@ -18,18 +18,18 @@ export function validateSettings(settings, organizers) {
   const ids = new Set();
   for (const o of organizers) {
     if (!o.id || ids.has(o.id) || !o.name || !['Company','College','Organization','Community'].includes(o.kind) || !Number.isFinite(o.prestige) || o.prestige < 0 || o.prestige > 100) throw new Error(`Invalid or duplicate organizer: ${o.id}`);
-    if (!safeUrl(o.website) || !/^#[a-f\d]{6}$/i.test(o.color)) throw new Error(`Invalid URL or color for organizer: ${o.id}`);
+    if ((o.website !== undefined && o.website !== null && !safeUrl(o.website)) || !/^#[a-f\d]{6}$/i.test(o.color)) throw new Error(`Invalid URL or color for organizer: ${o.id}`);
     ids.add(o.id);
   }
 }
 export function validateOpportunity(o, file, settings, organizers) {
   const fail = message => { throw new Error(`${file}: ${message}`); };
-  for (const key of ['id','title','category','organizerId','summary','location','format','eligibility','url']) if (typeof o[key] !== 'string' || !o[key].trim()) fail(`${key} is required`);
+  for (const key of ['id','title','category','organizerId','summary','location','format','eligibility']) if (typeof o[key] !== 'string' || !o[key].trim()) fail(`${key} is required`);
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(o.id)) fail('id must be a lowercase slug');
   if (!settings.categories.includes(o.category)) fail(`category must be one of ${settings.categories.join(', ')}`);
   if (!organizers.some(x => x.id === o.organizerId)) fail(`unknown organizerId: ${o.organizerId}; add it to data/organizers.json`);
   if (!['Online','In person','Hybrid','To confirm'].includes(o.format)) fail('format must be Online, In person, Hybrid, or To confirm');
-  if (!safeUrl(o.url)) fail('url must use https:// or http://');
+  if (o.url !== undefined && o.url !== null && !safeUrl(o.url)) fail('url must be null or use https:// or http://');
   if (o.sourceUrl !== undefined && !safeUrl(o.sourceUrl)) fail('sourceUrl must use https:// or http://');
   if (o.deadline !== null && !validDate(o.deadline)) fail('deadline must be null or a timestamp with timezone, e.g. 2026-11-02T18:00:00+05:30');
   if (o.addedAt !== undefined && !validDate(o.addedAt)) fail('addedAt must be an ISO timestamp with timezone');

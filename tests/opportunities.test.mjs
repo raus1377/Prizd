@@ -50,6 +50,7 @@ test('Prize comparisons normalize currency instead of comparing nominal amounts'
 });
 test('Validation rejects executable URLs, naive timestamps and invalid relationships', () => {
   validateSettings(settings,[organizer]);validateOpportunity(fixture(),'test.json',settings,[organizer]);
+  assert.doesNotThrow(()=>validateOpportunity(fixture({url:null}),'test.json',settings,[organizer]));
   for(const changes of [{url:'javascript:alert(1)'},{deadline:'2026-11-02T18:00:00'},{organizerId:'missing'},{team:{min:4,max:1}},{prize:{amount:-1,currency:'USD',kind:'pool',description:'Pool'}}]) assert.throws(()=>validateOpportunity(fixture(changes),'test.json',settings,[organizer]));
 });
 test('A date-only deadline expires after that calendar day in the specified timezone', () => {
@@ -88,7 +89,7 @@ test('Published catalog uses event links and valid organizer relationships for e
     const o=JSON.parse(await readFile(new URL('opportunities/'+file,root),'utf8'));
     validateOpportunity(o,file,configured,organizers);
     assert.equal(ids.has(o.id),false);ids.add(o.id);
-    assert.equal(new URL(o.url).hostname.endsWith('example.com'),false);
+    if(o.url) assert.equal(new URL(o.url).hostname.endsWith('example.com'),false);
     assert.equal('isDemo' in o,false);
     assert.equal(file.startsWith('example-'),false);
   }

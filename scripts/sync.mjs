@@ -115,7 +115,7 @@ function ensureOrganizer(id, opportunity, supplied = {}) {
     throw Error(`Invalid organizerId for ${opportunity.id ?? opportunity.title}: ${id}`);
   }
   const name = supplied.name || opportunity.organizerName || provisionalOrganizerName(id);
-  const website = supplied.website || opportunity.organizerWebsite || opportunity.url;
+  const website = supplied.website || opportunity.organizerWebsite || opportunity.url || null;
   // Invalid URLs remain fatal during validation; no invented website links.
   const created = {
     id, name, kind:supplied.kind || 'Organization', prestige:40,
@@ -144,7 +144,7 @@ function resolveOrganizer(input, record) {
     ...(existing||{}), id, name:label, kind, prestige, 
     monogram:spec.monogram ?? existing?.monogram ?? String(label).slice(0,2).toUpperCase(),
     color:spec.color ?? existing?.color ?? defaultColor,
-    website:url
+    website:url ?? null
   };
   organizers.set(id,updated);
   return id;
