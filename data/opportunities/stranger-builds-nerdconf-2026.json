@@ -1,0 +1,31 @@
+{
+  "id": "stranger-builds-nerdconf-2026",
+  "summary": "An AI build-and-ship challenge with Fetch.ai as main sponsor, running across San Francisco, Melbourne and online.",
+  "deadline": null,
+  "location": "San Francisco, Melbourne and online",
+  "format": "Hybrid",
+  "eligibility": "Registration availability, remote-only eligibility, team limits and fees not verified.",
+  "tags": [
+    "AI",
+    "Build challenge"
+  ],
+  "entryStatus": "check",
+  "title": "Stranger Builds (NERDCONF × Fetch.ai)",
+  "category": "Hackathon",
+  "deadlineDate": "2026-10-31",
+  "deadlineLabel": "Event starts (registration status unverified)",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize amounts not verified."
+  },
+  "url": "https://luma.com/nerdconfmedellin",
+  "notes": [
+    "31 October–7 November per Fetch.ai's calendar. Link is NERDCONF's Luma calendar, not a confirmed event page."
+  ],
+  "researchAsOf": "2026-10-17",
+  "organizerId": "nerdconf",
+  "addedAt": "2026-10-17T01:16:39.481Z"
+}

@@ -880,5 +880,59 @@
     "monogram": "RI",
     "color": "#242424",
     "website": "https://business.rice.edu"
+  },
+  {
+    "id": "tokyo-gic",
+    "name": "Tokyo Global Innovation Challenge",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "TO",
+    "color": "#242424",
+    "website": "https://icae.scu.edu.tw/zh-hant/node/4352"
+  },
+  {
+    "id": "witg-fundamental-edge",
+    "name": "WITG × Fundamental Edge",
+    "kind": "Organization",
+    "prestige": 45,
+    "monogram": "WI",
+    "color": "#242424",
+    "website": "https://www.google.com/search?q=WITG+Fundamental+Edge+investment+competition+2026"
+  },
+  {
+    "id": "mecc",
+    "name": "MECC",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "ME",
+    "color": "#242424",
+    "website": "https://www.google.com/search?q=MECC+October+case+competition+Excel+students"
+  },
+  {
+    "id": "iim-nagpur",
+    "name": "IIM Nagpur",
+    "kind": "College",
+    "prestige": 70,
+    "monogram": "II",
+    "color": "#242424",
+    "website": "https://www.iimnagpur.ac.in"
+  },
+  {
+    "id": "xrlabs",
+    "name": "XRlabs",
+    "kind": "Company",
+    "prestige": 40,
+    "monogram": "XR",
+    "color": "#242424",
+    "website": "https://www.google.com/search?q=XRlabs+Real-Time+Vision+Challenge+London"
+  },
+  {
+    "id": "nerdconf",
+    "name": "NERDCONF",
+    "kind": "Community",
+    "prestige": 40,
+    "monogram": "NE",
+    "color": "#242424",
+    "website": "https://luma.com/nerdconfmedellin"
   }
 ]

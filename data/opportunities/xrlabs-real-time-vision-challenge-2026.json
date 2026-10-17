@@ -1,0 +1,36 @@
+{
+  "id": "xrlabs-real-time-vision-challenge-2026",
+  "summary": "Train and deploy a model that distinguishes surgical instruments in live video; the top five models are tested on real surgical footage.",
+  "deadline": null,
+  "location": "London, UK",
+  "format": "In person",
+  "eligibility": "Individual entry; 20 places, approval-based. Vision-model skills required, no medical background needed. Age, international admission and fees unstated. NDA and data licence required.",
+  "tags": [
+    "Computer vision",
+    "Healthcare",
+    "Physical AI"
+  ],
+  "entryStatus": "check",
+  "title": "XRlabs Real-Time Vision Challenge",
+  "category": "Engineering",
+  "deadlineDate": "2026-10-22",
+  "deadlineLabel": "Application deadline (time and timezone unstated)",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 1000,
+    "currency": "GBP",
+    "kind": "first",
+    "description": "GBP 1,000 / 600 / 400, a hardware prize and US$100 NVIDIA Brev credits per participant."
+  },
+  "url": "https://www.google.com/search?q=XRlabs+Real-Time+Vision+Challenge+London",
+  "notes": [
+    "Event 24 October, 10:00–19:00 at the London Institute for Healthcare Engineering. Official Luma application page was not found; this is a search link.",
+    "Models trained on XRlabs data cannot be published or commercialised and must be deleted after the event."
+  ],
+  "researchAsOf": "2026-10-17",
+  "organizerId": "xrlabs",
+  "addedAt": "2026-10-17T01:16:39.481Z"
+}
