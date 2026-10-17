@@ -1,0 +1,42 @@
+{
+  "id": "iitgn-visiting-research-2026-27",
+  "summary": "Spend a semester at IIT Gandhinagar on faculty-supervised research, earning up to 16 credits of research engagement in 4-credit modules.",
+  "deadline": "2026-10-27T17:00:00+05:30",
+  "location": "Gandhinagar, Gujarat",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "Final-year BTech/BS (4-year) or integrated MSc/BS-MS (5-year) students at IITs, IISc, NITs and IISERs with CPI/CGPA above 8.0.",
+  "tags": [
+    "Research",
+    "Semester internship",
+    "STEM",
+    "IIT"
+  ],
+  "entryStatus": "open",
+  "title": "IIT Gandhinagar Visiting Students Research Engagement Programme (Sem II 2026–27)",
+  "category": "Research internship",
+  "categories": [
+    "Research",
+    "Engineering"
+  ],
+  "organizerId": "iit-gandhinagar",
+  "deadlineLabel": "Application deadline",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 5000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "₹5,000 for each quad in which the student earns B or above (up to about ₹20,000 per semester). No tuition fee; hostel and mess paid by the student."
+  },
+  "url": "https://iitgn.ac.in/admissions/visiting-students-research-engagement-programme",
+  "sourceUrl": "https://www.biotecnika.org/2026/10/iit-gandhinagar-internship-2026-27/",
+  "notes": [
+    "Separate from IITGN's SRIP summer programme.",
+    "The amount is per quad and depends on grades, not a fixed monthly stipend."
+  ],
+  "addedAt": "2026-10-17T04:30:00+00:00",
+  "researchAsOf": "2026-10-17"
+}

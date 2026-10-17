@@ -1,0 +1,39 @@
+{
+  "id": "iitb-research-internship-2026-27",
+  "summary": "Project-based research internship with IIT Bombay faculty, running between January and June 2027.",
+  "deadline": null,
+  "location": "Mumbai",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "UG/PG students; project-specific eligibility set by the hosting faculty.",
+  "tags": [
+    "Research",
+    "IIT",
+    "Winter–spring 2027"
+  ],
+  "entryStatus": "check",
+  "title": "IIT Bombay Research Internship 2026–27",
+  "category": "Research internship",
+  "categories": [
+    "Research",
+    "Engineering"
+  ],
+  "organizerId": "iit-bombay",
+  "deadlineLabel": "Application deadline",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 15000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "₹15,000 per month for 4–6 months (reported by a secondary source)."
+  },
+  "url": "https://www.foundit.in/career-advice/iit-bombay-research-internship-apply/",
+  "notes": [
+    "Dates and stipend come only from a secondary source; confirm on the IIT Bombay website before applying."
+  ],
+  "addedAt": "2026-10-17T04:30:00+00:00",
+  "researchAsOf": "2026-10-17"
+}

@@ -1231,5 +1231,59 @@
     "monogram": "SIH",
     "color": "#242424",
     "website": "https://sih.gov.in"
+  },
+  {
+    "id": "great-lakes-institute-of-management-gurgaon",
+    "name": "Great Lakes Institute of Management, Gurgaon",
+    "kind": "College",
+    "prestige": 80,
+    "monogram": "GR",
+    "color": "#242424",
+    "website": "https://www.greatlakes.edu.in/gurgaon"
+  },
+  {
+    "id": "iit-patna",
+    "name": "IIT Patna",
+    "kind": "College",
+    "prestige": 88,
+    "monogram": "II",
+    "color": "#242424",
+    "website": "https://www.iitp.ac.in"
+  },
+  {
+    "id": "imt-ghaziabad",
+    "name": "IMT Ghaziabad",
+    "kind": "College",
+    "prestige": 82,
+    "monogram": "IM",
+    "color": "#242424",
+    "website": "https://www.imt.edu"
+  },
+  {
+    "id": "national-law-university-odisha-saaew",
+    "name": "National Law University Odisha · SAAEW",
+    "kind": "College",
+    "prestige": 82,
+    "monogram": "NA",
+    "color": "#242424",
+    "website": "https://www.nluo.ac.in"
+  },
+  {
+    "id": "nit-durgapur",
+    "name": "NIT Durgapur",
+    "kind": "College",
+    "prestige": 82,
+    "monogram": "NI",
+    "color": "#242424",
+    "website": "https://nitdgp.ac.in"
+  },
+  {
+    "id": "iit-bhubaneswar",
+    "name": "IIT Bhubaneswar",
+    "kind": "College",
+    "prestige": 88,
+    "monogram": "II",
+    "color": "#242424",
+    "website": "https://www.iitbbs.ac.in"
   }
 ]
