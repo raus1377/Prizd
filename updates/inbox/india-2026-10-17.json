@@ -1,0 +1,351 @@
+{
+  "upsert": [
+    {
+      "id": "glim-sustainx-2026",
+      "title": "SustainX 2026: The Sustainability Hackathon",
+      "category": "Hackathon",
+      "categories": [
+        "Engineering",
+        "Consulting"
+      ],
+      "organizer": {
+        "name": "Great Lakes Institute of Management, Gurgaon",
+        "kind": "College",
+        "website": "https://www.greatlakes.edu.in/gurgaon",
+        "prestige": 80
+      },
+      "summary": "Team hackathon to build solutions to sustainability and climate problems, with the final round at the GLIM Gurgaon campus.",
+      "deadline": "2026-11-05T23:59:00+05:30",
+      "deadlineLabel": "Registration deadline",
+      "location": "Online + Gurgaon",
+      "format": "Hybrid",
+      "eligibility": "UG, PG, engineering and management students; multidisciplinary teams welcome.",
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "prize": {
+        "amount": 50000,
+        "currency": "INR",
+        "kind": "pool",
+        "description": "Prizes worth ₹50,000 in total (cash/kind split not published)."
+      },
+      "tags": [
+        "Sustainability",
+        "Climate tech",
+        "Hackathon"
+      ],
+      "url": "https://unstop.com/competitions/sustainx-2026-the-sustainability-hackathon-great-lakes-institute-of-management-glim-gurgaon-1771244",
+      "entryStatus": "open",
+      "notes": [
+        "Posted on Unstop on 16 October 2026."
+      ],
+      "region": "India",
+      "addedAt": "2026-10-17T04:30:00+00:00",
+      "researchAsOf": "2026-10-17"
+    },
+    {
+      "id": "iitp-praxis-pm-case-2026",
+      "title": "Praxis: Product Management Case Study Competition",
+      "category": "Product",
+      "categories": [
+        "Case competition"
+      ],
+      "organizer": {
+        "name": "IIT Patna",
+        "kind": "College",
+        "website": "https://www.iitp.ac.in",
+        "prestige": 88
+      },
+      "summary": "Online product management case competition from IIT Patna: diagnose a product problem and pitch a solution.",
+      "deadline": "2026-10-22T23:59:00+05:30",
+      "deadlineLabel": "Registration deadline",
+      "location": "Online",
+      "format": "Online",
+      "eligibility": "UG, PG, engineering and management students.",
+      "team": {
+        "min": 1,
+        "max": 3
+      },
+      "prize": {
+        "amount": 10000,
+        "currency": "INR",
+        "kind": "pool",
+        "description": "₹10,000 total prize pool."
+      },
+      "tags": [
+        "Product management",
+        "Case study",
+        "IIT"
+      ],
+      "url": "https://unstop.com/competitions/praxis-product-management-case-study-competition-indian-institute-of-technology-iit-patna-1770048",
+      "entryStatus": "open",
+      "notes": [],
+      "region": "India",
+      "addedAt": "2026-10-17T04:30:00+00:00",
+      "researchAsOf": "2026-10-17"
+    },
+    {
+      "id": "imt-good-bad-business-2026",
+      "title": "The Good, The Bad, and The Business (Marketing, HR & Sustainability tracks)",
+      "category": "Case competition",
+      "categories": [
+        "Marketing",
+        "Consulting"
+      ],
+      "organizer": {
+        "name": "IMT Ghaziabad",
+        "kind": "College",
+        "website": "https://www.imt.edu",
+        "prestige": 82
+      },
+      "summary": "Three parallel IMT Ghaziabad competitions — Marketing, HR and Sustainability — each with a quiz round followed by a case round.",
+      "deadline": "2026-10-24T23:59:00+05:30",
+      "deadlineLabel": "Registration deadline",
+      "location": "Online + Ghaziabad",
+      "format": "Hybrid",
+      "eligibility": "Postgraduate management students.",
+      "team": {
+        "min": 2,
+        "max": 3
+      },
+      "prize": {
+        "amount": null,
+        "currency": "INR",
+        "kind": "undisclosed",
+        "description": "Prize not shown on the listing yet; confirm before entering."
+      },
+      "tags": [
+        "MBA",
+        "Marketing",
+        "HR",
+        "Sustainability"
+      ],
+      "url": "https://unstop.com/competitions/the-good-the-bad-and-the-business-marketing-track-the-good-the-bad-and-the-business-imt-ghaziabad-1771057",
+      "entryStatus": "check",
+      "notes": [
+        "Posted 16 October 2026. The link is the Marketing track; the HR and Sustainability tracks are separate Unstop listings.",
+        "Listed as 'check' because no prize amount is published yet."
+      ],
+      "region": "India",
+      "addedAt": "2026-10-17T04:30:00+00:00",
+      "researchAsOf": "2026-10-17"
+    },
+    {
+      "id": "nluo-saaew-essay-2026",
+      "title": "2nd NLUO SAAEW Essay Writing Competition 2026",
+      "category": "Writing",
+      "categories": [
+        "Policy"
+      ],
+      "organizer": {
+        "name": "National Law University Odisha · SAAEW",
+        "kind": "College",
+        "website": "https://www.nluo.ac.in",
+        "prestige": 82
+      },
+      "summary": "Essay on the legal and ethical questions around animal welfare, animal rights and the commercial exploitation of animals.",
+      "deadline": null,
+      "deadlineDate": "2026-11-15",
+      "deadlineLabel": "Registration deadline",
+      "location": "Online",
+      "format": "Online",
+      "eligibility": "UG and PG students in any discipline at a recognised Indian university — arts, commerce, STEM and law.",
+      "team": {
+        "min": 1,
+        "max": 2
+      },
+      "prize": {
+        "amount": 13000,
+        "currency": "INR",
+        "kind": "pool",
+        "description": "₹13,000 total cash prize pool."
+      },
+      "tags": [
+        "Essay",
+        "Animal law",
+        "Environment",
+        "All disciplines"
+      ],
+      "url": "https://www.livelaw.in/lawschool/competitions/2nd-nluo-saaew-essay-writing-competition-2026-554324",
+      "entryStatus": "open",
+      "notes": [
+        "Essay submission closes 31 December 2026.",
+        "Entry fee: ₹300 single author, ₹500 co-authors."
+      ],
+      "region": "India",
+      "addedAt": "2026-10-17T04:30:00+00:00",
+      "researchAsOf": "2026-10-17"
+    },
+    {
+      "id": "iitgn-visiting-research-2026-27",
+      "title": "IIT Gandhinagar Visiting Students Research Engagement Programme (Sem II 2026–27)",
+      "category": "Research internship",
+      "categories": [
+        "Research",
+        "Engineering"
+      ],
+      "organizerId": "iit-gandhinagar",
+      "summary": "Spend a semester at IIT Gandhinagar on faculty-supervised research, earning up to 16 credits of research engagement in 4-credit modules.",
+      "deadline": "2026-10-27T17:00:00+05:30",
+      "deadlineLabel": "Application deadline",
+      "location": "Gandhinagar, Gujarat",
+      "format": "In person",
+      "eligibility": "Final-year BTech/BS (4-year) or integrated MSc/BS-MS (5-year) students at IITs, IISc, NITs and IISERs with CPI/CGPA above 8.0.",
+      "team": {
+        "min": 1,
+        "max": 1
+      },
+      "prize": {
+        "amount": 5000,
+        "currency": "INR",
+        "kind": "stipend",
+        "description": "₹5,000 for each quad in which the student earns B or above (up to about ₹20,000 per semester). No tuition fee; hostel and mess paid by the student."
+      },
+      "tags": [
+        "Research",
+        "Semester internship",
+        "STEM",
+        "IIT"
+      ],
+      "url": "https://iitgn.ac.in/admissions/visiting-students-research-engagement-programme",
+      "sourceUrl": "https://www.biotecnika.org/2026/10/iit-gandhinagar-internship-2026-27/",
+      "entryStatus": "open",
+      "notes": [
+        "Separate from IITGN's SRIP summer programme.",
+        "The amount is per quad and depends on grades, not a fixed monthly stipend."
+      ],
+      "region": "India",
+      "addedAt": "2026-10-17T04:30:00+00:00",
+      "researchAsOf": "2026-10-17"
+    },
+    {
+      "id": "nit-durgapur-dst-serb-biotech-2026",
+      "title": "NIT Durgapur DST-SERB Project Internship (Biotechnology)",
+      "category": "Research internship",
+      "categories": [
+        "Research"
+      ],
+      "organizer": {
+        "name": "NIT Durgapur",
+        "kind": "College",
+        "website": "https://nitdgp.ac.in",
+        "prestige": 82
+      },
+      "summary": "One project-intern position on a DST-SERB funded research project in NIT Durgapur's Department of Biotechnology.",
+      "deadline": "2026-10-22T17:00:00+05:30",
+      "deadlineLabel": "Application deadline (by email)",
+      "location": "Durgapur, West Bengal",
+      "format": "In person",
+      "eligibility": "Life sciences / biotechnology background; check the advertisement for exact qualifications.",
+      "team": {
+        "min": 1,
+        "max": 1
+      },
+      "prize": {
+        "amount": 5000,
+        "currency": "INR",
+        "kind": "stipend",
+        "description": "₹5,000 per month."
+      },
+      "tags": [
+        "Biotech",
+        "Research",
+        "NIT",
+        "DST-SERB"
+      ],
+      "url": "https://www.biotecnika.org/2026/10/nit-durgapur-internship-2026-dst-serb-biotech/",
+      "entryStatus": "open",
+      "notes": [
+        "One seat. Apply by email to the PI/Co-PI; joining by 22 November 2026.",
+        "Advertisement ref NITD/BT/OM-DD/SERB/ADV/01/2026 (dated 5 October 2026)."
+      ],
+      "region": "India",
+      "addedAt": "2026-10-17T04:30:00+00:00",
+      "researchAsOf": "2026-10-17"
+    },
+    {
+      "id": "iitbbs-tech-zephyr-case-2026",
+      "title": "Case Study Competition — Tech Zephyr 4.0",
+      "category": "Case competition",
+      "categories": [
+        "Consulting"
+      ],
+      "organizer": {
+        "name": "IIT Bhubaneswar",
+        "kind": "College",
+        "website": "https://www.iitbbs.ac.in",
+        "prestige": 88
+      },
+      "summary": "Three rounds on live business dilemmas (scaling, market entry, broken operations); finalists present at Tech Zephyr on 31 October at IIT Bhubaneswar.",
+      "deadline": null,
+      "deadlineLabel": "Registration deadline",
+      "location": "Online + Bhubaneswar",
+      "format": "Hybrid",
+      "eligibility": "Open to all college students in any programme or year — engineering, management, arts, commerce, sciences, law, medical.",
+      "team": {
+        "min": 2,
+        "max": 4
+      },
+      "prize": {
+        "amount": 30000,
+        "currency": "INR",
+        "kind": "pool",
+        "description": "₹30,000 total prize pool."
+      },
+      "tags": [
+        "Case study",
+        "IIT",
+        "Strategy",
+        "Open to all"
+      ],
+      "url": "https://unstop.com/competitions/case-study-competition-tech-zephyr-40-indian-institute-of-technology-iit-bhubaneswar-1742778",
+      "entryStatus": "check",
+      "notes": [
+        "Unstop pages show conflicting deadlines (10 September vs still open); check whether registration is still accepted."
+      ],
+      "region": "India",
+      "addedAt": "2026-10-17T04:30:00+00:00",
+      "researchAsOf": "2026-10-17"
+    },
+    {
+      "id": "iitb-research-internship-2026-27",
+      "title": "IIT Bombay Research Internship 2026–27",
+      "category": "Research internship",
+      "categories": [
+        "Research",
+        "Engineering"
+      ],
+      "organizerId": "iit-bombay",
+      "summary": "Project-based research internship with IIT Bombay faculty, running between January and June 2027.",
+      "deadline": null,
+      "deadlineLabel": "Application deadline",
+      "location": "Mumbai",
+      "format": "In person",
+      "eligibility": "UG/PG students; project-specific eligibility set by the hosting faculty.",
+      "team": {
+        "min": 1,
+        "max": 1
+      },
+      "prize": {
+        "amount": 15000,
+        "currency": "INR",
+        "kind": "stipend",
+        "description": "₹15,000 per month for 4–6 months (reported by a secondary source)."
+      },
+      "tags": [
+        "Research",
+        "IIT",
+        "Winter–spring 2027"
+      ],
+      "url": "https://www.foundit.in/career-advice/iit-bombay-research-internship-apply/",
+      "entryStatus": "check",
+      "notes": [
+        "Dates and stipend come only from a secondary source; confirm on the IIT Bombay website before applying."
+      ],
+      "region": "India",
+      "addedAt": "2026-10-17T04:30:00+00:00",
+      "researchAsOf": "2026-10-17"
+    }
+  ]
+}
