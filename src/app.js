@@ -8,9 +8,9 @@
   const settings = data.settings;
   const opportunities = data.opportunities;
   const params = new URLSearchParams(location.search);
-  const defaults = { view:'all', category:'all', kind:'all', format:'all', team:'all', status:'open', sort:settings.defaultSort, search:'' };
+  const defaults = { view:'all', region:'Global', category:'all', kind:'all', format:'all', team:'all', status:'open', sort:settings.defaultSort, search:'' };
   const state = { ...defaults };
-  const allowed = {view:['all','new','saved'],category:['all',...settings.categories],kind:['all','Company','College','Organization','Community'],format:['all','Online','In person','Hybrid','To confirm'],team:['all','solo','team'],status:['open','all','closing','upcoming','check','closed'],sort:['prestige','prize','deadline','newest']};
+  const allowed = {view:['all','new','saved'],region:['Global','India'],category:['all',...settings.categories],kind:['all','Company','College','Organization','Community'],format:['all','Online','In person','Hybrid','To confirm'],team:['all','solo','team'],status:['open','all','closing','upcoming','check','closed'],sort:['prestige','prize','deadline','newest']};
   for (const key of Object.keys(allowed)) if (allowed[key].includes(params.get(key))) state[key] = params.get(key);
   state.search = params.get('q') || '';
   let saved;
@@ -26,12 +26,22 @@
   $('footer-year').textContent = new Date().getFullYear();
   $('edition-label').textContent = 'CURATED INDEX';
   $('updated-label').textContent = `INDEX UPDATED ${new Date(data.builtAt).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}).toUpperCase()}`;
-  $('category-filters').innerHTML = ['all',...settings.categories].map(c => `<button data-category="${escape(c)}" aria-pressed="${state.category === c}" class="${state.category === c ? 'active' : ''}">${c === 'all' ? 'Everything' : escape(c)}</button>`).join('');
+  const regionOf = o => o.region || 'Global';
+  let chipKey = '';
+  function renderCategories() {
+    const used = new Set(opportunities.filter(o => regionOf(o) === state.region).flatMap(o => [o.category,...(o.categories || [])]));
+    const list = settings.categories.filter(c => used.has(c));
+    if (state.category !== 'all' && !list.includes(state.category)) state.category = 'all';
+    const key = list.join('|');
+    if (key === chipKey) return;
+    chipKey = key;
+    $('category-filters').innerHTML = ['all',...list].map(c => `<button data-category="${escape(c)}" aria-pressed="${state.category === c}" class="${state.category === c ? 'active' : ''}">${c === 'all' ? 'Everything' : escape(c)}</button>`).join('');
+  }
   $('search').value = state.search;
   for (const [key,id] of [['kind','kind-filter'],['format','format-filter'],['team','team-filter'],['status','status-filter'],['sort','sort']]) $(id).value = state[key];
   const bookmark = active => `<svg width="15" height="19" viewBox="0 0 15 19" fill="${active ? 'currentColor' : 'none'}" aria-hidden="true"><path d="M2 1.5h11v15L7.5 13 2 16.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>`;
-  const prizeText = o => o.prize.amount === null ? (o.prize.kind === 'none' ? 'Experience' : 'To be announced') : new Intl.NumberFormat('en-US',{style:'currency',currency:o.prize.currency,maximumFractionDigits:0}).format(o.prize.amount);
-  const prizeKind = o => ({pool:'PRIZE POOL',first:'FIRST PRIZE',none:'REWARD',undisclosed:'PRIZE'}[o.prize.kind]);
+  const prizeText = o => o.prize.amount === null ? (o.prize.kind === 'none' ? 'Experience' : o.prize.kind === 'stipend' ? 'Paid · amount TBC' : 'To be announced') : new Intl.NumberFormat('en-US',{style:'currency',currency:o.prize.currency,maximumFractionDigits:0}).format(o.prize.amount);
+  const prizeKind = o => ({pool:'PRIZE POOL',first:'FIRST PRIZE',stipend:'STIPEND / MONTH',none:'REWARD',undisclosed:'PRIZE'}[o.prize.kind]);
   const shortDate = value => new Date(value).toLocaleDateString('en-GB',{day:'2-digit',month:'short'}).toUpperCase();
   const statusLabel = o => ({open:'Open',upcoming:'Upcoming',check:'Check entry',closed:'Closed'}[entryStatus(o,now)]);
   function teamText(o) {
@@ -69,7 +79,8 @@
   function render() {
     now = Date.now();
     observer?.disconnect();
-    const open = opportunities.filter(o => isActionable(o,now));
+    renderCategories();
+    const open = opportunities.filter(o => regionOf(o) === state.region && isActionable(o,now));
     const newItems = open.filter(o => isNew(o,now,settings.newWindowDays));
     const savedCount = opportunities.filter(o => saved.has(o.id)).length;
     const items = select(opportunities,state,saved,now,settings.newWindowDays);
@@ -77,9 +88,11 @@
     $('stat-new').textContent = String(newItems.length).padStart(2,'0');
     $('stat-organizers').textContent = String(new Set(open.map(o => o.organizerId)).size).padStart(2,'0');
     $('count-all').textContent = open.length;
+    for (const r of ['Global','India']) $('count-' + r.toLowerCase()).textContent = opportunities.filter(o => regionOf(o) === r && isActionable(o,now)).length;
     $('count-new').textContent = newItems.length;
     $('count-saved').textContent = savedCount;
     $('result-count').textContent = `${String(items.length).padStart(2,'0')} ${items.length === 1 ? 'OPPORTUNITY' : 'OPPORTUNITIES'}${state.view === 'new' ? ' / ADDED IN THE LAST ' + settings.newWindowDays + ' DAYS' : ''}`;
+    document.querySelectorAll('[data-region]').forEach(el => { el.classList.toggle('active',el.dataset.region === state.region); el.setAttribute('aria-pressed',el.dataset.region === state.region); });
     document.querySelectorAll('[data-view]').forEach(el => { el.classList.toggle('active',el.dataset.view === state.view); el.setAttribute('aria-pressed',el.dataset.view === state.view); });
     document.querySelectorAll('.category-filters [data-category]').forEach(el => { el.classList.toggle('active',el.dataset.category === state.category); el.setAttribute('aria-pressed',el.dataset.category === state.category); });
     $('opportunity-grid').innerHTML = items.map(card).join('');
@@ -109,7 +122,7 @@
     document.body.style.overflow = 'hidden';
   }
   function reset() {
-    Object.assign(state,defaults);
+    Object.assign(state,defaults,{ region:state.region });
     $('search').value = '';
     for (const [key,id] of [['kind','kind-filter'],['format','format-filter'],['team','team-filter'],['status','status-filter'],['sort','sort']]) $(id).value = state[key];
     render();
@@ -127,6 +140,8 @@
     }
     const category = event.target.closest('[data-category]');
     if (category) { state.category = category.dataset.category; state.view = 'all'; render(); }
+    const region = event.target.closest('[data-region]');
+    if (region) { state.region = region.dataset.region; render(); return; }
     const view = event.target.closest('[data-view]');
     if (view) { state.view = view.dataset.view; render(); }
     const quick = event.target.closest('[data-quick]');

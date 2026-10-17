@@ -1,0 +1,37 @@
+{
+  "id": "smart-india-hackathon-2027",
+  "title": "Smart India Hackathon 2027",
+  "category": "Hackathon",
+  "organizerId": "moe-sih",
+  "summary": "The Government of India's national hackathon on problem statements from ministries, PSUs and industry, with a 36-hour grand finale at nodal centres.",
+  "deadline": null,
+  "deadlineLabel": "Expected SPOC registration",
+  "location": "Internal hackathon + nodal centres across India",
+  "region": "India",
+  "format": "Hybrid",
+  "eligibility": "Students at Indian institutions; teams of exactly six from the same institution with at least one woman. Registration goes through the college SPOC.",
+  "team": {
+    "min": 6,
+    "max": 6
+  },
+  "prize": {
+    "amount": 100000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "₹1,00,000 for the winning team of each problem statement (₹75,000 and ₹50,000 for runners-up in some categories)."
+  },
+  "tags": [
+    "GovTech",
+    "Software",
+    "Hardware",
+    "All streams"
+  ],
+  "url": "https://sih.gov.in",
+  "entryStatus": "upcoming",
+  "notes": [
+    "SIH 2026 launched on 21 August 2026, with its grand finale in December 2026. Expect the 2027 cycle around August 2027.",
+    "Confirm prize amounts for the 2027 problem-statement categories on the portal."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15"
+}

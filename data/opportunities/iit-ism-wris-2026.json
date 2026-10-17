@@ -1,0 +1,44 @@
+{
+  "id": "iit-ism-wris-2026",
+  "title": "IIT (ISM) Winter Research Internship Scheme 2026",
+  "category": "Research internship",
+  "organizerId": "iit-ism",
+  "summary": "One-to-two-month winter research internship with IIT (ISM) Dhanbad faculty; separate long-term track for 6–12 months.",
+  "deadline": null,
+  "deadlineLabel": "Category I & II deadline",
+  "location": "Dhanbad, Jharkhand",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "Category I: BTech students. Category II: MTech, MSc and MBA students (PG students already on a fellowship get no extra stipend). Category III (long-term, 6–12 months, NOC needed) is project- or self-funded.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 5000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "₹5,000 per month for institute-funded Category I and II interns, for up to two months. Category III has no institute stipend."
+  },
+  "tags": [
+    "Research",
+    "Engineering",
+    "Winter internship",
+    "UG",
+    "PG",
+    "MBA"
+  ],
+  "url": "https://www.iitism.ac.in/storage/notice-documents/notice_6abd00c830b971790771400.pdf",
+  "entryStatus": "open",
+  "notes": [
+    "Category III (long-term) closes 15 November 2026.",
+    "₹500 non-refundable application fee; apply by email as a single PDF per the official notice."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "deadlineDate": "2026-10-31",
+  "categories": [
+    "Research internship"
+  ],
+  "sourceUrl": "https://www.biotecnika.org/2026/10/iit-ism-winter-research-internship-2026/"
+}

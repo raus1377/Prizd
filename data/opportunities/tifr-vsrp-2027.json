@@ -1,0 +1,39 @@
+{
+  "id": "tifr-vsrp-2027",
+  "title": "TIFR Visiting Students' Research Programme 2027",
+  "category": "Research internship",
+  "organizerId": "tifr",
+  "summary": "About eight weeks (mid-May to early July) of research with TIFR faculty in astronomy, biology, chemistry, computer science, maths or physics.",
+  "deadline": null,
+  "deadlineLabel": "Expected application deadline",
+  "location": "Mumbai, Pune (NCRA) and Hyderabad",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "Students who have completed at least two years of UG science or engineering: final-year 3-year BSc; pre-final or final year of 4-year BSc, MSc, integrated MSc, BTech/BE. PhD students and past VSRP participants are not eligible.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 9000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "TIFR Hyderabad's 2026 VSRP paid ₹9,000/month plus shared accommodation and travel reimbursement; check each campus for its rate."
+  },
+  "tags": [
+    "Research",
+    "Physics",
+    "Mathematics",
+    "Biology",
+    "Computer science",
+    "Summer 2027"
+  ],
+  "url": "https://www.tifr.res.in/~vsrp/",
+  "entryStatus": "upcoming",
+  "notes": [
+    "The 2026 deadline was 31 January 2026, with shortlists by mid-March. Expect the 2027 call around December–January."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "sourceUrl": "https://www.foundit.in/career-advice/tifr-summer-internship-apply/"
+}

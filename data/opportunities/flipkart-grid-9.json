@@ -1,0 +1,33 @@
+{
+  "id": "flipkart-grid-9",
+  "title": "Flipkart GRiD 9.0",
+  "category": "Hackathon",
+  "organizerId": "flipkart",
+  "summary": "Flipkart's engineering challenge with software development, AI engineering and data science tracks; national finals at Flipkart HQ, Bengaluru.",
+  "deadline": null,
+  "deadlineLabel": "Expected registration deadline",
+  "location": "Online + Bengaluru",
+  "region": "India",
+  "format": "Hybrid",
+  "eligibility": "Engineering students (BTech/BE/MTech/ME/MS, dual degree and integrated) at recognised Indian institutions, from the batches Flipkart specifies.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Cash prizes and certificates (amount not published), plus SDE interview and internship pathways."
+  },
+  "tags": [
+    "Software",
+    "AI",
+    "Data science",
+    "Careers"
+  ],
+  "url": "https://internshala.com/competitions/flipkart-grid-8-0/",
+  "entryStatus": "upcoming",
+  "notes": [
+    "GRiD 8.0 registered 19 June–7 July 2026; the link is the 8.0 listing. Expect 9.0 around June–July 2027."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15"
+}

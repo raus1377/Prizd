@@ -1,0 +1,33 @@
+{
+  "id": "hackwithinfy-2027",
+  "title": "Infosys HackWithInfy 2027",
+  "category": "Hackathon",
+  "organizerId": "infosys",
+  "summary": "Infosys's national coding contest: two online coding rounds, then a grand finale, with pre-placement interview tracks.",
+  "deadline": null,
+  "deadlineLabel": "Expected registration window",
+  "location": "Online + finale",
+  "region": "India",
+  "format": "Hybrid",
+  "eligibility": "Indian residents 18+ in BE/BTech, ME/MTech, dual degree, MS (Research), MCA or 5-year MSc programmes, from the specified graduating batch.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Cash prizes at the grand finale (amounts not stated in the published terms) plus PPI and job-offer tracks."
+  },
+  "tags": [
+    "Competitive programming",
+    "Algorithms",
+    "Careers"
+  ],
+  "url": "https://www.infosys.com/careers/hackwithinfy.html",
+  "entryStatus": "upcoming",
+  "notes": [
+    "The 2026 edition opened registrations on 6 February 2026 for the class of 2027."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "sourceUrl": "https://www.infosys.com/careers/hackwithinfy/2026/hwi-terms-conditions.pdf"
+}

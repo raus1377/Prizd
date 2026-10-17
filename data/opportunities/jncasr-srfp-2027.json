@@ -1,0 +1,38 @@
+{
+  "id": "jncasr-srfp-2027",
+  "title": "JNCASR Summer Research Fellowship Programme 2027",
+  "category": "Research internship",
+  "organizerId": "jncasr",
+  "summary": "Two-month research fellowship in a JNCASR lab in Bengaluru, across chemistry, physics, materials, engineering mechanics and life sciences.",
+  "deadline": null,
+  "deadlineLabel": "Expected application deadline",
+  "location": "Bengaluru",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "UG/PG students in science, engineering, technology, medicine or veterinary sciences (eligible years vary by discipline); 65%+ in Class X, XII and core subjects plus first class in recent semesters.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 10000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "₹10,000 per month (₹20,000 total) plus second-sleeper train fare."
+  },
+  "tags": [
+    "Research",
+    "STEM",
+    "Life sciences",
+    "Chemistry",
+    "Summer 2027"
+  ],
+  "url": "https://www.jncasr.ac.in",
+  "entryStatus": "upcoming",
+  "notes": [
+    "2026 window: 22 December 2025 to 31 January 2026, ₹500 fee. Expect similar dates for 2027."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "sourceUrl": "https://www.foundit.in/career-advice/jncasr-summer-research-internship-apply/"
+}

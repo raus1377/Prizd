@@ -1,0 +1,35 @@
+{
+  "id": "flame-smart-tank-5",
+  "title": "Smart Tank 5.0 — National Case Competition",
+  "category": "Case competition",
+  "organizerId": "flame",
+  "summary": "FLAME University's national case competition for teams of two.",
+  "deadline": "2026-10-17T23:59:00+05:30",
+  "deadlineLabel": "Registration deadline",
+  "location": "Online + Pune",
+  "region": "India",
+  "format": "Hybrid",
+  "eligibility": "UG, PG, engineering and management students.",
+  "team": {
+    "min": 2,
+    "max": 2
+  },
+  "prize": {
+    "amount": 120000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "₹1.2 lakh total prize pool."
+  },
+  "tags": [
+    "Strategy",
+    "Business cases"
+  ],
+  "url": "https://unstop.com/competitions/smart-tank-50-national-case-competition-flame-university-pune-1757615",
+  "entryStatus": "open",
+  "notes": [],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Consulting"
+  ]
+}

@@ -3,6 +3,7 @@
   "summary": "Train and deploy a model that distinguishes surgical instruments in live video; the top five models are tested on real surgical footage.",
   "deadline": null,
   "location": "London, UK",
+  "region": "Global",
   "format": "In person",
   "eligibility": "Individual entry; 20 places, approval-based. Vision-model skills required, no medical background needed. Age, international admission and fees unstated. NDA and data licence required.",
   "tags": [

@@ -1,0 +1,41 @@
+{
+  "id": "prs-lamp-2027-28",
+  "title": "LAMP Fellowship 2027–28 (Legislative Assistants to MPs)",
+  "category": "Research internship",
+  "organizerId": "prs",
+  "summary": "Eleven-month fellowship working with a Member of Parliament on legislative research, with training by PRS Legislative Research.",
+  "deadline": null,
+  "deadlineLabel": "Expected application window",
+  "location": "New Delhi",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "Indian citizens aged 25 or under with a bachelor's degree in any discipline completed before the fellowship starts. Open to arts, commerce, science, law and engineering graduates.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 23000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "₹23,000 per month for the duration of the fellowship."
+  },
+  "tags": [
+    "Policy",
+    "Law",
+    "Arts",
+    "Graduates",
+    "Parliament"
+  ],
+  "url": "https://prsindia.org/lamp",
+  "entryStatus": "upcoming",
+  "notes": [
+    "The form typically opens in December, with an online test in January and results by end-March. The last cycle closed 21 December 2025."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Policy"
+  ],
+  "sourceUrl": "https://prsindia.org/lamp/faq"
+}

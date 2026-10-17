@@ -113,3 +113,19 @@ test('Repository has no absolute asset paths and deployment fetches full Git his
   const yaml=await readFile(new URL('../.github/workflows/pages.yml',import.meta.url),'utf8');
   assert.match(yaml,/fetch-depth: 0/);assert.match(yaml,/path: dist/);
 });
+
+test('region filter separates India from Global and the saved view spans both',()=>{
+  const state={view:'all',category:'all',kind:'all',format:'all',team:'all',status:'open',sort:'prestige',search:''};
+  const global=fixture({id:'g'}),india=fixture({id:'i',region:'India'});
+  assert.deepEqual(select([global,india],{...state,region:'Global'},new Set(),now).map(x=>x.id),['g']);
+  assert.deepEqual(select([global,india],{...state,region:'India'},new Set(),now).map(x=>x.id),['i']);
+  assert.deepEqual(select([global,india],state,new Set(),now).map(x=>x.id).sort(),['g','i']);
+  assert.deepEqual(select([global,india],{...state,region:'India',view:'saved'},new Set(['g','i']),now).map(x=>x.id).sort(),['g','i']);
+});
+
+test('region and stipend prizes are validated; region defaults to Global',()=>{
+  assert.doesNotThrow(()=>validateOpportunity(fixture({region:'India',prize:{amount:null,currency:'INR',kind:'stipend',description:'Monthly stipend'}}),'ok.json',settings,[organizer]));
+  assert.throws(()=>validateOpportunity(fixture({region:'Mars'}),'bad.json',settings,[organizer]),/region/);
+  assert.equal(normalizeOpportunity(fixture(),organizer,settings,null,now).region,'Global');
+  assert.equal(normalizeOpportunity(fixture({region:'India'}),organizer,settings,null,now).region,'India');
+});

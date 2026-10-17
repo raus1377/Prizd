@@ -1,0 +1,38 @@
+{
+  "id": "hpcl-power-lab-3",
+  "title": "HP Power Lab 3.0",
+  "category": "Case competition",
+  "organizerId": "hpcl",
+  "summary": "HPCL's national innovation and case challenge for students on energy, fuel retail and business problems.",
+  "deadline": "2026-10-28T23:59:00+05:30",
+  "deadlineLabel": "Registration deadline",
+  "location": "Online",
+  "region": "India",
+  "format": "Online",
+  "eligibility": "UG and PG students in engineering and management.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 580000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "₹5.8 lakh total prize pool (breakdown on the Unstop listing)."
+  },
+  "tags": [
+    "Energy",
+    "Strategy",
+    "Engineering",
+    "Management"
+  ],
+  "url": "https://unstop.com/competitions/crp-hp-power-lab-30-hindustan-petroleum-corporation-ltd-1761011",
+  "entryStatus": "open",
+  "notes": [],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Consulting",
+    "Product"
+  ]
+}

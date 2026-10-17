@@ -7,6 +7,7 @@
   "deadline": null,
   "deadlineLabel": "Event date",
   "location": "London, UK",
+  "region": "Global",
   "format": "In person",
   "eligibility": "Check the official rules for age, country and student eligibility.",
   "team": {

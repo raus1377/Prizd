@@ -934,5 +934,302 @@
     "monogram": "NE",
     "color": "#242424",
     "website": "https://luma.com/nerdconfmedellin"
+  },
+  {
+    "id": "ias-academies",
+    "name": "IAS · INSA · NASI",
+    "kind": "Organization",
+    "prestige": 95,
+    "monogram": "IAS",
+    "color": "#242424",
+    "website": "https://webjapps.ias.ac.in/fellowship2027/"
+  },
+  {
+    "id": "rbi",
+    "name": "Reserve Bank of India",
+    "kind": "Organization",
+    "prestige": 98,
+    "monogram": "RBI",
+    "color": "#242424",
+    "website": "https://opportunities.rbi.org.in/scripts/summer.aspx"
+  },
+  {
+    "id": "tifr",
+    "name": "TIFR",
+    "kind": "Organization",
+    "prestige": 96,
+    "monogram": "TIFR",
+    "color": "#242424",
+    "website": "https://www.tifr.res.in/~vsrp/"
+  },
+  {
+    "id": "jncasr",
+    "name": "JNCASR",
+    "kind": "Organization",
+    "prestige": 92,
+    "monogram": "JN",
+    "color": "#242424",
+    "website": "https://www.jncasr.ac.in"
+  },
+  {
+    "id": "iit-gandhinagar",
+    "name": "IIT Gandhinagar",
+    "kind": "College",
+    "prestige": 90,
+    "monogram": "IIT",
+    "color": "#242424",
+    "website": "https://iitgn.ac.in"
+  },
+  {
+    "id": "iit-madras",
+    "name": "IIT Madras",
+    "kind": "College",
+    "prestige": 97,
+    "monogram": "IIT",
+    "color": "#242424",
+    "website": "https://sfp.iitm.ac.in"
+  },
+  {
+    "id": "iit-ism",
+    "name": "IIT (ISM) Dhanbad",
+    "kind": "College",
+    "prestige": 88,
+    "monogram": "IIT",
+    "color": "#242424",
+    "website": "https://www.iitism.ac.in"
+  },
+  {
+    "id": "iit-bombay",
+    "name": "IIT Bombay · SJMSOM",
+    "kind": "College",
+    "prestige": 97,
+    "monogram": "IIT",
+    "color": "#242424",
+    "website": "https://www.som.iitb.ac.in"
+  },
+  {
+    "id": "orc",
+    "name": "Odisha Research Centre × TISS",
+    "kind": "Organization",
+    "prestige": 80,
+    "monogram": "ORC",
+    "color": "#242424",
+    "website": "https://www.odisharesearchcentre.org"
+  },
+  {
+    "id": "prs",
+    "name": "PRS Legislative Research",
+    "kind": "Organization",
+    "prestige": 88,
+    "monogram": "PRS",
+    "color": "#242424",
+    "website": "https://prsindia.org/lamp"
+  },
+  {
+    "id": "icssr",
+    "name": "ICSSR",
+    "kind": "Organization",
+    "prestige": 87,
+    "monogram": "ICSSR",
+    "color": "#242424",
+    "website": "https://icssr.org"
+  },
+  {
+    "id": "mwcd",
+    "name": "Ministry of Women & Child Development",
+    "kind": "Organization",
+    "prestige": 86,
+    "monogram": "WCD",
+    "color": "#242424",
+    "website": "https://wcd.gov.in"
+  },
+  {
+    "id": "cci",
+    "name": "Competition Commission of India",
+    "kind": "Organization",
+    "prestige": 88,
+    "monogram": "CCI",
+    "color": "#242424",
+    "website": "https://www.cci.gov.in"
+  },
+  {
+    "id": "nabard",
+    "name": "NABARD",
+    "kind": "Organization",
+    "prestige": 88,
+    "monogram": "NB",
+    "color": "#242424",
+    "website": "https://www.nabard.org"
+  },
+  {
+    "id": "ccs",
+    "name": "Centre for Civil Society",
+    "kind": "Organization",
+    "prestige": 78,
+    "monogram": "CCS",
+    "color": "#242424",
+    "website": "https://ccs.in"
+  },
+  {
+    "id": "hpcl",
+    "name": "Hindustan Petroleum (HPCL)",
+    "kind": "Company",
+    "prestige": 90,
+    "monogram": "HP",
+    "color": "#242424",
+    "website": "https://www.hindustanpetroleum.com"
+  },
+  {
+    "id": "tvs",
+    "name": "TVS Motor Company",
+    "kind": "Company",
+    "prestige": 92,
+    "monogram": "TVS",
+    "color": "#242424",
+    "website": "https://www.tvsmotor.com"
+  },
+  {
+    "id": "nmims",
+    "name": "NMIMS",
+    "kind": "College",
+    "prestige": 85,
+    "monogram": "NM",
+    "color": "#242424",
+    "website": "https://www.nmims.edu"
+  },
+  {
+    "id": "xlri",
+    "name": "XLRI Jamshedpur",
+    "kind": "College",
+    "prestige": 93,
+    "monogram": "XL",
+    "color": "#242424",
+    "website": "https://xlri.ac.in"
+  },
+  {
+    "id": "asian-paints",
+    "name": "Asian Paints",
+    "kind": "Company",
+    "prestige": 93,
+    "monogram": "AP",
+    "color": "#242424",
+    "website": "https://www.asianpaints.com"
+  },
+  {
+    "id": "tiss",
+    "name": "TISS Mumbai",
+    "kind": "College",
+    "prestige": 88,
+    "monogram": "TISS",
+    "color": "#242424",
+    "website": "https://tiss.ac.in"
+  },
+  {
+    "id": "ashoka",
+    "name": "Ashoka University",
+    "kind": "College",
+    "prestige": 87,
+    "monogram": "AU",
+    "color": "#242424",
+    "website": "https://www.ashoka.edu.in"
+  },
+  {
+    "id": "flame",
+    "name": "FLAME University",
+    "kind": "College",
+    "prestige": 80,
+    "monogram": "FL",
+    "color": "#242424",
+    "website": "https://www.flame.edu.in"
+  },
+  {
+    "id": "nationbuilding",
+    "name": "NationBuilding Foundation of India",
+    "kind": "Organization",
+    "prestige": 72,
+    "monogram": "NBF",
+    "color": "#242424",
+    "website": "https://unstop.com"
+  },
+  {
+    "id": "loyola-chennai",
+    "name": "Loyola College, Chennai",
+    "kind": "College",
+    "prestige": 80,
+    "monogram": "LC",
+    "color": "#242424",
+    "website": "https://www.loyolacollege.edu"
+  },
+  {
+    "id": "iiit-delhi",
+    "name": "IIIT Delhi",
+    "kind": "College",
+    "prestige": 88,
+    "monogram": "IIITD",
+    "color": "#242424",
+    "website": "https://www.iiitd.ac.in"
+  },
+  {
+    "id": "cnlu",
+    "name": "Chanakya National Law University",
+    "kind": "College",
+    "prestige": 80,
+    "monogram": "CNLU",
+    "color": "#242424",
+    "website": "https://cnlu.ac.in"
+  },
+  {
+    "id": "grant-thornton",
+    "name": "Grant Thornton Bharat",
+    "kind": "Company",
+    "prestige": 88,
+    "monogram": "GT",
+    "color": "#242424",
+    "website": "https://www.grantthornton.in/careers/campace/"
+  },
+  {
+    "id": "tata",
+    "name": "Tata Group",
+    "kind": "Company",
+    "prestige": 99,
+    "monogram": "TATA",
+    "color": "#242424",
+    "website": "https://www.tata.com"
+  },
+  {
+    "id": "flipkart",
+    "name": "Flipkart",
+    "kind": "Company",
+    "prestige": 96,
+    "monogram": "FK",
+    "color": "#242424",
+    "website": "https://www.flipkartcareers.com"
+  },
+  {
+    "id": "infosys",
+    "name": "Infosys",
+    "kind": "Company",
+    "prestige": 94,
+    "monogram": "INFY",
+    "color": "#242424",
+    "website": "https://www.infosys.com/careers/hackwithinfy.html"
+  },
+  {
+    "id": "accenture",
+    "name": "Accenture India",
+    "kind": "Company",
+    "prestige": 94,
+    "monogram": "ACN",
+    "color": "#242424",
+    "website": "https://www.accenture.com/in-en"
+  },
+  {
+    "id": "moe-sih",
+    "name": "Ministry of Education · AICTE (SIH)",
+    "kind": "Organization",
+    "prestige": 95,
+    "monogram": "SIH",
+    "color": "#242424",
+    "website": "https://sih.gov.in"
   }
 ]

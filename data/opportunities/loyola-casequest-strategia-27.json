@@ -1,0 +1,37 @@
+{
+  "id": "loyola-casequest-strategia-27",
+  "title": "CaseQuest (Strategia '27)",
+  "category": "Case competition",
+  "organizerId": "loyola-chennai",
+  "summary": "Business strategy case competition at Loyola College Chennai's annual Strategia fest — a strong pick for BCom/BBA/BA teams.",
+  "deadline": "2026-12-01T00:00:00+05:30",
+  "deadlineLabel": "Registration deadline",
+  "location": "Online + Chennai",
+  "region": "India",
+  "format": "Hybrid",
+  "eligibility": "UG, PG, engineering and management students.",
+  "team": {
+    "min": 2,
+    "max": 2
+  },
+  "prize": {
+    "amount": 50000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "₹50,000 total prize pool."
+  },
+  "tags": [
+    "Strategy",
+    "Commerce",
+    "BBA",
+    "BCom"
+  ],
+  "url": "https://unstop.com/competitions/casequest-strategia27-the-annual-business-strategy-fest-of-loyola-college-loyola-college-lc-chennai-1763017",
+  "entryStatus": "open",
+  "notes": [],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Consulting"
+  ]
+}

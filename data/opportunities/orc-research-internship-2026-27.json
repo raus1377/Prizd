@@ -1,0 +1,46 @@
+{
+  "id": "orc-research-internship-2026-27",
+  "title": "ORC Senior & Junior Research Internship 2026–27",
+  "category": "Research internship",
+  "organizerId": "orc",
+  "summary": "Paid social-science research internships at the Odisha Research Centre in collaboration with TISS Mumbai — 15 senior (6 months) and 30 junior (3 months) positions.",
+  "deadline": null,
+  "deadlineLabel": "Application deadline",
+  "location": "Bhubaneswar, Odisha",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "Senior: Master's in social sciences, humanities or allied fields with 55%+ (final-year MA students may apply). Junior: Bachelor's in the same fields with 55%+ (final-year BA students may apply). Economics, sociology, anthropology, history, languages, public policy and more.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 25000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "Senior interns ₹25,000/month for 6 months; junior interns ₹15,000/month for 3 months (as reported from the official guidelines)."
+  },
+  "tags": [
+    "Arts",
+    "Humanities",
+    "Social sciences",
+    "Economics",
+    "Public policy",
+    "UG",
+    "PG"
+  ],
+  "url": "https://www.odisharesearchcentre.org/internship-programs",
+  "entryStatus": "open",
+  "notes": [
+    "Apply through the separate Google Forms for the senior and junior tracks linked on the official page.",
+    "Stipend amounts come from a report of the guidelines PDF; confirm in the PDF before applying."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "deadlineDate": "2026-11-15",
+  "categories": [
+    "Policy",
+    "Economics"
+  ],
+  "sourceUrl": "https://www.agrijob.in/orc-research-internship-2026-odisha-research-centre/"
+}

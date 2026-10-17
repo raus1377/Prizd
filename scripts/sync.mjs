@@ -37,6 +37,7 @@ for (const file of allFiles) {
 // Structured TXT format supports repeated "Key: value" blocks separated by ---.
 const convertValue = (key, value) => {
   if (['deadline','deadlineDate','opensOn','sourceUrl'].includes(key) && /^(unknown|none|null)$/i.test(value)) return null;
+  if (key === 'region') return /^india(n)?$/i.test(value) ? 'India' : /^(global|worldwide|international)$/i.test(value) ? 'Global' : value;
   if (key === 'tags' || key === 'notes' || key === 'categories') return value.split(',').map(x => x.trim()).filter(Boolean);
   if (['teamMin','teamMax','prizeAmount','organizerPrestige'].includes(key)) return /^(none|unknown|null)$/i.test(value) ? null : Number(value);
   return value;
@@ -44,7 +45,7 @@ const convertValue = (key, value) => {
 const txtKeys = {
   id:'id',title:'title',category:'category',summary:'summary',deadline:'deadline',
   deadlinedate:'deadlineDate',deadlinetimezone:'deadlineTimezone',deadlinelabel:'deadlineLabel',
-  location:'location',format:'format',eligibility:'eligibility',url:'url',sourceurl:'sourceUrl',
+  location:'location',region:'region',format:'format',eligibility:'eligibility',url:'url',sourceurl:'sourceUrl',
   entrystatus:'entryStatus',openson:'opensOn',tags:'tags',notes:'notes',categories:'categories',
   organizer:'organizer',organizerid:'organizerId',organizername:'organizerName',
   organizerkind:'organizerKind',organizerwebsite:'organizerWebsite',organizerprestige:'organizerPrestige',
@@ -164,7 +165,7 @@ function upsert(input) {
   };
   for(const [key,to] of [['prizeAmount','amount'],['prizeCurrency','currency'],['prizeKind','kind'],['prizeDescription','description']]) if(input[key] !== undefined) prize[to] = input[key];
   const data = {
-    ...(!old ? {id:inputId,summary:'Details not yet verified.',deadline:null,location:'Not specified',format:'To confirm',eligibility:'Check official eligibility requirements.',tags:[],entryStatus:'check'} : old),
+    ...(!old ? {id:inputId,summary:'Details not yet verified.',deadline:null,location:'Not specified',region:'Global',format:'To confirm',eligibility:'Check official eligibility requirements.',tags:[],entryStatus:'check'} : old),
     ...overrides,id:inputId,organizerId,team,prize,
     // A correction must not masquerade as a newly added event.
     addedAt: old?.addedAt ?? input.addedAt ?? now

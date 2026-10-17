@@ -1,0 +1,42 @@
+{
+  "id": "tata-imagination-challenge-2027",
+  "title": "Tata Imagination Challenge 2027",
+  "category": "Case competition",
+  "organizerId": "tata",
+  "summary": "Tata Group's national ideas challenge: pitch an original idea in line with the Tata ethos. The top 10 win cash and a Tata Trails immersion.",
+  "deadline": null,
+  "deadlineLabel": "Expected registration deadline",
+  "location": "Online + Mumbai finale",
+  "region": "India",
+  "format": "Hybrid",
+  "eligibility": "Full-time UG or PG students from any stream at AICTE/UGC-approved Indian institutions. Individual entry.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 2000000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "2026 edition: ₹2 lakh cash to each of the top 10 (₹20 lakh), plus Tata Trails and career opportunities."
+  },
+  "tags": [
+    "All streams",
+    "Innovation",
+    "Arts",
+    "Commerce",
+    "STEM"
+  ],
+  "url": "https://unstop.com/competitions/crp-tata-imagination-challenge-2026-tata-group-1740413",
+  "entryStatus": "upcoming",
+  "notes": [
+    "2026 registration closed on 13 September 2026; the link points to the 2026 listing. Expect the 2027 edition around July–September 2027."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Product",
+    "Marketing"
+  ],
+  "sourceUrl": "https://internshala.com/competitions/tata-imagination-challenge-2026/"
+}

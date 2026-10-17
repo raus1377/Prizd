@@ -1,0 +1,41 @@
+{
+  "id": "ccs-researching-reality-2027",
+  "title": "CCS Researching Reality Internship 2027",
+  "category": "Research internship",
+  "organizerId": "ccs",
+  "summary": "Eight-week, full-time public-policy research internship at the Centre for Civil Society, ending in a capstone project.",
+  "deadline": null,
+  "deadlineLabel": "Expected application deadline",
+  "location": "New Delhi",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "Students or recent graduates in economics, public policy or a related social science, with strong research, quantitative and English/Hindi writing skills.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 10000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "₹10,000 per month for the programme."
+  },
+  "tags": [
+    "Public policy",
+    "Economics",
+    "Arts",
+    "UG",
+    "PG"
+  ],
+  "url": "https://ccs.in/researching-reality-program",
+  "entryStatus": "upcoming",
+  "notes": [
+    "The 2026 edition ran 1 June–31 July and its applications closed on 5 April 2026."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Policy",
+    "Economics"
+  ]
+}

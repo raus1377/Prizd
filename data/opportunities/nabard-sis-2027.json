@@ -1,0 +1,43 @@
+{
+  "id": "nabard-sis-2027",
+  "title": "NABARD Student Internship Scheme 2027",
+  "category": "Research internship",
+  "organizerId": "nabard",
+  "summary": "8–12 week study projects on agriculture, rural finance and development with NABARD regional offices.",
+  "deadline": null,
+  "deadlineLabel": "Expected application window",
+  "location": "NABARD regional offices across India",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "PG students (MBA/PGDM, agriculture and allied, economics, social sciences, management) at reputed Indian institutions.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 18000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "₹18,000–20,000 per month in recent cycles, plus travel support for field visits."
+  },
+  "tags": [
+    "Rural development",
+    "Finance",
+    "Agriculture",
+    "Economics",
+    "MBA",
+    "PG"
+  ],
+  "url": "https://www.nabard.org",
+  "entryStatus": "upcoming",
+  "notes": [
+    "Applications usually open in February–March; the 2026–27 scheme had about 39 seats."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Finance",
+    "Economics"
+  ],
+  "sourceUrl": "https://www.nabard.org/auth/writereaddata/WhatsNew/2603250441Notification-for-nabard.org-for-SIS-2025-26.pdf"
+}
