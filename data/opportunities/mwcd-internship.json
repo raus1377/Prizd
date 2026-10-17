@@ -1,0 +1,41 @@
+{
+  "id": "mwcd-internship",
+  "title": "MWCD Internship for Women Students & Scholars",
+  "category": "Research internship",
+  "organizerId": "mwcd",
+  "summary": "Policy and programme internship with the Ministry of Women and Child Development for women students, scholars, social activists and teachers.",
+  "deadline": null,
+  "deadlineLabel": "Next cycle deadline",
+  "location": "New Delhi",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "Women students (UG/PG/research), scholars, social activists and teachers. Law, social work, gender studies, public policy and allied fields are common.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 20000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "₹20,000 per month plus travel reimbursement and hostel accommodation."
+  },
+  "tags": [
+    "Women",
+    "Policy",
+    "Law",
+    "Social work",
+    "Arts"
+  ],
+  "url": "https://wcd.gov.in",
+  "entryStatus": "check",
+  "notes": [
+    "The latest reported cycle closed on 10 September 2026; the ministry runs it in batches, so check for the next call."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Policy"
+  ],
+  "sourceUrl": "https://www.lawof.in/paid-internship-opportunity-ministry-of-women-and-child-development-stipend-rs-20000-apply-by-10th-september-2026"
+}

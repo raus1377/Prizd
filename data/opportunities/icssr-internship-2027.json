@@ -1,0 +1,43 @@
+{
+  "id": "icssr-internship-2027",
+  "title": "ICSSR Research Internship 2027",
+  "category": "Research internship",
+  "organizerId": "icssr",
+  "summary": "Full-time research internship at the Indian Council of Social Science Research, New Delhi — 3 months for junior and 6 months for senior interns.",
+  "deadline": null,
+  "deadlineLabel": "Expected application window",
+  "location": "New Delhi",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "Junior: currently pursuing a master's in social sciences. Senior: master's in social sciences with 55%+.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 20000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "Junior interns ₹20,000/month; senior interns ₹25,000/month (fixed)."
+  },
+  "tags": [
+    "Social sciences",
+    "Arts",
+    "Economics",
+    "Policy",
+    "PG"
+  ],
+  "url": "https://icssr.org",
+  "entryStatus": "upcoming",
+  "notes": [
+    "The 2026 call closed in July–August 2026; watch icssr.org → Opportunities → Internships for the next notification.",
+    "Applications were by email or post, as set out in the notification."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Policy",
+    "Economics"
+  ],
+  "sourceUrl": "https://govtinternship.com/icssr-internship/"
+}

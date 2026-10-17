@@ -3,6 +3,7 @@
   "summary": "Build an end-to-end physical-AI application on Viam using supplied robot arms, cameras and compute. MongoDB is a co-host.",
   "deadline": null,
   "location": "San Francisco, USA",
+  "region": "Global",
   "format": "In person",
   "eligibility": "Rolling-approval applications. Software, Linux, Git and JSON familiarity expected; no robotics experience needed. Fee, age and international admission unconfirmed.",
   "tags": [

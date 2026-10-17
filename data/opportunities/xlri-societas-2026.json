@@ -1,0 +1,36 @@
+{
+  "id": "xlri-societas-2026",
+  "title": "Societas — Sustainability Case Competition (Ensemble 2026)",
+  "category": "Case competition",
+  "organizerId": "xlri",
+  "summary": "XLRI's flagship sustainability case competition at Ensemble 2026.",
+  "deadline": "2026-11-08T23:59:00+05:30",
+  "deadlineLabel": "Registration deadline",
+  "location": "Online",
+  "region": "India",
+  "format": "Online",
+  "eligibility": "Engineering, postgraduate, management and medical students.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": 50000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "₹50,000 total prize pool."
+  },
+  "tags": [
+    "Sustainability",
+    "ESG",
+    "Strategy"
+  ],
+  "url": "https://unstop.com/competitions/societas-sustainability-flagship-event-2026-ensemble-valhalla-2026-xavier-school-of-management-xlri-1745936",
+  "entryStatus": "open",
+  "notes": [],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Consulting"
+  ]
+}

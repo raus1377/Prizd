@@ -1,0 +1,38 @@
+{
+  "id": "tvs-ride-case-track-a-2026",
+  "title": "TVS Motor RiDE Case Competition 2026 (Track A)",
+  "category": "Case competition",
+  "organizerId": "tvs",
+  "summary": "Business case competition from TVS Motor for management students; separate Track B and HR tracks (₹2.3 lakh each) are on Unstop.",
+  "deadline": "2026-10-16T23:59:00+05:30",
+  "deadlineLabel": "Registration deadline",
+  "location": "Online",
+  "region": "India",
+  "format": "Online",
+  "eligibility": "Postgraduate and management students.",
+  "team": {
+    "min": 3,
+    "max": 3
+  },
+  "prize": {
+    "amount": 450000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "₹4.5 lakh total prize pool for Track A."
+  },
+  "tags": [
+    "Strategy",
+    "Automotive",
+    "MBA",
+    "Marketing"
+  ],
+  "url": "https://unstop.com/competitions/crp-ride-case-competition-track-a-tvs-motor-tvs-motor-ride-2026-tvs-motor-company-1763797",
+  "entryStatus": "open",
+  "notes": [],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Consulting",
+    "Marketing"
+  ]
+}

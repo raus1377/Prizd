@@ -1,6 +1,7 @@
 import { execFileSync } from 'node:child_process';
 
 export const DAY = 86_400_000;
+export const REGIONS = ['Global','India'];
 export function validDate(value) {
   return typeof value === 'string' && /^\d{4}-\d\d-\d\dT\d\d:\d\d(?::\d\d(?:\.\d+)?)?(?:Z|[+-]\d\d:\d\d)$/.test(value) && Number.isFinite(Date.parse(value));
 }
@@ -29,6 +30,7 @@ export function validateOpportunity(o, file, settings, organizers) {
   if (!settings.categories.includes(o.category)) fail(`category must be one of ${settings.categories.join(', ')}`);
   if (!organizers.some(x => x.id === o.organizerId)) fail(`unknown organizerId: ${o.organizerId}; add it to data/organizers.json`);
   if (!['Online','In person','Hybrid','To confirm'].includes(o.format)) fail('format must be Online, In person, Hybrid, or To confirm');
+  if (o.region !== undefined && !REGIONS.includes(o.region)) fail(`region must be ${REGIONS.join(' or ')}`);
   if (o.url !== undefined && o.url !== null && !safeUrl(o.url)) fail('url must be null or use https:// or http://');
   if (o.sourceUrl !== undefined && !safeUrl(o.sourceUrl)) fail('sourceUrl must use https:// or http://');
   if (o.deadline !== null && !validDate(o.deadline)) fail('deadline must be null or a timestamp with timezone, e.g. 2026-11-02T18:00:00+05:30');
@@ -43,7 +45,7 @@ export function validateOpportunity(o, file, settings, organizers) {
   if (o.categories !== undefined && (!Array.isArray(o.categories) || o.categories.some(c => !settings.categories.includes(c)))) fail('categories must contain configured category labels');
   if (!Array.isArray(o.tags) || o.tags.some(t => typeof t !== 'string')) fail('tags must be an array of strings');
   if (o.team !== null && (!o.team || !Number.isInteger(o.team.min) || o.team.min < 1 || (o.team.max !== null && (!Number.isInteger(o.team.max) || o.team.max < o.team.min)))) fail('team must be null, or have positive min and max (max can be null if unknown)');
-  if (!o.prize || !['pool','first','none','undisclosed'].includes(o.prize.kind)) fail('prize.kind must be pool, first, none, or undisclosed');
+  if (!o.prize || !['pool','first','stipend','none','undisclosed'].includes(o.prize.kind)) fail('prize.kind must be pool, first, stipend, none, or undisclosed');
   if (typeof o.prize.description !== 'string' || !o.prize.description.trim()) fail('prize.description is required');
   if (o.prize.amount !== null && (!Number.isFinite(o.prize.amount) || o.prize.amount < 0)) fail('prize.amount must be null or a nonnegative number');
   if (!/^[A-Z]{3}$/.test(o.prize.currency || '')) fail('prize.currency must be a three-letter code');
@@ -59,6 +61,7 @@ export function gitAddedAt(root, relativePath) {
 export function normalizeOpportunity(o, organizer, settings, addedAt, now) {
   return {
     ...o,
+    region: o.region ?? 'Global',
     organizer,
     addedAt: addedAt || o.addedAt || new Date(now).toISOString(),
     prizeUsd: o.prize.usdEquivalent ?? (o.prize.amount === null ? 0 : o.prize.amount * settings.prizeUsdRates[o.prize.currency])

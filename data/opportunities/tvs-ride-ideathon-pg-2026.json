@@ -1,0 +1,38 @@
+{
+  "id": "tvs-ride-ideathon-pg-2026",
+  "title": "TVS Motor RiDE Ideathon 2026 (PG)",
+  "category": "Hackathon",
+  "organizerId": "tvs",
+  "summary": "Postgraduate track of TVS Motor's RiDE 2026 ideathon on mobility and automotive engineering problems.",
+  "deadline": "2026-10-18T23:59:00+05:30",
+  "deadlineLabel": "Registration deadline",
+  "location": "Online",
+  "region": "India",
+  "format": "Online",
+  "eligibility": "Postgraduate engineering students.",
+  "team": {
+    "min": 3,
+    "max": 3
+  },
+  "prize": {
+    "amount": 300000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "₹3 lakh total prize pool for the PG track."
+  },
+  "tags": [
+    "Automotive",
+    "Mobility",
+    "Engineering",
+    "Ideathon",
+    "PG"
+  ],
+  "url": "https://unstop.com/competitions/crp-ride-ideathon-pg-tvs-motor-tvs-motor-ride-2026-tvs-motor-company-1763727",
+  "entryStatus": "open",
+  "notes": [],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Product"
+  ]
+}

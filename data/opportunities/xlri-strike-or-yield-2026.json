@@ -1,0 +1,37 @@
+{
+  "id": "xlri-strike-or-yield-2026",
+  "title": "Strike or Yield — Industrial Relations Case Competition",
+  "category": "Case competition",
+  "organizerId": "xlri",
+  "summary": "XLRI's flagship industrial relations and labour-negotiation case event at Ensemble 2026.",
+  "deadline": "2026-11-08T23:59:00+05:30",
+  "deadlineLabel": "Registration deadline",
+  "location": "Online",
+  "region": "India",
+  "format": "Online",
+  "eligibility": "Postgraduate management students.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": 50000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "₹50,000 total prize pool."
+  },
+  "tags": [
+    "HR",
+    "Industrial relations",
+    "Negotiation",
+    "MBA"
+  ],
+  "url": "https://unstop.com/competitions/strike-or-yield-industrial-relations-flagship-event-2026-ensemble-valhalla-2026-xavier-school-of-management-1746034",
+  "entryStatus": "open",
+  "notes": [],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Psychology"
+  ]
+}

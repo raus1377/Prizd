@@ -1,0 +1,45 @@
+{
+  "id": "rbi-summer-internship-2027",
+  "title": "RBI Summer Internship Scheme 2027",
+  "category": "Research internship",
+  "organizerId": "rbi",
+  "summary": "Up to 125 students intern at Reserve Bank of India offices on economics, banking, finance and legal projects for 8–10 weeks between April and July.",
+  "deadline": null,
+  "deadlineLabel": "Expected application window",
+  "location": "RBI offices across India",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "PG students and students of 5-year integrated courses in management, statistics, law, commerce, economics, econometrics, banking or finance; 3-year LLB students at reputed Indian institutions. Penultimate-year students apply for summer placement.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 20000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "₹20,000 per month (2026 scheme), subject to RBI rules."
+  },
+  "tags": [
+    "Finance",
+    "Economics",
+    "Law",
+    "Commerce",
+    "Banking",
+    "PG"
+  ],
+  "url": "https://opportunities.rbi.org.in/scripts/summer.aspx",
+  "entryStatus": "upcoming",
+  "notes": [
+    "The 2026 cycle closed on 15 December 2025, with interviews in January–February. Expect the 2027 call around November–December 2026.",
+    "Upload a bonafide certificate, statement of purpose and preferred research areas; details cannot be edited after submission."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Finance",
+    "Economics",
+    "Policy"
+  ],
+  "sourceUrl": "https://opportunities.rbi.org.in/scripts/ApplicationForm.aspx"
+}

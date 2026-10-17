@@ -1,0 +1,38 @@
+{
+  "id": "iitm-sfp-2027",
+  "title": "IIT Madras Summer Fellowship Programme 2027",
+  "category": "Research internship",
+  "organizerId": "iit-madras",
+  "summary": "Two-month summer fellowship with IIT Madras faculty in engineering, sciences, humanities and management.",
+  "deadline": null,
+  "deadlineLabel": "Expected application window",
+  "location": "Chennai",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "3rd-year BE/BTech/BSc (Engg), 3rd/4th-year integrated ME/MTech, 1st-year ME/MTech/MSc/MA or MBA students with an outstanding academic record. IIT students are not eligible.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 6000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "₹6,000 per month for up to two months (last published rate)."
+  },
+  "tags": [
+    "Research",
+    "Engineering",
+    "Sciences",
+    "Humanities",
+    "MBA",
+    "Summer 2027"
+  ],
+  "url": "https://sfp.iitm.ac.in",
+  "entryStatus": "upcoming",
+  "notes": [
+    "The portal historically opens around 20 February, with a 31 March deadline. Confirm the stipend on the 2027 notice."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15"
+}

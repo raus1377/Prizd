@@ -1,0 +1,38 @@
+{
+  "id": "iitgn-srip-2027",
+  "title": "IIT Gandhinagar Summer Research Internship Programme (SRIP) 2027",
+  "category": "Research internship",
+  "organizerId": "iit-gandhinagar",
+  "summary": "At least eight weeks of on-campus research with IIT Gandhinagar faculty across engineering, sciences, humanities and design.",
+  "deadline": null,
+  "deadlineLabel": "Expected application window",
+  "location": "Gandhinagar, Gujarat",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "Students pursuing a bachelor's or master's degree at a prominent Indian institution, with a strong academic record and a statement of purpose matched to a listed project.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 8000,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "₹2,000 per week (₹16,000 for 8 weeks) plus free hostel accommodation; top performers can win the ₹50,000 Bhalodia-Khetan Excellence Award."
+  },
+  "tags": [
+    "Research",
+    "Engineering",
+    "Humanities",
+    "Summer 2027",
+    "UG",
+    "PG"
+  ],
+  "url": "https://www.indiascienceandtechnology.gov.in/internships/summer-research-internship-programme-srip-2026-iit-gandhinagar",
+  "entryStatus": "upcoming",
+  "notes": [
+    "The 2026 edition ran 7 May–16 July 2026; applications usually open in January–February."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "grant-thornton-casequest",
+  "title": "Grant Thornton Bharat CASEQuest",
+  "category": "Case competition",
+  "organizerId": "grant-thornton",
+  "summary": "Grant Thornton's case competition for arts and commerce undergraduates: a video prelim, semi-finals and a finale, with internships for top teams.",
+  "deadline": null,
+  "deadlineLabel": "Registration deadline",
+  "location": "Online + finale",
+  "region": "India",
+  "format": "Hybrid",
+  "eligibility": "BBA, BCom, BA, BSc and other arts/commerce UG students at recognised institutions. BTech students are not eligible.",
+  "team": {
+    "min": 3,
+    "max": 5
+  },
+  "prize": {
+    "amount": 150000,
+    "currency": "INR",
+    "kind": "pool",
+    "description": "₹1.5 lakh cash: ₹75,000 + PPI (winner), ₹50,000 and ₹25,000 + live projects/internships for runners-up."
+  },
+  "tags": [
+    "Commerce",
+    "Arts",
+    "Consulting",
+    "Audit",
+    "BBA",
+    "BCom"
+  ],
+  "url": "https://www.grantthornton.in/careers/campace/casequest/",
+  "entryStatus": "check",
+  "notes": [
+    "Registration usually runs from mid-September with the prelim in October–November; the official page doesn't show this year's dates."
+  ],
+  "addedAt": "2026-10-15T05:30:00+00:00",
+  "researchAsOf": "2026-10-15",
+  "categories": [
+    "Consulting",
+    "Finance"
+  ]
+}
