@@ -1,0 +1,34 @@
+{
+  "id": "daytona-hacksprint-seoul-2026",
+  "summary": "Build a working AI application using sponsor technology and demo it live.",
+  "deadline": null,
+  "location": "Seoul, South Korea",
+  "format": "In person",
+  "eligibility": "Approval-based registration; students, developers and founders welcomed. Fee, age, international admission and travel funding unconfirmed.",
+  "tags": [
+    "AI",
+    "Developer tools"
+  ],
+  "entryStatus": "check",
+  "title": "Daytona HackSprint Seoul",
+  "category": "Hackathon",
+  "organizerId": "daytona",
+  "deadlineDate": "2026-10-18",
+  "deadlineLabel": "Event date",
+  "team": {
+    "min": 1,
+    "max": 6
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Sponsor-credit prizes and participant credits; no cash amount published."
+  },
+  "url": "https://luma.com/daytonaseoul",
+  "notes": [
+    "Agenda 14:00–18:00, demos from 17:00 (timezone not labelled). Venue disclosed after registration."
+  ],
+  "researchAsOf": "2026-10-17",
+  "addedAt": "2026-10-17T01:13:40.420Z"
+}

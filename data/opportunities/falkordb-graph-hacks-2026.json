@@ -1,0 +1,34 @@
+{
+  "id": "falkordb-graph-hacks-2026",
+  "summary": "Build an AI agent with FalkorDB at its core across three tracks: connected-data reasoning, agent memory and coordination, and company knowledge.",
+  "deadline": "2026-10-18T23:59:00+05:30",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Open to developers worldwide, including students and professionals in India. Free entry; minimum age not published.",
+  "tags": [
+    "AI agents",
+    "Graph database",
+    "RAG"
+  ],
+  "entryStatus": "open",
+  "title": "Graph Hacks: Context for AI Agents",
+  "category": "Hackathon",
+  "deadlineLabel": "Registration and submission deadline",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 20000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "Advertised US$20,000 of hardware and merchandise, not cash. One prize per track plus blog-post and top-50 side awards."
+  },
+  "url": "https://www.wemakedevs.org/hackathons/falkordb",
+  "notes": [
+    "Submit a repository, README and demo video; FalkorDB must be central to the project."
+  ],
+  "researchAsOf": "2026-10-17",
+  "organizerId": "falkordb",
+  "addedAt": "2026-10-17T01:13:40.420Z"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "concordium-trusted-agents-hackathon-2026",
+  "summary": "Add verified-human accountability, identity, an agent registry or payments to AI agents using Concordium.",
+  "deadline": "2026-12-10T05:29:00+05:30",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "No prior blockchain experience required. Country restrictions, minimum age, team limits and India eligibility not yet verified.",
+  "tags": [
+    "Blockchain",
+    "AI agents",
+    "Identity"
+  ],
+  "entryStatus": "check",
+  "title": "Concordium Trusted Agents Hackathon",
+  "category": "Hackathon",
+  "organizerId": "encode-club",
+  "deadlineLabel": "Final submission",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize details not verified."
+  },
+  "url": "https://www.encodeclub.com",
+  "notes": [
+    "Free six-week online programme from 2 November; build window opens 19 November; checkpoint 22 November 23:59 UTC; judging 10–11 December.",
+    "A working enrolment route and registration cutoff were not verified."
+  ],
+  "researchAsOf": "2026-10-17",
+  "addedAt": "2026-10-17T01:13:40.420Z"
+}

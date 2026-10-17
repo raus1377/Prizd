@@ -1,0 +1,35 @@
+{
+  "id": "viam-physical-ai-robot-hackathon-2026",
+  "summary": "Build an end-to-end physical-AI application on Viam using supplied robot arms, cameras and compute. MongoDB is a co-host.",
+  "deadline": null,
+  "location": "San Francisco, USA",
+  "format": "In person",
+  "eligibility": "Rolling-approval applications. Software, Linux, Git and JSON familiarity expected; no robotics experience needed. Fee, age and international admission unconfirmed.",
+  "tags": [
+    "Robotics",
+    "Physical AI"
+  ],
+  "entryStatus": "open",
+  "title": "Viam Robot Hackathon: Physical AI & Data",
+  "category": "Hackathon",
+  "deadlineDate": "2026-10-29",
+  "deadlineLabel": "Event starts (application cutoff unpublished)",
+  "team": {
+    "min": 2,
+    "max": 3
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Winners receive SO-101 robot kits; gold/silver/bronze tiers of US$5,000 / 2,500 / 1,000 in credits from each of Viam and MongoDB Atlas. Credits, not cash."
+  },
+  "url": "https://www.viam.com",
+  "notes": [
+    "29–30 October at the Robotics Center of Silicon Valley, San Francisco; demos 30 October at 15:30.",
+    "Direct application page was not retrievable; use the link supplied in the research digest."
+  ],
+  "researchAsOf": "2026-10-17",
+  "organizerId": "viam",
+  "addedAt": "2026-10-17T01:13:40.420Z"
+}

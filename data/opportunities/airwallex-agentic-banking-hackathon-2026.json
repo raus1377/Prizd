@@ -1,0 +1,36 @@
+{
+  "id": "airwallex-agentic-banking-hackathon-2026",
+  "summary": "Build banking and financial-workflow agents on Airwallex APIs covering treasury, payments, expenses and disputes.",
+  "deadline": null,
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Worldwide, including India; 18+. Free entry; accepted teams are notified on 25 October.",
+  "tags": [
+    "Fintech",
+    "AI agents",
+    "Payments"
+  ],
+  "entryStatus": "open",
+  "title": "Airwallex Agentic Banking Hackathon",
+  "category": "Hackathon",
+  "deadlineDate": "2026-10-23",
+  "deadlineLabel": "Applications close",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 80000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "Itemised awards total US$80,000 (separate credits listed). The headline of US$100,000 does not reconcile with the page breakdown."
+  },
+  "url": "https://airwallex.hackerearth.com",
+  "notes": [
+    "Submissions due 13 November; finalists 15 November; demo day 19 November. Cutoff times and timezones are not published.",
+    "San Francisco attendance is optional; mentoring and judging are remote."
+  ],
+  "researchAsOf": "2026-10-17",
+  "organizerId": "airwallex",
+  "addedAt": "2026-10-17T01:13:40.420Z"
+}

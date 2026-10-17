@@ -1,0 +1,36 @@
+{
+  "id": "encode-solana-hackathon-2026",
+  "summary": "Ship a useful Solana product (consumer apps, payments, games, creator tools or agents) with a working demo and meaningful blockchain integration.",
+  "deadline": null,
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Online and worldwide, including India. Solo-entry rules, minimum age and fees were not independently confirmed.",
+  "tags": [
+    "Solana",
+    "Web3",
+    "Blockchain"
+  ],
+  "entryStatus": "open",
+  "title": "Encode Club Solana Hackathon 2026",
+  "category": "Hackathon",
+  "deadlineDate": "2026-11-01",
+  "deadlineLabel": "Registration closes",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Winning teams enter an eight-week Encode accelerator. Explicitly non-cash."
+  },
+  "url": "https://www.encodeclub.com",
+  "notes": [
+    "Share your project idea by 18 October; final submission 8 November 23:59 AoE = 9 November 17:29 IST; winners 16 November.",
+    "Direct application page was not retrievable; this links Encode Club's site."
+  ],
+  "researchAsOf": "2026-10-17",
+  "organizerId": "encode-club",
+  "addedAt": "2026-10-17T01:13:40.420Z"
+}

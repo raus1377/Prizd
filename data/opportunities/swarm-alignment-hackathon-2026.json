@@ -1,0 +1,31 @@
+{
+  "id": "swarm-alignment-hackathon-2026",
+  "summary": "A global remote AI-alignment research hackathon, solo or in teams.",
+  "deadline": "2026-11-09T17:29:00+05:30",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Global remote participation. Fees, minimum age and registration cutoff are unstated; portal status is unresolved.",
+  "tags": [
+    "AI safety",
+    "Alignment",
+    "Research"
+  ],
+  "entryStatus": "check",
+  "title": "Swarm Alignment Hackathon",
+  "category": "Hackathon",
+  "deadlineLabel": "Submission deadline",
+  "team": null,
+  "prize": {
+    "amount": 4000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$4,000 global prizes, plus a separate US$4,000 pool for Los Angeles participants only."
+  },
+  "url": "https://ae.studio/ai-alignment",
+  "notes": [
+    "6–8 November; deadline 8 November 23:59 AoE. The signup form also shows a closed-submission message, so confirm status. AE Studio is an applied-AI studio, not a verified product startup."
+  ],
+  "researchAsOf": "2026-10-17",
+  "organizerId": "ae-studio",
+  "addedAt": "2026-10-17T01:13:40.420Z"
+}

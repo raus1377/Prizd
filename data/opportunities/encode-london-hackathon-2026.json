@@ -1,0 +1,31 @@
+{
+  "id": "encode-london-hackathon-2026",
+  "summary": "Two challenges: The Real World (multimodal and physical-world data) and Agents That Ship (useful end-to-end agents). Includes a named Saint bounty.",
+  "deadline": null,
+  "location": "London, UK",
+  "format": "In person",
+  "eligibility": "Developers, founders, researchers and students via guaranteed-entry, ballot and student-approval tickets. Ticket prices, age and international admission unverified.",
+  "tags": [
+    "AI agents",
+    "Multimodal"
+  ],
+  "entryStatus": "check",
+  "title": "Encode London Hackathon",
+  "category": "Hackathon",
+  "organizerId": "encode-club",
+  "deadlineDate": "2026-10-23",
+  "deadlineLabel": "Event starts (ticket cutoff unpublished)",
+  "team": null,
+  "prize": {
+    "amount": 200,
+    "currency": "GBP",
+    "kind": "first",
+    "description": "Best Use of Saint bounty: GBP 200 cash, Saint access for each teammate and three months free. Other prizes not verified."
+  },
+  "url": "https://www.encodeclub.com",
+  "notes": [
+    "23–25 October at Encode Hub, 41 Pitfield Street; demos on Sunday 25 October. Direct ticket page was not retrievable."
+  ],
+  "researchAsOf": "2026-10-17",
+  "addedAt": "2026-10-17T01:13:40.420Z"
+}

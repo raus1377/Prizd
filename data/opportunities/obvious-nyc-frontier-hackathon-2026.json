@@ -1,0 +1,31 @@
+{
+  "id": "obvious-nyc-frontier-hackathon-2026",
+  "summary": "Build an autonomous software-development workflow on Obvious.ai, on a real repository or a new product.",
+  "deadline": null,
+  "location": "New York, USA",
+  "format": "In person",
+  "eligibility": "Approval-based registration. Minimum age, student status and international admission are unconfirmed; no travel funding stated.",
+  "tags": [
+    "AI agents",
+    "Developer tools"
+  ],
+  "entryStatus": "open",
+  "title": "NYC Frontier Hackathon: Autonomous Code Factory",
+  "category": "Hackathon",
+  "deadlineDate": "2026-10-30",
+  "deadlineLabel": "Event date (registration cutoff unpublished)",
+  "team": null,
+  "prize": {
+    "amount": 35000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$35,000 in Obvious Fusion credits split 20,000 / 10,000 / 5,000. Credits, not cash."
+  },
+  "url": "https://luma.com/FrontierBuildNYC2",
+  "notes": [
+    "Free entry including hackathon tokens. Doors 10:00, building 11:00, awards 17:45 (timezone not labelled)."
+  ],
+  "researchAsOf": "2026-10-17",
+  "organizerId": "obvious",
+  "addedAt": "2026-10-17T01:13:40.420Z"
+}

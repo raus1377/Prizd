@@ -1,0 +1,37 @@
+{
+  "id": "prmia-risk-management-challenge-2027",
+  "summary": "A virtual financial-risk case competition for enrolled undergraduate and graduate students, with industry feedback and a creative-thinking team award.",
+  "deadline": null,
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Any enrolled undergraduate or graduate student worldwide; cross-university teams and university-email verification. No coursework prerequisites.",
+  "tags": [
+    "Risk management",
+    "Finance",
+    "Case"
+  ],
+  "entryStatus": "open",
+  "title": "PRMIA Risk Management Challenge 2027",
+  "category": "Finance",
+  "deadlineDate": "2027-02-15",
+  "deadlineLabel": "Registration (conservative; official clocks conflict)",
+  "team": {
+    "min": 3,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Top two teams receive cash awards (amounts unspecified); scholarships and memberships are non-cash benefits."
+  },
+  "url": "https://www.prmia.org/prmia-risk-management-challenge",
+  "notes": [
+    "Fee US$200 per team early bird (about 5 January), US$300 after. Round 1 submission 22 February; case materials from 1 December.",
+    "Body text says 16 February, 11:29 IST; event metadata shows an earlier 15 February ending. Register well before 15 February.",
+    "Read the new 2027 handbook and AI/mentor policies before paying."
+  ],
+  "researchAsOf": "2026-10-17",
+  "organizerId": "prmia",
+  "addedAt": "2026-10-17T01:13:40.420Z"
+}

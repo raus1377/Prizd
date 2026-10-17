@@ -1,0 +1,32 @@
+{
+  "id": "emergent-yc-vibecon-sf-2026",
+  "summary": "Build, ship and demo a working product on Emergent at Y Combinator's San Francisco office.",
+  "deadline": null,
+  "location": "San Francisco, USA",
+  "format": "In person",
+  "eligibility": "Targets pre-seed founders, engineers, designers and operators with 2+ years' experience who can attend in SF; YC approval required. Not unrestricted student entry.",
+  "tags": [
+    "AI",
+    "Product",
+    "Startups"
+  ],
+  "entryStatus": "open",
+  "title": "Emergent × Y Combinator VibeCon SF 2026",
+  "category": "Hackathon",
+  "deadlineDate": "2026-10-24",
+  "deadlineLabel": "Event starts (registration cutoff unpublished)",
+  "team": null,
+  "prize": {
+    "amount": 10000,
+    "currency": "USD",
+    "kind": "first",
+    "description": "US$10,000 plus an upcoming YC batch interview for the winner; US$5,000 second and US$3,000 third. The interview is not guaranteed YC admission."
+  },
+  "url": "https://emergent.sh/news/vibecon-sf-oct-24-25-build-ship-win-10k-yc",
+  "notes": [
+    "24–25 October. Fee, age and residency rules are unstated; travel and visa are the participant's responsibility."
+  ],
+  "researchAsOf": "2026-10-17",
+  "organizerId": "emergent",
+  "addedAt": "2026-10-17T01:13:40.420Z"
+}

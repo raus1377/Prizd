@@ -772,5 +772,113 @@
     "monogram": "IN",
     "color": "#242424",
     "website": "https://webjapps.ias.ac.in/fellowship2027/index.html"
+  },
+  {
+    "id": "falkordb",
+    "name": "FalkorDB",
+    "kind": "Company",
+    "prestige": 45,
+    "monogram": "FA",
+    "color": "#242424",
+    "website": "https://www.falkordb.com"
+  },
+  {
+    "id": "lexsi-labs",
+    "name": "Lexsi Labs",
+    "kind": "Company",
+    "prestige": 45,
+    "monogram": "LE",
+    "color": "#242424",
+    "website": "https://lexsi.ai"
+  },
+  {
+    "id": "airwallex",
+    "name": "Airwallex",
+    "kind": "Company",
+    "prestige": 60,
+    "monogram": "AI",
+    "color": "#242424",
+    "website": "https://airwallex.hackerearth.com"
+  },
+  {
+    "id": "emergent",
+    "name": "Emergent",
+    "kind": "Company",
+    "prestige": 55,
+    "monogram": "EM",
+    "color": "#242424",
+    "website": "https://emergent.sh"
+  },
+  {
+    "id": "obvious",
+    "name": "Obvious",
+    "kind": "Company",
+    "prestige": 40,
+    "monogram": "OB",
+    "color": "#242424",
+    "website": "https://luma.com/FrontierBuildNYC2"
+  },
+  {
+    "id": "viam",
+    "name": "Viam",
+    "kind": "Company",
+    "prestige": 45,
+    "monogram": "VI",
+    "color": "#242424",
+    "website": "https://www.viam.com"
+  },
+  {
+    "id": "h-company",
+    "name": "H Company",
+    "kind": "Company",
+    "prestige": 55,
+    "monogram": "H ",
+    "color": "#242424",
+    "website": "https://luma.com/hcompany.ai"
+  },
+  {
+    "id": "encode-club",
+    "name": "Encode Club",
+    "kind": "Company",
+    "prestige": 45,
+    "monogram": "EN",
+    "color": "#242424",
+    "website": "https://www.encodeclub.com"
+  },
+  {
+    "id": "bright-data",
+    "name": "Bright Data",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "BR",
+    "color": "#242424",
+    "website": "https://brightdata.com"
+  },
+  {
+    "id": "ae-studio",
+    "name": "AE Studio",
+    "kind": "Company",
+    "prestige": 40,
+    "monogram": "AE",
+    "color": "#242424",
+    "website": "https://ae.studio/ai-alignment"
+  },
+  {
+    "id": "prmia",
+    "name": "PRMIA",
+    "kind": "Organization",
+    "prestige": 60,
+    "monogram": "PR",
+    "color": "#242424",
+    "website": "https://www.prmia.org"
+  },
+  {
+    "id": "rice-university",
+    "name": "Rice University",
+    "kind": "College",
+    "prestige": 80,
+    "monogram": "RI",
+    "color": "#242424",
+    "website": "https://business.rice.edu"
   }
 ]
