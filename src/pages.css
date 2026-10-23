@@ -48,3 +48,20 @@
 }
 .page .cta-off{background:transparent;color:#3f3e3b;border:1px solid var(--line);cursor:default}
 .page .cta-off:hover{background:transparent}
+
+/* Margin-style overrides */
+.page .page-head{border-bottom:1px solid var(--hair);padding:0 var(--gutter);min-height:87px;font-family:var(--mono)}
+.page .page-brand{font-family:var(--serif);font-size:39px;font-weight:900;letter-spacing:-3px;line-height:1;text-transform:lowercase}.page .page-brand em{color:var(--apricot);font-style:normal}
+.page .page-nav{font-family:var(--sans);font-weight:800;font-size:12px}.page .page-nav a:hover{color:#b34e3c;border-bottom-color:transparent}
+.page h1{font-family:var(--serif);font-weight:500;letter-spacing:-.085em;line-height:.95;font-size:clamp(40px,6.4vw,92px)}
+.page h2{font-family:var(--serif);font-weight:400;letter-spacing:-.07em;line-height:1}
+.page .kicker{font-family:var(--mono);letter-spacing:.1em}.page .organizer-icon{border-color:var(--ink);background:#fffc}
+.page .crumbs,.page .counts,.page .fineprint,.page .empty,.page .facts dt{color:#55465d;font-family:var(--mono)}.page .crumbs{font-size:11px}
+.page .lede{color:#493c52}
+.page .status{border-radius:0;font-family:var(--mono)}.page .status-open{color:#1d6b3a}.page .status-upcoming,.page .status-check{color:#7a4f00}.page .status-closed{color:#55465d}
+.page .facts{border-top:1px solid var(--ink);background:var(--paper)}.page .facts>div{border-bottom:1px solid var(--hair);padding:20px 24px 22px 20px}
+.page .tags li{border:1px solid #281b3855;background:transparent;font-family:var(--mono)}
+.page .cta{background:var(--apricot);color:var(--ink);border:1px solid var(--ink);font-weight:900;font-size:12px;letter-spacing:.03em;text-transform:none;border-radius:2px;transition:transform .2s,box-shadow .2s}.page .cta:hover{background:var(--apricot);transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+.page .cta-off,.page .cta-off:hover{background:transparent;box-shadow:none;transform:none;border-style:dashed;color:#55465d}
+.page .rows,.page .row{border-color:var(--hair)}.page .rows{border-top-color:var(--ink)}.page .row-org,.page .row-prize,.page .row-date{color:#493c52}.page .row-title{font-family:var(--serif);font-weight:400;letter-spacing:-.04em;font-size:clamp(20px,2vw,26px)}
+.page .page-foot{background:var(--ink);color:var(--cream);border-top:0;font-family:var(--mono)}.page .page-foot .page-brand{color:var(--cream)}.page .page-foot p{color:#ede8d8a8}.page .page-foot nav a:hover{border-bottom-color:var(--apricot)}
