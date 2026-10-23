@@ -110,8 +110,11 @@ export function buildSite({ settings, organizers, opportunities, archived = [], 
       `<meta name="twitter:description" content="${esc(description)}">`,
       `<link rel="stylesheet" href="${base}styles.css">`,
       `<link rel="stylesheet" href="${base}pages.css">`,
+      `<link rel="stylesheet" href="${base}account.css">`,
       site && jsonld.length ? jsonLd(jsonld) : '',
-      `<script defer src="${base}page.js"></script>`
+      `<script defer src="${base}page.js"></script>`,
+      `<script defer src="${base}config.js"></script>`,
+      `<script defer src="${base}account.js"></script>`
     ].filter(Boolean).join('\n');
     return `<!doctype html>
 <html lang="en">
@@ -165,6 +168,7 @@ ${o.tags?.length ? `<ul class="tags" aria-label="Tags">${o.tags.map(t => `<li>${
 <p class="actions">${o.url ? `<a class="cta" href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">Visit the official page <span aria-hidden="true">↗</span></a>` : '<span class="cta cta-off">Official link coming soon</span>'}${o.sourceUrl && o.sourceUrl !== o.url ? `<a class="text-link" href="${esc(o.sourceUrl)}" target="_blank" rel="noopener noreferrer">Rules / source <span aria-hidden="true">↗</span></a>` : ''}<a class="text-link" href="../../?category=${encodeURIComponent(o.category)}#opportunities">More ${esc(hub.navName.toLowerCase())} <span aria-hidden="true">↗</span></a></p>
 <p class="fineprint">Added ${esc(day(o.addedAt))}${checked ? ` · Details checked ${esc(day(checked + 'T12:00:00Z', 'UTC'))}` : ''} · Always confirm the rules and deadline on the official page before you apply.</p>
 </article>
+<section class="signup-band" data-signup data-source="listing:${esc(o.id)}" data-title="Get alerts like this one." hidden></section>
 ${related.length ? `<section class="related"><h2>More ${esc(hub.navName.toLowerCase())}</h2><ul class="rows">${related.map(r => row(r, '../../')).join('')}</ul></section>` : ''}`;
     files.set(`${path}index.html`, layout({
       base: '../../', title, description, path, body,
@@ -189,6 +193,7 @@ ${related.length ? `<section class="related"><h2>More ${esc(hub.navName.toLowerC
 <p class="actions"><a class="cta" href="../?${filterQuery}#opportunities">Filter and search ${esc(hub.navName.toLowerCase())} <span aria-hidden="true">↗</span></a></p>
 ${active.length ? `<ul class="rows">${active.map(o => row(o, '../')).join('')}</ul>` : '<p class="empty">No open listings right now. Check the past entries below or come back soon.</p>'}
 ${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o, '../')).join('')}</ul>` : ''}
+<section class="signup-band" data-signup data-source="hub:${esc(hub.slug)}" data-title="Get ${esc(hub.navName.toLowerCase())} in your inbox." hidden></section>
 <section class="related"><h2>Browse other types</h2><ul class="tags">${allHubs.filter(h => h.indexable && h !== hub).map(h => `<li><a href="../${h.slug}/">${esc(h.navName)}</a></li>`).join('')}</ul></section>`;
     files.set(`${path}index.html`, layout({
       base: '../', title: `${hub.title} | ${brand}`.length <= 64 ? `${hub.title} | ${brand}` : hub.title, description, path, body,
@@ -199,6 +204,39 @@ ${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o,
       ]
     }));
   }
+
+  // ---- privacy page (linked from every consent box)
+  const contact = settings.contactEmail ? `Questions or requests: <a href="mailto:${esc(settings.contactEmail)}">${esc(settings.contactEmail)}</a>.` : 'You can unsubscribe from any email with its unsubscribe link, and delete your account and data yourself from the Account panel.';
+  files.set('privacy/index.html', layout({
+    base: '../', title: `Privacy | ${brand}`, description: `What ${brand} collects, why, and how to remove it.`, path: 'privacy/', robots: 'noindex,follow',
+    body: `<nav class="crumbs" aria-label="Breadcrumb"><a href="../">${esc(brand)}</a><span aria-hidden="true">/</span><span aria-current="page">Privacy</span></nav>
+<div class="privacy">
+<h1>Privacy</h1>
+<p class="lede">${esc(brand)} is a free index of hackathons, case competitions and internships. We keep as little about you as we can, and only what a feature needs.</p>
+<h2>What we collect</h2>
+<ul>
+<li><b>If you sign in with Google:</b> your name, email address and profile picture, and the opportunities you save.</li>
+<li><b>If you leave an email:</b> your email address and the topics you ticked (hackathons, internships, case comps).</li>
+<li><b>If you add a WhatsApp number:</b> that number, only for deadline alerts you asked for.</li>
+<li><b>When you agree:</b> the time you agreed and the page you agreed on, so we can show your consent was given.</li>
+<li>If you arrive through a friend's invite link, we note the invite code.</li>
+</ul>
+<h2>Why</h2>
+<ul>
+<li>To keep your shortlist across devices and unlock filters.</li>
+<li>To send the weekly digest and deadline reminders you opted into. We never send anything else, and we never sell or rent your data.</li>
+</ul>
+<h2>Who handles it</h2>
+<p>Google confirms your identity. Supabase stores the data. Resend delivers email. Each acts only on our instructions to run the service.</p>
+<h2>Your choices</h2>
+<ul>
+<li>Every email has an unsubscribe link, and it works at once.</li>
+<li>Email signups are double opt-in: nothing is sent until you tap the link in the confirmation email.</li>
+<li>Signed-in users can change preferences or delete their account and data from the Account panel at any time.</li>
+</ul>
+<p>${contact}</p>
+</div>`
+  }));
 
   // ---- 404, robots, sitemap
   files.set('404.html', `<!doctype html>

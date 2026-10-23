@@ -65,3 +65,4 @@
 .page .cta-off,.page .cta-off:hover{background:transparent;box-shadow:none;transform:none;border-style:dashed;color:#55465d}
 .page .rows,.page .row{border-color:var(--hair)}.page .rows{border-top-color:var(--ink)}.page .row-org,.page .row-prize,.page .row-date{color:#493c52}.page .row-title{font-family:var(--serif);font-weight:400;letter-spacing:-.04em;font-size:clamp(20px,2vw,26px)}
 .page .page-foot{background:var(--ink);color:var(--cream);border-top:0;font-family:var(--mono)}.page .page-foot .page-brand{color:var(--cream)}.page .page-foot p{color:#ede8d8a8}.page .page-foot nav a:hover{border-bottom-color:var(--apricot)}
+.page .privacy h1{margin-bottom:10px}
