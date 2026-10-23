@@ -1,0 +1,48 @@
+name: Send Prizd emails
+on:
+  schedule:
+    - cron: '30 3 * * 1'   # weekly digest, Monday 09:00 IST
+    - cron: '0 4 * * *'    # deadline reminders, daily 09:30 IST
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'weekly or reminders'
+        required: true
+        default: reminders
+        type: choice
+        options: [weekly, reminders]
+permissions:
+  contents: read
+concurrency:
+  group: prizd-mail
+  cancel-in-progress: false
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Decide what to send
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "mode=${{ inputs.mode }}" >> "$GITHUB_OUTPUT";
+          elif [ "${{ github.event.schedule }}" = "30 3 * * 1" ]; then echo "mode=weekly" >> "$GITHUB_OUTPUT";
+          else echo "mode=reminders" >> "$GITHUB_OUTPUT"; fi
+      - name: Build the listing data
+        run: npm run build
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+      - name: Send (dry run if secrets are missing)
+        run: node scripts/digest.mjs "${{ steps.mode.outputs.mode }}"
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}

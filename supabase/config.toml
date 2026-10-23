@@ -1,0 +1,9 @@
+# Links in emails (confirm / unsubscribe) are opened by people who are not signed in,
+# and the signup form is called from the public site, so these functions skip JWT checks.
+# They validate their own input and use the service role only on the server.
+[functions.subscribe]
+verify_jwt = false
+[functions.confirm]
+verify_jwt = false
+[functions.unsubscribe]
+verify_jwt = false

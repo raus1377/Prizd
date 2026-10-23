@@ -18,7 +18,15 @@ export function validateSettings(settings, organizers) {
   for (const [currency, rate] of Object.entries(settings.prizeUsdRates || {})) if (!/^[A-Z]{3}$/.test(currency) || !(Number.isFinite(rate) && rate > 0)) throw new Error('settings: invalid prize exchange rate');
   if (settings.siteUrl !== undefined && settings.siteUrl !== '' && !/^https?:\/\/[^\s/?#]+(?:\/[^\s?#]*)?$/.test(settings.siteUrl)) throw new Error('settings: siteUrl must be empty or an absolute http(s) URL without query or fragment');
   for (const key of ['brand','tagline','seoTitle','seoDescription']) if (settings[key] !== undefined && (typeof settings[key] !== 'string' || !settings[key].trim())) throw new Error(`settings: ${key} must be a non-empty string`);
-  const slugs = new Set(['404','sitemap','robots','assets']);
+  if (settings.contactEmail !== undefined && settings.contactEmail !== '' && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(settings.contactEmail)) throw new Error('settings: contactEmail must be empty or an email address');
+  if (settings.backend !== undefined) {
+    const b = settings.backend;
+    if (!b || typeof b !== 'object') throw new Error('settings: backend must be an object');
+    if (b.supabaseUrl && !/^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(b.supabaseUrl)) throw new Error('settings: backend.supabaseUrl must look like https://<project>.supabase.co');
+    if (b.supabaseAnonKey && !/^[\w.-]{20,}$/.test(b.supabaseAnonKey)) throw new Error('settings: backend.supabaseAnonKey must be the public anon key');
+    if (Boolean(b.supabaseUrl) !== Boolean(b.supabaseAnonKey)) throw new Error('settings: backend needs both supabaseUrl and supabaseAnonKey, or neither');
+  }
+  const slugs = new Set(['404','sitemap','robots','assets','privacy']);
   const checkPage = (label, page) => {
     if (!page || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(page.slug || '') || slugs.has(page.slug)) throw new Error(`settings: ${label} needs a unique lowercase slug`);
     for (const key of ['title','h1','intro']) if (typeof page[key] !== 'string' || !page[key].trim()) throw new Error(`settings: ${label} needs ${key}`);

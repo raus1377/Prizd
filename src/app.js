@@ -93,8 +93,12 @@
     document.querySelectorAll('.card-reveal').forEach(el => observer ? observer.observe(el) : el.classList.add('visible'));
     syncURL();
   }
+  const account = window.PrizdAccount;
+  const gated = () => Boolean(account && account.enabled);
   function save(id) {
+    if (gated() && !account.user && !saved.has(id) && !account.requireAuth('save')) return;
     saved.has(id) ? saved.delete(id) : saved.add(id);
+    if (gated() && account.user) account.setSaved(id, saved.has(id));
     try { localStorage.setItem('prizd-saved-v1',JSON.stringify([...saved])); } catch { storageAvailable = false; }
     toast((saved.has(id) ? 'Added to your shortlist' : 'Removed from your shortlist') + (storageAvailable ? '' : ' · this session only'));
     render();
@@ -126,7 +130,7 @@
     if (detail) { openDetail(detail.dataset.detail); return; }
     const share = event.target.closest('[data-share]');
     if (share) {
-      const url = new URL(location.href);url.search = '';url.searchParams.set('opportunity',share.dataset.share);url.hash = 'opportunities';
+      const url = new URL(location.href);url.search = '';url.searchParams.set('opportunity',share.dataset.share);url.hash = 'opportunities';const refCode = account && account.refCode && account.refCode();if (refCode) url.searchParams.set('ref',refCode);
       try { await navigator.clipboard.writeText(url.href); toast('Opportunity link copied'); } catch { toast('Copy this page address to share the index'); }
       return;
     }
@@ -142,7 +146,7 @@
   $('search').addEventListener('input',event => { state.search = event.target.value; render(); });
   for (const [key,id] of [['kind','kind-filter'],['format','format-filter'],['team','team-filter'],['status','status-filter'],['sort','sort']]) $(id).addEventListener('change',event => { state[key] = event.target.value; render(); });
   $('reset-filters').addEventListener('click',reset);$('empty-reset').addEventListener('click',reset);
-  $('filter-toggle').addEventListener('click',() => { const expanded = $('filter-toggle').getAttribute('aria-expanded') !== 'true';$('filter-toggle').setAttribute('aria-expanded',expanded);$('advanced-filters').hidden = !expanded; });
+  $('filter-toggle').addEventListener('click',() => { if ($('filter-toggle').getAttribute('aria-expanded') !== 'true' && gated() && !account.user && !account.requireAuth('filters')) return;const expanded = $('filter-toggle').getAttribute('aria-expanded') !== 'true';$('filter-toggle').setAttribute('aria-expanded',expanded);$('advanced-filters').hidden = !expanded; });
   const closeMenu = () => { $('site-menu').hidden = true; $('menu-toggle').setAttribute('aria-expanded','false'); };
   $('menu-toggle').addEventListener('click',() => { const expanded = $('menu-toggle').getAttribute('aria-expanded') !== 'true';$('menu-toggle').setAttribute('aria-expanded',expanded);$('site-menu').hidden = !expanded; });
   document.addEventListener('click',e => { if (!e.target.closest('.site-menu,.menu-toggle')) closeMenu(); });
@@ -161,8 +165,14 @@
     heroKey = key;
     $('hero-shortlist').innerHTML=topPicks.map((o,i)=>`<a class="hero-pick" href="${escape(o.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${escape(o.title)}"><span class="pick-number">0${i+1}</span><span><span class="pick-label">${escape(o.organizer.name).toUpperCase()} / ${escape(o.category).toUpperCase()}</span><span class="pick-name">${escape(o.title)}</span></span><span class="pick-arrow" aria-hidden="true">↗</span></a>`).join('');
   }
-  if (state.kind !== 'all' || state.format !== 'all' || state.team !== 'all' || state.status !== 'open') { $('advanced-filters').hidden = false; $('filter-toggle').setAttribute('aria-expanded',true); }
+  if (!gated() && (state.kind !== 'all' || state.format !== 'all' || state.team !== 'all' || state.status !== 'open')) { $('advanced-filters').hidden = false; $('filter-toggle').setAttribute('aria-expanded',true); }
   render();setLayout(currentLayout);
+  if (account && account.onChange) account.onChange(a => {
+    if (a.user) for (const id of a.saved) saved.add(id);
+    try { localStorage.setItem('prizd-saved-v1',JSON.stringify([...saved])); } catch { /* storage may be blocked */ }
+    if (gated() && !a.user && !$('advanced-filters').hidden) { $('advanced-filters').hidden = true;$('filter-toggle').setAttribute('aria-expanded',false); }
+    render();
+  });
   if (params.get('opportunity')) openDetail(params.get('opportunity'));
   setInterval(() => { if (!$('detail-dialog').open) render(); },60000);
 })();

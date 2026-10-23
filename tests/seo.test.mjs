@@ -86,7 +86,7 @@ test('listing text is HTML-escaped and cannot break out of JSON-LD', () => {
   const site = buildSite({ settings, organizers: [organizer], opportunities: [evil, ...opportunities], now, siteUrl: 'https://prizd.example' });
   const page = site.files.get('hackathons/evil/index.html');
   assert.doesNotMatch(page, /<script>alert/);
-  assert.equal([...page.matchAll(/<script/g)].length, 2); // JSON-LD + page.js only
+  assert.equal([...page.matchAll(/<script/g)].length, 4); // JSON-LD + page.js + config.js + account.js only
   assert.equal(esc(`<a href="x">&'`), '&lt;a href=&quot;x&quot;&gt;&amp;&#39;');
   assert.ok(clip('word '.repeat(50), 40).endsWith('…'));
 });
@@ -140,4 +140,21 @@ test('the real repository data builds into pages whose internal links all resolv
       assert.ok(ok, `${file} links to missing ${href}`);
     }
   }
+});
+
+test('settings validation covers the backend block and contact email', () => {
+  const base = { ...settings, siteUrl: '' };
+  assert.doesNotThrow(() => validateSettings({ ...base, backend: { supabaseUrl: '', supabaseAnonKey: '' }, contactEmail: '' }, [organizer]));
+  assert.doesNotThrow(() => validateSettings({ ...base, backend: { supabaseUrl: 'https://abcd1234.supabase.co', supabaseAnonKey: 'eyJhbGciOiJIUzI1NiJ9.payload.signature' }, contactEmail: 'hi@prizd.in' }, [organizer]));
+  assert.throws(() => validateSettings({ ...base, backend: { supabaseUrl: 'https://evil.example', supabaseAnonKey: 'eyJhbGciOiJIUzI1NiJ9.payload.signature' } }, [organizer]), /supabaseUrl/);
+  assert.throws(() => validateSettings({ ...base, backend: { supabaseUrl: 'https://abcd1234.supabase.co', supabaseAnonKey: '' } }, [organizer]), /both/);
+  assert.throws(() => validateSettings({ ...base, contactEmail: 'nope' }, [organizer]), /contactEmail/);
+});
+
+test('listing and category pages carry the signup slot and the privacy page exists', () => {
+  const site = buildSite({ settings, organizers: [organizer], opportunities, now, siteUrl: 'https://prizd.example' });
+  assert.match(site.files.get('hackathons/a/index.html'), /data-signup data-source="listing:a"/);
+  assert.match(site.files.get('hackathons/index.html'), /data-signup data-source="hub:hackathons"/);
+  assert.match(site.files.get('hackathons/a/index.html'), /account\.js/);
+  assert.match(site.files.get('privacy/index.html'), /double opt-in/);
 });
