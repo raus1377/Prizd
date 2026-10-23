@@ -6,7 +6,7 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { validateSettings, validateOpportunity, gitAddedAt, normalizeOpportunity, DAY } from '../scripts/model.mjs';
 await import('../src/logic.js');
-const { isNew, isClosed, isActionable, entryStatus, rank, select } = globalThis.OpenCall;
+const { isNew, isClosed, isActionable, entryStatus, rank, select } = globalThis.Prizd;
 const now = Date.parse('2026-10-11T06:00:00Z');
 const organizer = {id:'o',name:'Organizer',kind:'College',prestige:100,monogram:'O',color:'#111111',website:'https://example.com'};
 const settings = { name:'Test',categories:['Hackathon','Product'],newWindowDays:7,defaultSort:'prestige',prizeUsdRates:{USD:1,INR:.01} };
@@ -95,7 +95,7 @@ test('Published catalog uses event links and valid organizer relationships for e
   }
 });
 test('Git birth date survives subsequent edits and a file rename', async () => {
-  const dir=await mkdtemp(path.join(tmpdir(),'open-call-test-'));
+  const dir=await mkdtemp(path.join(tmpdir(),'prizd-test-'));
   const run=(args,date)=>execFileSync('git',args,{cwd:dir,encoding:'utf8',stdio:['ignore','pipe','pipe'],env:{...process.env,...(date ? {GIT_AUTHOR_DATE:date,GIT_COMMITTER_DATE:date} : {})}});
   try {
     run(['init','-q']);run(['config','user.email','tests@example.invalid']);run(['config','user.name','Test']);

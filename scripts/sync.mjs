@@ -1,5 +1,5 @@
 /**
- * Idempotent OPEN CALL inbox ingestion and expiration maintenance.
+ * Idempotent Prizd inbox ingestion and expiration maintenance.
  * No API keys or dependencies. Reads ONLY updates/inbox and existing catalog.
  * Fail-closed: all incoming records are parsed and validated before any writes.
  * Existing listings are archived ONLY after their verified deadline has passed.

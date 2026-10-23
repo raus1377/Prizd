@@ -1,8 +1,8 @@
 (() => {
   'use strict';
-  const data = window.__OPEN_CALL_DATA__;
+  const data = window.__PRIZD_DATA__;
   if (!data) { document.getElementById('result-count').textContent = 'Data could not load. Please refresh.'; return; }
-  const { isNew, isClosed, isActionable, entryStatus, rank, select, DAY } = window.OpenCall;
+  const { isNew, isClosed, isActionable, entryStatus, rank, select, prizeText, prizeKind, teamText, DAY } = window.Prizd;
   const $ = id => document.getElementById(id);
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const settings = data.settings;
@@ -15,14 +15,14 @@
   state.search = params.get('q') || '';
   let saved;
   let storageAvailable = true;
-  try { const raw = JSON.parse(localStorage.getItem('open-call-saved-v1') || '[]'); saved = new Set(Array.isArray(raw) ? raw.filter(x => typeof x === 'string') : []); } catch { saved = new Set(); storageAvailable = false; }
+  try { const raw = JSON.parse(localStorage.getItem('prizd-saved-v1') || localStorage.getItem('open-call-saved-v1') || '[]'); saved = new Set(Array.isArray(raw) ? raw.filter(x => typeof x === 'string') : []); } catch { saved = new Set(); storageAvailable = false; }
   let currentLayout = 'grid';
-  try { currentLayout = localStorage.getItem('open-call-layout') === 'list' ? 'list' : 'grid'; } catch { /* Browsing still works without storage. */ }
+  try { currentLayout = (localStorage.getItem('prizd-layout') || localStorage.getItem('open-call-layout')) === 'list' ? 'list' : 'grid'; } catch { /* Browsing still works without storage. */ }
   let now = Date.now();
   let detailId = null;
   let toastTimer;
   $('brand-name').textContent = settings.name;
-  document.title = `${settings.name} — The Opportunity Index`;
+  document.title = settings.seoTitle || `${settings.name} — The Opportunity Index`;
   $('footer-year').textContent = new Date().getFullYear();
   $('edition-label').textContent = 'CURATED INDEX';
   $('updated-label').textContent = `INDEX UPDATED ${new Date(data.builtAt).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}).toUpperCase()}`;
@@ -40,16 +40,8 @@
   $('search').value = state.search;
   for (const [key,id] of [['kind','kind-filter'],['format','format-filter'],['team','team-filter'],['status','status-filter'],['sort','sort']]) $(id).value = state[key];
   const bookmark = active => `<svg width="15" height="19" viewBox="0 0 15 19" fill="${active ? 'currentColor' : 'none'}" aria-hidden="true"><path d="M2 1.5h11v15L7.5 13 2 16.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>`;
-  const prizeText = o => o.prize.amount === null ? (o.prize.kind === 'none' ? 'Experience' : o.prize.kind === 'stipend' ? 'Paid · amount TBC' : 'To be announced') : new Intl.NumberFormat('en-US',{style:'currency',currency:o.prize.currency,maximumFractionDigits:0}).format(o.prize.amount);
-  const prizeKind = o => ({pool:'PRIZE POOL',first:'FIRST PRIZE',stipend:'STIPEND / MONTH',none:'REWARD',undisclosed:'PRIZE'}[o.prize.kind]);
   const shortDate = value => new Date(value).toLocaleDateString('en-GB',{day:'2-digit',month:'short'}).toUpperCase();
   const statusLabel = o => ({open:'Open',upcoming:'Upcoming',check:'Check entry',closed:'Closed'}[entryStatus(o,now)]);
-  function teamText(o) {
-    if (o.teamText) return o.teamText;
-    if (!o.team) return 'Check team rules';
-    if (o.team.max === null) return o.team.min === 1 ? 'Solo / team' : `At least ${o.team.min} members`;
-    return o.team.min === o.team.max ? `${o.team.min} participant${o.team.min === 1 ? '' : 's'}` : `${o.team.min}–${o.team.max} participants`;
-  }
   function deadlineText(o) {
     const status=entryStatus(o,now);
     if (o.deadline === null && !o.deadlineDate) return {date:o.opensOn ? 'OPENS '+shortDate(o.opensOn+'T12:00:00Z') : 'DATE TO CONFIRM',remaining:statusLabel(o),urgent:false};
@@ -104,7 +96,7 @@
   }
   function save(id) {
     saved.has(id) ? saved.delete(id) : saved.add(id);
-    try { localStorage.setItem('open-call-saved-v1',JSON.stringify([...saved])); } catch { storageAvailable = false; }
+    try { localStorage.setItem('prizd-saved-v1',JSON.stringify([...saved])); } catch { storageAvailable = false; }
     toast((saved.has(id) ? 'Added to your shortlist' : 'Removed from your shortlist') + (storageAvailable ? '' : ' · this session only'));
     render();
     if (detailId === id) renderDetail(id);
@@ -160,7 +152,7 @@
   $('detail-dialog').addEventListener('click',e => { if (e.target === $('detail-dialog')) { const r = e.target.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) e.target.close(); } });
   $('detail-dialog').addEventListener('close',() => { document.body.style.overflow = '';detailId = null; });
   document.addEventListener('keydown',e => { if (e.key === 'Escape') closeMenu();if (e.key === '/' && !e.ctrlKey && !e.metaKey && !e.altKey && !e.target.matches('input,textarea,select') && !e.target.isContentEditable && !$('detail-dialog').open) { e.preventDefault();$('search').focus();$('opportunities').scrollIntoView({behavior:'smooth'}); } });
-  function setLayout(layout) { currentLayout = layout; $('opportunity-grid').classList.toggle('list',layout === 'list');$('grid-view').classList.toggle('active',layout === 'grid');$('list-view').classList.toggle('active',layout === 'list');$('grid-view').setAttribute('aria-pressed',layout === 'grid');$('list-view').setAttribute('aria-pressed',layout === 'list');try{localStorage.setItem('open-call-layout',layout);}catch{} }
+  function setLayout(layout) { currentLayout = layout; $('opportunity-grid').classList.toggle('list',layout === 'list');$('grid-view').classList.toggle('active',layout === 'grid');$('list-view').classList.toggle('active',layout === 'list');$('grid-view').setAttribute('aria-pressed',layout === 'grid');$('list-view').setAttribute('aria-pressed',layout === 'list');try{localStorage.setItem('prizd-layout',layout);}catch{} }
   $('grid-view').addEventListener('click',() => setLayout('grid'));$('list-view').addEventListener('click',() => setLayout('list'));
   let heroKey = '';
   function renderHero() {
@@ -178,7 +170,7 @@
   function initStory() {
     const reduced = matchMedia('(prefers-reduced-motion: reduce)');
     const scenes = [
-      {title:['OPEN','CALLS'],label:'OPEN OPPORTUNITIES',description:'Great names. Real challenges.<br>A little ambition goes a long way.',emphasis:'Find your next move.',figure:'POSSIBILITY, IN FORM'},
+      {title:['GET','PRIZD'],label:'HACKATHONS, CASES & INTERNSHIPS',description:'Hackathons, case competitions and paid internships<br>worth showing up for.',emphasis:'Find your next win.',figure:'POSSIBILITY, IN FORM'},
       {title:['BUILD','BOLD'],label:'HACKATHONS & PRODUCT',description:'An idea is only the beginning.<br>Make something people can use.',emphasis:'Bring what comes next.',figure:'AN IDEA, UNFOLDED'},
       {title:['MAKE','A CASE'],label:'CASES & CONSULTING',description:'A complex problem. A fresh perspective.<br>The right question changes everything.',emphasis:'Let your thinking do the talking.',figure:'A DIFFERENT PERSPECTIVE'},
       {title:['THINK','BIGGER'],label:'FINANCE, MARKETING & ECONOMICS',description:'New markets. Better decisions.<br>See the opportunity others overlook.',emphasis:'The next move is yours.',figure:'AMBITION, IN MOTION'}
@@ -197,7 +189,7 @@
       const offset = (phase < .17 && scene > 0 ? 1-entry : -(1-exit))*90;
       sceneCopy.style.opacity = visibility;sceneCopy.style.transform = `translate3d(0,${offset}px,0)`;sceneCopy.style.filter = `blur(${(1-visibility)*8}px)`;
       $('story-progress').style.width = `${progress*100}%`;
-      if (window.OpenCallGlass) window.OpenCallGlass.setProgress(progress);
+      if (window.PrizdGlass) window.PrizdGlass.setProgress(progress);
       frame = Math.abs(target-progress) > .0002 ? requestAnimationFrame(draw) : null;
     }
     window.addEventListener('scroll',updateTarget,{passive:true});window.addEventListener('resize',updateTarget);reduced.addEventListener('change',updateTarget);updateTarget();

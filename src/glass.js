@@ -62,7 +62,7 @@
   gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.clearColor(0,0,0,0);
   let progress=0,width=0,height=0,pointerX=0,pointerY=0,frame=null,visible=true,contextLost=false;
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  window.OpenCallGlass={setProgress(value){progress=value;if(frame===null&&visible&&!contextLost)frame=requestAnimationFrame(render);}};
+  window.PrizdGlass={setProgress(value){progress=value;if(frame===null&&visible&&!contextLost)frame=requestAnimationFrame(render);}};
   const objectParts=[];
   function addCube(base,alpha){for(const y of [-1,1])for(const z of [-1,1])objectParts.push([meshes.barX,multiply(base,transform(0,y,z,0,0,0)),alpha]);for(const x of [-1,1])for(const z of [-1,1])objectParts.push([meshes.barY,multiply(base,transform(x,0,z,0,0,0)),alpha]);for(const x of [-1,1])for(const y of [-1,1])objectParts.push([meshes.barZ,multiply(base,transform(x,y,0,0,0,0)),alpha]);}
   function resize(){const r=canvas.getBoundingClientRect();const dpr=Math.min(devicePixelRatio||1,1.5);const w=Math.floor(r.width*dpr),h=Math.floor(r.height*dpr);if(w!==width||h!==height){width=canvas.width=w;height=canvas.height=h;gl.viewport(0,0,w,h);const f=1/Math.tan(Math.PI/8),a=w/Math.max(1,h),near=.1,far=30;gl.uniformMatrix4fv(loc.uProjection,false,new Float32Array([f/a,0,0,0,0,f,0,0,0,0,(far+near)/(near-far),-1,0,0,2*far*near/(near-far),0]));}}

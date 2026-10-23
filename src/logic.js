@@ -39,5 +39,13 @@
       return true;
     }), state.sort);
   }
-  globalThis.OpenCall = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select };
+  const prizeText = o => o.prize.amount === null ? (o.prize.kind === 'none' ? 'Experience' : o.prize.kind === 'stipend' ? 'Paid · amount TBC' : 'To be announced') : new Intl.NumberFormat('en-US',{style:'currency',currency:o.prize.currency,maximumFractionDigits:0}).format(o.prize.amount);
+  const prizeKind = o => ({pool:'PRIZE POOL',first:'FIRST PRIZE',stipend:'STIPEND / MONTH',none:'REWARD',undisclosed:'PRIZE'}[o.prize.kind]);
+  function teamText(o) {
+    if (o.teamText) return o.teamText;
+    if (!o.team) return 'Check team rules';
+    if (o.team.max === null) return o.team.min === 1 ? 'Solo / team' : `At least ${o.team.min} members`;
+    return o.team.min === o.team.max ? `${o.team.min} participant${o.team.min === 1 ? '' : 's'}` : `${o.team.min}–${o.team.max} participants`;
+  }
+  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, prizeText, prizeKind, teamText };
 })();

@@ -1,4 +1,4 @@
-# OPEN CALL — The Opportunity Index
+# PRIZD — Hackathons, case competitions and paid internships
 
 A GitHub-ready opportunity board for hackathons, case competitions, product, finance, consulting, marketing, economics and related fields. The frontend uses giant black typography, a pale grey canvas, floating glass forms, pink reflections and scroll-driven chapter transitions.
 
@@ -8,15 +8,36 @@ The board contains the supplied competition listings. Card titles, featured pick
 
 ## Publish on GitHub Pages
 
-1. Create a repository named `open-call` (or any name), with the default branch named **main**.
-2. Extract this ZIP. Upload the contents of the `open-call` folder into your repository root. Include **`.github`**, which contains the publishing workflow. `package.json`, `src/`, `data/`, `scripts/`, `tests/` and `.github/` must be at the repository root.
+1. Create a repository named `prizd` (or any name), with the default branch named **main**.
+2. Extract this ZIP. Upload the contents of the `prizd` folder into your repository root. Include **`.github`**, which contains the publishing workflow. `package.json`, `src/`, `data/`, `scripts/`, `tests/` and `.github/` must be at the repository root.
 3. Open **Settings → Pages → Build and deployment → Source → GitHub Actions**.
-4. Open **Actions → Build and publish opportunity board → Run workflow**. Choose `main` and run it.
+4. Open **Actions → Sync data and publish Prizd → Run workflow**. Choose `main` and run it.
 5. When the workflow finishes, the deployment job and **Settings → Pages** show your website link.
 
 Every subsequent commit to `main` rebuilds and publishes the board automatically. Relative assets support repository subpaths and custom domains.
 
 Official setup reference: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+
+## Search visibility (SEO)
+
+A single JavaScript page is almost invisible to Google, so the build also writes plain HTML that search engines can read:
+
+- **One page per listing** at `/<category>/<listing-id>/` (for example `/hackathons/nebius-nvidia-ai-2026/`) with the prize, deadline, eligibility and official link, plus links to related listings. Listings with no official link yet show "Official link coming soon".
+- **One page per category** (`/hackathons/`, `/case-competitions/`, `/research-internships/` and so on) and an **India page** (`/india/`) for everything in the India region. Titles and intro copy are editable in `data/settings.json` under `categoryPages` and `regionPages`. Pages with fewer than three listings are marked `noindex` until they grow.
+- **Archived listings keep their page.** When the daily sync moves an expired listing to `data/archive/`, its URL stays online marked "Closed", so search engines do not hit a 404 and past editions keep ranking.
+- **`sitemap.xml`, `robots.txt`, `404.html`**, canonical tags, Open Graph / Twitter cards and structured data (WebSite, WebPage, CollectionPage, breadcrumbs).
+- A **“Browse by type”** section on the home page so crawlers reach every page from the front door.
+- The existing **daily sync** keeps open/closed status and the sitemap current without a commit.
+
+### Set your address (important)
+
+Canonical tags and the sitemap need the site's public address. The GitHub workflow supplies it automatically (your custom domain once you add one under **Settings → Pages → Custom domain**). For other hosts, set `"siteUrl": "https://your-domain"` in `data/settings.json` or run `SITE_URL=https://your-domain npm run build`. Without it the build prints a warning and skips canonical tags, structured data and the sitemap.
+
+`robots.txt` only takes effect at the root of a domain, so use a custom domain (a `.in` or `.com`) rather than `username.github.io/repo`. After deploying, add the site to Google Search Console and submit `https://your-domain/sitemap.xml`.
+
+### Writing listings that rank
+
+Each listing page is built from its JSON file, so the data is the content. Specific titles ("Meta Global AI Developer Hackathon 2026"), a clear `summary`, honest `eligibility` (say whether Indian students can enter) and a filled-in `prize.description` give each page something unique to rank for. Outbound links are cleaned of `utm_*` tracking parameters automatically.
 
 ## Add or update opportunities
 
@@ -102,7 +123,7 @@ npm run build
 npm start
 ```
 
-Open `http://localhost:3000`. Stop with Ctrl+C. No `npm install` is required. The included `dist/index.html` also opens directly; sharing and storage follow your browser’s file-mode policies.
+Open `http://localhost:3000`. Stop with Ctrl+C. No `npm install` is required. The included `dist/index.html` also opens directly, but category and listing pages need `npm start` (folder links do not resolve from `file://`); sharing and storage follow your browser’s file-mode policies.
 
 To check changes:
 
@@ -124,8 +145,11 @@ npm test
 | `templates/opportunity.json` | Copyable listing template |
 | `src/` | Frontend, filters and scroll/glass animation |
 | `scripts/build.mjs` | Validation, file discovery and build |
+| `scripts/seo.mjs` | Listing pages, category and India pages, sitemap, robots, meta tags and structured data |
+| `src/pages.css`, `src/page.js` | Styles and status refresh for the generated pages |
+| `src/og-image.png` | 1200×630 share image used in link previews |
 | `.github/workflows/pages.yml` | Automatic GitHub Pages publication |
 | `tests/` | Ranking, freshness, status, validation and Git-date checks |
 | `dist/` | Ready-to-view build, regenerated by the workflow |
 
-Syntax, build and behavior checks are included. Browser-based visual verification was unavailable for this update.
+Syntax, build and behavior checks are included (`npm run check`, `npm test`).

@@ -1,4 +1,4 @@
-name: Sync data and publish opportunity board
+name: Sync data and publish Prizd
 
 on:
   push:
@@ -16,7 +16,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: open-call-sync-and-pages
+  group: prizd-sync-and-pages
   cancel-in-progress: false
 
 jobs:
@@ -45,8 +45,15 @@ jobs:
       - name: Check and test
         run: npm run check && npm test
 
+      # The live address (your custom domain once configured) is needed for canonical tags and the sitemap.
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build website
         run: npm run build
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
 
       # Exclude dist/: the build embeds a new timestamp on every run.
       # These canonical catalog files are the only changes that belong in a PR.
@@ -74,7 +81,7 @@ jobs:
             data/archive
             updates/inbox
           commit-message: "chore: synchronize opportunities and archive expired listings"
-          title: "chore: update OPEN CALL opportunities"
+          title: "chore: update Prizd opportunities"
           body: |
             Automatically generated opportunity catalog update.
 
@@ -119,10 +126,6 @@ jobs:
       # Never publish unmerged PR changes. Deploy immediately after an allowed
       # bot PR merge (bot merges do not trigger another workflow), or rebuild
       # and deploy on push to main after a human merges a reviewed PR.
-      - name: Configure GitHub Pages
-        if: ${{ steps.changes.outputs.catalog_changed == 'false' || steps.merge.outputs.catalog_merged == 'true' }}
-        uses: actions/configure-pages@v5
-
       - name: Upload reviewed site artifact
         if: ${{ steps.changes.outputs.catalog_changed == 'false' || steps.merge.outputs.catalog_merged == 'true' }}
         uses: actions/upload-pages-artifact@v4
