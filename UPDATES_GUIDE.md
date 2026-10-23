@@ -1,4 +1,4 @@
-# OPEN CALL — update only ONE folder
+# PRIZD — update only ONE folder
 
 After a **one-time installation**, do not replace the repository and do not hand-edit `dist/`.
 

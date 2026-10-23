@@ -1,4 +1,4 @@
-OPEN CALL — Ranking update
+PRIZD — Ranking update
 
 This patch contains only the listed files, not your separate open.yml workflow.
 

@@ -1,7 +1,11 @@
 {
-  "name": "OPEN CALL",
+  "name": "PRIZD",
+  "brand": "Prizd",
   "tagline": "Good opportunities. Worth your time.",
   "description": "The opportunity index for people who build, solve and think bigger.",
+  "siteUrl": "",
+  "seoTitle": "Prizd — Hackathons, Case Competitions & Paid Internships",
+  "seoDescription": "A curated index of hackathons, case competitions and research internships with real prizes. Compare prize, deadline and eligibility, then apply on the official page.",
   "newWindowDays": 7,
   "categories": [
     "Hackathon",
@@ -21,6 +25,113 @@
     "Policy",
     "Writing"
   ],
+  "categoryPages": {
+    "Hackathon": {
+      "slug": "hackathons",
+      "title": "Hackathons for Students in {year} — Prizes & Deadlines",
+      "h1": "Hackathons with real prizes",
+      "intro": "Online and in-person hackathons from companies, colleges and communities. Every listing shows the prize, the deadline and who can apply, including whether participants from India can enter, and links straight to the official page."
+    },
+    "Case competition": {
+      "slug": "case-competitions",
+      "title": "Case Competitions for Students in {year} — Prizes & Deadlines",
+      "h1": "Case competitions",
+      "intro": "Business, strategy and consulting case competitions open to students. Compare prizes, team sizes and eligibility, then apply on the organizer's official page."
+    },
+    "Product": {
+      "slug": "product-competitions",
+      "title": "Product Management Competitions in {year} — Prizes & Deadlines",
+      "h1": "Product competitions",
+      "intro": "Product challenges and product-management competitions. Each listing shows the prize, the deadline and the eligibility rules before you click through."
+    },
+    "Finance": {
+      "slug": "finance-competitions",
+      "title": "Finance & Investment Competitions in {year} — Prizes & Deadlines",
+      "h1": "Finance competitions",
+      "intro": "Investment, trading and finance competitions for students, with prize, deadline and eligibility on every listing."
+    },
+    "Marketing": {
+      "slug": "marketing-competitions",
+      "title": "Marketing Competitions for Students in {year} — Prizes & Deadlines",
+      "h1": "Marketing competitions",
+      "intro": "Brand, marketing and growth competitions for students. Compare prizes and deadlines, then apply on the official page."
+    },
+    "Economics": {
+      "slug": "economics-competitions",
+      "title": "Economics Competitions & Essay Contests in {year}",
+      "h1": "Economics competitions",
+      "intro": "Economics competitions and essay contests, with prize, deadline and eligibility on every listing."
+    },
+    "Psychology": {
+      "slug": "psychology-competitions",
+      "title": "Psychology Competitions in {year} — Prizes & Deadlines",
+      "h1": "Psychology competitions",
+      "intro": "Psychology competitions and challenges, with prize, deadline and eligibility on every listing."
+    },
+    "Sales": {
+      "slug": "sales-competitions",
+      "title": "Sales Competitions for Students in {year} — Prizes & Deadlines",
+      "h1": "Sales competitions",
+      "intro": "Sales and negotiation competitions open to students, with prize, deadline and eligibility on every listing."
+    },
+    "Design": {
+      "slug": "design-competitions",
+      "title": "Design Competitions for Students in {year} — Prizes & Deadlines",
+      "h1": "Design competitions",
+      "intro": "Design awards and competitions for students, with prize, deadline and eligibility on every listing."
+    },
+    "Research": {
+      "slug": "research-opportunities",
+      "title": "Research Opportunities & Fellowships for Students in {year}",
+      "h1": "Research opportunities",
+      "intro": "Research programmes, fellowships and lab placements open to students, with funding, deadline and eligibility on every listing."
+    },
+    "Internship": {
+      "slug": "internships",
+      "title": "Internships for Students in {year} — Stipends & Deadlines",
+      "h1": "Internships",
+      "intro": "Internships and structured programmes for students, with stipend, deadline and eligibility on every listing."
+    },
+    "Engineering": {
+      "slug": "engineering-competitions",
+      "title": "Engineering Competitions & Challenges in {year} — Prizes",
+      "h1": "Engineering competitions",
+      "intro": "Engineering and technical challenges for students, with prize, deadline and eligibility on every listing."
+    },
+    "Consulting": {
+      "slug": "consulting-competitions",
+      "title": "Consulting Competitions in {year} — Prizes & Deadlines",
+      "h1": "Consulting competitions",
+      "intro": "Consulting and strategy challenges from firms and universities. Prize, deadline and eligibility are listed for each one."
+    },
+    "Research internship": {
+      "slug": "research-internships",
+      "title": "Paid Research Internships for Students in {year} — Stipends & Deadlines",
+      "h1": "Research internships",
+      "intro": "Research internships and summer programmes at universities and labs. Each listing shows the stipend or funding, the deadline and who is eligible, including whether students from India can apply."
+    },
+    "Policy": {
+      "slug": "policy-competitions",
+      "title": "Policy Competitions & Challenges in {year} — Prizes",
+      "h1": "Policy competitions",
+      "intro": "Public-policy competitions and challenges for students, with prize, deadline and eligibility on every listing."
+    },
+    "Writing": {
+      "slug": "writing-competitions",
+      "title": "Writing Competitions & Essay Contests in {year}",
+      "h1": "Writing competitions",
+      "intro": "Essay, article and creative-writing contests, with prize, deadline and eligibility on every listing."
+    }
+  },
+  "regionPages": {
+    "India": {
+      "slug": "india",
+      "name": "India",
+      "title": "Hackathons, Case Competitions & Internships in India in {year}",
+      "h1": "Opportunities in India",
+      "intro": "Hackathons, case competitions, internships and contests from Indian companies, colleges and communities, for undergraduate and postgraduate students. Each listing shows the prize, the deadline and who can apply."
+    }
+  },
   "defaultSort": "prestige",
   "prizeUsdRates": {
     "USD": 1,

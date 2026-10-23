@@ -7,7 +7,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const sourceRoot = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
 async function fixtureRoot() {
-  const dest = await mkdtemp(path.join(tmpdir(),'open-call-sync-'));
+  const dest = await mkdtemp(path.join(tmpdir(),'prizd-sync-'));
   for(const folder of ['scripts','data','data/opportunities','data/archive','updates','updates/inbox']) await mkdir(path.join(dest,folder),{recursive:true});
   for (const file of ['scripts/model.mjs','scripts/sync.mjs','data/settings.json','data/organizers.json']) await copyFile(path.join(sourceRoot,file),path.join(dest,file));
   const record=JSON.parse(await readFile(path.join(sourceRoot,'data/opportunities/qhack-2026.json'),'utf8'));

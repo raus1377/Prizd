@@ -16,6 +16,23 @@ export function validateSettings(settings, organizers) {
   if (!Number.isInteger(settings.newWindowDays) || settings.newWindowDays < 1) throw new Error('settings: newWindowDays must be a positive integer');
   if (!['prestige','prize','deadline','newest'].includes(settings.defaultSort)) throw new Error('settings: invalid defaultSort');
   for (const [currency, rate] of Object.entries(settings.prizeUsdRates || {})) if (!/^[A-Z]{3}$/.test(currency) || !(Number.isFinite(rate) && rate > 0)) throw new Error('settings: invalid prize exchange rate');
+  if (settings.siteUrl !== undefined && settings.siteUrl !== '' && !/^https?:\/\/[^\s/?#]+(?:\/[^\s?#]*)?$/.test(settings.siteUrl)) throw new Error('settings: siteUrl must be empty or an absolute http(s) URL without query or fragment');
+  for (const key of ['brand','tagline','seoTitle','seoDescription']) if (settings[key] !== undefined && (typeof settings[key] !== 'string' || !settings[key].trim())) throw new Error(`settings: ${key} must be a non-empty string`);
+  const slugs = new Set(['404','sitemap','robots','assets']);
+  const checkPage = (label, page) => {
+    if (!page || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(page.slug || '') || slugs.has(page.slug)) throw new Error(`settings: ${label} needs a unique lowercase slug`);
+    for (const key of ['title','h1','intro']) if (typeof page[key] !== 'string' || !page[key].trim()) throw new Error(`settings: ${label} needs ${key}`);
+    if (page.name !== undefined && (typeof page.name !== 'string' || !page.name.trim())) throw new Error(`settings: ${label} name must be a non-empty string`);
+    slugs.add(page.slug);
+  };
+  for (const [category, page] of Object.entries(settings.categoryPages || {})) {
+    if (!settings.categories.includes(category)) throw new Error(`settings: categoryPages has unknown category: ${category}`);
+    checkPage(`categoryPages "${category}"`, page);
+  }
+  for (const [region, page] of Object.entries(settings.regionPages || {})) {
+    if (!REGIONS.includes(region)) throw new Error(`settings: regionPages has unknown region: ${region}`);
+    checkPage(`regionPages "${region}"`, page);
+  }
   const ids = new Set();
   for (const o of organizers) {
     if (!o.id || ids.has(o.id) || !o.name || !['Company','College','Organization','Community'].includes(o.kind) || !Number.isFinite(o.prestige) || o.prestige < 0 || o.prestige > 100) throw new Error(`Invalid or duplicate organizer: ${o.id}`);
@@ -58,9 +75,20 @@ export function gitAddedAt(root, relativePath) {
     return values.at(-1) || null;
   } catch { return null; }
 }
+/* Removes utm_* tracking parameters so outbound links are clean and do not skew organizers' analytics. */
+export function cleanUrl(value) {
+  if (!value) return value;
+  try {
+    const url = new URL(value);
+    for (const key of [...url.searchParams.keys()]) if (/^utm_/i.test(key)) url.searchParams.delete(key);
+    return url.toString();
+  } catch { return value; }
+}
 export function normalizeOpportunity(o, organizer, settings, addedAt, now) {
   return {
     ...o,
+    url: cleanUrl(o.url),
+    ...(o.sourceUrl ? { sourceUrl: cleanUrl(o.sourceUrl) } : {}),
     region: o.region ?? 'Global',
     organizer,
     addedAt: addedAt || o.addedAt || new Date(now).toISOString(),
