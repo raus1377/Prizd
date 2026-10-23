@@ -93,7 +93,7 @@ export function buildSite({ settings, organizers, opportunities, archived = [], 
     const tags = [
       `<meta charset="utf-8">`,
       `<meta name="viewport" content="width=device-width,initial-scale=1">`,
-      `<meta name="theme-color" content="#ecebea">`,
+      `<meta name="theme-color" content="#281B38">`,
       `<title>${esc(title)}</title>`,
       `<meta name="description" content="${esc(description)}">`,
       robots ? `<meta name="robots" content="${robots}">` : '',
@@ -120,11 +120,12 @@ ${tags}
 </head>
 <body class="page">
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="page-head"><a class="page-brand" href="${base}" aria-label="${esc(brand)} home">${esc(brand.toUpperCase())}<span class="pink-dot">.</span></a><nav class="page-nav" aria-label="Main">${navHubs.map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}<a href="${base}#opportunities">Search the index ↗</a></nav></header>
+<div class="topline" aria-hidden="true"></div>
+<header class="page-head"><a class="page-brand" href="${base}" aria-label="${esc(brand)} home">${esc(brand.toLowerCase())}<em>.</em></a><nav class="page-nav" aria-label="Main">${navHubs.map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}<a href="${base}#opportunities">Search the index ↗</a></nav></header>
 <main id="main">
 ${body}
 </main>
-<footer class="page-foot"><a class="page-brand" href="${base}">${esc(brand.toUpperCase())}<span class="pink-dot">.</span></a><nav aria-label="Browse by type">${allHubs.filter(h => h.indexable).map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}</nav><p>An independent index. Always confirm rules and deadlines on the official page.</p></footer>
+<footer class="page-foot"><a class="page-brand" href="${base}">${esc(brand.toLowerCase())}<em>.</em></a><nav aria-label="Browse by type">${allHubs.filter(h => h.indexable).map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}</nav><p>An independent index. Always confirm rules and deadlines on the official page.</p></footer>
 </body>
 </html>
 `;
@@ -218,8 +219,8 @@ ${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o,
   // ---- snippets for the home page
   const newest = [...opportunities].filter(o => status(o) !== 'closed').sort((a, b) => Date.parse(b.addedAt) - Date.parse(a.addedAt)).slice(0, 8);
   const browse = `<section id="browse" class="browse-section" aria-labelledby="browse-title">
-      <div class="section-overline"><span>003 <span class="tiny-rule"></span> BROWSE BY TYPE</span></div>
-      <h2 id="browse-title">EVERY TYPE,<br>ONE PAGE<span class="pink-dot">.</span></h2>
+      <span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Browse by type</span>
+      <h2 id="browse-title">Every type,<br><em>one page.</em></h2>
       <div class="browse-grid">${allHubs.filter(h => h.indexable).map(h => `<a href="${h.slug}/"><span>${esc(h.navName)}</span><b>${h.list.length}</b></a>`).join('')}</div>
       <h3 class="browse-sub">Latest additions</h3>
       <ul class="browse-latest">${newest.map(o => `<li><a href="${pathOf(o)}">${esc(o.title)}</a><span>${esc(o.organizer.name)} · ${esc(prizePhrase(o))}</span></li>`).join('')}</ul>

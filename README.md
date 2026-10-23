@@ -108,13 +108,13 @@ Organizer priorities are editable curator choices. Choose **Highest prizes**, **
 
 ## Features and local use
 
-- Four pinned scroll chapters with rotating WebGL glass objects and a CSS fallback.
+- Margin-style design: serif display type, ink/apricot/cream/lime/lavender palette, split hero with a top-picks panel.
 - Separate title and featured-link areas to prevent text overlap while scrolling.
 - Direct official links, search, category/organizer/format/team/status filters and grid/list layouts.
 - Saved shortlists in the visitor’s browser and shareable opportunity-detail links.
 - Mobile layouts, keyboard focus, accessible dialogs and reduced-motion support.
 
-The glass forms are built in code. Shortlists are specific to the browser/device. You upload verified incoming listings to `updates/inbox/`; the site does not discover new opportunities automatically.
+Shortlists are specific to the browser/device. You upload verified incoming listings to `updates/inbox/`; the site does not discover new opportunities automatically.
 
 Install Node.js 22 or newer, then run:
 
@@ -143,7 +143,7 @@ npm test
 | `data/organizers.json` | Organizer names, types and ranking priorities |
 | `data/settings.json` | Categories, New window and prize comparison rates |
 | `templates/opportunity.json` | Copyable listing template |
-| `src/` | Frontend, filters and scroll/glass animation |
+| `src/` | Frontend and filters |
 | `scripts/build.mjs` | Validation, file discovery and build |
 | `scripts/seo.mjs` | Listing pages, category and India pages, sitemap, robots, meta tags and structured data |
 | `src/pages.css`, `src/page.js` | Styles and status refresh for the generated pages |

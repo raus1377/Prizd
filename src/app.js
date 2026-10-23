@@ -24,7 +24,6 @@
   $('brand-name').textContent = settings.name;
   document.title = settings.seoTitle || `${settings.name} — The Opportunity Index`;
   $('footer-year').textContent = new Date().getFullYear();
-  $('edition-label').textContent = 'CURATED INDEX';
   $('updated-label').textContent = `INDEX UPDATED ${new Date(data.builtAt).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}).toUpperCase()}`;
   const regionOf = o => o.region || 'Global';
   let chipKey = '';
@@ -166,32 +165,4 @@
   render();setLayout(currentLayout);
   if (params.get('opportunity')) openDetail(params.get('opportunity'));
   setInterval(() => { if (!$('detail-dialog').open) render(); },60000);
-  initStory();
-  function initStory() {
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    const scenes = [
-      {title:['GET','PRIZD'],label:'HACKATHONS, CASES & INTERNSHIPS',description:'Hackathons, case competitions and paid internships<br>worth showing up for.',emphasis:'Find your next win.',figure:'POSSIBILITY, IN FORM'},
-      {title:['BUILD','BOLD'],label:'HACKATHONS & PRODUCT',description:'An idea is only the beginning.<br>Make something people can use.',emphasis:'Bring what comes next.',figure:'AN IDEA, UNFOLDED'},
-      {title:['MAKE','A CASE'],label:'CASES & CONSULTING',description:'A complex problem. A fresh perspective.<br>The right question changes everything.',emphasis:'Let your thinking do the talking.',figure:'A DIFFERENT PERSPECTIVE'},
-      {title:['THINK','BIGGER'],label:'FINANCE, MARKETING & ECONOMICS',description:'New markets. Better decisions.<br>See the opportunity others overlook.',emphasis:'The next move is yours.',figure:'AMBITION, IN MOTION'}
-    ];
-    const sceneCopy = $('scene-copy');let lastScene = -1;let progress = 0;let target = 0;let frame = null;
-    function updateTarget() { const r = $('top').getBoundingClientRect();const distance = $('top').offsetHeight - document.querySelector('.story-stage').offsetHeight;target = reduced.matches ? 0 : Math.max(0,Math.min(1,-r.top / Math.max(1,distance)));if (frame === null) frame = requestAnimationFrame(draw); }
-    function draw() {
-      progress += (target-progress)*.16;
-      if (Math.abs(target-progress) < .0002) progress = target;
-      const position = progress*3.999;const scene = Math.min(3,Math.floor(position));const phase = position-scene;const entry = scene === 0 ? 1 : Math.min(1,phase/.17);const exit = scene === 3 ? 1 : Math.min(1,(1-phase)/.2);const visibility = Math.min(entry,exit);
-      if (scene !== lastScene) {
-        const s = scenes[scene];$('scene-title').innerHTML = `<span>${s.title[0]}</span><span>${s.title[1]}<span class="pink-dot">.</span></span>`;
-        $('scene-description').innerHTML = s.description;$('scene-emphasis').textContent = s.emphasis;$('scene-label').textContent = s.label;$('scene-number').textContent = String(scene+1).padStart(3,'0');$('figure-number').textContent = String(scene+1).padStart(2,'0');$('figure-label').textContent = s.figure;
-        document.querySelectorAll('.scene-dots span').forEach((el,i) => el.classList.toggle('active',i === scene));lastScene = scene;
-      }
-      const offset = (phase < .17 && scene > 0 ? 1-entry : -(1-exit))*90;
-      sceneCopy.style.opacity = visibility;sceneCopy.style.transform = `translate3d(0,${offset}px,0)`;sceneCopy.style.filter = `blur(${(1-visibility)*8}px)`;
-      $('story-progress').style.width = `${progress*100}%`;
-      if (window.PrizdGlass) window.PrizdGlass.setProgress(progress);
-      frame = Math.abs(target-progress) > .0002 ? requestAnimationFrame(draw) : null;
-    }
-    window.addEventListener('scroll',updateTarget,{passive:true});window.addEventListener('resize',updateTarget);reduced.addEventListener('change',updateTarget);updateTarget();
-  }
 })();
