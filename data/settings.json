@@ -142,5 +142,10 @@
     "JPY": 0.0067,
     "HKD": 0.128
   },
-  "prizeRatesNote": "Editable comparison estimates, not live exchange rates. Update these or set prize.usdEquivalent on an opportunity."
+  "prizeRatesNote": "Editable comparison estimates, not live exchange rates. Update these or set prize.usdEquivalent on an opportunity.",
+  "contactEmail": "",
+  "backend": {
+    "supabaseUrl": "",
+    "supabaseAnonKey": ""
+  }
 }

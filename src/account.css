@@ -1,0 +1,47 @@
+/* Sign-in, alerts signup and account dialogs. Loaded after styles.css on every page. */
+.no-account [data-account-button],.no-account [data-signup]{display:none!important}
+.signin-btn{display:inline-flex;align-items:center;gap:10px;font-family:'Courier New',monospace;font-size:12px;font-weight:700;border:1px solid #281b38;padding:11px 15px;border-radius:2px;background:transparent;color:#281b38;cursor:pointer;transition:background .2s}
+.signin-btn:hover{background:#e5ecaa}.signin-btn[hidden]{display:none}
+.signin-btn .avatar{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#ff805e;border:1px solid #281b38;font-size:12px}
+@media(max-width:900px){.masthead .signin-btn{display:none}}
+.site-menu a[data-account-button] .avatar{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#ff805e;color:#281b38;margin-right:10px;font-size:13px}
+
+.signup-band{background:#281b38;color:#f7f3eb;padding:90px clamp(24px,5vw,85px);border-top:1px solid #281b38;position:relative;overflow:hidden}
+.signup-band[hidden]{display:none}
+.signup-band:before{content:'✳';position:absolute;right:-40px;top:-60px;color:#ffffff12;font-size:320px;line-height:1;font-family:Georgia,serif}
+.signup-inner{position:relative;max-width:680px}
+.signup-inner .kicker{color:#e5ecaa}
+.signup-inner h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(40px,5.4vw,76px);line-height:.98;letter-spacing:-.08em;margin:18px 0 14px;color:inherit}
+.signup-inner p{font-size:16px;line-height:1.65;color:#e5dfe5;margin:0 0 22px;max-width:520px}
+.signup-row{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 14px}
+.signup-row input{flex:1 1 260px;min-width:0;height:52px;padding:0 16px;border:1px solid #f7f3eb;background:#f7f3eb;color:#281b38;font-size:16px;border-radius:2px}
+.signup-row .btn{height:52px;padding:0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.chip{position:relative;cursor:pointer}
+.chip input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.chip span{display:inline-block;border:1px solid currentColor;padding:9px 15px;font-size:13px;border-radius:2px;transition:background .15s,color .15s}
+.chip input:checked+span{background:#ff805e;border-color:#ff805e;color:#281b38;font-weight:700}
+.chip input:focus-visible+span{outline:3px solid #e5ecaa;outline-offset:2px}
+.consent{display:flex;gap:11px;align-items:flex-start;font-size:13px;line-height:1.5;cursor:pointer;margin:0 0 10px}
+.consent input{width:20px;height:20px;margin:1px 0 0;flex-shrink:0;accent-color:#ff805e;cursor:pointer}
+.consent a{text-decoration:underline;text-underline-offset:3px}
+.signup-msg{min-height:20px;font-family:'Courier New',monospace;font-size:12px!important;color:#e5ecaa!important;margin:8px 0 0!important}
+.page .signup-band{margin:70px 0 0;padding:48px clamp(22px,4vw,56px)}
+
+.account-dialog{max-width:520px;padding:40px 36px 34px}
+.account-dialog h2{font-family:Georgia,serif;font-weight:400;font-size:44px;line-height:1;letter-spacing:-.07em;margin:16px 0 12px}
+.account-dialog h2 em{color:#df664f;font-style:normal}
+.account-dialog p{font-size:15px;line-height:1.6;color:#493c52;margin:0 0 18px}
+.account-dialog .fine{font-size:12px;color:#63576d;margin:12px 0 0}
+.google-btn{width:100%;background:#fff;gap:12px;padding:15px 18px;margin-top:6px}.google-btn:hover:not(:disabled){box-shadow:5px 5px 0 #281b38}.google-btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.acct-who{display:flex;align-items:center;gap:14px;margin:18px 0 20px;padding-bottom:18px;border-bottom:1px solid #281b382b}.acct-who img{border-radius:50%;border:1px solid #281b38}.acct-who strong{display:block;font-size:16px}.acct-who span{font-size:13px;color:#63576d;word-break:break-all}
+.account-dialog fieldset{border:0;padding:0;margin:0 0 20px}.account-dialog legend{font-family:'Courier New',monospace;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:0;margin-bottom:12px}
+.account-dialog .chip span{color:#281b38}
+.field{display:block;font-size:14px;margin-bottom:10px}.field input{display:block;width:100%;margin-top:8px;height:46px;padding:0 12px;border:1px solid #281b38;background:#fff;font-size:16px;border-radius:2px}
+.acct-actions{display:flex;gap:10px;flex-wrap:wrap}
+.invite{margin-top:24px;padding-top:20px;border-top:1px solid #281b382b}.invite-row{display:flex;gap:8px;margin-top:10px}.invite-row input{flex:1;min-width:0;height:44px;padding:0 10px;border:1px solid #281b3866;background:#fff;font-size:13px}
+.account-dialog .signup-msg{color:#63576d!important}
+.danger{margin-top:22px;border-top:1px solid #281b382b;padding-top:16px;font-size:13px}.danger summary{cursor:pointer;font-family:'Courier New',monospace;font-size:11px;font-weight:700;color:#b0361c}
+.account-toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:#281b38;color:#f7f3eb;padding:12px 24px;font-family:'Courier New',monospace;font-size:12px;opacity:0;pointer-events:none;transition:all .25s;z-index:120;border:1px solid #ff805e;max-width:90vw;text-align:center}.account-toast.show{opacity:1;transform:translate(-50%,0)}
+.privacy h2{margin-top:44px;font-size:clamp(24px,2.6vw,34px)}.privacy p,.privacy li{max-width:70ch;line-height:1.7;font-size:16px;color:#493c52}.privacy ul{padding-left:20px}
+@media(max-width:560px){.account-dialog{padding:36px 22px 28px}.account-dialog h2{font-size:36px}.signup-band{padding:64px 6%}}

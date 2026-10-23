@@ -9,8 +9,11 @@
   <!--SEO_HEAD-->
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./account.css">
   <script defer src="./data.js"></script>
   <script defer src="./logic.js"></script>
+  <script defer src="./config.js"></script>
+  <script defer src="./account.js"></script>
   <script defer src="./app.js"></script>
 </head>
 <body>
@@ -19,6 +22,7 @@
   <header class="masthead">
     <a href="#top" class="brand" aria-label="Prizd home"><span id="brand-name">PRIZD</span><em>.</em></a>
     <nav class="navlinks" aria-label="Main navigation"><a href="#opportunities" data-quick="all">Open calls</a><a href="#opportunities" data-quick="new">New this week</a><a href="#browse">Browse by type</a><a href="#about">The idea</a></nav>
+    <button type="button" class="signin-btn" data-account-button hidden aria-label="Sign in"><span class="acct-label">Sign in</span></button>
     <a href="#opportunities" class="btn btn-dark nav-cta">Find yours <span aria-hidden="true">↗</span></a>
     <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu">MENU <span class="plus" aria-hidden="true">+</span></button>
   </header>
@@ -28,6 +32,7 @@
     <a href="#opportunities" data-quick="saved">03 / Your shortlist <span>↗</span></a>
     <a href="#browse">04 / Browse by type <span>↗</span></a>
     <a href="#about">05 / About <span>↗</span></a>
+    <a href="#top" data-account-button hidden>Sign in <span>↗</span></a>
   </nav>
   <main>
     <section id="top" class="hero" aria-labelledby="hero-heading">
@@ -75,9 +80,10 @@
       <div class="index-footnote"><span>PRIZE POOLS AND FIRST PRIZES ARE LABELED SEPARATELY.</span><span>CHECK THE OFFICIAL PAGE FOR CURRENT RULES AND ENTRY STATUS.</span></div>
     </section>
     <!--BROWSE-->
+    <section id="alerts" class="signup-band" data-signup data-source="home" data-title="Never miss a deadline." hidden></section>
     <section id="about" class="about-section"><span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Why Prizd</span><div class="about-main"><h2>Less noise.<br>More <em>what if.</em></h2><div><p>A good opportunity can change your direction. This is a place to find one.</p><p>An independent collection of challenges from companies, colleges and communities. Ranked by organizer priority, then prize and deadline. Save the ones that matter to you.</p><a class="text-link" href="#opportunities">FIND YOUR NEXT MOVE <span>↗</span></a></div></div><div class="about-bottom"><span>EVERY BIG THING STARTS WITH A CALL.</span><span aria-hidden="true">+ + +</span><a href="#top">BACK TO THE TOP ↑</a></div></section>
   </main>
-  <footer><a href="#top" class="brand footer-brand">prizd<em>.</em></a><div><span>THE OPPORTUNITY INDEX</span><span>INDEPENDENT. CURATED. ALWAYS LOOKING FORWARD.</span></div><span id="footer-year">2026</span></footer>
+  <footer><a href="#top" class="brand footer-brand">prizd<em>.</em></a><div><span>THE OPPORTUNITY INDEX</span><span>INDEPENDENT. CURATED. ALWAYS LOOKING FORWARD.</span></div><span><a href="./privacy/">Privacy</a> · <span id="footer-year">2026</span></span></footer>
   <dialog id="detail-dialog" aria-labelledby="detail-title"><button class="dialog-close" id="dialog-close" aria-label="Close opportunity details">×</button><div id="detail-content"></div></dialog>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>

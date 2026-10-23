@@ -6,6 +6,10 @@ The board contains the supplied competition listings. Card titles, featured pick
 
 **New one-folder maintenance:** after the one-time upgrade, upload JSON, JSONL or structured text only into `updates/inbox/`. GitHub Actions imports changes, synchronizes organizer records, archives expired competitions, rebuilds the site and publishes it automatically. Read **[UPDATES_GUIDE.md](UPDATES_GUIDE.md)**. No database, API key or npm package installation is required.
 
+## Accounts and email alerts
+
+Optional sign-in with Google, a synced shortlist, an email digest and deadline reminders. See [SETUP_ACCOUNTS.md](SETUP_ACCOUNTS.md). Off until you add a Supabase project.
+
 ## Publish on GitHub Pages
 
 1. Create a repository named `prizd` (or any name), with the default branch named **main**.

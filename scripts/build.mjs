@@ -47,6 +47,12 @@ await mkdir(dist, { recursive: true });
 await cp(path.join(root, 'src'), dist, { recursive: true });
 await writeFile(path.join(dist, 'opportunities.json'), JSON.stringify(data, null, 2));
 await writeFile(path.join(dist, 'data.js'), `window.__PRIZD_DATA__ = ${JSON.stringify(data).replace(/</g, '\\u003c')};\n`);
+// Public browser config for accounts/alerts. The anon key is meant to be public; row-level security protects the data.
+const backend = settings.backend || {};
+const publicConfig = backend.supabaseUrl && backend.supabaseAnonKey
+  ? { supabaseUrl: backend.supabaseUrl, supabaseAnonKey: backend.supabaseAnonKey, functionsUrl: `${backend.supabaseUrl}/functions/v1` }
+  : {};
+await writeFile(path.join(dist, 'config.js'), `window.PRIZD_CONFIG = ${JSON.stringify(publicConfig)};\n`);
 await writeFile(path.join(dist, '.nojekyll'), '');
 
 let home = await readFile(path.join(root, 'src/index.html'), 'utf8');
