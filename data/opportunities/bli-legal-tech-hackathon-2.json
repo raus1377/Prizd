@@ -1,0 +1,34 @@
+{
+  "id": "bli-legal-tech-hackathon-2",
+  "summary": "Online hackathon on blockchain, AI, legal technology, compliance and financial regulation, including smart-contract compliance and decentralized systems.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Not verified; check the official page.",
+  "tags": [
+    "Legal tech",
+    "Blockchain",
+    "AI"
+  ],
+  "entryStatus": "check",
+  "title": "BLI Legal Tech Hackathon 2",
+  "category": "Hackathon",
+  "deadlineDate": "2026-10-31",
+  "deadlineLabel": "Submission deadline",
+  "team": null,
+  "prize": {
+    "amount": 20000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$20,000 prize pool."
+  },
+  "url": "https://hacklist.io/",
+  "notes": [
+    "Official event URL not captured; find it via the Hacklist listing."
+  ],
+  "researchAsOf": "2026-10-24",
+  "sourceUrl": "https://hacklist.io/",
+  "organizerId": "blockchain-legal-institute",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}

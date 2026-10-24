@@ -1,0 +1,33 @@
+{
+  "id": "x-layer-tapeout-accelerate-2026",
+  "summary": "Online hackathon for apps, games, tools and circuits built with TapeOut on X Layer. Shortlisted teams attend an offline demo day.",
+  "deadline": "2026-12-08T05:29:00+05:30",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Individuals and teams aged 18+ (or local majority), or legal entities. Restricted Persons under X Layer terms excluded.",
+  "tags": [
+    "Web3",
+    "Zero knowledge",
+    "Developer tools"
+  ],
+  "entryStatus": "open",
+  "title": "X Layer TapeOut Accelerate",
+  "category": "Hackathon",
+  "deadlineLabel": "Submission deadline (provisional, 7 Dec 23:59 UTC)",
+  "team": null,
+  "prize": {
+    "amount": 100000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "100,000 USDT (about US$100,000): 1 x 20,000, 5 x 10,000, 5 x 6,000. Paid in stages after eligibility checks."
+  },
+  "url": "https://web3.okx.com/xlayer/build-x-series",
+  "notes": [
+    "Entry is via a Google Form; organizers call the deadline provisional."
+  ],
+  "researchAsOf": "2026-10-24",
+  "sourceUrl": "https://devgrantsdaily.com/items/2026-10-20-x-layer-tapeout-accelerate-2026/",
+  "organizerId": "x-layer",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}

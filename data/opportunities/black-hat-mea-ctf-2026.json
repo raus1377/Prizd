@@ -1,0 +1,35 @@
+{
+  "id": "black-hat-mea-ctf-2026",
+  "summary": "Online qualifier leading to a live CTF final at Black Hat MEA in Riyadh (1–3 December 2026) for cash prizes. Teams of 3–5.",
+  "deadline": null,
+  "location": "Riyadh, Saudi Arabia (final); online qualifier",
+  "region": "Global",
+  "format": "Hybrid",
+  "eligibility": "International teams of 3–5 reported; qualifier dates and registration not verified.",
+  "tags": [
+    "Security",
+    "CTF"
+  ],
+  "entryStatus": "check",
+  "title": "Black Hat MEA Capture the Flag 2026",
+  "category": "Engineering",
+  "team": {
+    "min": 3,
+    "max": 5
+  },
+  "prize": {
+    "amount": 1000000,
+    "currency": "SAR",
+    "kind": "pool",
+    "description": "SAR 1,000,000 fund reported; breakdown and cash split not verified.",
+    "usdEquivalent": 266000
+  },
+  "url": "https://blackhatmea.com/competition/capture-the-flag",
+  "notes": [
+    "Official page blocked automated access; details come from a search snippet. Verify before planning."
+  ],
+  "researchAsOf": "2026-10-24",
+  "sourceUrl": "https://infosecmap.com/?p=42563",
+  "organizerId": "black-hat-mea",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}

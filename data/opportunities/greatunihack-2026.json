@@ -1,0 +1,31 @@
+{
+  "id": "greatunihack-2026",
+  "summary": "University of Manchester's student hackathon on 7 November 2026: build from scratch and present to judges, with workshops and mentors.",
+  "deadline": null,
+  "location": "Manchester, UK",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "Student hackathon; registration and eligibility not verified.",
+  "tags": [
+    "Students",
+    "In person"
+  ],
+  "entryStatus": "check",
+  "title": "GreatUniHack 2026",
+  "category": "Hackathon",
+  "team": null,
+  "prize": {
+    "amount": 70000,
+    "currency": "GBP",
+    "kind": "pool",
+    "description": "GBP 70K+ in prizes stated on the event site; likely includes sponsor value."
+  },
+  "url": "https://greatunihack.com/",
+  "notes": [
+    "Event day is 7 November 2026."
+  ],
+  "researchAsOf": "2026-10-24",
+  "sourceUrl": "https://greatunihack.com/",
+  "organizerId": "university-of-manchester-unics",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}

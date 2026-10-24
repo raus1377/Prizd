@@ -1,0 +1,34 @@
+{
+  "id": "rp2350-hacking-challenge-2",
+  "summary": "First-across-the-line hardware security challenge: use side-channel analysis (power, EM or timing) on the RP2350 self-decrypting AES boot to leak enough key material to decrypt the payload.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Not verified. Needs hardware security equipment. Fault injection and optical attacks are out of scope.",
+  "tags": [
+    "Security",
+    "Hardware",
+    "Embedded"
+  ],
+  "entryStatus": "check",
+  "title": "RP2350 Hacking Challenge 2",
+  "category": "Engineering",
+  "deadlineDate": "2026-10-31",
+  "deadlineLabel": "Deadline",
+  "team": null,
+  "prize": {
+    "amount": 20000,
+    "currency": "USD",
+    "kind": "first",
+    "description": "US$20,000 to a single winner or winning team (organizers say the pool may change)."
+  },
+  "url": "https://hacklist.io/",
+  "notes": [
+    "Official event URL not captured; find it via the Hacklist listing."
+  ],
+  "researchAsOf": "2026-10-24",
+  "sourceUrl": "https://hacklist.io/",
+  "organizerId": "raspberry-pi",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "name-that-llm-kaggle",
+  "summary": "Kaggle code competition: build a notebook that identifies which of 18 frontier language models wrote each short passage.",
+  "deadline": "2027-01-07T05:29:00+05:30",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "18+ or local age of majority (under-18s with consent); worldwide except 6 regions and US-sanctioned persons. Solo or teams of up to 5.",
+  "tags": [
+    "NLP",
+    "Kaggle",
+    "ML"
+  ],
+  "entryStatus": "open",
+  "title": "Name That LLM: Identify the Model Behind the Text",
+  "category": "Research",
+  "deadlineLabel": "Entry deadline (final submission 13 Jan 2027)",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 50000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "10 x US$5,000 for the top 10."
+  },
+  "url": "https://reconscribe.com/hackathons/",
+  "notes": [],
+  "researchAsOf": "2026-10-17",
+  "sourceUrl": "https://reconscribe.com/hackathons/",
+  "organizerId": "kaggle",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}

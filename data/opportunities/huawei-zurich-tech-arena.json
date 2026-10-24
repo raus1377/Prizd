@@ -1,0 +1,31 @@
+{
+  "id": "huawei-zurich-tech-arena",
+  "summary": "Two challenges on large-scale AI processing run online from November to December, with an onsite demo day on 16 December at the Huawei Zurich Research Center.",
+  "deadline": null,
+  "location": "Online; demo day in Zurich, Switzerland",
+  "region": "Global",
+  "format": "Hybrid",
+  "eligibility": "Not verified. Register at techarena-switzerland.hackathon.com.",
+  "tags": [
+    "AI",
+    "Systems"
+  ],
+  "entryStatus": "check",
+  "title": "Huawei Zurich Tech Arena",
+  "category": "Hackathon",
+  "team": null,
+  "prize": {
+    "amount": 28000,
+    "currency": "EUR",
+    "kind": "pool",
+    "description": "EUR 28,000 prize pool."
+  },
+  "url": "https://www.bemyapp.com/events/huawei-zurich-tech-arena.html",
+  "notes": [
+    "The listing does not state the year; confirm it is the 2026 edition and find the registration deadline."
+  ],
+  "researchAsOf": "2026-10-24",
+  "sourceUrl": "https://www.bemyapp.com/events/huawei-zurich-tech-arena.html",
+  "organizerId": "huawei-zurich-research-center",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}

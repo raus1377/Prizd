@@ -1,0 +1,34 @@
+{
+  "id": "solana-fall-2026-colosseum",
+  "summary": "Five-week global online startup competition (28 Sep – 2 Nov): build a working MVP on Solana with a GitHub repo, monetisation plan and team details.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Developers and founders registered through Colosseum. Country rules not verified.",
+  "tags": [
+    "Solana",
+    "Web3",
+    "Startup"
+  ],
+  "entryStatus": "check",
+  "title": "Solana Fall 2026 Hackathon (Colosseum)",
+  "category": "Hackathon",
+  "deadlineDate": "2026-11-02",
+  "deadlineLabel": "Submission deadline",
+  "team": null,
+  "prize": {
+    "amount": 250000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$250,000 per one listing (Coinlaunch); other sources cite up to US$2.5M committed by Colosseum to winners. Verify on colosseum.com."
+  },
+  "url": "https://www.colosseum.com",
+  "notes": [
+    "Prize figure conflicts across sources; confirm before relying on it."
+  ],
+  "researchAsOf": "2026-10-24",
+  "sourceUrl": "https://coinlaunch.space/events-contests/solana-solana-fall-2026-hackathon/",
+  "organizerId": "colosseum",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}

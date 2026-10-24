@@ -1,0 +1,32 @@
+{
+  "id": "nfl-big-data-bowl-2027",
+  "summary": "Analysis of NFL player tracking data linking Combine data to game performance, hosted on Kaggle. No app needed; University Track for all-undergraduate teams.",
+  "deadline": "2027-01-07T05:29:00+05:30",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Most countries; 18+ (or local age of majority) to win. University Track is undergraduates only.",
+  "tags": [
+    "Data science",
+    "Sports analytics",
+    "Kaggle",
+    "Students"
+  ],
+  "entryStatus": "open",
+  "title": "NFL Big Data Bowl 2027",
+  "category": "Research",
+  "deadlineLabel": "Final submission",
+  "team": null,
+  "prize": {
+    "amount": 100000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$100,000 total, of which US$45,000 is for the undergraduate University Track."
+  },
+  "url": "https://reconscribe.com/hackathons/",
+  "notes": [],
+  "researchAsOf": "2026-10-17",
+  "sourceUrl": "https://reconscribe.com/hackathons/",
+  "organizerId": "nfl-football-operations",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}
