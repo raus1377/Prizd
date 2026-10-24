@@ -1,0 +1,33 @@
+{
+  "id": "kiroween-2026",
+  "summary": "Halloween hackathon on Devpost: build a brand-new app with the Kiro AI IDE between 30 Oct and 4 Dec. Only new projects count.",
+  "deadline": "2026-12-05T03:30:00+05:30",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Above age of majority, most countries (Devpost exclusions: Brazil, Quebec, Russia, Crimea, Cuba, Iran, North Korea). Solo or team.",
+  "tags": [
+    "AI",
+    "IDE",
+    "Beginner friendly"
+  ],
+  "entryStatus": "open",
+  "title": "Kiroween 2026",
+  "category": "Hackathon",
+  "deadlineLabel": "Submission deadline (4 Dec 2:00 pm PT)",
+  "team": null,
+  "prize": {
+    "amount": 100000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$100,000 in cash."
+  },
+  "url": "https://reconscribe.com/hackathons/",
+  "notes": [
+    "Build window opens 30 Oct 2026 20:00 UTC. Official Devpost page not captured."
+  ],
+  "researchAsOf": "2026-10-17",
+  "sourceUrl": "https://reconscribe.com/hackathons/",
+  "organizerId": "kiro-aws",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}

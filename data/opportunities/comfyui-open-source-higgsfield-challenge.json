@@ -1,0 +1,31 @@
+{
+  "id": "comfyui-open-source-higgsfield-challenge",
+  "summary": "Open-source workflow challenge built around listed generative models (e.g. FLUX 3, MiniMax H3).",
+  "deadline": "2026-11-14T13:29:00+05:30",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Not verified; check the official rules.",
+  "tags": [
+    "Generative AI",
+    "Open source",
+    "Workflows"
+  ],
+  "entryStatus": "check",
+  "title": "ComfyUI Open Source Higgsfield Challenge",
+  "category": "Hackathon",
+  "deadlineLabel": "Submission window closes (13 Nov 11:59 pm PT)",
+  "team": null,
+  "prize": {
+    "amount": 25000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$25,000 in prizes; some tiers are API credits rather than cash."
+  },
+  "url": "https://comfyui-wiki.com/en/news/2026-10-15-open-source-higgsfield",
+  "notes": [],
+  "researchAsOf": "2026-10-24",
+  "sourceUrl": "https://comfyui-wiki.com/en/news/2026-10-15-open-source-higgsfield",
+  "organizerId": "comfyui",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}

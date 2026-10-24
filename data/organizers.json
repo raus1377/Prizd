@@ -93,19 +93,19 @@
     "id": "genai",
     "name": "GenAI Works",
     "kind": "Company",
-    "prestige": 87,
+    "prestige": 35,
     "monogram": "AI",
     "color": "#242424",
-    "website": "https://hackathon.genai.works"
+    "website": "https://hacklist.io/"
   },
   {
     "id": "colosseum",
     "name": "Colosseum",
-    "kind": "Company",
-    "prestige": 87,
+    "kind": "Organization",
+    "prestige": 70,
     "monogram": "C",
     "color": "#242424",
-    "website": "https://colosseum.com"
+    "website": "https://www.colosseum.com"
   },
   {
     "id": "devpost",
@@ -460,12 +460,12 @@
   },
   {
     "id": "junction",
-    "name": "JunctionX Lisbon",
-    "kind": "Community",
-    "prestige": 82,
+    "name": "Junction",
+    "kind": "Organization",
+    "prestige": 60,
     "monogram": "JX",
     "color": "#242424",
-    "website": "https://hackjunction.app"
+    "website": "https://2026.hackjunction.com"
   },
   {
     "id": "suno",
@@ -1285,5 +1285,140 @@
     "monogram": "II",
     "color": "#242424",
     "website": "https://www.iitbbs.ac.in"
+  },
+  {
+    "id": "trendspider",
+    "name": "TrendSpider",
+    "kind": "Company",
+    "prestige": 40,
+    "monogram": "TR",
+    "color": "#242424",
+    "website": "https://trendspider.com"
+  },
+  {
+    "id": "buffer",
+    "name": "Buffer",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "BU",
+    "color": "#242424",
+    "website": "https://buffer.com"
+  },
+  {
+    "id": "blockchain-legal-institute",
+    "name": "Blockchain Legal Institute",
+    "kind": "Organization",
+    "prestige": 30,
+    "monogram": "BL",
+    "color": "#242424",
+    "website": "https://hacklist.io/"
+  },
+  {
+    "id": "raspberry-pi",
+    "name": "Raspberry Pi",
+    "kind": "Company",
+    "prestige": 70,
+    "monogram": "RA",
+    "color": "#242424",
+    "website": "https://www.raspberrypi.com"
+  },
+  {
+    "id": "circle",
+    "name": "Circle",
+    "kind": "Company",
+    "prestige": 60,
+    "monogram": "CI",
+    "color": "#242424",
+    "website": "https://www.circle.com"
+  },
+  {
+    "id": "arc-prize-foundation",
+    "name": "ARC Prize Foundation",
+    "kind": "Organization",
+    "prestige": 80,
+    "monogram": "AR",
+    "color": "#242424",
+    "website": "https://arcprize.org"
+  },
+  {
+    "id": "x-layer",
+    "name": "X Layer",
+    "kind": "Company",
+    "prestige": 55,
+    "monogram": "X ",
+    "color": "#242424",
+    "website": "https://web3.okx.com/xlayer/build-x-series"
+  },
+  {
+    "id": "google-deepmind",
+    "name": "Google DeepMind",
+    "kind": "Company",
+    "prestige": 95,
+    "monogram": "GO",
+    "color": "#242424",
+    "website": "https://deepmind.google"
+  },
+  {
+    "id": "kiro-aws",
+    "name": "Kiro (AWS)",
+    "kind": "Company",
+    "prestige": 80,
+    "monogram": "KI",
+    "color": "#242424",
+    "website": "https://kiro.dev"
+  },
+  {
+    "id": "comfyui",
+    "name": "ComfyUI",
+    "kind": "Company",
+    "prestige": 50,
+    "monogram": "CO",
+    "color": "#242424",
+    "website": "https://www.comfy.org"
+  },
+  {
+    "id": "kaggle",
+    "name": "Kaggle",
+    "kind": "Company",
+    "prestige": 80,
+    "monogram": "KA",
+    "color": "#242424",
+    "website": "https://www.kaggle.com"
+  },
+  {
+    "id": "nfl-football-operations",
+    "name": "NFL Football Operations",
+    "kind": "Organization",
+    "prestige": 85,
+    "monogram": "NF",
+    "color": "#242424",
+    "website": "https://operations.nfl.com"
+  },
+  {
+    "id": "black-hat-mea",
+    "name": "Black Hat MEA",
+    "kind": "Organization",
+    "prestige": 75,
+    "monogram": "BL",
+    "color": "#242424",
+    "website": "https://blackhatmea.com"
+  },
+  {
+    "id": "huawei-zurich-research-center",
+    "name": "Huawei Zurich Research Center",
+    "kind": "Company",
+    "prestige": 65,
+    "monogram": "HU",
+    "color": "#242424",
+    "website": "https://www.bemyapp.com/events/huawei-zurich-tech-arena.html"
+  },
+  {
+    "id": "university-of-manchester-unics",
+    "name": "University of Manchester (UniCS)",
+    "kind": "College",
+    "prestige": 55,
+    "monogram": "UN",
+    "color": "#242424",
+    "website": "https://greatunihack.com"
   }
 ]

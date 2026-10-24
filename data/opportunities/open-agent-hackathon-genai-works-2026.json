@@ -1,0 +1,35 @@
+{
+  "id": "open-agent-hackathon-genai-works-2026",
+  "summary": "Six-day online sprint (22–27 Oct) to build an agent that does real work across three tracks plus a wildcard track.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Teams of 1–5. Country restrictions not verified.",
+  "tags": [
+    "AI agents"
+  ],
+  "entryStatus": "check",
+  "title": "Open Agent Hackathon 2026",
+  "category": "Hackathon",
+  "deadlineDate": "2026-10-27",
+  "deadlineLabel": "Submission deadline",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 20000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "Up to US$20,000: US$15,000 cash plus US$5,000 in kind."
+  },
+  "url": "https://hacklist.io/",
+  "notes": [
+    "Official event URL not captured; find it via the Hacklist listing."
+  ],
+  "researchAsOf": "2026-10-24",
+  "sourceUrl": "https://hacklist.io/",
+  "organizerId": "genai",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}

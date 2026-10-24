@@ -1,0 +1,34 @@
+{
+  "id": "arc-prize-2026",
+  "summary": "Open-source AGI progress competition on Kaggle with ARC-AGI-2, ARC-AGI-3 and paper tracks. Winning solutions must be open sourced.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Open to individuals and teams via Kaggle; prize eligibility requires open-sourcing.",
+  "tags": [
+    "AI",
+    "Reasoning",
+    "Kaggle"
+  ],
+  "entryStatus": "check",
+  "title": "ARC Prize 2026",
+  "category": "Research",
+  "deadlineDate": "2026-11-02",
+  "deadlineLabel": "Paper track submissions (check page for main track)",
+  "team": null,
+  "prize": {
+    "amount": 2000000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$2M total across tracks; ARC-AGI-2 top score award US$500K guaranteed."
+  },
+  "url": "https://arcprize.org/competitions/2026",
+  "notes": [
+    "Paper track: submissions 2 Nov, papers 8 Nov, results 4 Dec. Main-track dates should be confirmed on the official page."
+  ],
+  "researchAsOf": "2026-10-24",
+  "sourceUrl": "https://arcprize.org/competitions/2026",
+  "organizerId": "arc-prize-foundation",
+  "addedAt": "2026-10-24T15:43:11.385Z"
+}
