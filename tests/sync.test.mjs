@@ -10,7 +10,7 @@ async function fixtureRoot() {
   const dest = await mkdtemp(path.join(tmpdir(),'prizd-sync-'));
   for(const folder of ['scripts','data','data/opportunities','data/archive','updates','updates/inbox']) await mkdir(path.join(dest,folder),{recursive:true});
   for (const file of ['scripts/model.mjs','scripts/sync.mjs','data/settings.json','data/organizers.json']) await copyFile(path.join(sourceRoot,file),path.join(dest,file));
-  const record=JSON.parse(await readFile(path.join(sourceRoot,'data/opportunities/qhack-2026.json'),'utf8'));
+  const record={id:'sample-source',title:'Sample Hackathon',category:'Hackathon',organizerId:'pennylane',summary:'Fixture record so tests do not depend on a live listing that may expire.',deadline:'2099-11-04T19:00:00+05:30',location:'Worldwide',region:'Global',format:'Online',eligibility:'Fixture only.',team:null,prize:{amount:1000,currency:'USD',kind:'pool',description:'Fixture prize.'},tags:['Test'],url:'https://www.nasa.gov',entryStatus:'open',notes:[],addedAt:'2026-01-01T00:00:00Z'};
   const old={...record,id:'example-existing',deadline:'2099-11-04T19:00:00+05:30',addedAt:'2026-01-02T00:00:00Z'};
   const expired={...old,id:'example-expired',deadline:'2020-01-01T19:00:00+05:30'};
   await writeFile(path.join(dest,'data/opportunities/example-existing.json'),JSON.stringify(old,null,2)+'\n');
