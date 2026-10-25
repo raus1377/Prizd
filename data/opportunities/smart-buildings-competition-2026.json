@@ -1,0 +1,36 @@
+{
+  "id": "smart-buildings-competition-2026",
+  "summary": "Kaggle code competition on smart-building control with a NeurIPS 2026 workshop paper track. Run as notebooks with up to 9 hours and no internet.",
+  "deadline": "2027-01-16T05:29:00+05:30",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Kaggle users aged 18+ worldwide except Crimea, DNR, LNR, Cuba, Iran, North Korea and sanctioned persons. Teams of up to 5.",
+  "tags": [
+    "Reinforcement learning",
+    "Kaggle",
+    "Energy"
+  ],
+  "entryStatus": "open",
+  "title": "Smart Buildings Competition 2026 (Kaggle)",
+  "category": "Research",
+  "deadlineLabel": "Final submissions and papers (15 Jan 2027 23:59 UTC)",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 40000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$40,000: US$25,000 across eight leaderboard places (US$5,750 down to US$2,500) and US$15,000 paper track."
+  },
+  "url": "https://www.kaggle.com/competitions/neurips-2026-smart-buildings",
+  "notes": [
+    "Poster paper deadline 13 Nov 2026; last day to join teams 3 Jan 2027."
+  ],
+  "researchAsOf": "2026-10-25",
+  "sourceUrl": "https://devgrantsdaily.com/items/2026-10-21-smart-buildings-competition-2026/",
+  "organizerId": "university-of-washington",
+  "addedAt": "2026-10-25T04:25:01.240Z"
+}

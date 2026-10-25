@@ -1,0 +1,35 @@
+{
+  "id": "arbitrum-open-house-dubai-buildathon-2026",
+  "summary": "Online buildathon on HackQuest for products built with Stylus or Solidity on Arbitrum One or an Orbit chain; new or existing products allowed.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Developers, creators and founders. Team size not specified.",
+  "tags": [
+    "Web3",
+    "Arbitrum",
+    "Stylus"
+  ],
+  "entryStatus": "open",
+  "title": "Arbitrum Open House Dubai: Online Buildathon",
+  "category": "Hackathon",
+  "deadlineDate": "2026-12-06",
+  "deadlineTimezone": "UTC",
+  "deadlineLabel": "Submissions close",
+  "team": null,
+  "prize": {
+    "amount": 30000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$30,000; breakdown not announced and prizes may change if submissions miss the quality bar."
+  },
+  "url": "https://www.hackquest.io/hackathons/Arbitrum-Open-House-Dubai-Online-Buildathon",
+  "notes": [
+    "Registration 31 Oct – 5 Dec; submissions open 16 Nov; rewards announced 13 Dec."
+  ],
+  "researchAsOf": "2026-10-25",
+  "sourceUrl": "https://devgrantsdaily.com/items/2026-09-11-arbitrum-open-house-dubai-online-buildathon/",
+  "organizerId": "arbitrum-foundation",
+  "addedAt": "2026-10-25T04:25:01.240Z"
+}

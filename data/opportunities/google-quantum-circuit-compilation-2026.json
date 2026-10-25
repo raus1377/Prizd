@@ -1,0 +1,36 @@
+{
+  "id": "google-quantum-circuit-compilation-2026",
+  "summary": "Kaggle competition on compiling quantum circuits with verifiable results. No quantum physics background required per the organizers.",
+  "deadline": "2027-01-21T05:29:00+05:30",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Kaggle account holders aged 18+, worldwide except Crimea, DNR, LNR, Cuba, Iran, North Korea and US-sanctioned persons. Teams of up to 5.",
+  "tags": [
+    "Quantum",
+    "Kaggle",
+    "Algorithms"
+  ],
+  "entryStatus": "open",
+  "title": "Google Quantum AI: Verifiable Quantum Circuit Compilation",
+  "category": "Research",
+  "deadlineLabel": "Final submission (20 Jan 2027 23:59 UTC)",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 150000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$150,000: 1st US$50,000, 2nd US$25,000, 3rd US$10,000, 4th–6th US$5,000 each, plus milestone, longest-leader and single-task prizes."
+  },
+  "url": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation",
+  "notes": [
+    "Join and merge teams by 13 Jan 2027."
+  ],
+  "researchAsOf": "2026-10-25",
+  "sourceUrl": "https://devgrantsdaily.com/items/2026-10-23-google-quantum-verifiable-circuit-compilation/",
+  "organizerId": "google-quantum-ai",
+  "addedAt": "2026-10-25T04:25:01.240Z"
+}

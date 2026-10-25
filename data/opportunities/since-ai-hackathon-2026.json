@@ -1,0 +1,35 @@
+{
+  "id": "since-ai-hackathon-2026",
+  "summary": "72-hour in-person AI hackathon at EduCity, Turku, Finland (6–8 Nov) with 15 company challenges and responsible-AI and commercial-potential awards.",
+  "deadline": null,
+  "location": "Turku, Finland",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "Builders worldwide above the legal age of majority. Application and acceptance required; applications reviewed on a rolling basis. Free.",
+  "tags": [
+    "AI",
+    "In person",
+    "Responsible AI"
+  ],
+  "entryStatus": "open",
+  "title": "Since AI Hackathon 2026",
+  "category": "Hackathon",
+  "deadlineDate": "2026-11-06",
+  "deadlineTimezone": "Europe/Helsinki",
+  "deadlineLabel": "Application deadline",
+  "team": null,
+  "prize": {
+    "amount": 50000,
+    "currency": "EUR",
+    "kind": "pool",
+    "description": "EUR 50,000: grand prize EUR 10,000, 15 company awards of EUR 2,000, plus EUR 4,000 / 3,000 / 3,000 special awards."
+  },
+  "url": "https://sinceai.app/events/since-ai-hackathon-2026",
+  "notes": [
+    "Apply early; the page says registration stays open until the event begins but also lists 6 Nov as the deadline."
+  ],
+  "researchAsOf": "2026-10-25",
+  "sourceUrl": "https://devgrantsdaily.com/items/2026-09-23-since-ai-hackathon-2026/",
+  "organizerId": "since-ai-ry",
+  "addedAt": "2026-10-25T04:25:01.240Z"
+}
