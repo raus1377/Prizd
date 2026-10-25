@@ -1420,5 +1420,59 @@
     "monogram": "UN",
     "color": "#242424",
     "website": "https://greatunihack.com"
+  },
+  {
+    "id": "near-protocol",
+    "name": "NEAR Protocol",
+    "kind": "Organization",
+    "prestige": 65,
+    "monogram": "NE",
+    "color": "#242424",
+    "website": "https://www.near.org"
+  },
+  {
+    "id": "google-quantum-ai",
+    "name": "Google Quantum AI",
+    "kind": "Company",
+    "prestige": 95,
+    "monogram": "GO",
+    "color": "#242424",
+    "website": "https://quantumai.google"
+  },
+  {
+    "id": "since-ai-ry",
+    "name": "Since AI ry",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SI",
+    "color": "#242424",
+    "website": "https://sinceai.app/events/since-ai-hackathon-2026"
+  },
+  {
+    "id": "tum-blockchain-club",
+    "name": "TUM Blockchain Club",
+    "kind": "College",
+    "prestige": 55,
+    "monogram": "TU",
+    "color": "#242424",
+    "website": "https://hackathon.tum-blockchain.com"
+  },
+  {
+    "id": "arbitrum-foundation",
+    "name": "Arbitrum Foundation",
+    "kind": "Organization",
+    "prestige": 60,
+    "monogram": "AR",
+    "color": "#242424",
+    "website": "https://www.hackquest.io/hackathons/Arbitrum-Open-House-Dubai-Online-Buildathon"
+  },
+  {
+    "id": "university-of-washington",
+    "name": "University of Washington",
+    "kind": "College",
+    "prestige": 75,
+    "monogram": "UN",
+    "color": "#242424",
+    "website": "https://www.kaggle.com/competitions/neurips-2026-smart-buildings"
   }
 ]

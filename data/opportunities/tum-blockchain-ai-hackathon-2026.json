@@ -1,0 +1,36 @@
+{
+  "id": "tum-blockchain-ai-hackathon-2026",
+  "summary": "30-hour in-person build sprint in Munich with about 200 builders on blockchain and AI, with agentic payments as the theme. Part of the TUM Blockchain Conference.",
+  "deadline": "2026-10-29T17:30:00+05:30",
+  "location": "Munich, Germany",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "Open worldwide, not limited to TUM students. Solo or teams of up to 5; each member applies separately on Devfolio. Free, though a deposit may be announced.",
+  "tags": [
+    "Blockchain",
+    "AI",
+    "In person"
+  ],
+  "entryStatus": "open",
+  "title": "TUM Blockchain & AI Hackathon 2026",
+  "category": "Hackathon",
+  "deadlineLabel": "Applications close (29 Oct 12:00 UTC)",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 10000,
+    "currency": "EUR",
+    "kind": "pool",
+    "description": "EUR 10,000: EUR 4,000 from BSV Association and EUR 6,000 from Cardano; per-place breakdown not yet published."
+  },
+  "url": "https://tum.devfolio.co",
+  "notes": [
+    "Build starts 30 Oct; submissions close 31 Oct."
+  ],
+  "researchAsOf": "2026-10-25",
+  "sourceUrl": "https://devgrantsdaily.com/items/2026-10-09-tum-blockchain-ai-hackathon-2026/",
+  "organizerId": "tum-blockchain-club",
+  "addedAt": "2026-10-25T04:25:01.240Z"
+}
