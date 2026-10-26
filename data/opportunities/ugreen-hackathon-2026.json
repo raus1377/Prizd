@@ -1,0 +1,37 @@
+{
+  "id": "ugreen-hackathon-2026",
+  "summary": "Online hackathon to build AI Skills for a NAS across four tracks. Round 1 needs a proposal of up to 500 words plus a test Skill; no NAS needed to enter.",
+  "deadline": "2026-11-15T23:45:00-08:00",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Individuals of legal age or teams of up to 3, from countries in the official rules; organisations cannot enter; Brazil, China and Quebec excluded.",
+  "tags": [
+    "AI",
+    "NAS",
+    "Hardware",
+    "Skills"
+  ],
+  "entryStatus": "open",
+  "title": "UGREEN Hackathon 2026: Build AI Skills for a NAS",
+  "category": "Hackathon",
+  "deadlineLabel": "Round 1 closes (15 Nov 23:45 PT)",
+  "team": {
+    "min": 1,
+    "max": 3
+  },
+  "prize": {
+    "amount": 46000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$46,000 cash: 1st US$20,000, 2nd US$10,000, 3rd US$6,000, two Most Creative awards US$5,000 each."
+  },
+  "url": "https://ugreenhackathon.devpost.com/",
+  "notes": [
+    "Up to 30 finalists announced 21 Nov; final Skills and demo videos due 30 Nov."
+  ],
+  "researchAsOf": "2026-10-26",
+  "sourceUrl": "https://devgrantsdaily.com/items/2026-10-24-ugreen-hackathon-2026/",
+  "organizerId": "ugreen",
+  "addedAt": "2026-10-26T09:23:19.551Z"
+}

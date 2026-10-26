@@ -1,0 +1,35 @@
+{
+  "id": "dev3pack-global-hackathon-2026",
+  "summary": "Solana university hackathon (27-29 Nov), online or at local build stations, preceded by a free Solana Rust bootcamp. Top teams invited to the Bridge Accelerator.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "University students worldwide, building in teams on Solana; projects must be open source.",
+  "tags": [
+    "Web3",
+    "Solana",
+    "Student"
+  ],
+  "entryStatus": "check",
+  "title": "Dev3pack Global Hackathon 2026",
+  "category": "Hackathon",
+  "deadlineDate": "2026-11-29",
+  "deadlineTimezone": "UTC",
+  "deadlineLabel": "Hackathon ends 29 Nov (timezone not stated)",
+  "team": null,
+  "prize": {
+    "amount": 10000,
+    "currency": "USD",
+    "kind": "first",
+    "description": "US$10,000+ for Best App Overall on Solana; Seeker phones for best mobile app; US$500 local tracks in selected countries."
+  },
+  "url": "https://app.dev3pack.xyz/hackathon/register",
+  "notes": [
+    "Registration and cutoff time not confirmed on the organiser's own page; verify before applying."
+  ],
+  "researchAsOf": "2026-10-26",
+  "sourceUrl": "https://devgrantsdaily.com/items/2026-10-22-dev3pack-global-hackathon-2026/",
+  "organizerId": "dev3pack",
+  "addedAt": "2026-10-26T09:23:19.551Z"
+}

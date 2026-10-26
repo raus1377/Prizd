@@ -1,0 +1,38 @@
+{
+  "id": "mergetober-cognee-2026",
+  "summary": "Open-source contribution contest: build or improve Cognee integrations for AI agent memory via merged pull requests, each paired with a short blog post.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Open to anyone, anywhere, subject to local law and shipping limits. Individual entries only.",
+  "tags": [
+    "Open source",
+    "AI agents",
+    "Integrations"
+  ],
+  "entryStatus": "check",
+  "title": "Mergetober 2026 with Cognee",
+  "category": "Hackathon",
+  "deadlineDate": "2026-10-31",
+  "deadlineTimezone": "UTC",
+  "deadlineLabel": "Closes 31 Oct (timezone not stated)",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 2000,
+    "currency": "USD",
+    "kind": "first",
+    "description": "Top contributor US$2,000 (cash, iPhone or MacBook); 20 random merged-PR contributors US$100 each. Headline pool US$5,000 but listed awards total US$4,000."
+  },
+  "url": "https://www.wemakedevs.org/hackathons/mergetober",
+  "notes": [
+    "Prize figures inconsistent on the listing; PRs must be opened in October."
+  ],
+  "researchAsOf": "2026-10-26",
+  "sourceUrl": "https://devgrantsdaily.com/items/2026-10-15-mergetober-cognee-2026/",
+  "organizerId": "wemakedevs-and-cognee",
+  "addedAt": "2026-10-26T09:23:19.551Z"
+}

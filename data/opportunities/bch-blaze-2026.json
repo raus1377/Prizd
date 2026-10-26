@@ -1,0 +1,38 @@
+{
+  "id": "bch-blaze-2026",
+  "summary": "Bitcoin Cash hackathon with a Mainnet track (live demo, WizardConnect integration), a Media track and community awards. Prizes paid on BCH mainnet.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Open to developers worldwide, solo or teams of 2-4; at least one team member must attend a BLAZE preparation stream.",
+  "tags": [
+    "Web3",
+    "Bitcoin Cash",
+    "DoraHacks"
+  ],
+  "entryStatus": "open",
+  "title": "BCH BLAZE 2026 Hackathon",
+  "category": "Hackathon",
+  "deadlineDate": "2026-11-13",
+  "deadlineTimezone": "UTC",
+  "deadlineLabel": "Registration closes (timezone not stated); submissions 14-22 Nov",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 8000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$8,000+ (25 BCH): Mainnet 1st US$3,500, 2nd US$1,500, 3rd US$750; Media US$1,000; Community Choice US$750; TokenHunt US$250."
+  },
+  "url": "https://dorahacks.io/hackathon/bchblaze2026",
+  "notes": [
+    "Winners announced 28 Nov. Paid in PUSD, BLISS NFTs, BCH or CashTokens."
+  ],
+  "researchAsOf": "2026-10-26",
+  "sourceUrl": "https://devgrantsdaily.com/items/2026-10-11-bch-blaze-2026/",
+  "organizerId": "bch-blaze",
+  "addedAt": "2026-10-26T09:23:19.551Z"
+}
