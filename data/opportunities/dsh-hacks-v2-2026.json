@@ -1,0 +1,33 @@
+{
+  "id": "dsh-hacks-v2-2026",
+  "summary": "Student-run online hackathon on AI and healthcare, with cash prizes, sponsor credits and a research-oriented award run with YRI.",
+  "deadline": "2026-11-07T23:45:00-08:00",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Students aged 13+; companies and professional organisations cannot enter; open to all countries with standard exceptions in the rules.",
+  "tags": [
+    "AI",
+    "Healthcare",
+    "Student"
+  ],
+  "entryStatus": "open",
+  "title": "DSH Hacks V2",
+  "category": "Hackathon",
+  "deadlineLabel": "Submissions close (7 Nov 23:45 PST)",
+  "team": null,
+  "prize": {
+    "amount": 42234,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$42,234 pool incl. credits: top three cash US$3,928 / US$3,543 / US$3,363, 100 x US$299 Tin Computer credits, and US$1,500 plus scholarship for best research project."
+  },
+  "url": "https://dsh-hacks-v2.devpost.com/",
+  "notes": [
+    "Most of the headline pool is credits; cash is the three top prizes plus the research award."
+  ],
+  "researchAsOf": "2026-10-26",
+  "sourceUrl": "https://devgrantsdaily.com/items/2026-09-17-dsh-hacks-v2/",
+  "organizerId": "deltaforge-hacks-nxt-horizon-and-stemise-ai",
+  "addedAt": "2026-10-26T09:23:19.551Z"
+}

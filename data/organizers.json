@@ -290,8 +290,8 @@
   {
     "id": "lablab",
     "name": "lablab.ai",
-    "kind": "Company",
-    "prestige": 83,
+    "kind": "Community",
+    "prestige": 55,
     "monogram": "LL",
     "color": "#242424",
     "website": "https://lablab.ai"
@@ -1474,5 +1474,59 @@
     "monogram": "UN",
     "color": "#242424",
     "website": "https://www.kaggle.com/competitions/neurips-2026-smart-buildings"
+  },
+  {
+    "id": "twitch-and-openai",
+    "name": "Twitch and OpenAI",
+    "kind": "Company",
+    "prestige": 85,
+    "monogram": "TW",
+    "color": "#242424",
+    "website": "https://www.twitch.tv"
+  },
+  {
+    "id": "ugreen",
+    "name": "UGREEN",
+    "kind": "Company",
+    "prestige": 55,
+    "monogram": "UG",
+    "color": "#242424",
+    "website": "https://www.ugreen.com"
+  },
+  {
+    "id": "deltaforge-hacks-nxt-horizon-and-stemise-ai",
+    "name": "DeltaForge Hacks, NXT Horizon and STEMise AI",
+    "kind": "Community",
+    "prestige": 30,
+    "monogram": "DE",
+    "color": "#242424",
+    "website": "https://dsh-hacks-v2.devpost.com/"
+  },
+  {
+    "id": "bch-blaze",
+    "name": "BCH BLAZE",
+    "kind": "Community",
+    "prestige": 35,
+    "monogram": "BC",
+    "color": "#242424",
+    "website": "https://dorahacks.io/hackathon/bchblaze2026"
+  },
+  {
+    "id": "dev3pack",
+    "name": "Dev3pack",
+    "kind": "Community",
+    "prestige": 35,
+    "monogram": "DE",
+    "color": "#242424",
+    "website": "https://hack.dev3pack.xyz/"
+  },
+  {
+    "id": "wemakedevs-and-cognee",
+    "name": "WeMakeDevs and Cognee",
+    "kind": "Community",
+    "prestige": 40,
+    "monogram": "WE",
+    "color": "#242424",
+    "website": "https://www.wemakedevs.org"
   }
 ]
