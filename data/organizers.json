@@ -231,7 +231,7 @@
     "prestige": 96,
     "monogram": "IIT",
     "color": "#242424",
-    "website": "https://unstop.com"
+    "website": "https://ariesiitd.com"
   },
   {
     "id": "huntress",
@@ -1141,15 +1141,6 @@
     "monogram": "FL",
     "color": "#242424",
     "website": "https://www.flame.edu.in"
-  },
-  {
-    "id": "nationbuilding",
-    "name": "NationBuilding Foundation of India",
-    "kind": "Organization",
-    "prestige": 72,
-    "monogram": "NBF",
-    "color": "#242424",
-    "website": "https://unstop.com"
   },
   {
     "id": "loyola-chennai",

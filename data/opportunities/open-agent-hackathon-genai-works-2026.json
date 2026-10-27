@@ -25,9 +25,6 @@
     "description": "Up to US$20,000: US$15,000 cash plus US$5,000 in kind."
   },
   "url": "https://hacklist.io/",
-  "notes": [
-    "Official event URL not captured; find it via the Hacklist listing."
-  ],
   "researchAsOf": "2026-10-24",
   "sourceUrl": "https://hacklist.io/",
   "organizerId": "genai",

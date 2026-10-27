@@ -1,7 +1,7 @@
 {
   "id": "max-planck-institutes-in-computer-science-internships-summer-2027",
   "title": "Max Planck Institutes in Computer Science Internships Summer 2027",
-  "category": "Research",
+  "category": "Research internship",
   "organizerId": "custom-max-planck-institutes",
   "summary": "Summer 2027 research internships in computer science at Max Planck institutes.",
   "deadline": null,
@@ -12,19 +12,22 @@
   "team": null,
   "prize": {
     "amount": null,
-    "currency": "USD",
-    "kind": "undisclosed",
-    "description": "Cash prize value is not established or is not applicable."
+    "currency": "EUR",
+    "kind": "stipend",
+    "description": "Monthly stipend to cover living costs; the exact amount is stated in the offer letter."
   },
   "tags": [
-    "Research"
+    "Research",
+    "Computer science",
+    "Summer 2027"
   ],
   "url": "https://www.cis.mpg.de/internships/",
   "entryStatus": "open",
   "notes": [
-    "Internship typically 12–14 weeks. Reported stipend, accommodation and round-trip travel funding."
+    "Internship typically 12–14 weeks, mostly May–August."
   ],
   "deadlineDate": "2026-11-01",
   "deadlineTimezone": "Asia/Kolkata",
-  "addedAt": "2026-10-11T23:12:58.292Z"
+  "addedAt": "2026-10-11T23:12:58.292Z",
+  "support": "Accommodation covered · round-trip travel to the host institute covered"
 }

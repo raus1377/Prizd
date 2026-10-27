@@ -43,12 +43,15 @@
     }), state.sort);
   }
   const prizeText = o => o.prize.amount === null ? (o.prize.kind === 'none' ? 'Experience' : o.prize.kind === 'stipend' ? 'Paid · amount TBC' : 'To be announced') : new Intl.NumberFormat('en-US',{style:'currency',currency:o.prize.currency,maximumFractionDigits:0}).format(o.prize.amount);
-  const prizeKind = o => ({pool:'PRIZE POOL',first:'FIRST PRIZE',stipend:'STIPEND / MONTH',none:'REWARD',undisclosed:'PRIZE'}[o.prize.kind]);
+  /* Internships and research programmes pay a stipend, not a prize, and have no team size: they get stipend wording and an accommodation / support field. */
+  const isInternship = o => o.category === 'Internship' || o.category === 'Research internship';
+  const prizeKind = o => isInternship(o) ? 'STIPEND / MONTH' : ({pool:'PRIZE POOL',first:'FIRST PRIZE',stipend:'STIPEND / MONTH',none:'REWARD',undisclosed:'PRIZE'}[o.prize.kind]);
+  const supportText = o => o.support || 'Not specified by the organizer';
   function teamText(o) {
     if (o.teamText) return o.teamText;
     if (!o.team) return 'Check team rules';
     if (o.team.max === null) return o.team.min === 1 ? 'Solo / team' : `At least ${o.team.min} members`;
     return o.team.min === o.team.max ? `${o.team.min} participant${o.team.min === 1 ? '' : 's'}` : `${o.team.min}–${o.team.max} participants`;
   }
-  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, prizeText, prizeKind, teamText };
+  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, prizeText, prizeKind, teamText, isInternship, supportText };
 })();

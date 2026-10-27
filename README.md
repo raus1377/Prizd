@@ -79,6 +79,7 @@ Add organizers in `data/organizers.json`; use their IDs in each listing. Add cat
 | `eligibility` | Age, student, country and other requirements |
 | `team` | `{ "min": 1, "max": 4 }`; use `null` if unknown, or `max: null` if only the minimum is known |
 | `teamText` | Optional descriptive team rules |
+| `support` | Internships and research programmes only: whether accommodation is provided, plus travel and other support. Shown instead of team size. |
 | `prize.amount` | Numeric amount; `null` if unknown |
 | `prize.currency` | Three-letter currency code such as `USD`, `INR` or `GBP` |
 | `prize.kind` | `pool`, `first`, `none` or `undisclosed` |

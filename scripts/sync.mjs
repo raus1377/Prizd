@@ -49,7 +49,7 @@ const txtKeys = {
   entrystatus:'entryStatus',openson:'opensOn',tags:'tags',notes:'notes',categories:'categories',
   organizer:'organizer',organizerid:'organizerId',organizername:'organizerName',
   organizerkind:'organizerKind',organizerwebsite:'organizerWebsite',organizerprestige:'organizerPrestige',
-  teammin:'teamMin',teammax:'teamMax',teamtext:'teamText',
+  teammin:'teamMin',teammax:'teamMax',teamtext:'teamText',support:'support',
   prizeamount:'prizeAmount',prizecurrency:'prizeCurrency',prizekind:'prizeKind',prizedescription:'prizeDescription'
 };
 function parseStructuredText(text, source) {
