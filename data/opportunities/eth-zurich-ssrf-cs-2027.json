@@ -1,0 +1,41 @@
+{
+  "id": "eth-zurich-ssrf-cs-2027",
+  "summary": "Two-month summer research fellowship in ETH Zurich computer-science groups (July–August 2027).",
+  "deadline": null,
+  "location": "Zurich, Switzerland",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "Open worldwide except current ETH students; strong grades matter.",
+  "tags": [
+    "Research",
+    "Computer science",
+    "Switzerland",
+    "Summer 2027"
+  ],
+  "entryStatus": "check",
+  "title": "ETH Zurich Student Summer Research Fellowship (CS) 2027",
+  "deadlineDate": "2026-12-16",
+  "deadlineTimezone": "Asia/Kolkata",
+  "prize": {
+    "amount": null,
+    "currency": "CHF",
+    "kind": "stipend",
+    "description": "Allowance and housing support; amount not confirmed."
+  },
+  "url": "https://scholarshipinfocenter.com/fully-funded-summer-programs-2027-2028/",
+  "notes": [
+    "Deadline is 'mid-December' per a secondary source (16 Dec in the last cycle); no official ETH link found, so confirm on ETH's site."
+  ],
+  "sourceUrl": "https://scholarshipinfocenter.com/fully-funded-summer-programs-2027-2028/",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "eth-zurich",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#281B38">
+  <meta name="description" content="A curated index of hackathons, case competitions and research internships with real prizes. Compare prize, deadline and eligibility, then apply on the official page.">
+  <title>Prizd — Hackathons, Case Competitions &amp; Paid Internships</title>
+  <link rel="canonical" href="https://prizd.altz.me/">
+  <meta property="og:site_name" content="Prizd"><meta property="og:type" content="website"><meta property="og:title" content="Prizd — Hackathons, Case Competitions &amp; Paid Internships"><meta property="og:description" content="A curated index of hackathons, case competitions and research internships with real prizes. Compare prize, deadline and eligibility, then apply on the official page.">
+  <meta property="og:url" content="https://prizd.altz.me/">
+  <meta property="og:image" content="https://prizd.altz.me/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:image" content="https://prizd.altz.me/og-image.png">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Prizd — Hackathons, Case Competitions &amp; Paid Internships"><meta name="twitter:description" content="A curated index of hackathons, case competitions and research internships with real prizes. Compare prize, deadline and eligibility, then apply on the official page.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://prizd.altz.me/#website","url":"https://prizd.altz.me/","name":"Prizd","description":"A curated index of hackathons, case competitions and research internships with real prizes. Compare prize, deadline and eligibility, then apply on the official page.","publisher":{"@id":"https://prizd.altz.me/#org"}},{"@type":"Organization","@id":"https://prizd.altz.me/#org","name":"Prizd","url":"https://prizd.altz.me/","logo":"https://prizd.altz.me/og-image.png"}]}</script>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./account.css">
+  <script defer src="./data.js"></script>
+  <script defer src="./logic.js"></script>
+  <script defer src="./config.js"></script>
+  <script defer src="./account.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#opportunities">Skip to opportunities</a>
+  <div class="topline" aria-hidden="true"></div>
+  <header class="masthead">
+    <a href="#top" class="brand" aria-label="Prizd home"><span id="brand-name">PRIZD</span><em>.</em></a>
+    <nav class="navlinks" aria-label="Main navigation"><a href="#opportunities" data-quick="all">Open calls</a><a href="#opportunities" data-quick="new">New this week</a><a href="#browse">Browse by type</a><a href="#about">The idea</a></nav>
+    <button type="button" class="signin-btn" data-account-button hidden aria-label="Sign in"><span class="acct-label">Sign in</span></button>
+    <a href="#opportunities" class="btn btn-dark nav-cta">Find yours <span aria-hidden="true">↗</span></a>
+    <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-menu">MENU <span class="plus" aria-hidden="true">+</span></button>
+  </header>
+  <nav id="site-menu" class="site-menu" aria-label="Menu" hidden>
+    <a href="#opportunities" data-quick="all">01 / All opportunities <span>↗</span></a>
+    <a href="#opportunities" data-quick="new">02 / New this week <span>↗</span></a>
+    <a href="#opportunities" data-quick="saved">03 / Your shortlist <span>↗</span></a>
+    <a href="#browse">04 / Browse by type <span>↗</span></a>
+    <a href="#about">05 / About <span>↗</span></a>
+    <a href="#top" data-account-button hidden>Sign in <span>↗</span></a>
+  </nav>
+  <main>
+    <section id="top" class="hero" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <div class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Hackathons, cases &amp; internships</div>
+        <h1 id="hero-heading">Find your<br>next <span>win.</span></h1>
+        <p class="hero-description">Hackathons, case competitions and paid internships worth showing up for. Compare prize, deadline and eligibility, then apply on the official page.</p>
+        <div class="hero-actions"><a class="btn" href="#opportunities">Browse open calls <span aria-hidden="true">↗</span></a><span class="small-note">Free. Updated daily.</span></div>
+        <div class="hero-bottom"><span class="dash"></span> Every big thing starts with a call.</div>
+      </div>
+      <div class="hero-stage">
+        <div class="stage-ring" aria-hidden="true"></div><div class="stage-scribble" aria-hidden="true">✳</div>
+        <div class="stage-label">[ TOP PICKS RIGHT NOW ]</div>
+        <div class="floating-note" aria-hidden="true">real prizes.<br>real deadlines. ↗</div>
+        <div class="workspace">
+          <div class="workspace-bar"><div class="window-dots" aria-hidden="true"><b></b><b></b><b></b></div><span>PRIZD / THIS WEEK</span><span>✳</span></div>
+          <div class="workspace-body"><span class="eyebrow">Worth a look</span><h2>Today, ranked.</h2><div class="hero-shortlist" id="hero-shortlist" aria-label="Highest-ranked opportunities"></div><p class="workspace-foot"><span class="live-label"><i></i> CURATED INDEX</span><a href="#opportunities">SEE ALL ↓</a></p></div>
+        </div>
+        <div class="stage-foot">NOT PERFECT. JUST PRESENT. ↗</div>
+      </div>
+    </section>
+    <div class="band" aria-hidden="true"><div class="band-inner"><span>✳ Hackathons</span><i>↗</i><span>Case competitions</span><i>✳</i><span>Paid internships</span><i>↗</i><span>Real prizes</span><i>✳</i><span>✳ Hackathons</span><i>↗</i><span>Case competitions</span><i>✳</i><span>Paid internships</span><i>↗</i><span>Real prizes</span><i>✳</i></div></div>
+    <section id="opportunities" class="index-section" aria-labelledby="index-title">
+      <div class="section-overline"><span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> The index</span><span id="updated-label">UPDATED DAILY BY THE CURATOR</span></div>
+      <div class="index-heading"><h2 id="index-title">Your next<br><em>big thing.</em></h2><p>For the builders. The strategists.<br>The people who see a better way.<br><strong>Find something worth showing up for.</strong></p></div>
+      <div class="index-stats"><span><b id="stat-open">00</b> OPEN NOW</span><span><b id="stat-new">00</b> NEW THIS WEEK</span><span><b id="stat-organizers">00</b> ORGANIZERS</span><span class="stat-note">COMPANIES & COLLEGES FIRST <span>↗</span></span></div>
+      <div class="index-toolbar">
+        <div class="tabs" role="group" aria-label="Opportunity collections"><button class="active" data-view="all">ALL <span id="count-all"></span></button><button data-view="new">NEW <span id="count-new"></span><i class="new-dot"></i></button><button data-view="saved">SAVED <span id="count-saved"></span></button></div>
+        <div class="region-switch" role="group" aria-label="Region"><div class="seg"><button class="active" data-region="Global" aria-pressed="true">GLOBAL <span id="count-global"></span></button><button data-region="India" aria-pressed="false">INDIA <span id="count-india"></span></button></div></div>
+        <label class="search"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Search a name, idea, or field…" aria-label="Search opportunities"><kbd>/</kbd></label>
+        <button class="filter-toggle" id="filter-toggle" aria-expanded="false" aria-controls="advanced-filters">FILTERS <span aria-hidden="true">☷</span></button>
+      </div>
+      <div class="category-filters" id="category-filters" role="group" aria-label="Filter by category"></div>
+      <div class="advanced-filters" id="advanced-filters" hidden>
+        <label>ORGANIZER<select id="kind-filter"><option value="all">Any organizer</option><option value="Company">Companies</option><option value="College">Colleges</option><option value="Organization">Organizations</option><option value="Community">Communities</option></select></label>
+        <label>FORMAT<select id="format-filter"><option value="all">Any format</option><option>Online</option><option>In person</option><option>Hybrid</option><option>To confirm</option></select></label>
+        <label>TEAM<select id="team-filter"><option value="all">Any team size</option><option value="solo">Solo eligible</option><option value="team">Teams only</option></select></label>
+        <label>STATUS<select id="status-filter"><option value="open">Open now</option><option value="closing">Closing in 7 days</option><option value="upcoming">Upcoming openings</option><option value="check">Entry needs checking</option><option value="closed">Past / closed</option><option value="all">All entry statuses</option></select></label>
+        <button class="reset-filters" id="reset-filters">RESET FILTERS ↺</button>
+      </div>
+      <div class="results-meta"><span id="result-count" role="status" aria-live="polite">Loading opportunities…</span><label>SORT BY <select id="sort"><option value="featured">Curated ranking</option><option value="prestige">Top companies & colleges</option><option value="prize">Highest prizes</option><option value="deadline">Closing soon</option><option value="newest">Newest added</option></select></label><div class="layout-switch" role="group" aria-label="Results layout"><button class="active" id="grid-view" aria-label="Grid view" aria-pressed="true">⊞</button><button id="list-view" aria-label="List view" aria-pressed="false">☰</button></div></div>
+      <div class="opportunity-grid" id="opportunity-grid"></div>
+      <div id="empty-state" class="empty-state" hidden><span>NOTHING HERE. YET.</span><p id="empty-message">Try a different filter. Your next opportunity might be one click away.</p><button id="empty-reset">SHOW ALL OPPORTUNITIES ↗</button></div>
+      <noscript><p>Enable JavaScript to filter and search. The lists under “Browse by type” work without it.</p></noscript>
+      <div class="index-footnote"><span>PRIZE POOLS AND FIRST PRIZES ARE LABELED SEPARATELY.</span><span>CHECK THE OFFICIAL PAGE FOR CURRENT RULES AND ENTRY STATUS.</span></div>
+    </section>
+    <section id="browse" class="browse-section" aria-labelledby="browse-title">
+      <span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Browse by type</span>
+      <h2 id="browse-title">Every type,<br><em>one page.</em></h2>
+      <div class="browse-grid"><a href="hackathons/"><span>Hackathons</span><b>95</b></a><a href="case-competitions/"><span>Case competitions</span><b>11</b></a><a href="product-competitions/"><span>Product competitions</span><b>10</b></a><a href="finance-competitions/"><span>Finance competitions</span><b>15</b></a><a href="marketing-competitions/"><span>Marketing competitions</span><b>11</b></a><a href="economics-competitions/"><span>Economics competitions</span><b>7</b></a><a href="psychology-competitions/"><span>Psychology competitions</span><b>3</b></a><a href="research-opportunities/"><span>Research opportunities</span><b>22</b></a><a href="engineering-competitions/"><span>Engineering competitions</span><b>10</b></a><a href="research-internships/"><span>Research internships</span><b>33</b></a><a href="policy-competitions/"><span>Policy competitions</span><b>9</b></a><a href="india/"><span>India</span><b>38</b></a><a href="equity-research/"><span>Equity research</span><b>4</b></a><a href="business-research/"><span>Business research</span><b>24</b></a><a href="product-case/"><span>Product case</span><b>10</b></a><a href="hackathons/cash-prize/"><span>Cash-prize hackathons</span><b>67</b></a><a href="case-competitions/india/"><span>Case competitions in India</span><b>4</b></a></div>
+      <h3 class="browse-sub">Latest additions</h3>
+      <ul class="browse-latest"><li><a href="research-internships/barc-student-internship-practical-training/">BARC Student Internship / Practical Training</a><span>BARC – Bhabha Atomic Research Centre · Prize to be announced</span></li><li><a href="research-internships/caltech-surf-2027/">Caltech SURF 2027</a><span>Caltech · $8,110 stipend</span></li><li><a href="research-internships/cern-openlab-summer-student-2027/">CERN openlab Summer Student Programme 2027</a><span>CERN · CHF 94 stipend</span></li><li><a href="research-internships/cern-summer-student-2027/">CERN Summer Student Programme 2027</a><span>CERN · CHF 94 stipend</span></li><li><a href="research-internships/daad-wise-2027/">DAAD WISE 2027 (Germany)</a><span>DAAD · Paid</span></li><li><a href="research-internships/drdo-student-project-training/">DRDO Student Internship / Project Training (lab-wise)</a><span>DRDO · Prize to be announced</span></li><li><a href="research-internships/eth-zurich-ssrf-cs-2027/">ETH Zurich Student Summer Research Fellowship (CS) 2027</a><span>ETH Zurich · Paid</span></li><li><a href="research-internships/iirs-isro-external-student-internship-2026-27/">ISRO-IIRS External Student Internship / Project Trainee (Oct 2026 round)</a><span>ISRO – Indian Institute of Remote Sensing · No cash prize</span></li></ul>
+      <p class="browse-sub">Running a competition? <a href="submit/">Submit it to Prizd</a>.</p>
+    </section>
+    <section id="alerts" class="signup-band" data-signup data-source="home" data-title="Never miss a deadline." hidden></section>
+    <section id="about" class="about-section"><span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Why Prizd</span><div class="about-main"><h2>Less noise.<br>More <em>what if.</em></h2><div><p>A good opportunity can change your direction. This is a place to find one.</p><p>An independent collection of challenges from companies, colleges and communities. Ranked by organizer priority, then prize and deadline. Save the ones that matter to you.</p><a class="text-link" href="#opportunities">FIND YOUR NEXT MOVE <span>↗</span></a></div></div><div class="about-bottom"><span>EVERY BIG THING STARTS WITH A CALL.</span><span aria-hidden="true">+ + +</span><a href="#top">BACK TO THE TOP ↑</a></div></section>
+  </main>
+  <footer><a href="#top" class="brand footer-brand">prizd<em>.</em></a><div><span>THE OPPORTUNITY INDEX</span><span>INDEPENDENT. CURATED. ALWAYS LOOKING FORWARD.</span></div><span><a href="./privacy/">Privacy</a> · <span id="footer-year">2026</span></span></footer>
+  <dialog id="detail-dialog" aria-labelledby="detail-title"><button class="dialog-close" id="dialog-close" aria-label="Close opportunity details">×</button><div id="detail-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

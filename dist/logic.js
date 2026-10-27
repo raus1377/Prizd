@@ -1,0 +1,57 @@
+/* Shared, pure selection logic. Also used by the repository's tests. */
+(() => {
+  const DAY = 86400000;
+  const isNew = (o, now, days = 7) => {
+    const added = Date.parse(o.addedAt);
+    return added <= now && added > now - days * DAY;
+  };
+  const today = (now,zone='Asia/Kolkata') => new Intl.DateTimeFormat('en-CA',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit'}).format(now);
+  const isClosed = (o, now) => Boolean(o.entryStatus === 'closed' || (o.deadline !== null && Date.parse(o.deadline) <= now) || (o.deadlineDate && today(now,o.deadlineTimezone) > o.deadlineDate));
+  const entryStatus = (o,now) => isClosed(o,now) ? 'closed' : o.opensOn && today(now) < o.opensOn ? 'upcoming' : o.entryStatus === 'upcoming' && (!o.opensOn || today(now) < o.opensOn) ? 'upcoming' : o.entryStatus === 'check' ? 'check' : 'open';
+  const deadlineValue = o => o.deadline !== null ? Date.parse(o.deadline) : o.deadlineDate ? Date.parse(o.deadlineDate+'T00:00:00Z') : Infinity;
+  const isActionable = (o,now) => entryStatus(o,now) === 'open';
+  /* 'featured': the curator's pinned listings first, in the order set in settings.featured; everything else by prize, highest first. */
+  const featuredOrder = o => Number.isInteger(o.featuredRank) ? o.featuredRank : Infinity;
+  function rank(items, sort = 'prestige') {
+    return [...items].sort((a,b) => {
+      let result;
+      if (sort === 'featured') result = (featuredOrder(a) === featuredOrder(b) ? 0 : featuredOrder(a) < featuredOrder(b) ? -1 : 1) || b.prizeUsd - a.prizeUsd || b.organizer.prestige - a.organizer.prestige;
+      else if (sort === 'prize') result = b.prizeUsd - a.prizeUsd || b.organizer.prestige - a.organizer.prestige;
+      else if (sort === 'deadline') result = deadlineValue(a) - deadlineValue(b) || b.organizer.prestige - a.organizer.prestige;
+      else if (sort === 'newest') result = Date.parse(b.addedAt) - Date.parse(a.addedAt) || b.organizer.prestige - a.organizer.prestige;
+      else result = b.organizer.prestige - a.organizer.prestige || b.prizeUsd - a.prizeUsd;
+      return result || deadlineValue(a) - deadlineValue(b) || a.title.localeCompare(b.title);
+    });
+  }
+  function select(items, state, saved, now, newWindowDays = 7) {
+    const query = (state.search || '').trim().toLowerCase();
+    return rank(items.filter(o => {
+      if (state.view === 'new' && !isNew(o, now, newWindowDays)) return false;
+      if (state.view === 'saved' && !saved.has(o.id)) return false;
+      const status=entryStatus(o,now);
+      if (state.status === 'open' && state.view !== 'saved' && status !== 'open') return false;
+      if (['upcoming','check','closed'].includes(state.status) && status !== state.status) return false;
+      if (state.status === 'closing' && (!isActionable(o,now) || deadlineValue(o) === Infinity || deadlineValue(o) > now + 7 * DAY)) return false;
+      if (state.region && state.region !== 'all' && state.view !== 'saved' && (o.region || 'Global') !== state.region) return false;
+      if (state.category !== 'all' && o.category !== state.category && !(o.categories || []).includes(state.category)) return false;
+      if (state.kind !== 'all' && o.organizer.kind !== state.kind) return false;
+      if (state.format !== 'all' && o.format !== state.format) return false;
+      if (state.team === 'solo' && (!o.team || o.team.min > 1)) return false;
+      if (state.team === 'team' && (!o.team || o.team.min === 1)) return false;
+      if (query && ![o.title,o.summary,o.organizer.name,o.category,o.location,o.eligibility,...o.tags].join(' ').toLowerCase().includes(query)) return false;
+      return true;
+    }), state.sort);
+  }
+  const prizeText = o => o.prize.amount === null ? (o.prize.kind === 'none' ? 'Experience' : o.prize.kind === 'stipend' ? 'Paid · amount TBC' : 'To be announced') : new Intl.NumberFormat('en-US',{style:'currency',currency:o.prize.currency,maximumFractionDigits:0}).format(o.prize.amount);
+  /* Internships and research programmes pay a stipend, not a prize, and have no team size: they get stipend wording and an accommodation / support field. */
+  const isInternship = o => o.category === 'Internship' || o.category === 'Research internship';
+  const prizeKind = o => isInternship(o) ? 'STIPEND / MONTH' : ({pool:'PRIZE POOL',first:'FIRST PRIZE',stipend:'STIPEND / MONTH',none:'REWARD',undisclosed:'PRIZE'}[o.prize.kind]);
+  const supportText = o => o.support || 'Not specified by the organizer';
+  function teamText(o) {
+    if (o.teamText) return o.teamText;
+    if (!o.team) return 'Check team rules';
+    if (o.team.max === null) return o.team.min === 1 ? 'Solo / team' : `At least ${o.team.min} members`;
+    return o.team.min === o.team.max ? `${o.team.min} participant${o.team.min === 1 ? '' : 's'}` : `${o.team.min}–${o.team.max} participants`;
+  }
+  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, prizeText, prizeKind, teamText, isInternship, supportText };
+})();

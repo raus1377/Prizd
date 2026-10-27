@@ -1,0 +1,41 @@
+{
+  "id": "kaust-vsrp",
+  "summary": "3–6 month research internship at KAUST in Saudi Arabia, with a stipend, housing and travel.",
+  "deadline": null,
+  "location": "Thuwal, Saudi Arabia",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "3rd/4th-year bachelor's and master's STEM students from any country.",
+  "tags": [
+    "Research",
+    "KAUST",
+    "Saudi Arabia",
+    "UG",
+    "PG"
+  ],
+  "entryStatus": "open",
+  "title": "KAUST Visiting Student Research Program (VSRP)",
+  "prize": {
+    "amount": 1000,
+    "currency": "USD",
+    "kind": "stipend",
+    "description": "About $1,000 per month, private housing and travel, as reported."
+  },
+  "url": "https://vsrp.kaust.edu.sa/",
+  "notes": [
+    "Rolling applications, no fixed deadline; a recommendation letter, SOP and CV are needed."
+  ],
+  "sourceUrl": "https://www.heysuccess.com/opportunity/KAUST-Visiting-Student-Research-Program-(VSRP)-Internships-45593",
+  "support": "Housing and travel covered",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "kaust",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}

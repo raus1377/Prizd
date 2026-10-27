@@ -1,0 +1,41 @@
+{
+  "id": "summer-at-epfl-cs-2027",
+  "summary": "Summer research internship in EPFL labs for computer-science students, Lausanne.",
+  "deadline": null,
+  "location": "Lausanne, Switzerland",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "Open to international students, including Indians; see summer.epfl.ch for year-of-study requirements.",
+  "tags": [
+    "Research",
+    "Computer science",
+    "Switzerland",
+    "Summer 2027"
+  ],
+  "entryStatus": "open",
+  "title": "Summer@EPFL (Computer Science) 2027",
+  "deadlineDate": "2026-11-29",
+  "deadlineTimezone": "Asia/Kolkata",
+  "prize": {
+    "amount": 1800,
+    "currency": "CHF",
+    "kind": "stipend",
+    "description": "About CHF 1,800 per month."
+  },
+  "url": "https://summer.epfl.ch",
+  "notes": [
+    "Deadline 29 Nov 2026, 23:59 AoE per a secondary source. EPFL's School of Life Sciences summer programme closes 15 Nov 2026, and E3 closes 1 Nov."
+  ],
+  "sourceUrl": "https://leapscholar.com/blog/epfl-summer-internships/",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "custom-epfl",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}

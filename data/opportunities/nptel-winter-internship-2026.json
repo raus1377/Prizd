@@ -1,0 +1,39 @@
+{
+  "id": "nptel-winter-internship-2026",
+  "summary": "Research internship under faculty at IITs, IISc, IISERs and IIITs for NPTEL Elite-Gold certified learners; invitations go out in October.",
+  "deadline": null,
+  "location": "IITs, IISc, IISERs, IIITs, India",
+  "region": "India",
+  "format": "Hybrid",
+  "eligibility": "NPTEL course toppers with an Elite-Gold certificate from the January–April semester; the course instructor decides.",
+  "tags": [
+    "Research",
+    "NPTEL",
+    "Winter internship",
+    "UG"
+  ],
+  "entryStatus": "open",
+  "title": "NPTEL Winter Internship 2026-27",
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "stipend",
+    "description": "In-person stipend of ₹7,500 for 2 weeks and ₹15,000 for 4 weeks; virtual internships are unpaid."
+  },
+  "url": "https://nptel.ac.in/internship",
+  "notes": [
+    "By invitation: NPTEL emails eligible learners after the instructor agrees, so check your email for an October notice."
+  ],
+  "sourceUrl": "https://internshala.com/blog/nptel-winter-internship/",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "nptel-iits-and-iisc",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}

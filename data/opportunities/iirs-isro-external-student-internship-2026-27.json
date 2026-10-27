@@ -1,0 +1,45 @@
+{
+  "id": "iirs-isro-external-student-internship-2026-27",
+  "summary": "45-day to 12-month internship or project-trainee work at ISRO's Indian Institute of Remote Sensing, Dehradun (remote sensing, GIS, geoinformatics).",
+  "deadline": null,
+  "location": "Dehradun, Uttarakhand",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "Indian citizens in UG/PG/PhD science or technology programmes with at least 60% or 6.32/10 CGPA; college NOC needed.",
+  "tags": [
+    "Research",
+    "ISRO",
+    "Remote sensing",
+    "UG",
+    "PG"
+  ],
+  "entryStatus": "open",
+  "title": "ISRO-IIRS External Student Internship / Project Trainee (Oct 2026 round)",
+  "deadlineDate": "2026-10-31",
+  "deadlineTimezone": "Asia/Kolkata",
+  "deadlineLabel": "Autumn round deadline",
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "none",
+    "description": "No stipend or accommodation; certificate on completion."
+  },
+  "url": "https://www.iirs.gov.in/content/external-student-internship",
+  "notes": [
+    "IIRS takes applications twice a year (31 March and 31 October); one aggregator lists 30 Oct, so apply a day early.",
+    "Next round after this one: 31 March 2027."
+  ],
+  "sourceUrl": "https://www.talentd.in/articles/iirs-isro-internship-2026-eligibility-stipend-last-date",
+  "support": "No accommodation or stipend",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "isro-indian-institute-of-remote-sensing",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}

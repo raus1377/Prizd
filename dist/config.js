@@ -1,0 +1,1 @@
+window.PRIZD_CONFIG = {};

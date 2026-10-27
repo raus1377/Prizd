@@ -1,0 +1,40 @@
+{
+  "id": "lpi-summer-intern-2027",
+  "summary": "10-week planetary science research internship in Houston, 7 June – 13 Aug 2027.",
+  "deadline": null,
+  "location": "Houston, Texas, USA",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "Undergraduates with at least 50 semester hours of credit; international students can apply. Two to three recommendation letters needed.",
+  "tags": [
+    "Research",
+    "Planetary science",
+    "USA",
+    "Summer 2027"
+  ],
+  "entryStatus": "open",
+  "title": "LPI Summer Intern Program in Planetary Science 2027",
+  "deadlineDate": "2026-12-14",
+  "prize": {
+    "amount": 13639,
+    "currency": "USD",
+    "kind": "stipend",
+    "description": "About $13,639 in total support for the 10 weeks."
+  },
+  "url": "https://www.lpi.usra.edu/lpiintern/",
+  "notes": [
+    "Deadline 14 Dec 2026, 11:59 PM; late applications are not accepted. Notifications in March 2027."
+  ],
+  "sourceUrl": "https://gksscholarships.com/lpi-summer-internship-2027/",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "lunar-and-planetary-institute-usra",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}

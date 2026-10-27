@@ -1,0 +1,41 @@
+{
+  "id": "barc-student-internship-practical-training",
+  "summary": "45-day training or 3–6 month academic project work at BARC for engineering and science students; rolling applications.",
+  "deadline": null,
+  "location": "Mumbai, Maharashtra",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "UG/PG science and engineering students; training must be part of the curriculum, and a limited number of students per course per college can apply.",
+  "tags": [
+    "Research",
+    "BARC",
+    "DAE",
+    "UG",
+    "PG"
+  ],
+  "entryStatus": "open",
+  "title": "BARC Student Internship / Practical Training",
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Stipend not published."
+  },
+  "url": "https://www.barc.gov.in",
+  "notes": [
+    "Applied offline as a hard copy on college letterhead; apply about 3 months before the intended start.",
+    "No fixed deadline; secondary source, confirm with BARC's training section."
+  ],
+  "sourceUrl": "https://theinternship.in/?p=35",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "barc-bhabha-atomic-research-centre",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}
