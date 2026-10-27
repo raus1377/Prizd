@@ -26,6 +26,17 @@ test('Organizer prestige takes priority over a larger prize; same tier breaks ti
   assert.deepEqual(rank([large,top,sameTier]).map(x=>x.id),['same-tier','top','large']);
   assert.deepEqual(rank([large,top,sameTier],'prize').map(x=>x.id),['large','same-tier','top']);
 });
+test('Curated ranking puts pinned listings first in the set order, then everything else by prize', () => {
+  const a=fixture({id:'a',prizeUsd:10,featuredRank:1});
+  const b=fixture({id:'b',prizeUsd:5,featuredRank:0});
+  const big=fixture({id:'big',prizeUsd:1e6});
+  const small=fixture({id:'small',prizeUsd:50});
+  assert.deepEqual(rank([small,a,big,b],'featured').map(x=>x.id),['b','a','big','small']);
+  assert.deepEqual(rank([small,big],'featured').map(x=>x.id),['big','small']);
+  const pinned=normalizeOpportunity({id:'x',url:'https://example.com',prize:{amount:1,currency:'USD'}},organizer,{...settings,featured:['y','x']},'2026-10-01T00:00:00Z',now);
+  assert.equal(pinned.featuredRank,1);
+  assert.throws(()=>validateSettings({...settings,featured:['x','x']},[]),/featured/);
+});
 test('Unknown deadlines remain open and sort last; an exact deadline is closed', () => {
   const unknown=fixture({id:'unknown',deadline:null});
   const closed=fixture({id:'closed',deadline:new Date(now).toISOString()});

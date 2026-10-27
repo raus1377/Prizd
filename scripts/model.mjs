@@ -14,7 +14,8 @@ export function safeUrl(value) {
 export function validateSettings(settings, organizers) {
   if (!settings.name || !Array.isArray(settings.categories) || !settings.categories.length) throw new Error('settings: name and categories are required');
   if (!Number.isInteger(settings.newWindowDays) || settings.newWindowDays < 1) throw new Error('settings: newWindowDays must be a positive integer');
-  if (!['prestige','prize','deadline','newest'].includes(settings.defaultSort)) throw new Error('settings: invalid defaultSort');
+  if (!['featured','prestige','prize','deadline','newest'].includes(settings.defaultSort)) throw new Error('settings: invalid defaultSort');
+  if (settings.featured !== undefined && (!Array.isArray(settings.featured) || settings.featured.some(id => typeof id !== 'string' || !id) || new Set(settings.featured).size !== settings.featured.length)) throw new Error('settings: featured must be a list of unique listing ids');
   for (const [currency, rate] of Object.entries(settings.prizeUsdRates || {})) if (!/^[A-Z]{3}$/.test(currency) || !(Number.isFinite(rate) && rate > 0)) throw new Error('settings: invalid prize exchange rate');
   if (settings.siteUrl !== undefined && settings.siteUrl !== '' && !/^https?:\/\/[^\s/?#]+(?:\/[^\s?#]*)?$/.test(settings.siteUrl)) throw new Error('settings: siteUrl must be empty or an absolute http(s) URL without query or fragment');
   for (const key of ['brand','tagline','seoTitle','seoDescription']) if (settings[key] !== undefined && (typeof settings[key] !== 'string' || !settings[key].trim())) throw new Error(`settings: ${key} must be a non-empty string`);
@@ -98,6 +99,7 @@ export function normalizeOpportunity(o, organizer, settings, addedAt, now) {
     url: cleanUrl(o.url),
     ...(o.sourceUrl ? { sourceUrl: cleanUrl(o.sourceUrl) } : {}),
     region: o.region ?? 'Global',
+    ...((settings.featured || []).includes(o.id) ? { featuredRank: settings.featured.indexOf(o.id) } : {}),
     organizer,
     addedAt: addedAt || o.addedAt || new Date(now).toISOString(),
     prizeUsd: o.prize.usdEquivalent ?? (o.prize.amount === null ? 0 : o.prize.amount * settings.prizeUsdRates[o.prize.currency])

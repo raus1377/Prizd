@@ -10,7 +10,7 @@
   const params = new URLSearchParams(location.search);
   const defaults = { view:'all', region:'Global', category:'all', kind:'all', format:'all', team:'all', status:'open', sort:settings.defaultSort, search:'' };
   const state = { ...defaults };
-  const allowed = {view:['all','new','saved'],region:['Global','India'],category:['all',...settings.categories],kind:['all','Company','College','Organization','Community'],format:['all','Online','In person','Hybrid','To confirm'],team:['all','solo','team'],status:['open','all','closing','upcoming','check','closed'],sort:['prestige','prize','deadline','newest']};
+  const allowed = {view:['all','new','saved'],region:['Global','India'],category:['all',...settings.categories],kind:['all','Company','College','Organization','Community'],format:['all','Online','In person','Hybrid','To confirm'],team:['all','solo','team'],status:['open','all','closing','upcoming','check','closed'],sort:['featured','prestige','prize','deadline','newest']};
   for (const key of Object.keys(allowed)) if (allowed[key].includes(params.get(key))) state[key] = params.get(key);
   state.search = params.get('q') || '';
   let saved;

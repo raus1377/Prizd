@@ -132,7 +132,18 @@
       "intro": "Hackathons, case competitions, internships and contests from Indian companies, colleges and communities, for undergraduate and postgraduate students. Each listing shows the prize, the deadline and who can apply."
     }
   },
-  "defaultSort": "prestige",
+  "featured": [
+    "meta-vr-start-2026",
+    "google-quantum-circuit-compilation-2026",
+    "elevenlabs-elevencreative-the-search-for-the-worlds-catchiest-ad",
+    "gemma-4-developer-agent-competition",
+    "nebius-nvidia-ai-2026",
+    "gitlab-transcend-2026",
+    "codex-twitchcon-hackathon-2026",
+    "paypal-ai-hackathon",
+    "loreal-brandstorm-2027"
+  ],
+  "defaultSort": "featured",
   "prizeUsdRates": {
     "USD": 1,
     "INR": 0.0115,
