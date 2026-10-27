@@ -1,0 +1,39 @@
+name: Submit an opportunity
+description: Suggest a hackathon, case competition or research programme for Prizd
+title: "Submit: "
+labels: ["submission"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name of the opportunity
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Official page or registration link
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: organizer
+    attributes:
+      label: Organizer
+    validations:
+      required: true
+  - type: input
+    id: prize
+    attributes:
+      label: Prize or stipend
+      description: For example "Rs 50,000 prize pool" or "No cash prize".
+  - type: input
+    id: deadline
+    attributes:
+      label: Registration deadline
+      placeholder: e.g. 15 Dec 2026
+  - type: textarea
+    id: eligibility
+    attributes:
+      label: Who can apply
+      description: Include whether participants from India are eligible.

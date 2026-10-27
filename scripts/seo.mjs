@@ -45,16 +45,33 @@ const prizePhrase = o => {
 const STATUS = { open: 'Open', upcoming: 'Upcoming', check: 'Check entry', closed: 'Closed' };
 
 export function opportunityTitle(o, brand) {
-  const long = `${o.title} — Prize & Deadline | ${brand}`;
-  if (long.length <= 64) return long;
-  const short = `${o.title} | ${brand}`;
-  return short.length <= 64 ? short : `${clip(o.title, 64 - brand.length - 3)} | ${brand}`;
+  const candidates = [
+    `${o.title}: Prize, Deadline & Eligibility | ${brand}`,
+    `${o.title}: Prize, Deadline & Eligibility`,
+    `${o.title} — Prize & Deadline | ${brand}`,
+    `${o.title} | ${brand}`
+  ];
+  return candidates.find(c => c.length <= 64) || `${clip(o.title, 64 - brand.length - 3)} | ${brand}`;
 }
 export function opportunityDescription(o) {
   const summary = o.summary.trim().replace(/[.\s]*$/, '.');
   return clip(`${summary} ${prizePhrase(o)}. Deadline: ${shortDeadline(o)}. Who can apply: ${o.eligibility}`, 158);
 }
 const lastModified = (o, fallback) => isoDay(o.checkedAt) || isoDay(o.researchAsOf) || isoDay(o.addedAt) || fallback;
+
+const NOT_AN_EVENT = new Set(['Internship', 'Research internship']);
+const CASH_KINDS = new Set(['pool', 'first']);
+/** Does a listing belong on a keyword landing page (settings.keywordPages)? All stated filters must match. */
+export function matchesKeywordPage(page, o) {
+  if (page.categories?.length && !page.categories.some(c => o.category === c || (o.categories || []).includes(c))) return false;
+  if (page.region && (o.region || 'Global') !== page.region) return false;
+  if (page.cashPrize && !(o.prize.amount > 0 && CASH_KINDS.has(o.prize.kind))) return false;
+  if (page.keywords?.length) {
+    const text = [o.title, o.summary, ...(o.tags || [])].join(' ').toLowerCase();
+    if (!page.keywords.some(k => text.includes(k.toLowerCase()))) return false;
+  }
+  return true;
+}
 
 export function buildSite({ settings, organizers, opportunities, archived = [], now, siteUrl = '' }) {
   const brand = settings.brand || settings.name;
@@ -77,7 +94,14 @@ export function buildSite({ settings, organizers, opportunities, archived = [], 
     list: all.filter(o => (o.region || 'Global') === region)
   })).filter(h => h.list.length > 0);
   for (const hub of regionHubs) hub.indexable = hub.list.length >= 3;
-  const allHubs = [...hubs, ...regionHubs];
+  const keywordHubs = (settings.keywordPages || []).map(page => ({
+    category: null, region: page.region || null, slug: page.slug, navName: page.name || page.slug.split('/').pop().replace(/-/g, ' ').replace(/^./, c => c.toUpperCase()),
+    title: page.title.replaceAll('{year}', String(year)), h1: page.h1, intro: page.intro, keywordPage: page,
+    homeFilter: [page.categories?.length === 1 ? `category=${encodeURIComponent(page.categories[0])}` : '', page.region ? `region=${encodeURIComponent(page.region)}` : ''].filter(Boolean).join('&'),
+    list: all.filter(o => matchesKeywordPage(page, o))
+  })).filter(h => h.list.length > 0);
+  for (const hub of keywordHubs) hub.indexable = hub.list.length >= 3;
+  const allHubs = [...hubs, ...regionHubs, ...keywordHubs];
   const hubFor = category => hubs.find(h => h.category === category);
   const navHubs = [...regionHubs.filter(h => h.indexable), ...hubs.filter(h => h.indexable).sort((a, b) => b.list.length - a.list.length).slice(0, 3)];
   const pathOf = o => `${hubFor(o.category).slug}/${o.id}/`;
@@ -128,7 +152,7 @@ ${tags}
 <main id="main">
 ${body}
 </main>
-<footer class="page-foot"><a class="page-brand" href="${base}">${esc(brand.toLowerCase())}<em>.</em></a><nav aria-label="Browse by type">${allHubs.filter(h => h.indexable).map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}</nav><p>An independent index. Always confirm rules and deadlines on the official page.</p></footer>
+<footer class="page-foot"><a class="page-brand" href="${base}">${esc(brand.toLowerCase())}<em>.</em></a><nav aria-label="Browse by type">${allHubs.filter(h => h.indexable).map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}<a href="${base}submit/">Submit an opportunity</a></nav><p>An independent index. Always confirm rules and deadlines on the official page.</p></footer>
 </body>
 </html>
 `;
@@ -137,6 +161,21 @@ ${body}
   const row = (o, base) => {
     const s = status(o);
     return `<li class="row"><a class="row-title" href="${base}${pathOf(o)}">${esc(o.title)}</a><span class="row-org">${esc(o.organizer.name)}</span><span class="row-prize">${esc(prizePhrase(o))}</span><span class="row-date"><span class="status status-${s}">${STATUS[s]}</span> ${esc(shortDeadline(o))}</span></li>`;
+  };
+
+  // Event markup only when the listing carries a real startDate; we never invent event dates.
+  const eventLd = (o, path) => {
+    if (!o.startDate || NOT_AN_EVENT.has(o.category)) return [];
+    const online = o.format === 'Online';
+    const virtual = { '@type': 'VirtualLocation', url: o.url || abs(path) };
+    const place = { '@type': 'Place', name: o.location, address: o.location };
+    return [{
+      '@type': 'Event', name: o.title, description: o.summary, url: abs(path), startDate: o.startDate, ...(o.endDate ? { endDate: o.endDate } : {}),
+      eventAttendanceMode: online ? 'https://schema.org/OnlineEventAttendanceMode' : o.format === 'Hybrid' ? 'https://schema.org/MixedEventAttendanceMode' : 'https://schema.org/OfflineEventAttendanceMode',
+      eventStatus: 'https://schema.org/EventScheduled',
+      location: online ? virtual : o.format === 'Hybrid' ? [place, virtual] : place,
+      organizer: { '@type': 'Organization', name: o.organizer.name, ...(o.organizer.website ? { url: o.organizer.website } : {}) }
+    }];
   };
 
   // ---- one page per opportunity (active and archived)
@@ -174,6 +213,8 @@ ${related.length ? `<section class="related"><h2>More ${esc(hub.navName.toLowerC
       base: '../../', title, description, path, body,
       jsonld: [
         { '@type': 'WebPage', '@id': abs(path), url: abs(path), name: title, description, isPartOf: { '@id': abs('#website') }, datePublished: isoDay(o.addedAt) || today, dateModified: modified, breadcrumb: crumbs([{ name: brand, path: '' }, { name: hub.navName, path: `${hub.slug}/` }, { name: o.title, path }]) }
+      ,
+      ...eventLd(o, path)
       ]
     }));
   }
@@ -181,22 +222,24 @@ ${related.length ? `<section class="related"><h2>More ${esc(hub.navName.toLowerC
   // ---- one hub per category
   for (const hub of allHubs) {
     const ranked = P.rank(hub.list);
-    const filterQuery = hub.region ? `region=${encodeURIComponent(hub.region)}` : `category=${encodeURIComponent(hub.category)}`;
+    const b = '../'.repeat(hub.slug.split('/').length);
+    const filterQuery = hub.keywordPage ? hub.homeFilter : hub.region ? `region=${encodeURIComponent(hub.region)}` : `category=${encodeURIComponent(hub.category)}`;
     const active = ranked.filter(o => status(o) !== 'closed');
     const past = ranked.filter(o => status(o) === 'closed');
     const description = clip(`${hub.intro} ${active.length} open now.`, 158);
     const path = `${hub.slug}/`;
-    const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="../">${esc(brand)}</a><span aria-hidden="true">/</span><span aria-current="page">${esc(hub.navName)}</span></nav>
+    const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="${b}">${esc(brand)}</a><span aria-hidden="true">/</span><span aria-current="page">${esc(hub.navName)}</span></nav>
 <h1>${esc(hub.h1)}</h1>
 <p class="lede">${esc(hub.intro)}</p>
 <p class="counts"><b>${active.length}</b> open or upcoming · <b>${past.length}</b> past · ranked by organizer priority, then prize and deadline</p>
-<p class="actions"><a class="cta" href="../?${filterQuery}#opportunities">Filter and search ${esc(hub.navName.toLowerCase())} <span aria-hidden="true">↗</span></a></p>
-${active.length ? `<ul class="rows">${active.map(o => row(o, '../')).join('')}</ul>` : '<p class="empty">No open listings right now. Check the past entries below or come back soon.</p>'}
-${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o, '../')).join('')}</ul>` : ''}
+<p class="actions"><a class="cta" href="${b}?${filterQuery}#opportunities">Filter and search ${esc(hub.navName.toLowerCase())} <span aria-hidden="true">↗</span></a></p>
+${active.length ? `<ul class="rows">${active.map(o => row(o, b)).join('')}</ul>` : '<p class="empty">No open listings right now. Check the past entries below or come back soon.</p>'}
+${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o, b)).join('')}</ul>` : ''}
 <section class="signup-band" data-signup data-source="hub:${esc(hub.slug)}" data-title="Get ${esc(hub.navName.toLowerCase())} in your inbox." hidden></section>
-<section class="related"><h2>Browse other types</h2><ul class="tags">${allHubs.filter(h => h.indexable && h !== hub).map(h => `<li><a href="../${h.slug}/">${esc(h.navName)}</a></li>`).join('')}</ul></section>`;
+<section class="related"><h2>Browse other types</h2><ul class="tags">${allHubs.filter(h => h.indexable && h !== hub).map(h => `<li><a href="${b}${h.slug}/">${esc(h.navName)}</a></li>`).join('')}</ul></section>`;
+    if (files.has(`${path}index.html`)) throw new Error(`seo: page path collision at ${path}`);
     files.set(`${path}index.html`, layout({
-      base: '../', title: `${hub.title} | ${brand}`.length <= 64 ? `${hub.title} | ${brand}` : hub.title, description, path, body,
+      base: b, title: `${hub.title} | ${brand}`.length <= 64 ? `${hub.title} | ${brand}` : hub.title, description, path, body,
       robots: hub.indexable ? '' : 'noindex,follow',
       jsonld: [
         { '@type': 'CollectionPage', '@id': abs(path), url: abs(path), name: hub.title, description, isPartOf: { '@id': abs('#website') }, breadcrumb: crumbs([{ name: brand, path: '' }, { name: hub.navName, path }]) },
@@ -238,6 +281,22 @@ ${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o,
 </div>`
   }));
 
+  // ---- submit-an-opportunity page: gives organizers a way in, and a reason to link back
+  const issueUrl = settings.repoUrl ? `${settings.repoUrl}/issues/new?template=submit-opportunity.yml` : '';
+  const mailUrl = settings.contactEmail ? `mailto:${settings.contactEmail}?subject=${encodeURIComponent(`Submit an opportunity to ${brand}`)}` : '';
+  files.set('submit/index.html', layout({
+    base: '../', title: `Submit a Hackathon or Competition | ${brand}`, description: clip(`Run a hackathon, case competition or research programme for students? Submit it to ${brand} for free. We list the prize, deadline and eligibility and link to your official page.`, 158), path: 'submit/',
+    body: `<nav class="crumbs" aria-label="Breadcrumb"><a href="../">${esc(brand)}</a><span aria-hidden="true">/</span><span aria-current="page">Submit an opportunity</span></nav>
+<h1>Submit an opportunity</h1>
+<p class="lede">Running a hackathon, case competition or research programme for students? Send it to us and we will list it for free, with the prize, deadline and eligibility, and a link to your official page.</p>
+<h2>What we need</h2>
+<ul><li>The official page or registration link</li><li>The name of the organizer</li><li>The prize or stipend, the deadline and who can apply</li></ul>
+<p class="actions">${issueUrl ? `<a class="cta" href="${esc(issueUrl)}" target="_blank" rel="noopener noreferrer">Submit on GitHub <span aria-hidden="true">↗</span></a>` : ''}${mailUrl ? `<a class="cta" href="${esc(mailUrl)}">Submit by email</a>` : ''}</p>
+<h2>Already listed?</h2>
+<p>Every listing has its own page here. Linking to it from your event page or announcement helps students find you, and helps ${esc(brand)} reach more of them.</p>`
+  }));
+  if (settings.indexNowKey) files.set(`${settings.indexNowKey}.txt`, settings.indexNowKey);
+
   // ---- 404, robots, sitemap
   files.set('404.html', `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Page not found | ${esc(brand)}</title>
@@ -246,7 +305,7 @@ ${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o,
 `);
   if (site) {
     files.set('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);
-    const urls = [{ loc: abs(''), lastmod: today }];
+    const urls = [{ loc: abs(''), lastmod: today }, { loc: abs('submit/'), lastmod: today }];
     for (const hub of allHubs) if (hub.indexable) urls.push({ loc: abs(`${hub.slug}/`), lastmod: today });
     for (const o of all) urls.push({ loc: abs(pathOf(o)), lastmod: lastModified(o, today) });
     files.set('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${esc(u.loc)}</loc><lastmod>${u.lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`);
@@ -262,6 +321,7 @@ ${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o,
       <div class="browse-grid">${allHubs.filter(h => h.indexable).map(h => `<a href="${h.slug}/"><span>${esc(h.navName)}</span><b>${h.list.length}</b></a>`).join('')}</div>
       <h3 class="browse-sub">Latest additions</h3>
       <ul class="browse-latest">${newest.map(o => `<li><a href="${pathOf(o)}">${esc(o.title)}</a><span>${esc(o.organizer.name)} · ${esc(prizePhrase(o))}</span></li>`).join('')}</ul>
+      <p class="browse-sub">Running a competition? <a href="submit/">Submit it to ${esc(brand)}</a>.</p>
     </section>`;
   const homeHead = [
     abs('') ? `<link rel="canonical" href="${esc(abs(''))}">` : '',

@@ -27,7 +27,7 @@ export function validateSettings(settings, organizers) {
     if (b.supabaseAnonKey && !/^[\w.-]{20,}$/.test(b.supabaseAnonKey)) throw new Error('settings: backend.supabaseAnonKey must be the public anon key');
     if (Boolean(b.supabaseUrl) !== Boolean(b.supabaseAnonKey)) throw new Error('settings: backend needs both supabaseUrl and supabaseAnonKey, or neither');
   }
-  const slugs = new Set(['404','sitemap','robots','assets','privacy']);
+  const slugs = new Set(['404','sitemap','robots','assets','privacy','submit']);
   const checkPage = (label, page) => {
     if (!page || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(page.slug || '') || slugs.has(page.slug)) throw new Error(`settings: ${label} needs a unique lowercase slug`);
     for (const key of ['title','h1','intro']) if (typeof page[key] !== 'string' || !page[key].trim()) throw new Error(`settings: ${label} needs ${key}`);
@@ -41,6 +41,22 @@ export function validateSettings(settings, organizers) {
   for (const [region, page] of Object.entries(settings.regionPages || {})) {
     if (!REGIONS.includes(region)) throw new Error(`settings: regionPages has unknown region: ${region}`);
     checkPage(`regionPages "${region}"`, page);
+  }
+  if (settings.repoUrl !== undefined && !/^https:\/\/github\.com\/[\w.-]+\/[\w.-]+$/.test(settings.repoUrl)) throw new Error('settings: repoUrl must look like https://github.com/owner/repo');
+  if (settings.indexNowKey !== undefined && !/^[a-zA-Z0-9-]{8,128}$/.test(settings.indexNowKey)) throw new Error('settings: indexNowKey must be 8-128 letters, digits or dashes');
+  if (settings.keywordPages !== undefined) {
+    if (!Array.isArray(settings.keywordPages)) throw new Error('settings: keywordPages must be a list');
+    const seen = new Set();
+    for (const page of settings.keywordPages) {
+      const label = `keywordPages "${page?.slug}"`;
+      if (!page || !/^[a-z0-9]+(?:-[a-z0-9]+)*(?:\/[a-z0-9]+(?:-[a-z0-9]+)*)*$/.test(page.slug || '') || slugs.has(page.slug) || seen.has(page.slug) || ['404','sitemap','robots','assets','privacy','submit'].includes(page.slug.split('/')[0])) throw new Error(`settings: ${label} needs a unique lowercase slug`);
+      seen.add(page.slug);
+      for (const key of ['title','h1','intro']) if (typeof page[key] !== 'string' || !page[key].trim()) throw new Error(`settings: ${label} needs ${key}`);
+      for (const c of page.categories || []) if (!settings.categories.includes(c)) throw new Error(`settings: ${label} has unknown category: ${c}`);
+      if (page.region !== undefined && !REGIONS.includes(page.region)) throw new Error(`settings: ${label} has unknown region`);
+      if (page.keywords !== undefined && (!Array.isArray(page.keywords) || page.keywords.some(k => typeof k !== 'string' || !k.trim()))) throw new Error(`settings: ${label} keywords must be a list of words`);
+      if (!(page.categories?.length || page.region || page.keywords?.length || page.cashPrize)) throw new Error(`settings: ${label} needs at least one filter`);
+    }
   }
   const ids = new Set();
   for (const o of organizers) {
@@ -57,6 +73,8 @@ export function validateOpportunity(o, file, settings, organizers) {
   if (!organizers.some(x => x.id === o.organizerId)) fail(`unknown organizerId: ${o.organizerId}; add it to data/organizers.json`);
   if (!['Online','In person','Hybrid','To confirm'].includes(o.format)) fail('format must be Online, In person, Hybrid, or To confirm');
   if (o.region !== undefined && !REGIONS.includes(o.region)) fail(`region must be ${REGIONS.join(' or ')}`);
+  for (const key of ['startDate','endDate']) if (o[key] !== undefined && (typeof o[key] !== 'string' || !/^\d{4}-\d\d-\d\d(?:T[\d:.+Z-]+)?$/.test(o[key]) || Number.isNaN(Date.parse(o[key])))) fail(`${key} must be an ISO date like 2026-12-05 or 2026-12-05T09:00:00+05:30`);
+  if (o.startDate && o.endDate && Date.parse(o.endDate) < Date.parse(o.startDate)) fail('endDate cannot be before startDate');
   if (o.url !== undefined && o.url !== null && !safeUrl(o.url)) fail('url must be null or use https:// or http://');
   if (o.sourceUrl !== undefined && !safeUrl(o.sourceUrl)) fail('sourceUrl must use https:// or http://');
   if (o.deadline !== null && !validDate(o.deadline)) fail('deadline must be null or a timestamp with timezone, e.g. 2026-11-02T18:00:00+05:30');
