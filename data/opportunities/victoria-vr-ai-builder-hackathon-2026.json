@@ -1,0 +1,36 @@
+{
+  "id": "victoria-vr-ai-builder-hackathon-2026",
+  "summary": "Online hackathon to build browser-based AI-native 3D experiences that turn natural language into 3D scenes and working logic. Any web-based 3D stack allowed; topics include AI-generated scenes, intelligent NPCs and procedural worlds.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Not specified on the aggregator page; confirm in the official announcement.",
+  "tags": [
+    "AI",
+    "3D",
+    "Web"
+  ],
+  "entryStatus": "check",
+  "title": "AI Builder Hackathon 2026 (Victoria VR)",
+  "category": "Hackathon",
+  "deadlineDate": "2026-11-11",
+  "deadlineTimezone": "UTC",
+  "deadlineLabel": "Closes 11 Nov (timezone not stated)",
+  "team": null,
+  "prize": {
+    "amount": 20000,
+    "currency": "EUR",
+    "kind": "pool",
+    "description": "EUR 20,000 total (no per-place breakdown published; confirm cash form in the announcement).",
+    "usdEquivalent": 23000
+  },
+  "url": "https://www.victoriavr.com/news/ai-builder-hackathon-2026-build-the-future-of-ai-native-3d-experiences-5915194b",
+  "notes": [
+    "Verified via the HackList detail page only; USD figure is an approximate conversion."
+  ],
+  "researchAsOf": "2026-10-27",
+  "sourceUrl": "https://hacklist.io/hackathon/812ae0a6-8c87-42c5-b2bf-be576d546e30",
+  "organizerId": "victoria-vr",
+  "addedAt": "2026-10-27T04:37:38.582Z"
+}

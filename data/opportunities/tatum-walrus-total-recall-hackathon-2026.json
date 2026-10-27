@@ -1,0 +1,33 @@
+{
+  "id": "tatum-walrus-total-recall-hackathon-2026",
+  "summary": "Global online hackathon to build on Walrus Memory (mainnet) with Tatum AI Builder or RPCs, across three tracks. Open to AI and Web3 projects.",
+  "deadline": "2026-11-10T17:00:00+00:00",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Not stated on the aggregator page; confirm on the Tatum event page.",
+  "tags": [
+    "AI",
+    "Web3",
+    "Walrus"
+  ],
+  "entryStatus": "check",
+  "title": "Total Recall: Tatum x Walrus Memory Hackathon",
+  "category": "Hackathon",
+  "deadlineLabel": "Submissions close (10 Nov 17:00 UTC)",
+  "team": null,
+  "prize": {
+    "amount": 4500,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$4,500 total: three tracks at US$1,000 each plus bonuses."
+  },
+  "url": "https://tatum.io/hackathon/total-recall",
+  "notes": [
+    "Verified via the HackList detail page only; official page could not be opened in this run."
+  ],
+  "researchAsOf": "2026-10-27",
+  "sourceUrl": "https://hacklist.io/hackathon/8b8322d9-3726-43c0-bf9c-bdd3d3ab7dce",
+  "organizerId": "tatum",
+  "addedAt": "2026-10-27T04:37:38.582Z"
+}

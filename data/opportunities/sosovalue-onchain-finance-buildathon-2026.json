@@ -1,0 +1,36 @@
+{
+  "id": "sosovalue-onchain-finance-buildathon-2026",
+  "summary": "Online buildathon to create on-chain finance tools using SoSoValue data, news feeds, index tools, trading APIs and the ValueChain L1. Judged on user value, working demo, workflow design, API integration and UX.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Not stated on the aggregator page; confirm on the AKINDO event page.",
+  "tags": [
+    "Web3",
+    "AI",
+    "DeFi",
+    "AKINDO"
+  ],
+  "entryStatus": "check",
+  "title": "SoSoValue: Build Your One-Person On-Chain Finance Business",
+  "category": "Hackathon",
+  "deadlineDate": "2026-10-30",
+  "deadlineTimezone": "UTC",
+  "deadlineLabel": "Closes 30 Oct (time and timezone not stated)",
+  "team": null,
+  "prize": {
+    "amount": 10000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "10,000 USDC total (no per-place breakdown published on the listing)."
+  },
+  "url": "https://app.akindo.io/wave-hacks/JBEQXgN4Zi2jA3wA",
+  "notes": [
+    "Verified via the HackList detail page only; official AKINDO page could not be opened in this run."
+  ],
+  "researchAsOf": "2026-10-27",
+  "sourceUrl": "https://hacklist.io/hackathon/f1e186fe-51e9-48a4-8e5a-31536b66b607",
+  "organizerId": "sosovalue",
+  "addedAt": "2026-10-27T04:37:38.582Z"
+}

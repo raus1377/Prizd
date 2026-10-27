@@ -1,0 +1,38 @@
+{
+  "id": "blockscout-pro-api-buildathon-2026",
+  "summary": "Two-sprint online buildathon to build dApps with the Blockscout PRO API at the core. Mentorship, certificates and badges for participants.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Squads of 1 to 4 people; no other requirements listed.",
+  "tags": [
+    "Web3",
+    "Blockscout",
+    "dApps"
+  ],
+  "entryStatus": "check",
+  "title": "Blockscout PRO API Buildathon",
+  "category": "Hackathon",
+  "deadlineDate": "2026-11-03",
+  "deadlineTimezone": "UTC",
+  "deadlineLabel": "Listed deadline 3 Nov (timezone not stated); Sprint 2 runs 25-31 Oct",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 1200,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "1,200 USDC awarded in Sprint 2 (no per-place breakdown published)."
+  },
+  "url": "https://craftora.tech/sprints/blockscout-pro-api-buildathon/",
+  "notes": [
+    "Verified via the HackList detail page only; sprint year and exact cutoff should be confirmed on the Craftora page."
+  ],
+  "researchAsOf": "2026-10-27",
+  "sourceUrl": "https://hacklist.io/hackathon/d0116daa-e377-4964-96d4-9eb9b53401bf",
+  "organizerId": "blockscout-and-craftora",
+  "addedAt": "2026-10-27T04:37:38.582Z"
+}
