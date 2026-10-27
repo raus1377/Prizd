@@ -1,0 +1,44 @@
+{
+  "id": "daad-wise-2027",
+  "summary": "Funded 2–3 month summer research internship at a German university or institute for Indian undergraduates (May–July 2027).",
+  "deadline": null,
+  "location": "Germany",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "Indian nationals in science, engineering or maths at a DAAD WISE partner institution in India; a signed invitation letter from a German professor is needed.",
+  "tags": [
+    "Research",
+    "Germany",
+    "DAAD",
+    "Summer 2027",
+    "UG"
+  ],
+  "entryStatus": "open",
+  "title": "DAAD WISE 2027 (Germany)",
+  "deadlineDate": "2026-11-01",
+  "deadlineTimezone": "Asia/Kolkata",
+  "prize": {
+    "amount": null,
+    "currency": "EUR",
+    "kind": "stipend",
+    "description": "Monthly DAAD stipend plus travel allowance (reported figures vary, roughly €750–€861 per month)."
+  },
+  "url": "https://daad.de/go/en/stipa50015295",
+  "notes": [
+    "Deadline conflicts across sources (1 Nov vs late Nov); confirm on daad.in. The DAAD portal opens about 6 weeks before the deadline.",
+    "Students at non-partner institutions are not eligible."
+  ],
+  "sourceUrl": "https://opportunityinside.com/scholarships/daad-wise-internship-germany-2027.html",
+  "support": "Travel allowance and insurance reported · stipend covers living costs",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "daad",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}

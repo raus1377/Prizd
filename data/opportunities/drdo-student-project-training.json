@@ -1,0 +1,40 @@
+{
+  "id": "drdo-student-project-training",
+  "summary": "4-week to 6-month project training at DRDO laboratories; each lab sets its own intake, and some advertise paid internships.",
+  "deadline": null,
+  "location": "Multiple DRDO labs, India",
+  "region": "India",
+  "format": "In person",
+  "eligibility": "Engineering and science students routed through their college or institute to the specific lab; requirements differ by lab.",
+  "tags": [
+    "Research",
+    "DRDO",
+    "Defence",
+    "UG",
+    "PG"
+  ],
+  "entryStatus": "check",
+  "title": "DRDO Student Internship / Project Training (lab-wise)",
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Varies by lab; some labs advertise stipends."
+  },
+  "url": "https://www.drdo.gov.in",
+  "notes": [
+    "No DRDO-wide deadline. Earlier 2026 lab advertisements should not be treated as open; contact the target lab with a college letter."
+  ],
+  "sourceUrl": "https://www.foundit.in/career-advice/drdo-internship-apply/",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "drdo",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}

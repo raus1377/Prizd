@@ -1,0 +1,40 @@
+{
+  "id": "cern-summer-student-2027",
+  "summary": "8–13 week summer programme at CERN with lectures and a research or technical project (physics, engineering, computing, maths).",
+  "deadline": null,
+  "location": "Geneva, Switzerland",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "Bachelor's or Master's students with about 6 semesters done; all nationalities welcome. Not for PhD students or past participants.",
+  "tags": [
+    "Research",
+    "Physics",
+    "Computing",
+    "CERN",
+    "Summer 2027"
+  ],
+  "entryStatus": "upcoming",
+  "title": "CERN Summer Student Programme 2027",
+  "prize": {
+    "amount": 94,
+    "currency": "CHF",
+    "kind": "stipend",
+    "description": "CHF 94 per calendar day (about ₹11,000) plus a travel lump sum."
+  },
+  "url": "https://home.cern/summer-student-programme",
+  "notes": [
+    "Applications open November 2026 and close in late January 2027 (26 Jan in the last cycle); no late submissions."
+  ],
+  "sourceUrl": "https://leapscholar.com/blog/cern-internship-opportunities-for-indian-students/",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "cern",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}

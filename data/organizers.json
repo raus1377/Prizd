@@ -1573,5 +1573,104 @@
     "monogram": "VI",
     "color": "#242424",
     "website": "https://www.victoriavr.com"
+  },
+  {
+    "id": "isro-indian-institute-of-remote-sensing",
+    "name": "ISRO – Indian Institute of Remote Sensing",
+    "kind": "Organization",
+    "prestige": 85,
+    "monogram": "IS",
+    "color": "#242424",
+    "website": "https://www.iirs.gov.in"
+  },
+  {
+    "id": "barc-bhabha-atomic-research-centre",
+    "name": "BARC – Bhabha Atomic Research Centre",
+    "kind": "Organization",
+    "prestige": 92,
+    "monogram": "BA",
+    "color": "#242424",
+    "website": "https://www.barc.gov.in"
+  },
+  {
+    "id": "drdo",
+    "name": "DRDO",
+    "kind": "Organization",
+    "prestige": 90,
+    "monogram": "DR",
+    "color": "#242424",
+    "website": "https://www.drdo.gov.in"
+  },
+  {
+    "id": "nptel-iits-and-iisc",
+    "name": "NPTEL (IITs and IISc)",
+    "kind": "Organization",
+    "prestige": 85,
+    "monogram": "NP",
+    "color": "#242424",
+    "website": "https://nptel.ac.in"
+  },
+  {
+    "id": "niser-bhubaneswar",
+    "name": "NISER Bhubaneswar",
+    "kind": "College",
+    "prestige": 90,
+    "monogram": "NI",
+    "color": "#242424",
+    "website": "https://www.niser.ac.in"
+  },
+  {
+    "id": "daad",
+    "name": "DAAD",
+    "kind": "Organization",
+    "prestige": 85,
+    "monogram": "DA",
+    "color": "#242424",
+    "website": "https://www.daad.in"
+  },
+  {
+    "id": "cern",
+    "name": "CERN",
+    "kind": "Organization",
+    "prestige": 95,
+    "monogram": "CE",
+    "color": "#242424",
+    "website": "https://home.cern"
+  },
+  {
+    "id": "caltech",
+    "name": "Caltech",
+    "kind": "College",
+    "prestige": 95,
+    "monogram": "CA",
+    "color": "#242424",
+    "website": "https://sfp.caltech.edu/programs/surf"
+  },
+  {
+    "id": "eth-zurich",
+    "name": "ETH Zurich",
+    "kind": "College",
+    "prestige": 94,
+    "monogram": "ET",
+    "color": "#242424",
+    "website": "https://ethz.ch"
+  },
+  {
+    "id": "lunar-and-planetary-institute-usra",
+    "name": "Lunar and Planetary Institute (USRA)",
+    "kind": "Organization",
+    "prestige": 70,
+    "monogram": "LU",
+    "color": "#242424",
+    "website": "https://www.lpi.usra.edu/lpiintern/"
+  },
+  {
+    "id": "kaust",
+    "name": "KAUST",
+    "kind": "College",
+    "prestige": 80,
+    "monogram": "KA",
+    "color": "#242424",
+    "website": "https://vsrp.kaust.edu.sa"
   }
 ]

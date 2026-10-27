@@ -1,0 +1,40 @@
+{
+  "id": "cern-openlab-summer-student-2027",
+  "summary": "9-week computing-focused summer programme at CERN openlab, starting 21 or 28 June 2027.",
+  "deadline": null,
+  "location": "Geneva, Switzerland",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "Bachelor's or Master's students in computing-related fields; all nationalities.",
+  "tags": [
+    "Research",
+    "Computing",
+    "CERN",
+    "Summer 2027"
+  ],
+  "entryStatus": "upcoming",
+  "title": "CERN openlab Summer Student Programme 2027",
+  "prize": {
+    "amount": 94,
+    "currency": "CHF",
+    "kind": "stipend",
+    "description": "CHF 94 per calendar day plus travel lump sum and health insurance."
+  },
+  "url": "https://openlab.cern/cern-openlab-summer-student-programme/",
+  "notes": [
+    "Call opens November 2026; replies by late March or early April 2027."
+  ],
+  "sourceUrl": "https://openlab.cern/cern-openlab-summer-student-programme/",
+  "support": "Health insurance · travel lump sum · help finding accommodation",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "cern",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}

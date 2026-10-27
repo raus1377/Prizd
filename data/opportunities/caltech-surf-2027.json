@@ -1,0 +1,39 @@
+{
+  "id": "caltech-surf-2027",
+  "summary": "10-week Summer Undergraduate Research Fellowship at Caltech; you must secure a Caltech faculty mentor first.",
+  "deadline": null,
+  "location": "Pasadena, California, USA",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "Undergraduates; international students can apply to the Caltech campus track (JPL placements are US-only). Non-Caltech students need a Caltech associate mentor.",
+  "tags": [
+    "Research",
+    "Caltech",
+    "USA",
+    "Summer 2027"
+  ],
+  "entryStatus": "upcoming",
+  "title": "Caltech SURF 2027",
+  "prize": {
+    "amount": 8110,
+    "currency": "USD",
+    "kind": "stipend",
+    "description": "About $8,110 stipend for 10 weeks, as reported."
+  },
+  "url": "https://sfp.caltech.edu/programs/surf",
+  "notes": [
+    "Application opens 1 Nov 2026; the deadline is typically late February 2027, so email potential mentors now."
+  ],
+  "sourceUrl": "https://leapscholar.com/blog/caltech-surf-application-guide-for-indian-students/",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "researchAsOf": "2026-10-27",
+  "categories": [
+    "Research"
+  ],
+  "category": "Research internship",
+  "organizerId": "caltech",
+  "addedAt": "2026-10-27T14:10:53.065Z"
+}

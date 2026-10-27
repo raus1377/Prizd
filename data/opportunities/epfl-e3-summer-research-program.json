@@ -22,10 +22,12 @@
     "Switzerland"
   ],
   "url": "https://eee.epfl.ch/apply/",
-  "entryStatus": "check",
+  "entryStatus": "open",
   "notes": [
-    "Application opening announced for 12 October."
+    "E3 deadline for summer 2027 is 1 Nov 2026 per a secondary source; confirm on the EPFL page."
   ],
   "addedAt": "2026-10-11T23:12:58.292Z",
-  "support": "Accommodation costs covered by the monthly allowance · travel covered (2nd-class train, economy airfare) · workshop and social event"
+  "support": "Accommodation costs covered by the monthly allowance · travel covered (2nd-class train, economy airfare) · workshop and social event",
+  "deadlineDate": "2026-11-01",
+  "deadlineTimezone": "Asia/Kolkata"
 }
