@@ -1528,5 +1528,59 @@
     "monogram": "WE",
     "color": "#242424",
     "website": "https://www.wemakedevs.org"
+  },
+  {
+    "id": "builder-io",
+    "name": "Builder.io",
+    "kind": "Company",
+    "prestige": 55,
+    "monogram": "BU",
+    "color": "#242424",
+    "website": "https://www.builder.io"
+  },
+  {
+    "id": "sosovalue",
+    "name": "SoSoValue",
+    "kind": "Company",
+    "prestige": 40,
+    "monogram": "SO",
+    "color": "#242424",
+    "website": "https://sosovalue.com"
+  },
+  {
+    "id": "blockscout-and-craftora",
+    "name": "Blockscout and Craftora",
+    "kind": "Company",
+    "prestige": 40,
+    "monogram": "BL",
+    "color": "#242424",
+    "website": "https://www.blockscout.com"
+  },
+  {
+    "id": "portaldot-network-ecosystem-foundation",
+    "name": "Portaldot Network Ecosystem Foundation",
+    "kind": "Organization",
+    "prestige": 35,
+    "monogram": "PO",
+    "color": "#242424",
+    "website": "https://dorahacks.io/hackathon/portaldot-hacker-house-2026/detail"
+  },
+  {
+    "id": "tatum",
+    "name": "Tatum",
+    "kind": "Company",
+    "prestige": 40,
+    "monogram": "TA",
+    "color": "#242424",
+    "website": "https://tatum.io"
+  },
+  {
+    "id": "victoria-vr",
+    "name": "Victoria VR",
+    "kind": "Company",
+    "prestige": 40,
+    "monogram": "VI",
+    "color": "#242424",
+    "website": "https://www.victoriavr.com"
   }
 ]

@@ -1,0 +1,35 @@
+{
+  "id": "portaldot-hacker-house-2026",
+  "summary": "Online DoraHacks hackathon building on Portaldot Network V3.0 (WASM and EVM) across four tracks: modular cloud and middleware, cross-chain infrastructure, node tooling and ecosystem dApps. Projects must deploy on the Portaldot testnet.",
+  "deadline": null,
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "No team-size or geographic limits listed on the aggregator page; confirm on DoraHacks.",
+  "tags": [
+    "Web3",
+    "Portaldot",
+    "DoraHacks"
+  ],
+  "entryStatus": "check",
+  "title": "Portaldot Hacker House 2026",
+  "category": "Hackathon",
+  "deadlineDate": "2026-11-05",
+  "deadlineTimezone": "UTC",
+  "deadlineLabel": "Closes 5 Nov (timezone not stated)",
+  "team": null,
+  "prize": {
+    "amount": 5200,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "5,200 USDT total: 2,600 USDT cash plus 2,600 USDT equivalent paid in POT tokens."
+  },
+  "url": "https://dorahacks.io/hackathon/portaldot-hacker-house-2026/detail",
+  "notes": [
+    "Only about half of the pool is stated as USDT cash; the rest is POT tokens. Verified via the HackList detail page only."
+  ],
+  "researchAsOf": "2026-10-27",
+  "sourceUrl": "https://hacklist.io/hackathon/39d07d07-37ce-4948-b27d-6deac1312bd9",
+  "organizerId": "portaldot-network-ecosystem-foundation",
+  "addedAt": "2026-10-27T04:37:38.582Z"
+}

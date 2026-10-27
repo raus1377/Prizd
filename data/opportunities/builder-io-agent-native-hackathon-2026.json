@@ -1,0 +1,33 @@
+{
+  "id": "builder-io-agent-native-hackathon-2026",
+  "summary": "Build a working app with the Agent-Native framework and submit a public Clips demo video and demo link. Free to enter; no registration needed to build or submit.",
+  "deadline": "2026-11-02T23:59:00-08:00",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Developers worldwide aged 18+ (or age of majority), solo or teams, subject to applicable laws and sanctions; sponsor employees and judges cannot win.",
+  "tags": [
+    "AI",
+    "Agents",
+    "Developer tools"
+  ],
+  "entryStatus": "open",
+  "title": "Builder.io Agent-Native Hackathon",
+  "category": "Hackathon",
+  "deadlineLabel": "Submissions close (2 Nov 23:59 PT)",
+  "team": null,
+  "prize": {
+    "amount": 10000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$10,000 cash: 1st US$5,000, 2nd US$2,500, 3rd US$1,500, 4th US$750, 5th US$250."
+  },
+  "url": "https://www.builder.io/hackathon",
+  "notes": [
+    "Winners announced 6 Nov. Payment subject to identity verification and tax forms."
+  ],
+  "researchAsOf": "2026-10-27",
+  "sourceUrl": "https://www.builder.io/hackathon",
+  "organizerId": "builder-io",
+  "addedAt": "2026-10-27T04:37:38.582Z"
+}
