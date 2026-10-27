@@ -74,7 +74,7 @@ test('canonical, social tags and valid JSON-LD are present with a site URL; all 
 test('titles stay short and unique, descriptions stay within snippet length', () => {
   const long = make('long', { title: 'An extraordinarily long competition title that keeps going well past any sensible search result width' });
   assert.ok(opportunityTitle(long, 'Prizd').length <= 64);
-  assert.ok(opportunityTitle(make('x'), 'Prizd').includes('Prize & Deadline'));
+  assert.equal(opportunityTitle(make('x'), 'Prizd'), 'Title x: Prize, Deadline & Eligibility | Prizd');
   assert.ok(opportunityDescription(make('y', { eligibility: 'x'.repeat(400) })).length <= 158);
   const site = buildSite({ settings, organizers: [organizer], opportunities, now, siteUrl: 'https://prizd.example' });
   const titles = [...site.files].filter(([k]) => k !== '404.html' && k.endsWith('.html')).map(([, h]) => h.match(/<title>(.*?)<\/title>/)[1]);
@@ -126,7 +126,8 @@ test('the real repository data builds into pages whose internal links all resolv
     archived.push(normalizeOpportunity(o, organizers.find(x => x.id === o.organizerId), realSettings, null, now));
   }
   const site = buildSite({ settings: realSettings, organizers, opportunities: real, archived, now, siteUrl: 'https://prizd.example' });
-  assert.equal([...site.files.keys()].filter(k => /\/.+\/index\.html$/.test(k)).length, real.length + archived.length);
+  const nestedHubs = (realSettings.keywordPages || []).filter(p => p.slug.includes('/')).length;
+  assert.equal([...site.files.keys()].filter(k => /\/.+\/index\.html$/.test(k)).length, real.length + archived.length + nestedHubs);
   const keys = new Set(site.files.keys());
   for (const [file, html] of site.files) {
     if (!file.endsWith('.html')) continue;
@@ -157,4 +158,34 @@ test('listing and category pages carry the signup slot and the privacy page exis
   assert.match(site.files.get('hackathons/index.html'), /data-signup data-source="hub:hackathons"/);
   assert.match(site.files.get('hackathons/a/index.html'), /account\.js/);
   assert.match(site.files.get('privacy/index.html'), /double opt-in/);
+});
+
+test('keyword landing pages, the submit page, the IndexNow key and Event markup', () => {
+  const kwSettings = { ...settings, repoUrl: 'https://github.com/o/r', indexNowKey: 'abcdef1234567890',
+    keywordPages: [
+      { slug: 'hackathons/cash-prize', title: 'Cash hackathons in {year}', h1: 'Cash hackathons', intro: 'Intro.', categories: ['Hackathon'], cashPrize: true },
+      { slug: 'case-studies', name: 'Case studies', title: 'Case studies in {year}', h1: 'Case studies', intro: 'Intro.', keywords: ['case study'] }
+    ] };
+  validateSettings(kwSettings, [organizer]);
+  const ops = [
+    make('p1', { startDate: '2026-12-05', endDate: '2026-12-07', title: 'Big Case Study Cup' }), make('p2'), make('p3'),
+    make('p4', { prize: { amount: null, currency: 'USD', kind: 'undisclosed', description: 'TBA' } }),
+    make('p5', { category: 'Research internship', startDate: '2026-12-05' })
+  ];
+  const site = buildSite({ settings: kwSettings, organizers: [organizer], opportunities: ops, now, siteUrl: 'https://prizd.example' });
+  const cash = site.files.get('hackathons/cash-prize/index.html');
+  assert.ok(cash.includes('<link rel="canonical" href="https://prizd.example/hackathons/cash-prize/">'));
+  assert.equal([...cash.matchAll(/class="row"/g)].length, 3); // p4 has no cash prize, p5 is not a hackathon
+  assert.ok(cash.includes('href="../../p1') === false && cash.includes('href="../../hackathons/p1/"'));
+  assert.ok(site.files.get('case-studies/index.html').includes('Big Case Study Cup'));
+  assert.match(site.files.get('sitemap.xml'), /hackathons\/cash-prize\//);
+  assert.ok(site.files.get('submit/index.html').includes('issues/new?template=submit-opportunity.yml'));
+  assert.equal(site.files.get('abcdef1234567890.txt'), 'abcdef1234567890');
+  const ld = id => site.files.get(`hackathons/${id}/index.html`).match(/application\/ld\+json">(.*?)<\/script>/)[1];
+  assert.ok(JSON.parse(ld('p1'))['@graph'].some(n => n['@type'] === 'Event' && n.startDate === '2026-12-05'));
+  assert.ok(!JSON.parse(ld('p2'))['@graph'].some(n => n['@type'] === 'Event')); // no startDate, no Event
+  assert.ok(!site.files.get('research-internships/p5/index.html').includes('"Event"')); // internships are never events
+  assert.throws(() => validateSettings({ ...kwSettings, keywordPages: [{ ...kwSettings.keywordPages[0], slug: 'privacy' }] }, [organizer]), /slug/);
+  assert.throws(() => validateSettings({ ...kwSettings, keywordPages: [{ slug: 'x', title: 't', h1: 'h', intro: 'i' }] }, [organizer]), /filter/);
+  assert.throws(() => validateOpportunity({ ...ops[0], startDate: 'soon' }, 'f.json', kwSettings, [organizer]), /startDate/);
 });

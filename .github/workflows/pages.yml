@@ -143,3 +143,18 @@ jobs:
       - name: Deploy reviewed catalog
         id: deployment
         uses: actions/deploy-pages@v4
+
+      # Ping Bing and other IndexNow engines about pages changed in the last 2 days. Never fails the deploy.
+      - name: Check out repository (for settings)
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Notify IndexNow
+        continue-on-error: true
+        run: node scripts/indexnow.mjs "${{ steps.deployment.outputs.page_url }}"
