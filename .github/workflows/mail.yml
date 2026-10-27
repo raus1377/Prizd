@@ -1,8 +1,9 @@
 name: Send Prizd emails
 on:
-  schedule:
-    - cron: '30 3 * * 1'   # weekly digest, Monday 09:00 IST
-    - cron: '0 4 * * *'    # deadline reminders, daily 09:30 IST
+  # Scheduled sends are switched off. To resume, restore:
+  #   schedule:
+  #     - cron: '30 3 * * 1'   # weekly digest, Monday 09:00 IST
+  #     - cron: '0 4 * * *'    # deadline reminders, daily 09:30 IST
   workflow_dispatch:
     inputs:
       mode:
