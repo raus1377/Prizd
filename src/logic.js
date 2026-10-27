@@ -10,10 +10,13 @@
   const entryStatus = (o,now) => isClosed(o,now) ? 'closed' : o.opensOn && today(now) < o.opensOn ? 'upcoming' : o.entryStatus === 'upcoming' && (!o.opensOn || today(now) < o.opensOn) ? 'upcoming' : o.entryStatus === 'check' ? 'check' : 'open';
   const deadlineValue = o => o.deadline !== null ? Date.parse(o.deadline) : o.deadlineDate ? Date.parse(o.deadlineDate+'T00:00:00Z') : Infinity;
   const isActionable = (o,now) => entryStatus(o,now) === 'open';
+  /* 'featured': the curator's pinned listings first, in the order set in settings.featured; everything else by prize, highest first. */
+  const featuredOrder = o => Number.isInteger(o.featuredRank) ? o.featuredRank : Infinity;
   function rank(items, sort = 'prestige') {
     return [...items].sort((a,b) => {
       let result;
-      if (sort === 'prize') result = b.prizeUsd - a.prizeUsd || b.organizer.prestige - a.organizer.prestige;
+      if (sort === 'featured') result = (featuredOrder(a) === featuredOrder(b) ? 0 : featuredOrder(a) < featuredOrder(b) ? -1 : 1) || b.prizeUsd - a.prizeUsd || b.organizer.prestige - a.organizer.prestige;
+      else if (sort === 'prize') result = b.prizeUsd - a.prizeUsd || b.organizer.prestige - a.organizer.prestige;
       else if (sort === 'deadline') result = deadlineValue(a) - deadlineValue(b) || b.organizer.prestige - a.organizer.prestige;
       else if (sort === 'newest') result = Date.parse(b.addedAt) - Date.parse(a.addedAt) || b.organizer.prestige - a.organizer.prestige;
       else result = b.organizer.prestige - a.organizer.prestige || b.prizeUsd - a.prizeUsd;

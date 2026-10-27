@@ -20,6 +20,7 @@ for (const file of (await readdir(path.join(root, 'data/opportunities'))).filter
   ids.add(o.id);
   opportunities.push(normalizeOpportunity(o, organizers.find(x => x.id === o.organizerId), settings, gitAddedAt(root, relative), now));
 }
+for (const id of settings.featured || []) if (!ids.has(id)) console.warn(`⚠ settings.featured lists "${id}" but no active listing has that id; it is ignored.`);
 const data = { settings, organizers, opportunities, builtAt: new Date(now).toISOString() };
 
 // Archived listings are not shown in the app, but their pages stay online as "Closed" so search engines keep the URLs.
