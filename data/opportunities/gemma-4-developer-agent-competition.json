@@ -27,9 +27,6 @@
     "description": "US$100,000, plus a separate US$35,000 Paper Track (closes 12 Nov 23:59 UTC)."
   },
   "url": "https://reconscribe.com/hackathons/",
-  "notes": [
-    "Official Kaggle competition page not captured; reached via the Reconscribe tracker."
-  ],
   "researchAsOf": "2026-10-17",
   "sourceUrl": "https://reconscribe.com/hackathons/",
   "organizerId": "google-deepmind",

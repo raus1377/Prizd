@@ -11,10 +11,10 @@
   "eligibility": "Current/completed bachelor’s or master’s students in eligible science and related disciplines.",
   "team": null,
   "prize": {
-    "amount": null,
-    "currency": "USD",
-    "kind": "undisclosed",
-    "description": "Cash prize value is not established or is not applicable."
+    "amount": 1583,
+    "currency": "EUR",
+    "kind": "stipend",
+    "description": "Minimum gross salary of €1,583 per month under an employment contract with ISTA."
   },
   "tags": [
     "Internship"
@@ -22,8 +22,8 @@
   "url": "https://phd.pages.ista.ac.at/scientific-internships/",
   "entryStatus": "open",
   "notes": [
-    "Rolling host-contact process; register formally at least two months before arrival.",
-    "Minimum reported gross monthly pay €1,583; no promised flight or housing funding."
+    "Rolling host-contact process; register formally at least two months before arrival."
   ],
-  "addedAt": "2026-10-11T23:12:58.292Z"
+  "addedAt": "2026-10-11T23:12:58.292Z",
+  "support": "Housing not free (campus flats can be rented, subject to availability) · no travel funding · visa documents provided for non-EU/EEA applicants · no application fee"
 }

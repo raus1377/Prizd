@@ -85,6 +85,7 @@ export function validateOpportunity(o, file, settings, organizers) {
   if (o.entryStatus !== undefined && !['open','upcoming','check','closed'].includes(o.entryStatus)) fail('entryStatus must be open, upcoming, check, or closed');
   if (o.deadlineTimezone !== undefined) { try { new Intl.DateTimeFormat('en',{timeZone:o.deadlineTimezone}).format(); } catch { fail('deadlineTimezone must be a valid timezone'); } }
   if (o.eventTimezone !== undefined) { try { new Intl.DateTimeFormat('en',{timeZone:o.eventTimezone}).format(); } catch { fail('eventTimezone must be a valid timezone'); } }
+  if (o.support !== undefined && (typeof o.support !== 'string' || !o.support.trim())) fail('support must be a non-empty string (accommodation and other support for internships)');
   if (o.notes !== undefined && (!Array.isArray(o.notes) || o.notes.some(n => typeof n !== 'string'))) fail('notes must be an array of strings');
   if (o.categories !== undefined && (!Array.isArray(o.categories) || o.categories.some(c => !settings.categories.includes(c)))) fail('categories must contain configured category labels');
   if (!Array.isArray(o.tags) || o.tags.some(t => typeof t !== 'string')) fail('tags must be an array of strings');

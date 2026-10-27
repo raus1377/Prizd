@@ -18,7 +18,7 @@
     "amount": 10000,
     "currency": "INR",
     "kind": "stipend",
-    "description": "₹10,000 per month (₹20,000 total) plus second-sleeper train fare."
+    "description": "₹10,000 per month (₹20,000 for the 8-week programme), paid after successful completion."
   },
   "tags": [
     "Research",
@@ -34,5 +34,6 @@
   ],
   "addedAt": "2026-10-15T05:30:00+00:00",
   "researchAsOf": "2026-10-15",
-  "sourceUrl": "https://www.foundit.in/career-advice/jncasr-summer-research-internship-apply/"
+  "sourceUrl": "https://www.foundit.in/career-advice/jncasr-summer-research-internship-apply/",
+  "support": "No free housing (host institution arranges stay; campus accommodation at JNCASR is paid) · travel reimbursed at actuals, up to ₹5,000"
 }

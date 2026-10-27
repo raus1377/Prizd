@@ -45,10 +45,11 @@ const prizePhrase = o => {
 const STATUS = { open: 'Open', upcoming: 'Upcoming', check: 'Check entry', closed: 'Closed' };
 
 export function opportunityTitle(o, brand) {
+  const reward = P.isInternship?.(o) ? 'Stipend' : 'Prize';
   const candidates = [
-    `${o.title}: Prize, Deadline & Eligibility | ${brand}`,
-    `${o.title}: Prize, Deadline & Eligibility`,
-    `${o.title} — Prize & Deadline | ${brand}`,
+    `${o.title}: ${reward}, Deadline & Eligibility | ${brand}`,
+    `${o.title}: ${reward}, Deadline & Eligibility`,
+    `${o.title} — ${reward} & Deadline | ${brand}`,
     `${o.title} | ${brand}`
   ];
   return candidates.find(c => c.length <= 64) || `${clip(o.title, 64 - brand.length - 3)} | ${brand}`;
@@ -196,16 +197,16 @@ ${body}
 <p class="lede">${esc(o.summary)}</p>
 <dl class="facts">
 <div><dt>${esc(P.prizeKind(o))}</dt><dd>${esc(P.prizeText(o))}</dd></div>
-<div><dt>Reward details</dt><dd>${esc(o.prize.description)}</dd></div>
+<div><dt>${P.isInternship(o) ? 'Stipend details' : 'Reward details'}</dt><dd>${esc(o.prize.description)}</dd></div>
 <div><dt>${esc(o.deadlineLabel || 'Entry deadline')}</dt><dd>${o.deadline ? `<time datetime="${esc(o.deadline)}">${esc(deadlineText(o))}</time>` : esc(deadlineText(o))}</dd></div>
 <div><dt>Format &amp; location</dt><dd>${esc(o.format)} · ${esc(o.location)}</dd></div>
 <div><dt>Who can apply</dt><dd>${esc(o.eligibility)}</dd></div>
-<div><dt>Team size</dt><dd>${esc(P.teamText(o))}</dd></div>
+${P.isInternship(o) ? `<div><dt>Accommodation &amp; support</dt><dd>${esc(P.supportText(o))}</dd></div>` : `<div><dt>Team size</dt><dd>${esc(P.teamText(o))}</dd></div>`}
 </dl>
 ${o.notes?.length ? `<section class="notes"><h2>Entry notes</h2><ul>${o.notes.map(n => `<li>${esc(n)}</li>`).join('')}</ul></section>` : ''}
 ${o.tags?.length ? `<ul class="tags" aria-label="Tags">${o.tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
 <p class="actions">${o.url ? `<a class="cta" href="${esc(o.url)}" target="_blank" rel="noopener noreferrer">Visit the official page <span aria-hidden="true">↗</span></a>` : '<span class="cta cta-off">Official link coming soon</span>'}${o.sourceUrl && o.sourceUrl !== o.url ? `<a class="text-link" href="${esc(o.sourceUrl)}" target="_blank" rel="noopener noreferrer">Rules / source <span aria-hidden="true">↗</span></a>` : ''}<a class="text-link" href="../../?category=${encodeURIComponent(o.category)}#opportunities">More ${esc(hub.navName.toLowerCase())} <span aria-hidden="true">↗</span></a></p>
-<p class="fineprint">Added ${esc(day(o.addedAt))}${checked ? ` · Details checked ${esc(day(checked + 'T12:00:00Z', 'UTC'))}` : ''} · Always confirm the rules and deadline on the official page before you apply.</p>
+<p class="fineprint">${checked ? `Details checked ${esc(day(checked + 'T12:00:00Z', 'UTC'))} · ` : ''}Always confirm the rules and deadline on the official page before you apply.</p>
 </article>
 <section class="signup-band" data-signup data-source="listing:${esc(o.id)}" data-title="Get alerts like this one." hidden></section>
 ${related.length ? `<section class="related"><h2>More ${esc(hub.navName.toLowerCase())}</h2><ul class="rows">${related.map(r => row(r, '../../')).join('')}</ul></section>` : ''}`;
@@ -231,7 +232,7 @@ ${related.length ? `<section class="related"><h2>More ${esc(hub.navName.toLowerC
     const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="${b}">${esc(brand)}</a><span aria-hidden="true">/</span><span aria-current="page">${esc(hub.navName)}</span></nav>
 <h1>${esc(hub.h1)}</h1>
 <p class="lede">${esc(hub.intro)}</p>
-<p class="counts"><b>${active.length}</b> open or upcoming · <b>${past.length}</b> past · ranked by organizer priority, then prize and deadline</p>
+<p class="counts"><b>${active.length}</b> open or upcoming · <b>${past.length}</b> past</p>
 <p class="actions"><a class="cta" href="${b}?${filterQuery}#opportunities">Filter and search ${esc(hub.navName.toLowerCase())} <span aria-hidden="true">↗</span></a></p>
 ${active.length ? `<ul class="rows">${active.map(o => row(o, b)).join('')}</ul>` : '<p class="empty">No open listings right now. Check the past entries below or come back soon.</p>'}
 ${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o, b)).join('')}</ul>` : ''}

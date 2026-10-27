@@ -1,7 +1,7 @@
 {
   "id": "epfl-e3-summer-research-program",
   "title": "EPFL E3 Summer Research Program",
-  "category": "Research",
+  "category": "Research internship",
   "organizerId": "custom-epfl",
   "summary": "EPFL summer research programme; see official selection criteria and application opening.",
   "deadline": null,
@@ -12,17 +12,20 @@
   "team": null,
   "prize": {
     "amount": null,
-    "currency": "USD",
-    "kind": "undisclosed",
-    "description": "Cash prize value is not established or is not applicable."
+    "currency": "CHF",
+    "kind": "stipend",
+    "description": "Monthly allowance covering accommodation and living costs in Switzerland; the amount is not published."
   },
   "tags": [
-    "Research"
+    "Research",
+    "Engineering",
+    "Switzerland"
   ],
   "url": "https://eee.epfl.ch/apply/",
   "entryStatus": "check",
   "notes": [
-    "Application opening announced for 12 October; current application link was not verified."
+    "Application opening announced for 12 October."
   ],
-  "addedAt": "2026-10-11T23:12:58.292Z"
+  "addedAt": "2026-10-11T23:12:58.292Z",
+  "support": "Accommodation costs covered by the monthly allowance · travel covered (2nd-class train, economy airfare) · workshop and social event"
 }
