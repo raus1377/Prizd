@@ -3,9 +3,10 @@ name: Sync data and publish Prizd
 on:
   push:
     branches: [main]
-  schedule:
-    # Approximately 07:17 IST (01:47 UTC); GitHub may delay scheduled runs.
-    - cron: '47 1 * * *'
+  # Daily scheduled sync is switched off. To resume, restore:
+  #   schedule:
+  #     # Approximately 07:17 IST (01:47 UTC); GitHub may delay scheduled runs.
+  #     - cron: '47 1 * * *'
   workflow_dispatch:
 
 # The bot can update its own PR branch, but cannot push changes to protected main.
