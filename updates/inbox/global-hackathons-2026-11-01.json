@@ -1,20 +1,41 @@
-{"upsert":[
-{"id":"hack-the-audience-2026","title":"Hack the Audience 2026: Creator-to-CEO Hackathon","category":"Hackathon",
-"organizer":{"name":"Extriver Partners","kind":"Company","website":"https://extriver.com","prestige":30},
-"summary":"Fully online month-long hackathon (5 Nov - 5 Dec 2026) for building audience-driven products. Teams of up to three; field capped at 100 teams; free entry.",
-"deadline":null,"location":"Worldwide","region":"Global","format":"Online",
-"eligibility":"Free entry; no country, age or student limits stated on the listing. Confirm on the official page.",
-"team":{"min":1,"max":3},
-"prize":{"amount":1600,"currency":"USD","kind":"pool","description":"US$1,600 in cash plus sponsor credits (Render, Tin Computer, .xyz) for winners."},
-"tags":["Startup","Creator","Online"],"url":"https://extriver.com/event1","sourceUrl":"https://vibecoding.app/ai-events/hack-the-audience-2026-creator-to-ceo-hackathon-2026-11",
-"entryStatus":"check","researchAsOf":"2026-11-01","notes":["Registration deadline not stated; event runs 5 Nov - 5 Dec 2026 (UTC). Details taken from an aggregator page."]},
-{"id":"entrepreneurship-world-cup-2026","title":"Entrepreneurship World Cup (EWC) 2026-27","category":"Hackathon",
-"organizer":{"name":"Entrepreneurship World Cup (GEN / Monsha'at)","kind":"Organization","website":"https://entrepreneurshipworldcup.com","prestige":70},
-"summary":"Global startup competition for idea, early and growth-stage startups plus AI tracks, with equity-free cash awards. Applications online; global finals in Riyadh.",
-"deadline":null,"location":"Worldwide (finals in Riyadh, Saudi Arabia)","region":"Global","format":"Hybrid",
-"eligibility":"Open to startups at all stages; country limits not confirmed (rules page could not be read).",
-"team":null,
-"prize":{"amount":1000000,"currency":"USD","kind":"pool","description":"Equity-free cash awards across 12 winners (up to US$200,000 Early Stage grand prize; US$160,000 Growth Stage; US$50,000 per AI track); finalists share about US$1 million."},
-"tags":["Startup","Pitch","Saudi Arabia"],"url":"https://entrepreneurshipworldcup.com/apply-form/","sourceUrl":"https://entrepreneurshipworldcup.com",
-"entryStatus":"check","researchAsOf":"2026-11-01","notes":["Official page showed 'Closes 31 May 2027' but cycle dates look inconsistent; confirm the deadline before applying."]}
-]}
+{
+  "upsert": [
+    {
+      "id": "global-virtual-hackathon-2026-cis",
+      "title": "Global Virtual Hackathon 2026",
+      "category": "Hackathon",
+      "organizer": {
+        "name": "Canadian International School, Singapore",
+        "kind": "College",
+        "website": "https://internshala.com/competitions/global-virtual-hackathon-2026/",
+        "prestige": 35
+      },
+      "summary": "Online school-student hackathon run by Canadian International School Singapore. Teams of 2-4 build a project with a supervising teacher; judging runs 26 Nov to 9 Dec. Free to enter.",
+      "deadline": "2026-11-14T12:29:00+05:30",
+      "deadlineLabel": "Registration closes 14 Nov, 12:29 PM IST; project submission 26 Nov, 12:29 PM IST",
+      "location": "Worldwide",
+      "region": "Global",
+      "format": "Online",
+      "eligibility": "Students aged 14-18 enrolled in schools worldwide. Teams of 2-4, each with a supervising teacher; parent or guardian consent required. Details read from an aggregator listing, not an official site.",
+      "team": { "min": 2, "max": 4 },
+      "prize": {
+        "amount": 1000,
+        "currency": "USD",
+        "kind": "first",
+        "description": "US$1,000 cash for first place in each age division, plus two US$250 runner-up prizes per division."
+      },
+      "tags": ["Students", "Teams", "School"],
+      "url": "https://internshala.com/competitions/global-virtual-hackathon-2026/",
+      "sourceUrl": "https://internshala.com/competitions/global-virtual-hackathon-2026/",
+      "researchAsOf": "2026-11-01",
+      "entryStatus": "check"
+    },
+    {
+      "id": "builder-io-agent-native-hackathon-2026",
+      "deadline": "2026-11-09T23:59:00-08:00",
+      "deadlineLabel": "Submissions close (9 Nov 23:59 PT)",
+      "notes": ["Winners announced 13 Nov. Payment subject to identity verification and tax forms."],
+      "researchAsOf": "2026-11-01"
+    }
+  ]
+}
