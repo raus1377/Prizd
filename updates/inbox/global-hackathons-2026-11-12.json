@@ -1,0 +1,11 @@
+{"upsert":[
+{"id":"agentware-2026-hackathon-raptors","title":"Agentware 2026","category":"Hackathon",
+"organizer":{"name":"Hackathon Raptors","kind":"Community","website":"https://dev.to/raptorsdev","prestige":30},
+"summary":"72-hour online hackathon to build an autonomous agent you can walk away from. Runs 27-30 Nov 2026; team formation closes 23 Nov 2026 and code freeze/submission is 30 Nov 2026, 18:00 UTC.",
+"deadline":"2026-11-30T18:00:00+00:00","location":"Worldwide","region":"Global","format":"Online",
+"eligibility":"Online and open to participants worldwide; teams of 1-4. No country restriction stated.",
+"team":{"min":1,"max":4},
+"prize":{"amount":1800,"currency":"USD","kind":"pool","description":"US$1,800 total cash pool: 1st US$800, 2nd US$400, 3rd US$200, Best Kill Switch US$100, plus a US$300 'Near Miss' side quest (3 x US$100)."},
+"tags":["AI","Agents","Online"],"url":"https://dev.to/raptorsdev/agentware-2026-build-an-agent-you-can-walk-away-from-l88","sourceUrl":"https://dev.to/raptorsdev/agentware-2026-build-an-agent-you-can-walk-away-from-l88",
+"entryStatus":"open","researchAsOf":"2026-11-12","notes":["Details read from the organiser's announcement post on DEV; the separate event site was not opened. Near Miss write-up due 7 Dec 2026, 18:00 UTC."]}
+]}
