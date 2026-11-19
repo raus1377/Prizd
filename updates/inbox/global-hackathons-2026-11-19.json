@@ -1,0 +1,14 @@
+{"upsert":[
+{"id":"kaggle-agent-harness-physical-engineering-exam-2027","title":"Agent Harness on Physical-Engineering's Last Exam (Kaggle × Google)","category":"Research",
+"organizerId":"kaggle",
+"summary":"Online Kaggle competition hosted with Google: build an open-source agent harness paired with one of eight Google-sponsored models to solve 85 expert-reviewed, long-horizon engineering tasks (structural, civil, electrical, mechanical) from Google Cloud AI Research's Physical-Engineering's Last Exam benchmark. Top 100 qualifying entries advance to 56 hidden test tasks.",
+"deadlineDate":"2027-01-05","deadlineTimezone":"UTC","deadlineLabel":"Entry deadline (5 Jan 2027, time unconfirmed)",
+"location":"Worldwide","region":"Global","format":"Online",
+"eligibility":"Not confirmed. Details taken from an aggregator summary of Kaggle's announcement; check the Kaggle competition rules for age, country and team limits.",
+"team":null,
+"prize":{"amount":400000,"currency":"USD","kind":"pool","description":"US$400,000 total prize pool per Kaggle's announcement; per-place split not confirmed."},
+"tags":["AI","Agents","Kaggle","Google","Online"],
+"url":"https://www.kaggle.com/competitions","sourceUrl":"https://digg.com/ai/l2maeg0x",
+"entryStatus":"check","researchAsOf":"2026-11-19",
+"notes":["Found via a Digg summary of Kaggle's X post; the official Kaggle competition page was not opened, so URL points to the Kaggle competitions index and entry status is check. Prize split, timezone and eligibility unverified."]}
+]}
