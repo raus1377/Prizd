@@ -1,0 +1,32 @@
+{
+  "id": "huntress-ctf-2026",
+  "title": "Huntress CTF 2026",
+  "category": "Hackathon",
+  "organizerId": "huntress",
+  "summary": "Practice cybersecurity through an online capture-the-flag challenge.",
+  "deadline": null,
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "region": "Global",
+  "format": "Online",
+  "eligibility": "Check the official rules for age, country and student eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize details were not established in the supplied research; check the official page.",
+    "rewardType": "unknown"
+  },
+  "tags": [
+    "Cybersecurity",
+    "CTF"
+  ],
+  "url": "https://ctf.huntress.com/",
+  "entryStatus": "check",
+  "notes": [
+    "Current team limits, age / country eligibility, fee, deadline and 2026 prizes were not established."
+  ],
+  "addedAt": "2026-10-27T19:39:05+05:30",
+  "researchAsOf": "2026-10-10"
+}

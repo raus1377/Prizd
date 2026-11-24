@@ -1,0 +1,34 @@
+{
+  "id": "epfl-e3-summer-research-program",
+  "title": "EPFL E3 Summer Research Program",
+  "category": "Research internship",
+  "organizerId": "custom-epfl",
+  "summary": "EPFL summer research programme; see official selection criteria and application opening.",
+  "deadline": null,
+  "location": "Lausanne, Switzerland",
+  "region": "Global",
+  "format": "In person",
+  "eligibility": "Requires successful completion of the second bachelor year when applying.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "CHF",
+    "kind": "stipend",
+    "description": "Monthly allowance covering accommodation and living costs in Switzerland; the amount is not published.",
+    "rewardType": "unknown"
+  },
+  "tags": [
+    "Research",
+    "Engineering",
+    "Switzerland"
+  ],
+  "url": "https://eee.epfl.ch/apply/",
+  "entryStatus": "open",
+  "notes": [
+    "E3 deadline for summer 2027 is 1 Nov 2026 per a secondary source; confirm on the EPFL page."
+  ],
+  "addedAt": "2026-10-27T19:39:05+05:30",
+  "support": "Accommodation costs covered by the monthly allowance · travel covered (2nd-class train, economy airfare) · workshop and social event",
+  "deadlineDate": "2026-11-01",
+  "deadlineTimezone": "Asia/Kolkata"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "tcs-codevita-14",
+  "title": "TCS CodeVita Season 14",
+  "category": "Hackathon",
+  "organizerId": "tcs",
+  "summary": "Solve algorithmic programming challenges in a global coding competition.",
+  "deadline": null,
+  "deadlineLabel": "Registration deadline",
+  "location": "Worldwide",
+  "region": "India",
+  "format": "Online",
+  "eligibility": "Graduating years 2027–2030 under the supplied official eligibility summary.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 20000,
+    "currency": "USD",
+    "kind": "pool",
+    "description": "US$20,000 total cash awards for the top three coders.",
+    "rewardType": "cash"
+  },
+  "tags": [
+    "Algorithms",
+    "Programming",
+    "C++"
+  ],
+  "url": "https://codevita.tcsapps.com/",
+  "entryStatus": "open",
+  "notes": [
+    "13 November registration deadline comes from university careers listings; confirm it on the TCS portal."
+  ],
+  "addedAt": "2026-10-27T19:39:05+05:30",
+  "researchAsOf": "2026-10-10",
+  "deadlineDate": "2026-11-13"
+}
