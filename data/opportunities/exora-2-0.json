@@ -1,0 +1,28 @@
+{
+  "id": "exora-2-0",
+  "title": "EXORA 2.0",
+  "category": "Hackathon",
+  "organizerId": "abes-engineering-college",
+  "summary": "Online build 27 Nov, physical finale 28 Nov; physical AI, robotics, fintech and healthcare. PPT screening date conflicts.",
+  "deadline": "2026-11-24T23:59:00+05:30",
+  "location": "Delhi NCR, Gurugram, India",
+  "format": "Hybrid",
+  "eligibility": "Free, cross-college teams.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://unstop.com/hackathons/exora-20-unveil-the-build-abes-engineering-college-1799143",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

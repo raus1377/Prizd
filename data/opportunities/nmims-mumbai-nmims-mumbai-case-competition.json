@@ -1,0 +1,29 @@
+{
+  "id": "nmims-mumbai-nmims-mumbai-case-competition",
+  "title": "NMIMS Mumbai Case Competition",
+  "category": "Case competition",
+  "organizerId": "nmims-mumbai",
+  "summary": "Case brief and exact cutoff unclear.",
+  "deadline": null,
+  "deadlineDate": "2026-11-24",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "UG/PG including engineering, according to directory.",
+  "team": {
+    "min": 2,
+    "max": 3
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://unstop.com/competitions/1799353",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

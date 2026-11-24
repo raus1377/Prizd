@@ -1,0 +1,25 @@
+{
+  "id": "iit-madras-prodsprint",
+  "title": "ProdSprint",
+  "category": "Case competition",
+  "organizerId": "iit-madras",
+  "summary": "Product case and Chennai final; directory cutoff 25 Dec conflicts with qualifying round 2 Dec.",
+  "deadline": null,
+  "location": "India",
+  "format": "Hybrid",
+  "eligibility": "Check eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://unstop.com/competitions/1806004",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

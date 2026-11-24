@@ -1,0 +1,28 @@
+{
+  "id": "tapmi-manipal-casecade",
+  "title": "CASECADE",
+  "category": "Case competition",
+  "organizerId": "tapmi-manipal",
+  "summary": "Quiz, one-slide diagnosis, bid for information and defend solution.",
+  "deadline": "2026-11-27T23:59:00+05:30",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Open to all.",
+  "team": {
+    "min": 1,
+    "max": 3
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://unstop.com/competitions/1821502",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "iim-guwahati-second-serving",
+  "title": "Second Serving",
+  "category": "Case competition",
+  "organizerId": "iim-guwahati",
+  "summary": "Diagnose failed business and defend revival plan.",
+  "deadline": "2026-12-01T00:00:00+05:30",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Open to all.",
+  "team": {
+    "min": 1,
+    "max": 2
+  },
+  "prize": {
+    "amount": 10000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "unknown",
+    "description": "₹10,000 reported prize pool; cash composition not explicitly confirmed."
+  },
+  "tags": [],
+  "url": "https://unstop.com/competitions/1814542",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

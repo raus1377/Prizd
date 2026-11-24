@@ -1,0 +1,25 @@
+{
+  "id": "icts-tifr-s-n-bhatt-memorial-excellence-fellowship",
+  "title": "S. N. Bhatt Memorial Excellence Fellowship",
+  "category": "Research",
+  "organizerId": "icts-tifr",
+  "summary": "Summer theoretical-science research; referee deadline 31 Dec 5 PM.",
+  "deadline": "2026-12-15T17:00:00+05:30",
+  "location": "Bengaluru, India",
+  "format": "In person",
+  "eligibility": "Normally students finishing third or fourth year; exceptional students finishing second year by May 2027 may apply.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "stipend",
+    "rewardType": "cash",
+    "description": "Stipend and accommodation provided."
+  },
+  "tags": [],
+  "url": "https://www.icts.res.in/academic/summer-research-program",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

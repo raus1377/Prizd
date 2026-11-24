@@ -1,0 +1,26 @@
+{
+  "id": "avishkar-2k26",
+  "title": "AVISHKAR 2K26",
+  "category": "Hackathon",
+  "organizerId": "ait",
+  "summary": "Innovation hackathon 25–26 Nov; five domains; late entry unconfirmed.",
+  "deadline": null,
+  "deadlineDate": "2026-11-21",
+  "location": "Chikkamagaluru, India",
+  "format": "In person",
+  "eligibility": "₹1,500/team.",
+  "team": null,
+  "prize": {
+    "amount": 100000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "unknown",
+    "description": "₹1 lakh prize pool; cash composition unconfirmed."
+  },
+  "tags": [],
+  "url": "https://www.avishkarait.online/",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

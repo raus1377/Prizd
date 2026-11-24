@@ -1,1 +1,695 @@
-[]
+[
+  {
+    "id": "iim-raipur",
+    "name": "IIM Raipur",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IR",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1786399"
+  },
+  {
+    "id": "asian-paints",
+    "name": "Asian Paints",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "AP",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1704498"
+  },
+  {
+    "id": "tapmi-manipal",
+    "name": "TAPMI Manipal",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "TM",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1821504"
+  },
+  {
+    "id": "skilled-sapiens",
+    "name": "Skilled Sapiens",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SS",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1824056"
+  },
+  {
+    "id": "siom-nashik",
+    "name": "SIOM Nashik",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "SN",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1823195"
+  },
+  {
+    "id": "iim-lucknow",
+    "name": "IIM Lucknow",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IL",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1820849"
+  },
+  {
+    "id": "iit-madras",
+    "name": "IIT Madras",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IM",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1806030"
+  },
+  {
+    "id": "iim-lucknow-noida-campus",
+    "name": "IIM Lucknow Noida Campus",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IL",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1818990"
+  },
+  {
+    "id": "international-management-institute-new-delhi",
+    "name": "International Management Institute New Delhi",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IM",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1816905"
+  },
+  {
+    "id": "ge-healthcare",
+    "name": "GE HealthCare",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "GH",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1805203"
+  },
+  {
+    "id": "iit-bhu",
+    "name": "IIT BHU",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IB",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1796767"
+  },
+  {
+    "id": "aima",
+    "name": "AIMA",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "A",
+    "color": "#444444",
+    "website": "https://www.aima.in/events/aima-icrc-india-case-league-2026"
+  },
+  {
+    "id": "gostops",
+    "name": "goSTOPS",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "G",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1757375"
+  },
+  {
+    "id": "iim-guwahati",
+    "name": "IIM Guwahati",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IG",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1814542"
+  },
+  {
+    "id": "iim-indore",
+    "name": "IIM Indore",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "II",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1804365"
+  },
+  {
+    "id": "mdi-gurgaon-mercedes-benz-financial-services-india",
+    "name": "MDI Gurgaon × Mercedes-Benz Financial Services India",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "MG",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1803817"
+  },
+  {
+    "id": "symbiosis-college-of-arts-and-commerce",
+    "name": "Symbiosis College of Arts and Commerce",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "SC",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1820026"
+  },
+  {
+    "id": "indian-reits-association",
+    "name": "Indian REITs Association",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IR",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1777919"
+  },
+  {
+    "id": "government-college-of-engineering-amravati",
+    "name": "Government College of Engineering Amravati",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "GC",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1786029"
+  },
+  {
+    "id": "nationbuilding-foundation-of-india",
+    "name": "NationBuilding Foundation of India",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "NF",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1759161"
+  },
+  {
+    "id": "nmims-mumbai",
+    "name": "NMIMS Mumbai",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "NM",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1799353"
+  },
+  {
+    "id": "interactup",
+    "name": "InteractUp",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1747200"
+  },
+  {
+    "id": "iim-udaipur",
+    "name": "IIM Udaipur",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IU",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1782867"
+  },
+  {
+    "id": "loyola-college-chennai",
+    "name": "Loyola College Chennai",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "LC",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1763017"
+  },
+  {
+    "id": "iim-kozhikode",
+    "name": "IIM Kozhikode",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IK",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1798067"
+  },
+  {
+    "id": "institute-of-management-accountants",
+    "name": "Institute of Management Accountants",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IO",
+    "color": "#444444",
+    "website": "https://imasccindia.secure-platform.com/a/"
+  },
+  {
+    "id": "mondelez-international",
+    "name": "Mondelēz International",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "MI",
+    "color": "#444444",
+    "website": "https://unstop.com/competitions/1813372"
+  },
+  {
+    "id": "indian-science-academies",
+    "name": "Indian Science Academies",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IS",
+    "color": "#444444",
+    "website": "https://webjapps.ias.ac.in/fellowship2027/"
+  },
+  {
+    "id": "google",
+    "name": "Google",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "G",
+    "color": "#444444",
+    "website": "https://www.google.com/about/careers/applications/jobs/results/125423735539671750-student-researcher-2027"
+  },
+  {
+    "id": "icts-tifr",
+    "name": "ICTS-TIFR",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://www.icts.res.in/academic/summer-research-program"
+  },
+  {
+    "id": "indian-institute-of-astrophysics",
+    "name": "Indian Institute of Astrophysics",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "II",
+    "color": "#444444",
+    "website": "https://www.iiap.res.in/opportunities/visiting-students/internships/"
+  },
+  {
+    "id": "assistech-foundation",
+    "name": "AssisTech Foundation",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "AF",
+    "color": "#444444",
+    "website": "https://advocatecouncilofindia.org/job/assistech-foundation-atf-remote-26-policy-research-interns/"
+  },
+  {
+    "id": "ceew",
+    "name": "CEEW",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "C",
+    "color": "#444444",
+    "website": "https://www.ceew.in/careers/research-intern-%E2%80%93-energy-transitions"
+  },
+  {
+    "id": "davv-indore",
+    "name": "DAVV Indore",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "DI",
+    "color": "#444444",
+    "website": "https://maitri.gov.in/adminassets/pdf/11-14-2026_1020pm39127.pdf"
+  },
+  {
+    "id": "crisp",
+    "name": "CRISP",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "C",
+    "color": "#444444",
+    "website": "https://fellowship.crispindia.net/"
+  },
+  {
+    "id": "iit-ism-dhanbad",
+    "name": "IIT ISM Dhanbad",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "II",
+    "color": "#444444",
+    "website": "https://people.iitism.ac.in/~download/projectOpening/uploads/pdfprj/1448/Internship_2026-11-21_14-17-35.pdf"
+  },
+  {
+    "id": "reserve-bank-of-india",
+    "name": "Reserve Bank of India",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "RB",
+    "color": "#444444",
+    "website": "https://www.rbi.org.in/scripts/Bs_viewcontent.aspx?Id=3496"
+  },
+  {
+    "id": "national-law-university-delhi",
+    "name": "National Law University Delhi",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "NL",
+    "color": "#444444",
+    "website": "https://careers.nludelhi.ac.in"
+  },
+  {
+    "id": "crgd",
+    "name": "CRGD",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "C",
+    "color": "#444444",
+    "website": "https://crgd.in/programs/fellowships/public-policy-fellowship-2027/"
+  },
+  {
+    "id": "raman-research-institute",
+    "name": "Raman Research Institute",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "RR",
+    "color": "#444444",
+    "website": "https://www.rri.res.in/careers/visiting-students"
+  },
+  {
+    "id": "icrier",
+    "name": "ICRIER",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://icrier.org/career/internship-opportunities/"
+  },
+  {
+    "id": "solumn-ai",
+    "name": "Solumn AI",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SA",
+    "color": "#444444",
+    "website": "https://apply.solumn.ai/assets/Solumn_AI_Winter_Internship_IIT_2026.pdf"
+  },
+  {
+    "id": "iiit-allahabad",
+    "name": "IIIT Allahabad",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IA",
+    "color": "#444444",
+    "website": "https://cvbl.iiita.ac.in/internship/delta2026-winter/"
+  },
+  {
+    "id": "iit-patna",
+    "name": "IIT Patna",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IP",
+    "color": "#444444",
+    "website": "https://iitp.ac.in/~rishavsingh/opportunities/"
+  },
+  {
+    "id": "iit-hyderabad",
+    "name": "IIT Hyderabad",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IH",
+    "color": "#444444",
+    "website": "https://mae.iith.ac.in/maestro.html"
+  },
+  {
+    "id": "madras-school-of-economics",
+    "name": "Madras School of Economics",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "MS",
+    "color": "#444444",
+    "website": null
+  },
+  {
+    "id": "iiit-hyderabad",
+    "name": "IIIT Hyderabad",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IH",
+    "color": "#444444",
+    "website": null
+  },
+  {
+    "id": "organizer-not-specified",
+    "name": "Organizer not specified",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "ON",
+    "color": "#444444",
+    "website": null
+  },
+  {
+    "id": "bit-mesra",
+    "name": "BIT Mesra",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "BM",
+    "color": "#444444",
+    "website": null
+  },
+  {
+    "id": "quad-ai-school-of-technology-and-business",
+    "name": "Quad AI School of Technology and Business",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "QA",
+    "color": "#444444",
+    "website": "https://luma.com/0d2dgzm6"
+  },
+  {
+    "id": "flutterflow",
+    "name": "FlutterFlow",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "F",
+    "color": "#444444",
+    "website": "https://luma.com/8hp1sxzr"
+  },
+  {
+    "id": "hidevs",
+    "name": "HiDevs",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "H",
+    "color": "#444444",
+    "website": "https://theagent-to-agent-hackathon.devpost.com/"
+  },
+  {
+    "id": "aws-student-builder-club",
+    "name": "AWS Student Builder Club",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "AS",
+    "color": "#444444",
+    "website": "https://www.meetup.com/aws-sbg-at-genba-sopanrao-moze-college-of-engineering/events/317366081/"
+  },
+  {
+    "id": "mjcet",
+    "name": "MJCET",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "M",
+    "color": "#444444",
+    "website": "https://www.datanyx.in/timeline"
+  },
+  {
+    "id": "gcelt",
+    "name": "GCELT",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "G",
+    "color": "#444444",
+    "website": "https://devnexus2.devfolio.co/"
+  },
+  {
+    "id": "graftcode",
+    "name": "Graftcode",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "G",
+    "color": "#444444",
+    "website": "https://indiahackathons.com/events/build-with-graftcode"
+  },
+  {
+    "id": "wie-hackearth",
+    "name": "WIE HackEarth",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "WH",
+    "color": "#444444",
+    "website": "https://ieeegusbwiehackearth20.vercel.app/"
+  },
+  {
+    "id": "the-pupil",
+    "name": "The Pupil",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "TP",
+    "color": "#444444",
+    "website": "https://thepupilhackathon.com/RISE-Hackathon-2026-Quick-Guide.pdf"
+  },
+  {
+    "id": "google-deepmind-and-google-cloud",
+    "name": "Google DeepMind and Google Cloud",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "GD",
+    "color": "#444444",
+    "website": "https://rsvp.withgoogle.com/events/gemini-sprints"
+  },
+  {
+    "id": "galgotias-university-design-club",
+    "name": "Galgotias University Design Club",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "GU",
+    "color": "#444444",
+    "website": "https://www.commudle.com/communities/ardverse/hackathons/designathon"
+  },
+  {
+    "id": "ieee-ras-cusat",
+    "name": "IEEE RAS CUSAT",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IR",
+    "color": "#444444",
+    "website": "https://luma.com/ugpnkdir"
+  },
+  {
+    "id": "gdg-on-campus-ggits",
+    "name": "GDG on Campus GGITS",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "GO",
+    "color": "#444444",
+    "website": "https://gdg.community.dev/events/details/google-gdg-on-campus-gyan-ganga-institute-of-technology-and-science-jabalpur-india-presents-promptwars-x-ggits-welcome-to-new-era-of-building/"
+  },
+  {
+    "id": "codegnan",
+    "name": "Codegnan",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "C",
+    "color": "#444444",
+    "website": "https://codegnan.com/hackathon/"
+  },
+  {
+    "id": "rajasthan-police",
+    "name": "Rajasthan Police",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "RP",
+    "color": "#444444",
+    "website": "https://rajasthanpolicehackathon.in/"
+  },
+  {
+    "id": "vedam-school-of-technology",
+    "name": "Vedam School of Technology",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "VS",
+    "color": "#444444",
+    "website": "https://web.mail.sponsormyevent.com/innovedam-hackathon-2026-pune"
+  },
+  {
+    "id": "geeta-university",
+    "name": "Geeta University",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "GU",
+    "color": "#444444",
+    "website": "https://www.devnovate.co/events/"
+  },
+  {
+    "id": "rishihood-university",
+    "name": "Rishihood University",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "RU",
+    "color": "#444444",
+    "website": "https://gdg.community.dev/events/details/google-gdg-on-campus-rishihood-university-sonipat-india-presents-caffeine-code-2026-24-hour-hackathon/"
+  },
+  {
+    "id": "ait",
+    "name": "AIT",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "A",
+    "color": "#444444",
+    "website": "https://www.avishkarait.online/"
+  },
+  {
+    "id": "sdgi-global-university",
+    "name": "SDGI Global University",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "SG",
+    "color": "#444444",
+    "website": "https://devnovate.co/event/hacknova-2026"
+  },
+  {
+    "id": "abes-engineering-college",
+    "name": "ABES Engineering College",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "AE",
+    "color": "#444444",
+    "website": "https://unstop.com/hackathons/exora-20-unveil-the-build-abes-engineering-college-1799143"
+  },
+  {
+    "id": "simats-engineering",
+    "name": "SIMATS Engineering",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SE",
+    "color": "#444444",
+    "website": "https://apexforge-2026.lovable.app/"
+  },
+  {
+    "id": "quad-patna",
+    "name": "Quad Patna",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "QP",
+    "color": "#444444",
+    "website": "https://in.bookmyshow.com/events/promptwars-x-quad-patna/ET00525773"
+  },
+  {
+    "id": "gdg-bhubaneswar",
+    "name": "GDG Bhubaneswar",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "GB",
+    "color": "#444444",
+    "website": null
+  },
+  {
+    "id": "iit-bombay",
+    "name": "IIT Bombay",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IB",
+    "color": "#444444",
+    "website": null
+  },
+  {
+    "id": "cmr",
+    "name": "CMR",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "C",
+    "color": "#444444",
+    "website": "https://cmr-hackfest-4.vercel.app/downloads/hackfest-faq.pdf"
+  },
+  {
+    "id": "srhu-dehradun",
+    "name": "SRHU Dehradun",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SD",
+    "color": "#444444",
+    "website": "https://unstop.com/hackathons/solve-a-thon-national-hackathon-swami-rama-himalayan-university-srhu-baksar-wala-uttarakhand-1755466/amp"
+  },
+  {
+    "id": "vit-bhopal",
+    "name": "VIT Bhopal",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "VB",
+    "color": "#444444",
+    "website": "https://jamao.in/e/codeverse-2-0-hackathon"
+  }
+]

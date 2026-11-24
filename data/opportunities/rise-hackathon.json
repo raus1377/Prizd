@@ -1,0 +1,25 @@
+{
+  "id": "rise-hackathon",
+  "title": "RISE Hackathon",
+  "category": "Hackathon",
+  "organizerId": "the-pupil",
+  "summary": "Grand finale 28 Nov; payment window before 24 Nov.",
+  "deadline": null,
+  "location": "Chennai, Poonamallee, India",
+  "format": "In person",
+  "eligibility": "Fresh university-team entry not confirmed.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://thepupilhackathon.com/RISE-Hackathon-2026-Quick-Guide.pdf",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "designathon",
+  "title": "Designathon",
+  "category": "Hackathon",
+  "organizerId": "galgotias-university-design-club",
+  "summary": "24-hour UI/UX prototype hackathon 27–28 Nov; coding bonus.",
+  "deadline": null,
+  "location": "Greater Noida, Knowledge Centre, India",
+  "format": "In person",
+  "eligibility": "Students of any university and professionals; ₹99/person.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://www.commudle.com/communities/ardverse/hackathons/designathon",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

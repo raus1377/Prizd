@@ -1,0 +1,25 @@
+{
+  "id": "build-with-graftcode",
+  "title": "Build with Graftcode",
+  "category": "Hackathon",
+  "organizerId": "graftcode",
+  "summary": "28 Nov finale following 10 and 18 Nov online qualifiers; tickets sold out.",
+  "deadline": null,
+  "location": "Gurugram, Nagarro, India",
+  "format": "Hybrid",
+  "eligibility": "Finalists only.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://indiahackathons.com/events/build-with-graftcode",
+  "region": "India",
+  "entryStatus": "closed",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

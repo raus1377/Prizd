@@ -1,0 +1,29 @@
+{
+  "id": "iit-bhu-casex",
+  "title": "CaseX",
+  "category": "Case competition",
+  "organizerId": "iit-bhu",
+  "summary": "E-Summit entrepreneurship and business strategy; registration from 9 Nov.",
+  "deadline": null,
+  "deadlineDate": "2027-01-30",
+  "location": "India",
+  "format": "Hybrid",
+  "eligibility": "Check organizer rules.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://unstop.com/competitions/1796767",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

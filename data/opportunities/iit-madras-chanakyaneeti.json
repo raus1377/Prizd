@@ -1,0 +1,28 @@
+{
+  "id": "iit-madras-chanakyaneeti",
+  "title": "Chanakyaneeti",
+  "category": "Case competition",
+  "organizerId": "iit-madras",
+  "summary": "Business qualifier, consulting case and Consulting War Room.",
+  "deadline": "2026-11-30T23:59:00+05:30",
+  "location": "India",
+  "format": "Hybrid",
+  "eligibility": "UG/PG; same institute.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://unstop.com/competitions/1806014",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

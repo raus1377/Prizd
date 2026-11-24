@@ -1,0 +1,28 @@
+{
+  "id": "caffeine-code",
+  "title": "Caffeine Code",
+  "category": "Hackathon",
+  "organizerId": "rishihood-university",
+  "summary": "24-hour build 28–29 Nov during Damru.",
+  "deadline": "2026-11-23T23:59:00+05:30",
+  "location": "Sonipat, India",
+  "format": "In person",
+  "eligibility": "Inter-college teams; ₹799/team.",
+  "team": {
+    "min": 3,
+    "max": 5
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://gdg.community.dev/events/details/google-gdg-on-campus-rishihood-university-sonipat-india-presents-caffeine-code-2026-24-hour-hackathon/",
+  "region": "India",
+  "entryStatus": "closed",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

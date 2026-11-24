@@ -1,0 +1,28 @@
+{
+  "id": "devnexus-2-0",
+  "title": "DevNexus 2.0",
+  "category": "Hackathon",
+  "organizerId": "gcelt",
+  "summary": "36-hour hackathon 28–29 Nov; newer official schedule gives 24 Nov 11 PM deadline.",
+  "deadline": "2026-11-24T23:00:00+05:30",
+  "location": "Kolkata, Salt Lake, India",
+  "format": "In person",
+  "eligibility": "Free; idea PPT screening and invitation.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://devnexus2.devfolio.co/",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

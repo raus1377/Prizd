@@ -1,0 +1,28 @@
+{
+  "id": "hacknova-2026",
+  "title": "HACKNOVA 2026",
+  "category": "Hackathon",
+  "organizerId": "sdgi-global-university",
+  "summary": "Eight-hour hackathon 25 Nov, with Hack With India and Covexcode.",
+  "deadline": null,
+  "location": "Ghaziabad, India",
+  "format": "In person",
+  "eligibility": "Student event; outside-college access unconfirmed.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://devnovate.co/event/hacknova-2026",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

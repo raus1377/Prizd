@@ -1,0 +1,25 @@
+{
+  "id": "diwali-festiverse-agent-to-agent-hackathon",
+  "title": "Diwali Festiverse Agent-to-Agent Hackathon",
+  "category": "Hackathon",
+  "organizerId": "hidevs",
+  "summary": "Build multi-agent project; top ten demo 28 Nov. Finished submission cutoff, first-time registration unconfirmed.",
+  "deadline": "2026-11-24T22:00:00+05:30",
+  "location": "Bengaluru, OJone and online, India",
+  "format": "Hybrid",
+  "eligibility": "HiDevs registration required.",
+  "team": null,
+  "prize": {
+    "amount": 700,
+    "currency": "USD",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "$700 cash awards."
+  },
+  "tags": [],
+  "url": "https://theagent-to-agent-hackathon.devpost.com/",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}
