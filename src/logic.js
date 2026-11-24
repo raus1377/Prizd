@@ -36,6 +36,7 @@
       if (state.category !== 'all' && o.category !== state.category && !(o.categories || []).includes(state.category)) return false;
       if (state.kind !== 'all' && o.organizer.kind !== state.kind) return false;
       if (state.format !== 'all' && o.format !== state.format && !(o.format === 'Hybrid' && ['Online','In person'].includes(state.format))) return false;
+      if (state.paid === 'yes' && !(o.prize.kind === 'stipend' ? o.prize.amount === null || o.prize.amount > 0 : ['pool','first'].includes(o.prize.kind) && o.prize.amount > 0)) return false;
       if (state.team === 'solo' && (!o.team || o.team.min > 1)) return false;
       if (state.team === 'team' && (!o.team || o.team.min === 1)) return false;
       if (query && ![o.title,o.summary,o.organizer.name,o.category,o.location,o.eligibility,...o.tags].join(' ').toLowerCase().includes(query)) return false;
