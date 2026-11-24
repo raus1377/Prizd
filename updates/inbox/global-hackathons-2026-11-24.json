@@ -1,0 +1,11 @@
+{"upsert":[
+{"id":"google-agent-harness-physical-engineering-kaggle-2026","title":"Agent Harness on Physical-Engineering's Last Exam (Kaggle)","category":"Hackathon",
+"organizer":{"name":"Google","kind":"Company","website":"https://www.google.com","prestige":95},
+"summary":"Online Kaggle competition hosted by Google: build an agent harness and write up the approach, then compete on the Physical Engineering's Last Exam benchmark (built with Mercor). Stage 1 is a Kaggle Writeup; top 100 advance to a hidden-task evaluation stage. Final deadline 5 Jan 2027.",
+"deadlineDate":"2027-01-05","deadlineTimezone":"UTC","location":"Worldwide","region":"Global","format":"Online",
+"eligibility":"Registered Kaggle users aged 18+ (or local age of majority). Residents of Crimea, DNR/LNR regions, Cuba, Iran, North Korea and persons under US sanctions are excluded. Solo or teams of up to 5. Taken from an aggregator page; confirm on the Kaggle rules page.",
+"team":{"min":1,"max":5},
+"prize":{"amount":400000,"currency":"USD","kind":"pool","description":"US$400,000 total prizes: 1st US$250,000, 2nd US$100,000, 3rd US$50,000 (team prize money split evenly unless agreed otherwise). Listed as prize money by an aggregator; the word 'cash' was not confirmed on the Kaggle page."},
+"tags":["AI","Agents","Kaggle","Online"],"url":"https://www.kaggle.com/competitions/physical-engineerings-last-exam","sourceUrl":"https://devgrantsdaily.com/items/2026-11-22-kaggle-physical-engineerings-last-exam/",
+"entryStatus":"check","researchAsOf":"2026-11-24","notes":["Official Kaggle page could not be opened; details come from an aggregator (checked against organizer page 22 Nov 2026 per its own note). Cash nature of the prize and exact deadline time/timezone are unconfirmed."]}
+]}
