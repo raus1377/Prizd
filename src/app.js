@@ -8,7 +8,7 @@
   const settings = data.settings;
   const opportunities = data.opportunities;
   const params = new URLSearchParams(location.search);
-  const defaults = { view:'all', category:'all', kind:'all', format:'all', paid:'no', team:'all', status:'open', sort:settings.defaultSort, search:'' };
+  const defaults = { view:'all', category:'all', kind:'all', format:'all', paid:'no', team:'all', status:'all', sort:settings.defaultSort, search:'' };
   const state = { ...defaults };
   const allowed = {view:['all','new','saved'],category:['all',...settings.categories],kind:['all','Company','College','Organization','Community'],format:['all','Online','In person','Hybrid','To confirm'],paid:['no','yes'],team:['all','solo','team'],status:['open','all','closing','upcoming','check','closed'],sort:['featured','prestige','prize','deadline','newest']};
   for (const key of Object.keys(allowed)) if (allowed[key].includes(params.get(key))) state[key] = params.get(key);
@@ -134,7 +134,7 @@
     heroKey = key;
     $('hero-shortlist').innerHTML=topPicks.map((o,i)=>`<a class="hero-pick" href="./${escape(o.detailPath)}" aria-label="Open ${escape(o.title)}"><span class="pick-number">0${i+1}</span><span><span class="pick-label">${escape(o.organizer.name).toUpperCase()} / ${escape(o.category).toUpperCase()}</span><span class="pick-name">${escape(o.title)}</span></span><span class="pick-arrow" aria-hidden="true">↗</span></a>`).join('');
   }
-  if (!gated() && (state.kind !== 'all' || state.format !== 'all' || state.team !== 'all' || state.status !== 'open')) { $('advanced-filters').hidden = false; $('filter-toggle').setAttribute('aria-expanded',true); }
+  if (!gated() && (state.kind !== 'all' || state.format !== 'all' || state.team !== 'all' || state.status !== 'all')) { $('advanced-filters').hidden = false; $('filter-toggle').setAttribute('aria-expanded',true); }
   render();setLayout(currentLayout);
   if (account && account.onChange) account.onChange(a => {
     if (a.user) for (const id of a.saved) saved.add(id);
