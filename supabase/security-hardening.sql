@@ -5,8 +5,6 @@ revoke all on public.profiles, public.saved_opportunities, public.subscribers, p
 grant select (id,email,name,avatar_url,created_at,consent_at,source,ref,referral_code,interests,digest_opt_in,reminder_opt_in) on public.profiles to authenticated;
 grant update (name,interests,digest_opt_in,reminder_opt_in,consent_at,source,ref) on public.profiles to authenticated;
 grant select,insert,delete on public.saved_opportunities to authenticated;
--- Upsert uses UPDATE privileges; row ownership policy still applies.
-grant update (opportunity_id) on public.saved_opportunities to authenticated;
 revoke all on function public.handle_new_user() from public, anon, authenticated;
 revoke all on function public.keep_first_consent() from public, anon, authenticated;
 revoke all on function public.delete_my_account() from public, anon;

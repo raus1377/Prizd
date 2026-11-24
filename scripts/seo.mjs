@@ -152,7 +152,7 @@ ${tags}
 <body class="page">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="topline" aria-hidden="true"></div>
-<header class="page-head"><a class="page-brand" href="${base}" aria-label="${esc(brand)} home">${esc(brand.toLowerCase())}<em>.</em></a><nav class="page-nav" aria-label="Main">${navHubs.map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}<a href="${base}submit/">Contribute</a><a href="${base}#opportunities">Search the index ↗</a></nav></header>
+<header class="page-head"><a class="page-brand" href="${base}" aria-label="${esc(brand)} home">${esc(brand.toLowerCase())}<em>.</em></a><nav class="page-nav" aria-label="Main">${navHubs.map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}<a href="${base}submit/">Contribute</a><a href="${base}#opportunities">Search the index ↗</a><button type="button" class="signin-btn" data-account-button hidden>Sign in</button></nav></header>
 <main id="main">
 ${body}
 </main>

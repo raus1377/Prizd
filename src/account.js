@@ -91,7 +91,7 @@
   api.setSaved = async (id, on) => {
     if (!api.user) return;
     const sb = await loadClient();
-    const { error } = on ? await sb.from('saved_opportunities').upsert({ user_id: api.user.id, opportunity_id: id }, { onConflict: 'user_id,opportunity_id' }) : await sb.from('saved_opportunities').delete().eq('user_id', api.user.id).eq('opportunity_id', id);
+    const { error } = on ? await sb.from('saved_opportunities').upsert({ user_id: api.user.id, opportunity_id: id }, { onConflict: 'user_id,opportunity_id', ignoreDuplicates: true }) : await sb.from('saved_opportunities').delete().eq('user_id', api.user.id).eq('opportunity_id', id);
     if (error) { say('Could not sync your shortlist. It is saved on this device.'); return; }
     on ? api.saved.add(id) : api.saved.delete(id);
   };
@@ -99,7 +99,7 @@
 
   // ---- dialogs
   const dialog = (id, html) => { const d = document.createElement('dialog'); d.id = id; d.className = 'account-dialog'; d.innerHTML = `<button class="dialog-close" data-close aria-label="Close">×</button>${html}`; d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); }); document.body.appendChild(d); return d; };
-  const REASONS = { save: 'Sign in to save opportunities and track their deadlines.', filters: 'Sign in to manage your account.', reminders: 'Sign in to get a reminder 48 hours before a saved deadline.', digest: 'Sign in to set up your weekly digest.', default: 'Sign in to save opportunities, get deadline reminders.' };
+  const REASONS = { save: 'Sign in to save opportunities and track their deadlines.', filters: 'Sign in to manage your account.', reminders: 'Sign in to get a reminder 48 hours before a saved deadline.', digest: 'Sign in to set up your weekly digest.', default: 'Sign in to save opportunities and manage your account.' };
   let authDialog;
   api.requireAuth = (reason = 'default') => {
     if (api.user || !api.enabled) return true;
@@ -142,7 +142,7 @@
           <label class="consent"><input type="checkbox" name="digest" ${p.digest_opt_in ? 'checked' : ''}> <span>Weekly digest of open calls</span></label>
           <label class="consent"><input type="checkbox" name="reminders" ${p.reminder_opt_in ? 'checked' : ''}> <span>Remind me 48 hours before a saved deadline</span></label>
           <div class="chips" role="group" aria-label="Interests">${chips(p.interests || [], 'interest')}</div>
-        </fieldset>> <span>Yes, send me deadline alerts on WhatsApp</span></label><p class="fine">${p.phone ? (p.phone_verified ? 'Number verified.' : 'Number saved. Alerts start once it is verified by a one-time code.') : 'Optional. We never share your number.'}</p></fieldset>` : ''}
+        </fieldset>
         <div class="acct-actions"><button class="btn" type="submit">Save preferences</button><button class="btn btn-dark" type="button" id="acct-out">Sign out</button></div>
         <p class="signup-msg" id="acct-msg" role="status"></p>
       </form>
