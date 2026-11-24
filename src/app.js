@@ -8,9 +8,9 @@
   const settings = data.settings;
   const opportunities = data.opportunities;
   const params = new URLSearchParams(location.search);
-  const defaults = { view:'all', category:'all', kind:'all', format:'all', team:'all', status:'open', sort:settings.defaultSort, search:'' };
+  const defaults = { view:'all', category:'all', kind:'all', format:'all', paid:'no', team:'all', status:'open', sort:settings.defaultSort, search:'' };
   const state = { ...defaults };
-  const allowed = {view:['all','new','saved'],category:['all',...settings.categories],kind:['all','Company','College','Organization','Community'],format:['all','Online','In person','Hybrid','To confirm'],team:['all','solo','team'],status:['open','all','closing','upcoming','check','closed'],sort:['featured','prestige','prize','deadline','newest']};
+  const allowed = {view:['all','new','saved'],category:['all',...settings.categories],kind:['all','Company','College','Organization','Community'],format:['all','Online','In person','Hybrid','To confirm'],paid:['no','yes'],team:['all','solo','team'],status:['open','all','closing','upcoming','check','closed'],sort:['featured','prestige','prize','deadline','newest']};
   for (const key of Object.keys(allowed)) if (allowed[key].includes(params.get(key))) state[key] = params.get(key);
   state.search = params.get('q') || '';
   let saved;
@@ -71,6 +71,7 @@
     $('count-saved').textContent = savedCount;
     $('result-count').textContent = `${String(items.length).padStart(2,'0')} ${items.length === 1 ? 'OPPORTUNITY' : 'OPPORTUNITIES'}${state.view === 'new' ? ' / ADDED IN THE LAST ' + settings.newWindowDays + ' DAYS' : ''}`;
     document.querySelectorAll('[data-view]').forEach(el => { el.classList.toggle('active',el.dataset.view === state.view); el.setAttribute('aria-pressed',el.dataset.view === state.view); });
+    $('paid-only').checked = state.paid === 'yes';
     document.querySelectorAll('[data-format]').forEach(el => { el.classList.toggle('active',el.dataset.format === state.format); el.setAttribute('aria-pressed',el.dataset.format === state.format); });
     document.querySelectorAll('.category-filters [data-category]').forEach(el => { el.classList.toggle('active',el.dataset.category === state.category); el.setAttribute('aria-pressed',el.dataset.category === state.category); });
     $('opportunity-grid').innerHTML = items.map(card).join('');
@@ -107,12 +108,13 @@
     const category = event.target.closest('[data-category]');
     if (category) { state.category = state.category === category.dataset.category ? 'all' : category.dataset.category; state.view = 'all'; render(); return; }
     const format = event.target.closest('[data-format]');
-    if (format) { state.format = format.dataset.format; $('format-filter').value = state.format; render(); return; }
+    if (format) { state.format = state.format === format.dataset.format ? 'all' : format.dataset.format; $('format-filter').value = state.format; render(); return; }
     const view = event.target.closest('[data-view]');
     if (view) { state.view = view.dataset.view; if (state.view === 'all') state.category = 'all'; render(); }
     const quick = event.target.closest('[data-quick]');
     if (quick) { state.view = quick.dataset.quick; render(); closeMenu(); }
   });
+  $('paid-only').addEventListener('change',event => { state.paid = event.target.checked ? 'yes' : 'no'; render(); });
   $('search').addEventListener('input',event => { state.search = event.target.value; render(); });
   for (const [key,id] of [['kind','kind-filter'],['format','format-filter'],['team','team-filter'],['status','status-filter'],['sort','sort']]) $(id).addEventListener('change',event => { state[key] = event.target.value; render(); });
   $('reset-filters').addEventListener('click',reset);$('empty-reset').addEventListener('click',reset);
