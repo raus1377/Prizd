@@ -4,7 +4,7 @@ import { db, cors, json, isEmail, esc, sendMail, FUNCTIONS_URL, INTERESTS } from
 Deno.serve(async req => {
   if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: cors(req) });
   if (req.method !== 'POST') return json(req, { error: 'method' }, 405);
-  let body: any; try { body = await req.json(); } catch { return json(req, { error: 'bad_json' }, 400); }
+  let body: any; try { const raw = await req.text(); if (raw.length > 8192) return json(req, {error:'too_large'}, 413); body = JSON.parse(raw); if (!body || typeof body !== 'object' || Array.isArray(body)) throw new Error('bad body'); } catch { return json(req, { error: 'bad_json' }, 400); }
   const email = String(body.email || '').trim().toLowerCase();
   if (!isEmail(email)) return json(req, { error: 'email' }, 400);
   if (body.consent !== true) return json(req, { error: 'consent' }, 400);
@@ -16,7 +16,7 @@ Deno.serve(async req => {
   let token: string;
   if (existing) {
     // Already confirmed: say OK without revealing it (and without sending more mail).
-    if (existing.status === 'confirmed') { await sb.from('subscribers').update({ interests }).eq('id', existing.id); return json(req, { ok: true }); }
+    if (existing.status === 'confirmed') return json(req, { ok: true });
     // Re-sends are limited to one per 10 minutes per address.
     const last = existing.last_confirmation_sent_at ? Date.parse(existing.last_confirmation_sent_at) : 0;
     if (Date.now() - last < 10 * 60_000) return json(req, { ok: true });
@@ -32,6 +32,6 @@ Deno.serve(async req => {
     await sendMail(email, 'Confirm your Prizd alerts',
       `<p>Tap to confirm you want hackathon, internship and case-competition alerts from Prizd${interests.length ? ' (' + esc(interests.join(', ')) + ')' : ''}.</p><p><a href="${link}" style="background:#ff805e;color:#281b38;padding:12px 18px;text-decoration:none;font-weight:bold">Confirm my email</a></p><p style="color:#63576d;font-size:12px">If you didn't ask for this, ignore this email and nothing will be sent.</p>`,
       `Confirm your Prizd alerts: ${link}\n\nIf you didn't ask for this, ignore this email.`);
-  } catch (e) { console.error(e); return json(req, { error: 'mail' }, 502); }
+  } catch { console.error('Confirmation email delivery failed'); return json(req, { error: 'mail' }, 502); }
   return json(req, { ok: true });
 });

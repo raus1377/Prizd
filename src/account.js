@@ -14,7 +14,6 @@
     del(k) { try { localStorage.removeItem(k); } catch { /* ignore */ } }
   };
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const base = (() => { const l = new URL(location.href); l.search = ''; l.hash = ''; return l; })();
   const siteRoot = new URL('.', document.currentScript?.src || location.href).href;
 
   const api = window.PrizdAccount = {
@@ -59,7 +58,7 @@
   async function loadUserData(user) {
     const sb = await loadClient();
     const [{ data: profile }, { data: rows }] = await Promise.all([
-      sb.from('profiles').select('*').eq('id', user.id).maybeSingle(),
+      sb.from('profiles').select('id,email,name,avatar_url,consent_at,source,ref,referral_code,interests,digest_opt_in,reminder_opt_in').eq('id', user.id).maybeSingle(),
       sb.from('saved_opportunities').select('opportunity_id').eq('user_id', user.id)
     ]);
     api.profile = profile;
@@ -67,15 +66,12 @@
     const pending = (() => { try { return JSON.parse(store.get('prizd-consent') || 'null'); } catch { return null; } })();
     if (profile && pending?.at && !profile.consent_at) {
       const patch = { consent_at: pending.at, source: pending.source || 'home', ref: store.get('prizd-ref') || null };
-      const { data } = await sb.from('profiles').update(patch).eq('id', user.id).select('*').maybeSingle();
+      const { data } = await sb.from('profiles').update(patch).eq('id', user.id).select('id,email,name,avatar_url,consent_at,source,ref,referral_code,interests,digest_opt_in,reminder_opt_in').maybeSingle();
       if (data) api.profile = data;
     }
     if (pending) store.del('prizd-consent');
-    // Merge the shortlist saved on this device into the account.
+    // Do not import another account's saved items from browser storage.
     const remote = new Set((rows || []).map(r => r.opportunity_id));
-    let local = []; try { local = JSON.parse(store.get('prizd-saved-v1') || store.get('open-call-saved-v1') || '[]').filter(x => typeof x === 'string'); } catch { /* ignore */ }
-    const missing = local.filter(id => !remote.has(id));
-    if (missing.length) { await sb.from('saved_opportunities').upsert(missing.map(id => ({ user_id: user.id, opportunity_id: id })), { onConflict: 'user_id,opportunity_id', ignoreDuplicates: true }); missing.forEach(id => remote.add(id)); }
     api.saved = remote;
   }
 
@@ -84,10 +80,10 @@
       const sb = await loadClient();
       const { data } = await sb.auth.getSession();
       if (data.session) { api.user = data.session.user; await loadUserData(api.user); }
-      sb.auth.onAuthStateChange(async (event, session) => {
+      sb.auth.onAuthStateChange((event, session) => { setTimeout(async () => {
         if (event === 'SIGNED_IN' && session && session.user.id !== api.user?.id) { api.user = session.user; await loadUserData(api.user); emit(); if (event === 'SIGNED_IN') say(`Signed in${api.profile?.name ? ' as ' + api.profile.name.split(' ')[0] : ''}.`); }
-        if (event === 'SIGNED_OUT') { api.user = null; api.profile = null; api.saved = new Set(); emit(); }
-      });
+        if (event === 'SIGNED_OUT') { api.user = null; api.profile = null; api.saved = new Set(); store.del('prizd-saved-v1'); store.del('open-call-saved-v1'); emit(); }
+      }, 0); });
     } catch (e) { console.warn('Prizd accounts unavailable:', e); root.classList.add('no-account'); api.enabled = false; }
     emit();
   })();
@@ -95,7 +91,7 @@
   api.setSaved = async (id, on) => {
     if (!api.user) return;
     const sb = await loadClient();
-    const { error } = on ? await sb.from('saved_opportunities').upsert({ user_id: api.user.id, opportunity_id: id }, { onConflict: 'user_id,opportunity_id' }) : await sb.from('saved_opportunities').delete().eq('user_id', api.user.id).eq('opportunity_id', id);
+    const { error } = on ? await sb.from('saved_opportunities').upsert({ user_id: api.user.id, opportunity_id: id }, { onConflict: 'user_id,opportunity_id', ignoreDuplicates: true }) : await sb.from('saved_opportunities').delete().eq('user_id', api.user.id).eq('opportunity_id', id);
     if (error) { say('Could not sync your shortlist. It is saved on this device.'); return; }
     on ? api.saved.add(id) : api.saved.delete(id);
   };
@@ -103,18 +99,26 @@
 
   // ---- dialogs
   const dialog = (id, html) => { const d = document.createElement('dialog'); d.id = id; d.className = 'account-dialog'; d.innerHTML = `<button class="dialog-close" data-close aria-label="Close">×</button>${html}`; d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); }); document.body.appendChild(d); return d; };
-  const REASONS = { save: 'Sign in to save opportunities and track their deadlines.', filters: 'Sign in to use filters: organizer, format, team size and entry status.', reminders: 'Sign in to get a reminder 48 hours before a saved deadline.', digest: 'Sign in to set up your weekly digest.', default: 'Sign in to save opportunities, use filters and get deadline reminders.' };
+  const REASONS = { save: 'Sign in to save opportunities and track their deadlines.', filters: 'Sign in to manage your account.', reminders: 'Sign in to get a reminder 48 hours before a saved deadline.', digest: 'Sign in to set up your weekly digest.', default: 'Sign in to save opportunities and manage your account.' };
   let authDialog;
   api.requireAuth = (reason = 'default') => {
     if (api.user || !api.enabled) return true;
     authDialog ||= (() => {
-      const d = dialog('auth-dialog', `<span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Welcome</span><h2>Sign in to <em>Prizd</em></h2><p id="auth-reason"></p><label class="consent"><input type="checkbox" id="auth-consent"> <span>I agree to the <a href="${siteRoot}privacy/">privacy policy</a> and to Prizd storing my name, email and shortlist.</span></label><button class="btn google-btn" id="auth-google" disabled><svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.9 2.4 30.4 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/><path fill="#FBBC05" d="M10.5 28.7a14.5 14.5 0 0 1 0-9.4l-7.9-6.1a24 24 0 0 0 0 21.6l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg> Continue with Google</button><p class="fine">We only use Google to confirm who you are. No password, no posting.</p>`);
+      const d = dialog('auth-dialog', `<span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Welcome</span><h2>Sign in to <em>Prizd</em></h2><p id="auth-reason"></p><label class="consent"><input type="checkbox" id="auth-consent"> <span>I have read the <a href="${siteRoot}privacy/">privacy policy</a> and agree to Prizd storing my account and shortlist.</span></label><button class="btn google-btn" id="auth-google" disabled><svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.9 2.4 30.4 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.5 5.8c4.4-4.1 7.1-10.1 7.1-17.5z"/><path fill="#FBBC05" d="M10.5 28.7a14.5 14.5 0 0 1 0-9.4l-7.9-6.1a24 24 0 0 0 0 21.6l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.5-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg> Continue with Google</button><p class="fine">Or use your email address:</p><form id="auth-email-form"><label class="field">Email<input type="email" name="email" autocomplete="email" required maxlength="254"></label><button class="btn" id="auth-email" type="submit" disabled>Send sign-in link</button><p id="auth-email-msg" role="status" class="fine"></p></form><p class="fine">No password stored by Prizd.</p>`);
       const box = d.querySelector('#auth-consent'), btn = d.querySelector('#auth-google');
-      box.addEventListener('change', () => { btn.disabled = !box.checked; });
+      const emailButton = d.querySelector('#auth-email');
+      box.addEventListener('change', () => { btn.disabled = !box.checked; emailButton.disabled = !box.checked; });
+      d.querySelector('#auth-email-form').addEventListener('submit', async e => {
+        e.preventDefault(); if (!box.checked || emailButton.disabled) return;
+        const email = String(new FormData(e.currentTarget).get('email') || '').trim();
+        const msg = d.querySelector('#auth-email-msg'); emailButton.disabled = true;
+        store.set('prizd-consent', JSON.stringify({ at: new Date().toISOString(), source: d.dataset.source || 'home' }));
+        try { const sb = await loadClient(); const {error} = await sb.auth.signInWithOtp({email,options:{emailRedirectTo:siteRoot}}); msg.textContent = error ? 'Could not send a sign-in link. Try again later.' : 'Check your inbox for your sign-in link.'; } catch { msg.textContent = 'Sign-in is temporarily unavailable.'; } finally { emailButton.disabled = !box.checked; }
+      });
       btn.addEventListener('click', async () => {
         store.set('prizd-consent', JSON.stringify({ at: new Date().toISOString(), source: d.dataset.source || 'home' }));
         const sb = await loadClient();
-        const { error } = await sb.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: base.href } });
+        const { error } = await sb.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: siteRoot } });
         if (error) say('Google sign-in is not available right now.');
       });
       return d;
@@ -128,7 +132,7 @@
   const chips = (selected, name) => INTERESTS.map(i => `<label class="chip"><input type="checkbox" name="${name}" value="${i}"${selected.includes(i) ? ' checked' : ''}><span>${i}</span></label>`).join('');
   const account = { dialog: null, close() { this.dialog?.close(); } };
   function openAccount() {
-    const p = api.profile || {}; const saved = api.saved.size; const showPhone = (Number(store.get('prizd-visits')) || 0) >= 2 || saved >= 1 || Boolean(p.phone);
+    const p = api.profile || {};
     const invite = p.referral_code ? new URL(siteRoot).origin + new URL(siteRoot).pathname + '?ref=' + p.referral_code : '';
     account.dialog?.remove();
     const d = account.dialog = dialog('account-dialog', `<span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Your account</span>
@@ -139,7 +143,6 @@
           <label class="consent"><input type="checkbox" name="reminders" ${p.reminder_opt_in ? 'checked' : ''}> <span>Remind me 48 hours before a saved deadline</span></label>
           <div class="chips" role="group" aria-label="Interests">${chips(p.interests || [], 'interest')}</div>
         </fieldset>
-        ${showPhone ? `<fieldset><legend>WhatsApp</legend><label class="field">WhatsApp me deadline alerts<input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="+91 98765 43210" value="${esc(p.phone || '')}" pattern="\\+[0-9 ]{8,16}"></label><label class="consent"><input type="checkbox" name="wa" ${p.whatsapp_opt_in ? 'checked' : ''}> <span>Yes, send me deadline alerts on WhatsApp</span></label><p class="fine">${p.phone ? (p.phone_verified ? 'Number verified.' : 'Number saved. Alerts start once it is verified by a one-time code.') : 'Optional. We never share your number.'}</p></fieldset>` : ''}
         <div class="acct-actions"><button class="btn" type="submit">Save preferences</button><button class="btn btn-dark" type="button" id="acct-out">Sign out</button></div>
         <p class="signup-msg" id="acct-msg" role="status"></p>
       </form>
@@ -147,11 +150,8 @@
       <details class="danger"><summary>Delete my account and data</summary><p class="fine">This removes your profile, shortlist and reminders for good.</p><button class="btn btn-dark" type="button" id="acct-del">Delete everything</button></details>`);
     d.querySelector('#acct-form').addEventListener('submit', async e => {
       e.preventDefault(); const f = new FormData(e.currentTarget), msg = d.querySelector('#acct-msg');
-      const phone = (f.get('phone') || '').toString().replace(/\s+/g, '');
-      if (phone && !/^\+[0-9]{8,15}$/.test(phone)) { msg.textContent = 'Use the international format, e.g. +919876543210.'; return; }
       const patch = { digest_opt_in: f.has('digest'), reminder_opt_in: f.has('reminders'), interests: f.getAll('interest') };
-      if (showPhone) Object.assign(patch, { phone: phone || null, whatsapp_opt_in: Boolean(phone) && f.has('wa') });
-      const sb = await loadClient(); const { data, error } = await sb.from('profiles').update(patch).eq('id', api.user.id).select('*').maybeSingle();
+      const sb = await loadClient(); const { data, error } = await sb.from('profiles').update(patch).eq('id', api.user.id).select('id,email,name,avatar_url,consent_at,source,ref,referral_code,interests,digest_opt_in,reminder_opt_in').maybeSingle();
       if (error) { msg.textContent = 'Could not save. Try again.'; return; }
       api.profile = data; msg.textContent = 'Saved.'; emit();
     });
@@ -179,12 +179,13 @@
 
   // ---- email signup (no login). Double opt-in: the confirmation email is what activates it.
   function renderSignups() {
+    if (!cfg.alertsEnabled) return;
     for (const host of document.querySelectorAll('[data-signup]')) {
       const signed = Boolean(api.user); const state = signed ? 'in' : 'out';
       if (host.dataset.state === state && host.firstElementChild) continue;
       host.dataset.state = state; host.hidden = false;
       const title = host.dataset.title || 'Get the weekly digest';
-      if (signed) { host.innerHTML = `<div class="signup-inner"><span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Alerts</span><h2>${esc(title)}</h2><p>You are signed in. Choose your digest, reminders and WhatsApp alerts in your account.</p><button class="btn" type="button" data-account-open>Manage alerts <span aria-hidden="true">↗</span></button></div>`; continue; }
+      if (signed) { host.innerHTML = `<div class="signup-inner"><span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Alerts</span><h2>${esc(title)}</h2><p>You are signed in. Choose your digest and reminders in your account.</p><button class="btn" type="button" data-account-open>Manage alerts <span aria-hidden="true">↗</span></button></div>`; continue; }
       host.innerHTML = `<form class="signup-inner" novalidate><span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Free, weekly</span><h2>${esc(title)}</h2><p>New hackathons, internships and case competitions, picked for you. One email a week.</p><div class="chips" role="group" aria-label="What are you looking for?">${chips([], 'interest')}</div><div class="signup-row"><input type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@college.edu" aria-label="Email address" required><button class="btn" type="submit">Notify me <span aria-hidden="true">↗</span></button></div><label class="consent"><input type="checkbox" name="consent"> <span>Yes, email me this digest. I have read the <a href="${siteRoot}privacy/">privacy policy</a>. I can unsubscribe at any time.</span></label><p class="signup-msg" role="status"></p></form>`;
       host.querySelector('form').addEventListener('submit', async e => {
         e.preventDefault(); const form = e.currentTarget, msg = form.querySelector('.signup-msg'), f = new FormData(form);

@@ -1,2 +1,15 @@
 dist/
 node_modules/
+
+# Private operational files and credentials
+.env
+.env.*
+!.env.example
+private/
+*.pem
+*.key
+*.p12
+*.pfx
+*.secret
+supabase/.temp/
+supabase/.branches/

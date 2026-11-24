@@ -50,7 +50,8 @@ function publicListing(o) {
 }
 const publicOpportunities = opportunities.map(publicListing).filter(Boolean);
 const publicArchived = archived.map(publicListing).filter(Boolean);
-const data = { settings: publicSettings, organizers, opportunities: publicOpportunities, builtAt: new Date(now).toISOString() };
+const { backend: _privateBackend, ...browserSettings } = publicSettings;
+const data = { settings: browserSettings, organizers, opportunities: publicOpportunities, builtAt: new Date(now).toISOString() };
 const seo = buildSite({ settings: publicSettings, organizers, opportunities: publicOpportunities, archived: publicArchived, now, siteUrl });
 
 const dist = path.join(root, 'dist');
@@ -61,9 +62,11 @@ await writeFile(path.join(dist, 'opportunities.json'), JSON.stringify(data, null
 await writeFile(path.join(dist, 'data.js'), `window.__PRIZD_DATA__ = ${JSON.stringify(data).replace(/</g, '\\u003c')};\n`);
 // Public browser config for accounts/alerts. The anon key is meant to be public; row-level security protects the data.
 const backend = settings.backend || {};
-const publicConfig = backend.supabaseUrl && backend.supabaseAnonKey
-  ? { supabaseUrl: backend.supabaseUrl, supabaseAnonKey: backend.supabaseAnonKey, functionsUrl: `${backend.supabaseUrl}/functions/v1` }
-  : {};
+const supabaseUrl = process.env.PRIZD_SUPABASE_URL || backend.supabaseUrl || '';
+const supabaseAnonKey = process.env.PRIZD_SUPABASE_PUBLIC_KEY || backend.supabaseAnonKey || '';
+const isPublicKey = key => { if (/^sb_publishable_[A-Za-z0-9_-]+$/.test(key)) return true; try { return JSON.parse(Buffer.from(key.split('.')[1], 'base64url').toString()).role === 'anon'; } catch { return false; } };
+if (Boolean(supabaseUrl) !== Boolean(supabaseAnonKey) || (supabaseUrl && (!/^https:\/\/[a-z0-9-]+\.supabase\.co$/.test(supabaseUrl) || !isPublicKey(supabaseAnonKey)))) throw new Error('Invalid public Supabase configuration; never use a service-role or secret key in browser configuration.');
+const publicConfig = supabaseUrl ? { supabaseUrl, supabaseAnonKey, functionsUrl: `${supabaseUrl}/functions/v1`, alertsEnabled: process.env.PRIZD_ALERTS_ENABLED === 'true' } : {};
 await writeFile(path.join(dist, 'config.js'), `window.PRIZD_CONFIG = ${JSON.stringify(publicConfig)};\n`);
 await writeFile(path.join(dist, '.nojekyll'), '');
 

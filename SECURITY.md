@@ -1,0 +1,6 @@
+# Security policy
+Report suspected vulnerabilities privately using GitHub Security > Report a vulnerability (if enabled). Do not post exploitable details, credentials or user data in public issues. If unavailable, contact the maintainer privately.
+ 
+Public security code is reviewable; secrets, private incident records, user exports and production credentials must never be committed. Store operational notes in an access-controlled private workspace, and credentials in Supabase secrets or GitHub Actions secrets. The browser receives only the public Supabase key. Apply the database security migration before activating sign-in.
+
+Before production: enable MFA for administrators, use exact HTTPS auth redirect URLs, configure Auth rate limits and CAPTCHA if appropriate, configure SMTP for email sign-in, review row-level security using two test accounts and an anonymous client, enable secret scanning/push protection where available, require reviewed PRs, and test account deletion and recovery. GitHub Pages cannot configure arbitrary HTTP response headers; use a controlled reverse proxy if full CSP, HSTS and framing policies are required. Review dependencies and rotate credentials if exposed.
