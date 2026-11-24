@@ -1,8 +1,8 @@
-# PRIZD — Hackathons, case competitions and paid internships
+# PRIZD — Hackathons, research opportunities and case competitions
 
-A GitHub-ready opportunity board for hackathons, case competitions, product, finance, consulting, marketing, economics and related fields. The frontend uses giant black typography, a pale grey canvas, floating glass forms, pink reflections and scroll-driven chapter transitions.
+A public opportunity board for three categories. Card titles and featured picks open dedicated listing pages with deadlines, eligibility, rewards and official application links.
 
-The board contains the supplied competition listings. Card titles, featured picks and **Visit event** links open the event’s official page directly. **Details** shows the deadline, eligibility, reward breakdown and notes.
+Everyone is welcome to contribute via [GitHub issues](https://github.com/raus7n/Prizd/issues) or pull requests. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 **New one-folder maintenance:** after the one-time upgrade, upload JSON, JSONL or structured text only into `updates/inbox/`. GitHub Actions imports changes, synchronizes organizer records, archives expired competitions, rebuilds the site and publishes it automatically. Read **[UPDATES_GUIDE.md](UPDATES_GUIDE.md)**. No database, API key or npm package installation is required.
 
@@ -27,7 +27,7 @@ Official setup reference: https://docs.github.com/en/pages/getting-started-with-
 A single JavaScript page is almost invisible to Google, so the build also writes plain HTML that search engines can read:
 
 - **One page per listing** at `/<category>/<listing-id>/` (for example `/hackathons/nebius-nvidia-ai-2026/`) with the prize, deadline, eligibility and official link, plus links to related listings. Listings with no official link yet show "Official link coming soon".
-- **One page per category** (`/hackathons/`, `/case-competitions/`, `/research-internships/` and so on) and an **India page** (`/india/`) for everything in the India region. Titles and intro copy are editable in `data/settings.json` under `categoryPages` and `regionPages`. Pages with fewer than three listings are marked `noindex` until they grow.
+- **One page per category** (`/hackathons/`, `/case-competitions/`, `/research-internships/` and so on) with both Indian and international listings combined. Titles and intro copy are editable in `data/settings.json` under `categoryPages` and `regionPages`. Pages with fewer than three listings are marked `noindex` until they grow.
 - **Archived listings keep their page.** When the daily sync moves an expired listing to `data/archive/`, its URL stays online marked "Closed", so search engines do not hit a 404 and past editions keep ranking.
 - **`sitemap.xml`, `robots.txt`, `404.html`**, canonical tags, Open Graph / Twitter cards and structured data (WebSite, WebPage, CollectionPage, breadcrumbs).
 - A **“Browse by type”** section on the home page so crawlers reach every page from the front door.
@@ -52,7 +52,7 @@ Each listing page is built from its JSON file, so the data is the content. Speci
 2. In GitHub, open `data/opportunities/` → **Add file → Create new file**.
 3. Use a unique filename such as `climate-challenge-2026.json`.
 4. Replace the title, organizer, URL, deadline, eligibility and reward details with your listing’s information. Use the exact event or application link you want visitors to open.
-5. Commit to `main` and wait for the publishing workflow.
+5. Commit to your fork and open a pull request against `main`. After review and merge, the publishing workflow runs.
 
 To edit an entry, open its JSON file, click the pencil, change the values and commit. To remove it, delete its file and commit. Editing preserves its original addition date.
 

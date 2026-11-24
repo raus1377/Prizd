@@ -3,6 +3,16 @@ description: Suggest a hackathon, case competition or research programme for Pri
 title: "Submit: "
 labels: ["submission"]
 body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Opportunity type
+      options:
+        - Hackathon
+        - Research opportunity
+        - Case competition
+    validations:
+      required: true
   - type: input
     id: name
     attributes:
