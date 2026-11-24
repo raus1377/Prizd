@@ -1,0 +1,26 @@
+{
+  "id": "iim-trichy-green-innovation-challenge",
+  "title": "IIM Trichy Green Innovation Challenge",
+  "category": "Product",
+  "organizerId": "iim-trichy-green-innovation-challenge-organizer",
+  "summary": "Green innovation challenge.",
+  "deadline": null,
+  "location": "Tiruchirappalli, India",
+  "format": "To confirm",
+  "eligibility": "Restricted to IIM Tiruchirappalli students according to detailed rules.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize information not supplied."
+  },
+  "tags": [],
+  "url": "https://api.unstop.com/competitions/green-innovation-challenge-iim-tiruchirappalli-trichy-1768448",
+  "entryStatus": "check",
+  "notes": [
+    "Current entry status not supplied."
+  ],
+  "researchAsOf": "2026-10-12"
+}

@@ -1762,5 +1762,86 @@
     "monogram": "RP",
     "color": "#444444",
     "website": "https://indiahackathons.com/"
+  },
+  {
+    "id": "william-mary-stock-pitch-2027-organizer",
+    "name": "William & Mary School of Business",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "W&",
+    "color": "#444444",
+    "website": "https://mason.wm.edu/boehly-center/events-news/bianca-caragliano-stock-pitch/"
+  },
+  {
+    "id": "schlesinger-global-family-enterprise-case-2027-organizer",
+    "name": "University of Vermont Grossman School of Business",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "Uo",
+    "color": "#444444",
+    "website": "https://site.uvm.edu/sgfecc/"
+  },
+  {
+    "id": "cfa-institute-research-challenge-2026-27-organizer",
+    "name": "CFA Institute",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CI",
+    "color": "#444444",
+    "website": "https://www.cfainstitute.org/insights/events/research-challenge"
+  },
+  {
+    "id": "aima-india-case-league-2026-organizer",
+    "name": "All India Management Association",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "AI",
+    "color": "#444444",
+    "website": "https://www.aima.in/events/aima-icrc-india-case-league-2026"
+  },
+  {
+    "id": "kogod-case-competition-organizer",
+    "name": "American University Kogod School of Business",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "AU",
+    "color": "#444444",
+    "website": "https://kogod.american.edu/case-competition"
+  },
+  {
+    "id": "tippie-international-case-competition-organizer",
+    "name": "University of Iowa Tippie College of Business",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "Uo",
+    "color": "#444444",
+    "website": "https://tippie.uiowa.edu/about/centers-and-institutes/iib/tippie-international-case-competition"
+  },
+  {
+    "id": "iim-trichy-green-innovation-challenge-organizer",
+    "name": "IIM Tiruchirappalli",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IT",
+    "color": "#444444",
+    "website": "https://api.unstop.com/competitions/green-innovation-challenge-iim-tiruchirappalli-trichy-1768448"
+  },
+  {
+    "id": "vietnam-finance-case-competition-2026-organizer",
+    "name": "Vietnam Finance Case Competition",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "VF",
+    "color": "#444444",
+    "website": "https://www.vfainternational.org/vfcc-2026/"
+  },
+  {
+    "id": "harvard-citadel-stock-pitch-2026-organizer",
+    "name": "Harvard Financial Analysts Club",
+    "kind": "Community",
+    "prestige": 50,
+    "monogram": "HF",
+    "color": "#444444",
+    "website": "https://www.harvardfac.org/hfac-citadel-pitch-comp"
   }
 ]
