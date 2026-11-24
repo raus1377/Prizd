@@ -149,7 +149,7 @@ ${tags}
 <body class="page">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="topline" aria-hidden="true"></div>
-<header class="page-head"><a class="page-brand" href="${base}" aria-label="${esc(brand)} home">${esc(brand.toLowerCase())}<em>.</em></a><nav class="page-nav" aria-label="Main">${navHubs.map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}<a href="${base}#opportunities">Search the index ↗</a></nav></header>
+<header class="page-head"><a class="page-brand" href="${base}" aria-label="${esc(brand)} home">${esc(brand.toLowerCase())}<em>.</em></a><nav class="page-nav" aria-label="Main">${navHubs.map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}<a href="${base}submit/">Contribute</a><a href="${base}#opportunities">Search the index ↗</a></nav></header>
 <main id="main">
 ${body}
 </main>
@@ -288,11 +288,14 @@ ${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o,
   files.set('submit/index.html', layout({
     base: '../', title: `Submit a Hackathon or Competition | ${brand}`, description: clip(`Run a hackathon, case competition or research programme for students? Submit it to ${brand} for free. We list the prize, deadline and eligibility and link to your official page.`, 158), path: 'submit/',
     body: `<nav class="crumbs" aria-label="Breadcrumb"><a href="../">${esc(brand)}</a><span aria-hidden="true">/</span><span aria-current="page">Submit an opportunity</span></nav>
-<h1>Submit an opportunity</h1>
-<p class="lede">Running a hackathon, case competition or research programme for students? Send it to us and we will list it for free, with the prize, deadline and eligibility, and a link to your official page.</p>
+<h1>Contribute to Prizd</h1>
+<p class="lede">Anyone can suggest an opportunity, report an error or improve the website. Contributions are public on GitHub and reviewed before publication.</p>
 <h2>What we need</h2>
 <ul><li>The official page or registration link</li><li>The name of the organizer</li><li>The prize or stipend, the deadline and who can apply</li></ul>
-<p class="actions">${issueUrl ? `<a class="cta" href="${esc(issueUrl)}" target="_blank" rel="noopener noreferrer">Submit on GitHub <span aria-hidden="true">↗</span></a>` : ''}${mailUrl ? `<a class="cta" href="${esc(mailUrl)}">Submit by email</a>` : ''}</p>
+<p class="actions">${issueUrl ? `<a class="cta" href="${esc(issueUrl)}" target="_blank" rel="noopener noreferrer">Submit an opportunity (issue) <span aria-hidden="true">↗</span></a>` : ''}${mailUrl ? `<a class="cta" href="${esc(mailUrl)}">Submit by email</a>` : ''}</p>
+<h2>Report a problem or contribute code</h2>
+<p>Found outdated information or a website bug? Open an issue. To add or edit listings yourself, fork the repository, follow the contribution guide and open a pull request against main. A GitHub account is required, but a Prizd account is not.</p>
+<p class="actions">${settings.repoUrl ? `<a class="cta" href="${esc(settings.repoUrl)}/issues/new">Report an issue ↗</a><a class="cta" href="${esc(settings.repoUrl)}/fork">Fork &amp; contribute ↗</a><a class="text-link" href="${esc(settings.repoUrl)}/compare">Open a pull request ↗</a><a class="text-link" href="${esc(settings.repoUrl)}/blob/main/CONTRIBUTING.md">Contribution guide ↗</a>` : ''}</p>
 <h2>Already listed?</h2>
 <p>Every listing has its own page here. Linking to it from your event page or announcement helps students find you, and helps ${esc(brand)} reach more of them.</p>`
   }));

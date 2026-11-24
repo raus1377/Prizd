@@ -70,6 +70,8 @@ jobs:
 
       - name: Create or update catalog pull request
         id: catalog_pr
+        if: ${{ steps.changes.outputs.catalog_changed == 'true' }}
+        continue-on-error: true
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -124,18 +126,23 @@ jobs:
         if: ${{ steps.catalog_pr.outputs.pull-request-url != '' }}
         run: echo "Review catalog PR at ${{ steps.catalog_pr.outputs.pull-request-url }}"
 
-      # Never publish unmerged PR changes. Deploy immediately after an allowed
-      # bot PR merge (bot merges do not trigger another workflow), or rebuild
-      # and deploy on push to main after a human merges a reviewed PR.
+      # If catalog automation cannot merge, publish only the reviewed main catalog.
+      - name: Rebuild from reviewed main when catalog changes are pending
+        if: ${{ steps.changes.outputs.catalog_changed == 'true' && steps.merge.outputs.catalog_merged != 'true' }}
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+        run: |
+          git restore --source=HEAD --staged --worktree -- data/organizers.json data/opportunities data/archive updates/inbox
+          git clean -fd -- data/opportunities data/archive updates/inbox
+          npm run build
+
       - name: Upload reviewed site artifact
-        if: ${{ steps.changes.outputs.catalog_changed == 'false' || steps.merge.outputs.catalog_merged == 'true' }}
         uses: actions/upload-pages-artifact@v4
         with:
           path: dist
 
   deploy:
     needs: prepare
-    if: ${{ needs.prepare.outputs.catalog_changed == 'false' || needs.prepare.outputs.catalog_merged == 'true' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
