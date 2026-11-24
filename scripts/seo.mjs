@@ -166,7 +166,7 @@ ${body}
 
   // Event markup only when the listing carries a real startDate; we never invent event dates.
   const eventLd = (o, path) => {
-    if (!o.startDate || NOT_AN_EVENT.has(o.category)) return [];
+    if (!o.startDate || NOT_AN_EVENT.has(o.originalCategory || o.category)) return [];
     const online = o.format === 'Online';
     const virtual = { '@type': 'VirtualLocation', url: o.url || abs(path) };
     const place = { '@type': 'Place', name: o.location, address: o.location };

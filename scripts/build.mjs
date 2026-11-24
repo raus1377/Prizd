@@ -21,7 +21,7 @@ for (const file of (await readdir(path.join(root, 'data/opportunities'))).filter
   opportunities.push(normalizeOpportunity(o, organizers.find(x => x.id === o.organizerId), settings, gitAddedAt(root, relative), now));
 }
 for (const id of settings.featured || []) if (!ids.has(id)) console.warn(`⚠ settings.featured lists "${id}" but no active listing has that id; it is ignored.`);
-const data = { settings, organizers, opportunities, builtAt: new Date(now).toISOString() };
+
 
 // Archived listings are not shown in the app, but their pages stay online as "Closed" so search engines keep the URLs.
 const archived = [];
@@ -40,7 +40,18 @@ for (const file of archiveFiles) {
 // The public site address: SITE_URL (set by the GitHub Actions workflow) wins over settings.siteUrl.
 const siteUrl = (process.env.SITE_URL || settings.siteUrl || '').replace(/\/+$/, '');
 if (!siteUrl) console.warn('⚠ No site URL: canonical tags, structured data and sitemap.xml are skipped. Set SITE_URL or "siteUrl" in data/settings.json.');
-const seo = buildSite({ settings, organizers, opportunities, archived, now, siteUrl });
+const publicCategories = ['Hackathon', 'Research', 'Case competition'];
+const publicSettings = { ...settings, categories: publicCategories, categoryPages: Object.fromEntries(publicCategories.map(c => [c, settings.categoryPages[c]])), regionPages: {}, keywordPages: [], seoTitle: 'Prizd — Hackathons, Research Opportunities & Case Competitions', seoDescription: 'Discover hackathons, research opportunities and case competitions. Compare eligibility, funding and deadlines, then apply on the official page.' };
+function publicListing(o) {
+  const labels = [o.category, ...(o.categories || [])].map(c => c === 'Research internship' ? 'Research' : c);
+  const category = publicCategories.includes(labels[0]) ? labels[0] : publicCategories.find(c => labels.includes(c));
+  if (!category) return null;
+  return { ...o, originalCategory: o.category, category, categories: [...new Set(labels.filter(c => publicCategories.includes(c)))], detailPath: publicSettings.categoryPages[category].slug + '/' + o.id + '/' };
+}
+const publicOpportunities = opportunities.map(publicListing).filter(Boolean);
+const publicArchived = archived.map(publicListing).filter(Boolean);
+const data = { settings: publicSettings, organizers, opportunities: publicOpportunities, builtAt: new Date(now).toISOString() };
+const seo = buildSite({ settings: publicSettings, organizers, opportunities: publicOpportunities, archived: publicArchived, now, siteUrl });
 
 const dist = path.join(root, 'dist');
 await rm(dist, { recursive: true, force: true });
