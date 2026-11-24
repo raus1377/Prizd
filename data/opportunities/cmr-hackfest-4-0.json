@@ -1,0 +1,26 @@
+{
+  "id": "cmr-hackfest-4-0",
+  "title": "CMR HackFest 4.0",
+  "category": "Hackathon",
+  "organizerId": "cmr",
+  "summary": "FAQ lists 25 Nov registration cutoff; actual build date not established.",
+  "deadline": null,
+  "deadlineDate": "2026-11-25",
+  "location": "Hyderabad, India",
+  "format": "To confirm",
+  "eligibility": "Check official FAQ.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://cmr-hackfest-4.vercel.app/downloads/hackfest-faq.pdf",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

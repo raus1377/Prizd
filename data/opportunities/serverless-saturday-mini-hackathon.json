@@ -1,0 +1,25 @@
+{
+  "id": "serverless-saturday-mini-hackathon",
+  "title": "Serverless Saturday Mini Hackathon",
+  "category": "Hackathon",
+  "organizerId": "aws-student-builder-club",
+  "summary": "Header 28 Nov 10 AM–2 PM, description 21 Nov.",
+  "deadline": null,
+  "location": "Pune, India",
+  "format": "In person",
+  "eligibility": "Outside-college eligibility unclear.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://www.meetup.com/aws-sbg-at-genba-sopanrao-moze-college-of-engineering/events/317366081/",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

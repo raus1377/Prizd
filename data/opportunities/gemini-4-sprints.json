@@ -1,0 +1,25 @@
+{
+  "id": "gemini-4-sprints",
+  "title": "Gemini 4 Sprints",
+  "category": "Hackathon",
+  "organizerId": "google-deepmind-and-google-cloud",
+  "summary": "Build and deploy AI agent or app; 27 Nov 9 AM–5 PM.",
+  "deadline": "2026-11-24T23:59:00+05:30",
+  "location": "Bengaluru, India",
+  "format": "Hybrid",
+  "eligibility": "Idea and three-slide pitch; venue shared with shortlisted builders.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://rsvp.withgoogle.com/events/gemini-sprints",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

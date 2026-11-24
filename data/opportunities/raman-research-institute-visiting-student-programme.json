@@ -1,0 +1,25 @@
+{
+  "id": "raman-research-institute-visiting-student-programme",
+  "title": "Visiting Student Programme",
+  "category": "Research",
+  "organizerId": "raman-research-institute",
+  "summary": "Experimental/theoretical physics and astronomy; apply at least two months before visit.",
+  "deadline": null,
+  "location": "Bengaluru, India",
+  "format": "In person",
+  "eligibility": "Students within one or two years of finishing degree encouraged.",
+  "team": null,
+  "prize": {
+    "amount": 15000,
+    "currency": "INR",
+    "kind": "stipend",
+    "rewardType": "cash",
+    "description": "₹15,000/month for full-time visitors plus eligible return train fare."
+  },
+  "tags": [],
+  "url": "https://www.rri.res.in/careers/visiting-students",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

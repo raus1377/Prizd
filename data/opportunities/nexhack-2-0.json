@@ -1,0 +1,25 @@
+{
+  "id": "nexhack-2-0",
+  "title": "NexHack 2.0",
+  "category": "Hackathon",
+  "organizerId": "geeta-university",
+  "summary": "24-hour national hackathon 24–25 Nov; ten tracks.",
+  "deadline": null,
+  "location": "Panipat, Naultha, India",
+  "format": "In person",
+  "eligibility": "Student event; same-day admission unconfirmed.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://www.devnovate.co/events/",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

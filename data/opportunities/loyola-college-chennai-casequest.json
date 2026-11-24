@@ -1,0 +1,28 @@
+{
+  "id": "loyola-college-chennai-casequest",
+  "title": "CaseQuest",
+  "category": "Case competition",
+  "organizerId": "loyola-college-chennai",
+  "summary": "Directory deadlines conflict: 1 Dec versus 24 Jan 2027.",
+  "deadline": null,
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Check eligibility.",
+  "team": {
+    "min": 2,
+    "max": 2
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://unstop.com/competitions/1763017",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

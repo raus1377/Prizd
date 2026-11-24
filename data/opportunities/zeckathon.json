@@ -1,0 +1,25 @@
+{
+  "id": "zeckathon",
+  "title": "Zeckathon",
+  "category": "Hackathon",
+  "organizerId": "iit-patna",
+  "summary": "Description places competition in October 2026.",
+  "deadline": null,
+  "location": "Patna, India",
+  "format": "To confirm",
+  "eligibility": "Current entry not verified.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "entryStatus": "closed",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

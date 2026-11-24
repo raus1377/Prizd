@@ -1,0 +1,28 @@
+{
+  "id": "iit-madras-finvent",
+  "title": "Finvent",
+  "category": "Case competition",
+  "organizerId": "iit-madras",
+  "summary": "Finance aptitude and dataset valuation; top ten present at IIT Madras, pass required.",
+  "deadline": "2026-11-25T14:32:00+05:30",
+  "location": "India",
+  "format": "Hybrid",
+  "eligibility": "UG/PG any stream; same institute.",
+  "team": {
+    "min": 1,
+    "max": 3
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://unstop.com/competitions/1816498",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

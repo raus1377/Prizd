@@ -1,0 +1,26 @@
+{
+  "id": "iit-hyderabad-maestro-residential-research-internship",
+  "title": "MAESTRO Residential Research Internship",
+  "category": "Research",
+  "organizerId": "iit-hyderabad",
+  "summary": "Semester placement from 18 Jan 2027; rank three projects, upload CV/NOC; hostel and mess at own cost.",
+  "deadline": null,
+  "deadlineDate": "2026-12-10",
+  "location": "Hyderabad, India",
+  "format": "In person",
+  "eligibility": "External final-year B.E./B.Tech, top 20%, Mechanical, Aerospace, Production, Robotics, Mechatronics or Aeronautical Engineering.",
+  "team": null,
+  "prize": {
+    "amount": 7000,
+    "currency": "INR",
+    "kind": "stipend",
+    "rewardType": "cash",
+    "description": "₹7,000/month."
+  },
+  "tags": [],
+  "url": "https://mae.iith.ac.in/maestro.html",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

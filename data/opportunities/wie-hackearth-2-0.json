@@ -1,0 +1,26 @@
+{
+  "id": "wie-hackearth-2-0",
+  "title": "WIE HackEarth 2.0",
+  "category": "Hackathon",
+  "organizerId": "wie-hackearth",
+  "summary": "Offline final during 23–29 Nov.",
+  "deadline": null,
+  "deadlineDate": "2026-11-18",
+  "location": "Greater Noida, India",
+  "format": "In person",
+  "eligibility": "Registration closed 18 Nov.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://ieeegusbwiehackearth20.vercel.app/",
+  "region": "India",
+  "entryStatus": "closed",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

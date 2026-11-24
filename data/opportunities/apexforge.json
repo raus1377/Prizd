@@ -1,0 +1,25 @@
+{
+  "id": "apexforge",
+  "title": "APEXFORGE",
+  "category": "Hackathon",
+  "organizerId": "simats-engineering",
+  "summary": "One-day hackathon 26 Nov.",
+  "deadline": null,
+  "location": "Chennai, Thandalam, India",
+  "format": "In person",
+  "eligibility": "Organizer says registration closed.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://apexforge-2026.lovable.app/",
+  "region": "India",
+  "entryStatus": "closed",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

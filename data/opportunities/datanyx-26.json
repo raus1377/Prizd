@@ -1,0 +1,26 @@
+{
+  "id": "datanyx-26",
+  "title": "DataNyx ’26",
+  "category": "Hackathon",
+  "organizerId": "mjcet",
+  "summary": "Datathon 28–29 Nov; final RSVP 24 Nov for selected teams.",
+  "deadline": null,
+  "deadlineDate": "2026-11-19",
+  "location": "Hyderabad, Banjara Hills, India",
+  "format": "In person",
+  "eligibility": "Selected teams only.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://www.datanyx.in/timeline",
+  "region": "India",
+  "entryStatus": "closed",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

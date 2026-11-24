@@ -1,0 +1,28 @@
+{
+  "id": "codegnan-12-hour-hackathon",
+  "title": "Codegnan 12-hour Hackathon",
+  "category": "Hackathon",
+  "organizerId": "codegnan",
+  "summary": "28 Nov 8 AM–8 PM; DS, analytics, agentic AI and full stack.",
+  "deadline": null,
+  "location": "Hyderabad, JNTU Metro, India",
+  "format": "In person",
+  "eligibility": "Free; outside access unclear.",
+  "team": {
+    "min": 2,
+    "max": 3
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Reward details not confirmed."
+  },
+  "tags": [],
+  "url": "https://codegnan.com/hackathon/",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}
