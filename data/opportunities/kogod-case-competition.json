@@ -1,0 +1,26 @@
+{
+  "id": "kogod-case-competition",
+  "title": "American University Kogod Case Competition",
+  "category": "Case competition",
+  "organizerId": "kogod-case-competition-organizer",
+  "summary": "University case competition.",
+  "deadline": null,
+  "location": "United States",
+  "format": "To confirm",
+  "eligibility": "Restricted to American University and designated partner institutions.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize information not supplied."
+  },
+  "tags": [],
+  "url": "https://kogod.american.edu/case-competition",
+  "entryStatus": "check",
+  "notes": [
+    "Current registration and schedule not supplied."
+  ],
+  "researchAsOf": "2026-10-12"
+}

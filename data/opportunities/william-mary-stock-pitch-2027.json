@@ -1,0 +1,32 @@
+{
+  "id": "william-mary-stock-pitch-2027",
+  "title": "Bianca Caragliano Stock Pitch Competition 2027",
+  "category": "Finance",
+  "organizerId": "william-mary-stock-pitch-2027-organizer",
+  "summary": "Submit a one-page investment thesis; selected teams present investment analysis.",
+  "deadline": null,
+  "deadlineDate": "2026-11-20",
+  "location": "Williamsburg, Virginia, USA",
+  "format": "Hybrid",
+  "eligibility": "Undergraduates worldwide, any major or year; teams from the same university, faculty adviser mandatory.",
+  "team": {
+    "min": 3,
+    "max": 4
+  },
+  "prize": {
+    "amount": 8500,
+    "currency": "USD",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "US$8,500 total prize money."
+  },
+  "tags": [],
+  "url": "https://mason.wm.edu/boehly-center/events-news/bianca-caragliano-stock-pitch/",
+  "entryStatus": "check",
+  "notes": [
+    "Competition 9–10 April 2027. Two hotel rooms per team, meals and up to $1,000 transportation reimbursement subject to organizer rules."
+  ],
+  "researchAsOf": "2026-10-12",
+  "startDate": "2027-04-09",
+  "endDate": "2027-04-10"
+}

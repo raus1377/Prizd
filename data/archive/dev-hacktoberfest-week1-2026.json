@@ -1,0 +1,31 @@
+{
+  "id": "dev-hacktoberfest-week1-2026",
+  "title": "DEV Hacktoberfest Open-Source AI — Week 1",
+  "category": "Hackathon",
+  "organizerId": "dev",
+  "summary": "Build with open-source AI and publish the required DEV submission.",
+  "deadline": "2026-10-12T12:29:00+05:30",
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "Check the official rules for age, country and student eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize details were not established in the supplied research; check the official page."
+  },
+  "tags": [
+    "Open source",
+    "AI",
+    "Hacktoberfest"
+  ],
+  "url": "https://dev.to/challenges/hacktoberfest-week1-2026-10-05?bb=264648&utm_source=chatgpt.com",
+  "entryStatus": "open",
+  "notes": [
+    "Later weekly challenges have separate openings and deadlines."
+  ],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10"
+}

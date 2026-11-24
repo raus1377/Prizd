@@ -1,0 +1,26 @@
+{
+  "id": "tippie-international-case-competition",
+  "title": "Tippie International Case Competition",
+  "category": "Case competition",
+  "organizerId": "tippie-international-case-competition-organizer",
+  "summary": "International business case competition.",
+  "deadline": null,
+  "location": "Iowa, USA",
+  "format": "To confirm",
+  "eligibility": "Invitation only, primarily Iowa and nearby institutions.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize information not supplied."
+  },
+  "tags": [],
+  "url": "https://tippie.uiowa.edu/about/centers-and-institutes/iib/tippie-international-case-competition",
+  "entryStatus": "closed",
+  "notes": [
+    "2026 registration closed."
+  ],
+  "researchAsOf": "2026-10-12"
+}

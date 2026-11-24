@@ -1,0 +1,36 @@
+{
+  "upsert": [
+    {
+      "id": "hack-the-audience-2026-creator-to-ceo",
+      "title": "Hack the Audience 2026: Creator-to-CEO Hackathon",
+      "category": "Hackathon",
+      "organizer": {
+        "name": "Extriver Partners",
+        "kind": "Company",
+        "website": "https://extriver.com",
+        "prestige": 30
+      },
+      "summary": "Fully online 31-day rolling hackathon where teams of up to three pick one of five creator partners and build a product for that creator's audience. Capped at 100 teams; winning products may be promoted by creator partners under a 20% revenue share for two years.",
+      "deadline": null,
+      "location": "Worldwide",
+      "region": "Global",
+      "format": "Online",
+      "eligibility": "Free entry; teams of up to 3. No country restriction stated on the listing; confirm on the official page. Field capped at 100 teams, so register early.",
+      "team": { "min": 1, "max": 3 },
+      "prize": {
+        "amount": 1600,
+        "currency": "USD",
+        "kind": "pool",
+        "description": "US$1,600 in cash plus sponsor credits from Render, Tin Computer and .xyz (split between cash and credits not stated)."
+      },
+      "tags": ["AI", "Vibe coding", "Creator economy"],
+      "url": "https://vibecoding.app/ai-events/hack-the-audience-2026-creator-to-ceo-hackathon-2026-11",
+      "entryStatus": "check",
+      "notes": [
+        "Runs Thu 5 Nov to Sat 5 Dec 2026 (UTC). No registration deadline stated on the listing page; official site: https://extriver.com/event1 (not independently opened)."
+      ],
+      "researchAsOf": "2026-10-31",
+      "sourceUrl": "https://vibecoding.app/ai-events/hack-the-audience-2026-creator-to-ceo-hackathon-2026-11"
+    }
+  ]
+}
