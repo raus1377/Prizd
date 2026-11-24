@@ -2,7 +2,7 @@
   "id": "your-opportunity-slug",
   "title": "Name of the opportunity",
   "category": "Hackathon",
-  "organizerId": "amazon",
+  "organizerId": "example-organizer",
   "summary": "A clear one or two sentence description of the challenge and what participants submit.",
   "deadline": "2026-11-02T18:00:00+05:30",
   "location": "Worldwide",
@@ -16,7 +16,8 @@
     "amount": 10000,
     "currency": "USD",
     "kind": "pool",
-    "description": "Total cash prize pool; replace with the actual published prize breakdown."
+    "description": "Total cash prize pool; replace with the actual published prize breakdown.",
+    "rewardType": "cash"
   },
   "tags": [
     "AI",

@@ -91,6 +91,7 @@ export function validateOpportunity(o, file, settings, organizers) {
   if (!Array.isArray(o.tags) || o.tags.some(t => typeof t !== 'string')) fail('tags must be an array of strings');
   if (o.team !== null && (!o.team || !Number.isInteger(o.team.min) || o.team.min < 1 || (o.team.max !== null && (!Number.isInteger(o.team.max) || o.team.max < o.team.min)))) fail('team must be null, or have positive min and max (max can be null if unknown)');
   if (!o.prize || !['pool','first','stipend','none','undisclosed'].includes(o.prize.kind)) fail('prize.kind must be pool, first, stipend, none, or undisclosed');
+  if (o.prize.rewardType !== undefined && !['cash','credits','noncash','unknown'].includes(o.prize.rewardType)) fail('prize.rewardType must be cash, credits, noncash or unknown');
   if (typeof o.prize.description !== 'string' || !o.prize.description.trim()) fail('prize.description is required');
   if (o.prize.amount !== null && (!Number.isFinite(o.prize.amount) || o.prize.amount < 0)) fail('prize.amount must be null or a nonnegative number');
   if (!/^[A-Z]{3}$/.test(o.prize.currency || '')) fail('prize.currency must be a three-letter code');
@@ -121,6 +122,6 @@ export function normalizeOpportunity(o, organizer, settings, addedAt, now) {
     ...((settings.featured || []).includes(o.id) ? { featuredRank: settings.featured.indexOf(o.id) } : {}),
     organizer,
     addedAt: addedAt || o.addedAt || new Date(now).toISOString(),
-    prizeUsd: o.prize.usdEquivalent ?? (o.prize.amount === null ? 0 : o.prize.amount * settings.prizeUsdRates[o.prize.currency])
+    prizeUsd: ['credits','noncash'].includes(o.prize.rewardType) ? 0 : (o.prize.usdEquivalent ?? (o.prize.amount === null ? 0 : o.prize.amount * settings.prizeUsdRates[o.prize.currency]))
   };
 }
