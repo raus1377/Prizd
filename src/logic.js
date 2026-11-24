@@ -36,14 +36,16 @@
       if (state.category !== 'all' && o.category !== state.category && !(o.categories || []).includes(state.category)) return false;
       if (state.kind !== 'all' && o.organizer.kind !== state.kind) return false;
       if (state.format !== 'all' && o.format !== state.format && !(o.format === 'Hybrid' && ['Online','In person'].includes(state.format))) return false;
-      if (state.paid === 'yes' && !(o.prize.kind === 'stipend' ? o.prize.amount === null || o.prize.amount > 0 : ['pool','first'].includes(o.prize.kind) && o.prize.amount > 0)) return false;
+      if (state.paid === 'yes' && !isPaid(o)) return false;
       if (state.team === 'solo' && (!o.team || o.team.min > 1)) return false;
       if (state.team === 'team' && (!o.team || o.team.min === 1)) return false;
       if (query && ![o.title,o.summary,o.organizer.name,o.category,o.location,o.eligibility,...o.tags].join(' ').toLowerCase().includes(query)) return false;
       return true;
     }), state.sort);
   }
-  const prizeText = o => o.prize.amount === null ? (o.prize.kind === 'none' ? 'Experience' : o.prize.kind === 'stipend' ? 'Paid · amount TBC' : 'To be announced') : new Intl.NumberFormat('en-US',{style:'currency',currency:o.prize.currency,maximumFractionDigits:0}).format(o.prize.amount);
+  // Monetary rewards must be explicitly verified; credit values are never cash.
+  const isPaid = o => o.prize.rewardType === 'cash' && ['pool','first','stipend'].includes(o.prize.kind) && (o.prize.amount === null || o.prize.amount > 0);
+  const prizeText = o => o.prize.rewardType === 'credits' ? 'Credits only' : o.prize.amount === null ? (o.prize.rewardType === 'cash' ? 'Cash · amount TBC' : o.prize.rewardType === 'credits' ? 'Credits only' : o.prize.kind === 'none' ? 'Experience' : 'To be announced') : new Intl.NumberFormat('en-US',{style:'currency',currency:o.prize.currency,maximumFractionDigits:0}).format(o.prize.amount);
   /* Internships and research programmes pay a stipend, not a prize, and have no team size: they get stipend wording and an accommodation / support field. */
   const isInternship = o => ['Internship', 'Research internship'].includes(o.originalCategory || o.category);
   const prizeKind = o => isInternship(o) ? 'STIPEND / MONTH' : ({pool:'PRIZE POOL',first:'FIRST PRIZE',stipend:'STIPEND / MONTH',none:'REWARD',undisclosed:'PRIZE'}[o.prize.kind]);
@@ -54,5 +56,5 @@
     if (o.team.max === null) return o.team.min === 1 ? 'Solo / team' : `At least ${o.team.min} members`;
     return o.team.min === o.team.max ? `${o.team.min} participant${o.team.min === 1 ? '' : 's'}` : `${o.team.min}–${o.team.max} participants`;
   }
-  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, prizeText, prizeKind, teamText, isInternship, supportText };
+  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, isPaid, prizeText, prizeKind, teamText, isInternship, supportText };
 })();

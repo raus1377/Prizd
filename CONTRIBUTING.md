@@ -14,3 +14,7 @@ Open a [submission issue](https://github.com/raus7n/Prizd/issues/new?template=su
 4. Open a pull request against `main`, describing the change and linking official sources for listings.
 
 Maintainers review submissions before merging. Public contribution does not grant direct write access to main or automatic publication.
+
+## Monetary rewards
+
+Set `prize.rewardType` to `cash` only when official rules confirm a cash prize or monetary stipend. Use `credits` for API, model, cloud, app, website or platform credits; `noncash` for goods or vouchers; `unknown` for unverified rewards. For mixed prizes, record only the verified cash portion in `prize.amount`; explain credits separately. Credit amounts never qualify as paid.

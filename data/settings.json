@@ -123,25 +123,11 @@
       "intro": "Essay, article and creative-writing contests, with prize, deadline and eligibility on every listing."
     }
   },
-  "regionPages": {
-    "India": {
-      "slug": "india",
-      "name": "India",
-      "title": "Hackathons, Case Competitions & Internships in India in {year}",
-      "h1": "Opportunities in India",
-      "intro": "Hackathons, case competitions, internships and contests from Indian companies, colleges and communities, for undergraduate and postgraduate students. Each listing shows the prize, the deadline and who can apply."
-    }
-  },
+  "regionPages": {},
   "featured": [
-    "meta-vr-start-2026",
-    "google-quantum-circuit-compilation-2026",
-    "elevenlabs-elevencreative-the-search-for-the-worlds-catchiest-ad",
-    "gemma-4-developer-agent-competition",
-    "nebius-nvidia-ai-2026",
-    "gitlab-transcend-2026",
-    "codex-twitchcon-hackathon-2026",
-    "paypal-ai-hackathon",
-    "loreal-brandstorm-2027"
+    "build-with-manus-ai-bengaluru",
+    "build-with-flutterflow-pune",
+    "diwali-festiverse-agent-to-agent"
   ],
   "defaultSort": "featured",
   "prizeUsdRates": {
@@ -161,80 +147,5 @@
   },
   "repoUrl": "https://github.com/raus7n/Prizd",
   "indexNowKey": "1ef7b4583b5f6892262de5aeb7815f57",
-  "keywordPages": [
-    {
-      "slug": "case-studies",
-      "name": "Case studies",
-      "title": "Case Study Competitions & Case Writing Contests in {year}",
-      "h1": "Case study competitions",
-      "intro": "Case study competitions and case writing contests for students. Each listing shows the prize, the deadline and who can apply before you click through to the official page.",
-      "keywords": [
-        "case study",
-        "case studies",
-        "case writing"
-      ]
-    },
-    {
-      "slug": "equity-research",
-      "name": "Equity research",
-      "title": "Equity Research & Stock Pitch Competitions in {year}",
-      "h1": "Equity research competitions",
-      "intro": "Equity research, stock pitch and valuation competitions for students interested in investing and finance, with prize, deadline and eligibility on every listing.",
-      "keywords": [
-        "equity research",
-        "stock pitch",
-        "investment research",
-        "valuation"
-      ]
-    },
-    {
-      "slug": "business-research",
-      "name": "Business research",
-      "title": "Business & Market Research Competitions in {year}",
-      "h1": "Business research competitions",
-      "intro": "Business, market and economics research competitions and contests for students. Compare prizes and deadlines, then apply on the organizer's official page.",
-      "categories": [
-        "Marketing",
-        "Economics",
-        "Research",
-        "Consulting",
-        "Finance"
-      ],
-      "keywords": [
-        "research"
-      ]
-    },
-    {
-      "slug": "product-case",
-      "name": "Product case",
-      "title": "Product Case Competitions for Students in {year}",
-      "h1": "Product case competitions",
-      "intro": "Product management cases and product challenges for students. Each listing shows the prize, the deadline and the eligibility rules.",
-      "categories": [
-        "Product"
-      ]
-    },
-    {
-      "slug": "hackathons/cash-prize",
-      "name": "Cash-prize hackathons",
-      "title": "Hackathons with Cash Prizes in {year} — Deadlines & Eligibility",
-      "h1": "Hackathons with cash prizes",
-      "intro": "Hackathons that pay real cash to winners, ranked by prize. Every listing shows the prize pool, the deadline and who can apply, including whether participants from India can enter.",
-      "categories": [
-        "Hackathon"
-      ],
-      "cashPrize": true
-    },
-    {
-      "slug": "case-competitions/india",
-      "name": "Case competitions in India",
-      "title": "Case Competitions in India for Students in {year}",
-      "h1": "Case competitions in India",
-      "intro": "Case competitions run by Indian colleges and companies for undergraduate and postgraduate students. Each listing shows the prize, the deadline and who can apply.",
-      "categories": [
-        "Case competition"
-      ],
-      "region": "India"
-    }
-  ]
+  "keywordPages": []
 }

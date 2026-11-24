@@ -39,7 +39,8 @@ export function deadlineText(o) {
 }
 const shortDeadline = o => o.deadline ? day(o.deadline) : o.deadlineDate ? day(o.deadlineDate + 'T12:00:00Z', 'UTC') : 'Date to confirm';
 const prizePhrase = o => {
-  if (o.prize.amount === null) return o.prize.kind === 'stipend' ? 'Paid' : o.prize.kind === 'none' ? 'No cash prize' : 'Prize to be announced';
+  if (o.prize.rewardType === 'credits') return 'Platform credits (not cash)';
+  if (o.prize.amount === null) return P.isPaid(o) ? 'Cash reward, amount not announced' : o.prize.kind === 'none' ? 'No cash prize' : 'Prize to be announced';
   return `${P.prizeText(o)} ${{ pool: 'prize pool', first: 'first prize', stipend: 'stipend', undisclosed: 'prize', none: 'reward' }[o.prize.kind]}`;
 };
 const STATUS = { open: 'Open', upcoming: 'Upcoming', check: 'Check entry', closed: 'Closed' };
