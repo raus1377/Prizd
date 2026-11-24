@@ -68,7 +68,7 @@ create policy "own saved" on public.saved_opportunities for all using (auth.uid(
 
 -- Column-level guard: users may edit preferences, not identity, consent history or verification flags.
 revoke update on public.profiles from authenticated;
-grant update (name, interests, digest_opt_in, reminder_opt_in, phone, whatsapp_opt_in, consent_at, source, ref) on public.profiles to authenticated;
+grant update (name, interests, digest_opt_in, reminder_opt_in, consent_at, source, ref) on public.profiles to authenticated;
 
 -- Create the profile when someone signs in with Google for the first time.
 create or replace function public.handle_new_user() returns trigger
@@ -88,7 +88,7 @@ create trigger on_auth_user_created after insert on auth.users for each row exec
 create or replace function public.keep_first_consent() returns trigger
 language plpgsql as $$
 begin
-  if old.consent_at is not null then new.consent_at := old.consent_at; end if;
+  if old.consent_at is not null then new.consent_at := old.consent_at; elsif new.consent_at is not null then new.consent_at := now(); end if;
   if old.source is not null then new.source := old.source; end if;
   if old.ref is not null then new.ref := old.ref; end if;
   -- a changed phone number is unverified again

@@ -262,13 +262,12 @@ ${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o,
 <ul>
 <li><b>If you sign in with Google:</b> your name, email address and profile picture, and the opportunities you save.</li>
 <li><b>If you leave an email:</b> your email address and the topics you ticked (hackathons, internships, case comps).</li>
-<li><b>If you add a WhatsApp number:</b> that number, only for deadline alerts you asked for.</li>
 <li><b>When you agree:</b> the time you agreed and the page you agreed on, so we can show your consent was given.</li>
 <li>If you arrive through a friend's invite link, we note the invite code.</li>
 </ul>
 <h2>Why</h2>
 <ul>
-<li>To keep your shortlist across devices and unlock filters.</li>
+<li>To keep your shortlist across devices and measure aggregate verified signup growth.</li>
 <li>To send the weekly digest and deadline reminders you opted into. We never send anything else, and we never sell or rent your data.</li>
 </ul>
 <h2>Who handles it</h2>

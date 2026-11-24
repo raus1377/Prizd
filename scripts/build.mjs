@@ -41,7 +41,8 @@ for (const file of archiveFiles) {
 const siteUrl = (process.env.SITE_URL || settings.siteUrl || '').replace(/\/+$/, '');
 if (!siteUrl) console.warn('⚠ No site URL: canonical tags, structured data and sitemap.xml are skipped. Set SITE_URL or "siteUrl" in data/settings.json.');
 const publicCategories = ['Hackathon', 'Research', 'Case competition'];
-const publicSettings = { ...settings, categories: publicCategories, categoryPages: Object.fromEntries(publicCategories.map(c => [c, settings.categoryPages[c]])), regionPages: {}, keywordPages: [], seoTitle: 'Prizd — Hackathons, Research Opportunities & Case Competitions', seoDescription: 'Discover hackathons, research opportunities and case competitions. Compare eligibility, funding and deadlines, then apply on the official page.' };
+const { backend: _backend, contactEmail: _contact, ...publicBase } = settings;
+const publicSettings = { ...publicBase, categories: publicCategories, categoryPages: Object.fromEntries(publicCategories.map(c => [c, settings.categoryPages[c]])), regionPages: {}, keywordPages: [], seoTitle: 'Prizd — Hackathons, Research Opportunities & Case Competitions', seoDescription: 'Discover hackathons, research opportunities and case competitions. Compare eligibility, funding and deadlines, then apply on the official page.' };
 function publicListing(o) {
   const labels = [o.category, ...(o.categories || [])].map(c => c === 'Research internship' ? 'Research' : c);
   const category = publicCategories.includes(labels[0]) ? labels[0] : publicCategories.find(c => labels.includes(c));
@@ -60,9 +61,14 @@ await cp(path.join(root, 'src'), dist, { recursive: true });
 await writeFile(path.join(dist, 'opportunities.json'), JSON.stringify(data, null, 2));
 await writeFile(path.join(dist, 'data.js'), `window.__PRIZD_DATA__ = ${JSON.stringify(data).replace(/</g, '\\u003c')};\n`);
 // Public browser config for accounts/alerts. The anon key is meant to be public; row-level security protects the data.
-const backend = settings.backend || {};
+const backend = { supabaseUrl: process.env.PRIZD_SUPABASE_URL || settings.backend?.supabaseUrl || '', supabaseAnonKey: process.env.PRIZD_SUPABASE_PUBLIC_KEY || settings.backend?.supabaseAnonKey || '' };
+if (backend.supabaseUrl || backend.supabaseAnonKey) validateSettings({ ...settings, backend }, organizers);
+if (/^(sb_secret_|eyJ)/.test(backend.supabaseAnonKey)) {
+  if (backend.supabaseAnonKey.startsWith('sb_secret_')) throw Error('A secret key must never be published');
+  try { const role = JSON.parse(Buffer.from(backend.supabaseAnonKey.split('.')[1], 'base64url').toString()).role; if (role !== 'anon') throw Error('Not an anon key'); } catch { throw Error('Only a public anon key may be published'); }
+} else if (backend.supabaseAnonKey && !backend.supabaseAnonKey.startsWith('sb_publishable_')) throw Error('Use a Supabase public publishable key');
 const publicConfig = backend.supabaseUrl && backend.supabaseAnonKey
-  ? { supabaseUrl: backend.supabaseUrl, supabaseAnonKey: backend.supabaseAnonKey, functionsUrl: `${backend.supabaseUrl}/functions/v1` }
+  ? { supabaseUrl: backend.supabaseUrl, supabaseAnonKey: backend.supabaseAnonKey, functionsUrl: `${backend.supabaseUrl}/functions/v1`, emailAlertsEnabled: process.env.PRIZD_EMAIL_ALERTS === 'true' }
   : {};
 await writeFile(path.join(dist, 'config.js'), `window.PRIZD_CONFIG = ${JSON.stringify(publicConfig)};\n`);
 await writeFile(path.join(dist, '.nojekyll'), '');

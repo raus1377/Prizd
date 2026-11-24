@@ -6,6 +6,7 @@
   const cfg = window.PRIZD_CONFIG || {};
   const enabled = Boolean(cfg.supabaseUrl && cfg.supabaseAnonKey);
   const root = document.documentElement;
+  const emailAlertsEnabled = cfg.emailAlertsEnabled === true;
   const SUPABASE_ESM = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/+esm';
   const INTERESTS = ['Hackathons', 'Internships', 'Case comps'];
   const store = {
@@ -59,15 +60,15 @@
   async function loadUserData(user) {
     const sb = await loadClient();
     const [{ data: profile }, { data: rows }] = await Promise.all([
-      sb.from('profiles').select('*').eq('id', user.id).maybeSingle(),
+      sb.from('profiles').select('id,email,name,avatar_url,consent_at,source,ref,referral_code,interests,digest_opt_in,reminder_opt_in').eq('id', user.id).maybeSingle(),
       sb.from('saved_opportunities').select('opportunity_id').eq('user_id', user.id)
     ]);
     api.profile = profile;
     // First sign-in after the consent box: record when and where.
     const pending = (() => { try { return JSON.parse(store.get('prizd-consent') || 'null'); } catch { return null; } })();
     if (profile && pending?.at && !profile.consent_at) {
-      const patch = { consent_at: pending.at, source: pending.source || 'home', ref: store.get('prizd-ref') || null };
-      const { data } = await sb.from('profiles').update(patch).eq('id', user.id).select('*').maybeSingle();
+      const patch = { consent_at: new Date().toISOString(), source: pending.source || 'home', ref: store.get('prizd-ref') || null };
+      const { data } = await sb.from('profiles').update(patch).eq('id', user.id).select('id,email,name,avatar_url,consent_at,source,ref,referral_code,interests,digest_opt_in,reminder_opt_in').maybeSingle();
       if (data) api.profile = data;
     }
     if (pending) store.del('prizd-consent');
@@ -84,9 +85,9 @@
       const sb = await loadClient();
       const { data } = await sb.auth.getSession();
       if (data.session) { api.user = data.session.user; await loadUserData(api.user); }
-      sb.auth.onAuthStateChange(async (event, session) => {
-        if (event === 'SIGNED_IN' && session && session.user.id !== api.user?.id) { api.user = session.user; await loadUserData(api.user); emit(); if (event === 'SIGNED_IN') say(`Signed in${api.profile?.name ? ' as ' + api.profile.name.split(' ')[0] : ''}.`); }
-        if (event === 'SIGNED_OUT') { api.user = null; api.profile = null; api.saved = new Set(); emit(); }
+      sb.auth.onAuthStateChange((event, session) => {
+        if (event === 'SIGNED_IN' && session && session.user.id !== api.user?.id) { const user = session.user; setTimeout(async () => { if (api.user?.id === user.id) return; api.user = user; try { await loadUserData(user); emit(); } catch { say('Account data could not load.'); } }, 0); }
+        if (event === 'SIGNED_OUT') { api.user = null; api.profile = null; api.saved = new Set(); store.del('prizd-saved-v1'); store.del('open-call-saved-v1'); emit(); }
       });
     } catch (e) { console.warn('Prizd accounts unavailable:', e); root.classList.add('no-account'); api.enabled = false; }
     emit();
@@ -103,7 +104,7 @@
 
   // ---- dialogs
   const dialog = (id, html) => { const d = document.createElement('dialog'); d.id = id; d.className = 'account-dialog'; d.innerHTML = `<button class="dialog-close" data-close aria-label="Close">×</button>${html}`; d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); }); document.body.appendChild(d); return d; };
-  const REASONS = { save: 'Sign in to save opportunities and track their deadlines.', filters: 'Sign in to use filters: organizer, format, team size and entry status.', reminders: 'Sign in to get a reminder 48 hours before a saved deadline.', digest: 'Sign in to set up your weekly digest.', default: 'Sign in to save opportunities, use filters and get deadline reminders.' };
+  const REASONS = { save: 'Sign in to save opportunities and track their deadlines.', filters: 'Sign in to use filters: organizer, format, team size and entry status.', reminders: 'Sign in to get a reminder 48 hours before a saved deadline.', digest: 'Sign in to set up your weekly digest.', default: 'Sign in to save opportunities across devices.' };
   let authDialog;
   api.requireAuth = (reason = 'default') => {
     if (api.user || !api.enabled) return true;
@@ -128,18 +129,17 @@
   const chips = (selected, name) => INTERESTS.map(i => `<label class="chip"><input type="checkbox" name="${name}" value="${i}"${selected.includes(i) ? ' checked' : ''}><span>${i}</span></label>`).join('');
   const account = { dialog: null, close() { this.dialog?.close(); } };
   function openAccount() {
-    const p = api.profile || {}; const saved = api.saved.size; const showPhone = (Number(store.get('prizd-visits')) || 0) >= 2 || saved >= 1 || Boolean(p.phone);
+    const p = api.profile || {};
     const invite = p.referral_code ? new URL(siteRoot).origin + new URL(siteRoot).pathname + '?ref=' + p.referral_code : '';
     account.dialog?.remove();
     const d = account.dialog = dialog('account-dialog', `<span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Your account</span>
-      <div class="acct-who">${p.avatar_url ? `<img src="${esc(p.avatar_url)}" alt="" width="44" height="44" referrerpolicy="no-referrer">` : ''}<div><strong>${esc(p.name || 'Signed in')}</strong><span>${esc(p.email || api.user?.email || '')}</span></div></div>
+      <div class="acct-who">${''}<div><strong>${esc(p.name || 'Signed in')}</strong><span>${esc(p.email || api.user?.email || '')}</span></div></div>
       <form id="acct-form">
-        <fieldset><legend>Emails</legend>
+        <fieldset ${emailAlertsEnabled ? '' : 'hidden disabled'}><legend>Emails</legend>
           <label class="consent"><input type="checkbox" name="digest" ${p.digest_opt_in ? 'checked' : ''}> <span>Weekly digest of open calls</span></label>
           <label class="consent"><input type="checkbox" name="reminders" ${p.reminder_opt_in ? 'checked' : ''}> <span>Remind me 48 hours before a saved deadline</span></label>
           <div class="chips" role="group" aria-label="Interests">${chips(p.interests || [], 'interest')}</div>
         </fieldset>
-        ${showPhone ? `<fieldset><legend>WhatsApp</legend><label class="field">WhatsApp me deadline alerts<input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="+91 98765 43210" value="${esc(p.phone || '')}" pattern="\\+[0-9 ]{8,16}"></label><label class="consent"><input type="checkbox" name="wa" ${p.whatsapp_opt_in ? 'checked' : ''}> <span>Yes, send me deadline alerts on WhatsApp</span></label><p class="fine">${p.phone ? (p.phone_verified ? 'Number verified.' : 'Number saved. Alerts start once it is verified by a one-time code.') : 'Optional. We never share your number.'}</p></fieldset>` : ''}
         <div class="acct-actions"><button class="btn" type="submit">Save preferences</button><button class="btn btn-dark" type="button" id="acct-out">Sign out</button></div>
         <p class="signup-msg" id="acct-msg" role="status"></p>
       </form>
@@ -147,11 +147,8 @@
       <details class="danger"><summary>Delete my account and data</summary><p class="fine">This removes your profile, shortlist and reminders for good.</p><button class="btn btn-dark" type="button" id="acct-del">Delete everything</button></details>`);
     d.querySelector('#acct-form').addEventListener('submit', async e => {
       e.preventDefault(); const f = new FormData(e.currentTarget), msg = d.querySelector('#acct-msg');
-      const phone = (f.get('phone') || '').toString().replace(/\s+/g, '');
-      if (phone && !/^\+[0-9]{8,15}$/.test(phone)) { msg.textContent = 'Use the international format, e.g. +919876543210.'; return; }
       const patch = { digest_opt_in: f.has('digest'), reminder_opt_in: f.has('reminders'), interests: f.getAll('interest') };
-      if (showPhone) Object.assign(patch, { phone: phone || null, whatsapp_opt_in: Boolean(phone) && f.has('wa') });
-      const sb = await loadClient(); const { data, error } = await sb.from('profiles').update(patch).eq('id', api.user.id).select('*').maybeSingle();
+      const sb = await loadClient(); const { data, error } = await sb.from('profiles').update(patch).eq('id', api.user.id).select('id,email,name,avatar_url,consent_at,source,ref,referral_code,interests,digest_opt_in,reminder_opt_in').maybeSingle();
       if (error) { msg.textContent = 'Could not save. Try again.'; return; }
       api.profile = data; msg.textContent = 'Saved.'; emit();
     });
@@ -179,12 +176,13 @@
 
   // ---- email signup (no login). Double opt-in: the confirmation email is what activates it.
   function renderSignups() {
+    if (!emailAlertsEnabled) return;
     for (const host of document.querySelectorAll('[data-signup]')) {
       const signed = Boolean(api.user); const state = signed ? 'in' : 'out';
       if (host.dataset.state === state && host.firstElementChild) continue;
       host.dataset.state = state; host.hidden = false;
       const title = host.dataset.title || 'Get the weekly digest';
-      if (signed) { host.innerHTML = `<div class="signup-inner"><span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Alerts</span><h2>${esc(title)}</h2><p>You are signed in. Choose your digest, reminders and WhatsApp alerts in your account.</p><button class="btn" type="button" data-account-open>Manage alerts <span aria-hidden="true">↗</span></button></div>`; continue; }
+      if (signed) { host.innerHTML = `<div class="signup-inner"><span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Alerts</span><h2>${esc(title)}</h2><p>You are signed in. Choose your digest and reminders in your account.</p><button class="btn" type="button" data-account-open>Manage alerts <span aria-hidden="true">↗</span></button></div>`; continue; }
       host.innerHTML = `<form class="signup-inner" novalidate><span class="kicker"><span class="smallburst" aria-hidden="true">✳</span> Free, weekly</span><h2>${esc(title)}</h2><p>New hackathons, internships and case competitions, picked for you. One email a week.</p><div class="chips" role="group" aria-label="What are you looking for?">${chips([], 'interest')}</div><div class="signup-row"><input type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@college.edu" aria-label="Email address" required><button class="btn" type="submit">Notify me <span aria-hidden="true">↗</span></button></div><label class="consent"><input type="checkbox" name="consent"> <span>Yes, email me this digest. I have read the <a href="${siteRoot}privacy/">privacy policy</a>. I can unsubscribe at any time.</span></label><p class="signup-msg" role="status"></p></form>`;
       host.querySelector('form').addEventListener('submit', async e => {
         e.preventDefault(); const form = e.currentTarget, msg = form.querySelector('.signup-msg'), f = new FormData(form);
