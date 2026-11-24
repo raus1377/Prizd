@@ -124,11 +124,7 @@
     }
   },
   "regionPages": {},
-  "featured": [
-    "build-with-manus-ai-bengaluru",
-    "build-with-flutterflow-pune",
-    "diwali-festiverse-agent-to-agent"
-  ],
+  "featured": [],
   "defaultSort": "featured",
   "prizeUsdRates": {
     "USD": 1,

@@ -126,12 +126,13 @@
   document.addEventListener('keydown',e => { if (e.key === 'Escape') closeMenu();if (e.key === '/' && !e.ctrlKey && !e.metaKey && !e.altKey && !e.target.matches('input,textarea,select') && !e.target.isContentEditable) { e.preventDefault();$('search').focus();$('opportunities').scrollIntoView({behavior:'smooth'}); } });
   function setLayout(layout) { currentLayout = layout; $('opportunity-grid').classList.toggle('list',layout === 'list');$('grid-view').classList.toggle('active',layout === 'grid');$('list-view').classList.toggle('active',layout === 'list');$('grid-view').setAttribute('aria-pressed',layout === 'grid');$('list-view').setAttribute('aria-pressed',layout === 'list');try{localStorage.setItem('prizd-layout',layout);}catch{} }
   $('grid-view').addEventListener('click',() => setLayout('grid'));$('list-view').addEventListener('click',() => setLayout('list'));
-  let heroKey = '';
+  let heroKey = null;
   function renderHero() {
     const topPicks = rank(opportunities.filter(o => o.url && isActionable(o,now))).slice(0,3);
     const key = topPicks.map(o => o.id).join(',');
     if (key === heroKey) return;
     heroKey = key;
+    if (!topPicks.length) { $('hero-shortlist').innerHTML = '<p>No opportunities listed yet.</p>'; return; }
     $('hero-shortlist').innerHTML=topPicks.map((o,i)=>`<a class="hero-pick" href="./${escape(o.detailPath)}" aria-label="Open ${escape(o.title)}"><span class="pick-number">0${i+1}</span><span><span class="pick-label">${escape(o.organizer.name).toUpperCase()} / ${escape(o.category).toUpperCase()}</span><span class="pick-name">${escape(o.title)}</span></span><span class="pick-arrow" aria-hidden="true">↗</span></a>`).join('');
   }
   if ((state.kind !== 'all' || state.format !== 'all' || state.team !== 'all' || state.status !== 'all')) { $('advanced-filters').hidden = false; $('filter-toggle').setAttribute('aria-expanded',true); }
