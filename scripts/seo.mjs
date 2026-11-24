@@ -122,6 +122,8 @@ export function buildSite({ settings, organizers, opportunities, archived = [], 
       `<meta name="theme-color" content="#281B38">`,
       `<title>${esc(title)}</title>`,
       `<meta name="description" content="${esc(description)}">`,
+      `<meta name="referrer" content="strict-origin-when-cross-origin">`,
+      `<meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self'; form-action 'self'">`,
       robots ? `<meta name="robots" content="${robots}">` : '',
       canonical ? `<link rel="canonical" href="${esc(canonical)}">` : '',
       `<link rel="icon" href="${base}favicon.svg" type="image/svg+xml">`,
@@ -260,19 +262,19 @@ ${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o,
 <p class="lede">${esc(brand)} is a free index of hackathons, case competitions and internships. We keep as little about you as we can, and only what a feature needs.</p>
 <h2>What we collect</h2>
 <ul>
-<li><b>If you sign in with Google:</b> your name, email address and profile picture, and the opportunities you save.</li>
+<li><b>If you sign in with Google or email:</b> your name, email address and profile picture, and the opportunities you save.</li>
 <li><b>If you leave an email:</b> your email address and the topics you ticked (hackathons, internships, case comps).</li>
-<li><b>If you add a WhatsApp number:</b> that number, only for deadline alerts you asked for.</li>
+<li>We use aggregate registration and recent sign-in counts to understand service usage. These counts are available only to authorized administrators.</li>
 <li><b>When you agree:</b> the time you agreed and the page you agreed on, so we can show your consent was given.</li>
 <li>If you arrive through a friend's invite link, we note the invite code.</li>
 </ul>
 <h2>Why</h2>
 <ul>
-<li>To keep your shortlist across devices and unlock filters.</li>
+<li>To keep your shortlist across devices.</li>
 <li>To send the weekly digest and deadline reminders you opted into. We never send anything else, and we never sell or rent your data.</li>
 </ul>
 <h2>Who handles it</h2>
-<p>Google confirms your identity. Supabase stores the data. Resend delivers email. Each acts only on our instructions to run the service.</p>
+<p>Google or Supabase confirms your identity. Supabase stores the data. Resend delivers email when alerts are enabled. Each acts only on our instructions to run the service.</p>
 <h2>Your choices</h2>
 <ul>
 <li>Every email has an unsubscribe link, and it works at once.</li>

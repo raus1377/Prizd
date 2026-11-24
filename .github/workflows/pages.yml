@@ -55,6 +55,9 @@ jobs:
         run: npm run build
         env:
           SITE_URL: ${{ steps.pages.outputs.base_url }}
+          PRIZD_SUPABASE_URL: ${{ vars.PRIZD_SUPABASE_URL }}
+          PRIZD_SUPABASE_PUBLIC_KEY: ${{ vars.PRIZD_SUPABASE_PUBLIC_KEY }}
+          PRIZD_ALERTS_ENABLED: ${{ vars.PRIZD_ALERTS_ENABLED }}
 
       # Exclude dist/: the build embeds a new timestamp on every run.
       # These canonical catalog files are the only changes that belong in a PR.
@@ -131,6 +134,9 @@ jobs:
         if: ${{ steps.changes.outputs.catalog_changed == 'true' && steps.merge.outputs.catalog_merged != 'true' }}
         env:
           SITE_URL: ${{ steps.pages.outputs.base_url }}
+          PRIZD_SUPABASE_URL: ${{ vars.PRIZD_SUPABASE_URL }}
+          PRIZD_SUPABASE_PUBLIC_KEY: ${{ vars.PRIZD_SUPABASE_PUBLIC_KEY }}
+          PRIZD_ALERTS_ENABLED: ${{ vars.PRIZD_ALERTS_ENABLED }}
         run: |
           git restore --source=HEAD --staged --worktree -- data/organizers.json data/opportunities data/archive updates/inbox
           git clean -fd -- data/opportunities data/archive updates/inbox

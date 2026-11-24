@@ -107,3 +107,5 @@ begin
 end $$;
 revoke all on function public.delete_my_account() from public, anon;
 grant execute on function public.delete_my_account() to authenticated;
+
+-- After this base schema, apply supabase/security-hardening.sql before enabling public authentication.
