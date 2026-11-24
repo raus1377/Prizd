@@ -72,7 +72,8 @@ home = home
   .replace('{{SEO_TITLE}}', esc(seo.home.title))
   .replace('{{SEO_DESCRIPTION}}', esc(seo.home.description))
   .replace('<!--SEO_HEAD-->', seo.home.head)
-  .replace('<!--BROWSE-->', seo.home.browse);
+  .replace('<!--BROWSE-->', seo.home.browse)
+  .replace(/(src|href)="\.\/([\w-]+\.(?:js|css))"/g, (_, attr, asset) => `${attr}="./${asset}?v=${now}"`);
 await writeFile(path.join(dist, 'index.html'), home);
 
 for (const [relative, content] of seo.files) {

@@ -24,15 +24,6 @@
   document.title = settings.seoTitle || `${settings.name} — The Opportunity Index`;
   $('footer-year').textContent = new Date().getFullYear();
   $('updated-label').textContent = `INDEX UPDATED ${new Date(data.builtAt).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}).toUpperCase()}`;
-  let chipKey = '';
-  function renderCategories() {
-    const list = settings.categories;
-    if (state.category !== 'all' && !list.includes(state.category)) state.category = 'all';
-    const key = list.join('|');
-    if (key === chipKey) return;
-    chipKey = key;
-    $('category-filters').innerHTML = ['all',...list].map(c => `<button data-category="${escape(c)}" aria-pressed="${state.category === c}" class="${state.category === c ? 'active' : ''}">${c === 'all' ? 'All opportunities' : escape(({Hackathon:'Hackathons',Research:'Research Opportunities','Case competition':'Case Competitions'})[c] || c)}</button>`).join('');
-  }
   $('search').value = state.search;
   for (const [key,id] of [['kind','kind-filter'],['format','format-filter'],['team','team-filter'],['status','status-filter'],['sort','sort']]) $(id).value = state[key];
   const bookmark = active => `<svg width="15" height="19" viewBox="0 0 15 19" fill="${active ? 'currentColor' : 'none'}" aria-hidden="true"><path d="M2 1.5h11v15L7.5 13 2 16.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>`;
@@ -67,7 +58,6 @@
   function render() {
     now = Date.now();
     observer?.disconnect();
-    renderCategories();
     renderHero();
     const open = opportunities.filter(o => isActionable(o,now));
     const newItems = open.filter(o => isNew(o,now,settings.newWindowDays));
@@ -81,6 +71,7 @@
     $('count-saved').textContent = savedCount;
     $('result-count').textContent = `${String(items.length).padStart(2,'0')} ${items.length === 1 ? 'OPPORTUNITY' : 'OPPORTUNITIES'}${state.view === 'new' ? ' / ADDED IN THE LAST ' + settings.newWindowDays + ' DAYS' : ''}`;
     document.querySelectorAll('[data-view]').forEach(el => { el.classList.toggle('active',el.dataset.view === state.view); el.setAttribute('aria-pressed',el.dataset.view === state.view); });
+    document.querySelectorAll('[data-format]').forEach(el => { el.classList.toggle('active',el.dataset.format === state.format); el.setAttribute('aria-pressed',el.dataset.format === state.format); });
     document.querySelectorAll('.category-filters [data-category]').forEach(el => { el.classList.toggle('active',el.dataset.category === state.category); el.setAttribute('aria-pressed',el.dataset.category === state.category); });
     $('opportunity-grid').innerHTML = items.map(card).join('');
     $('empty-state').hidden = items.length > 0;
@@ -114,9 +105,11 @@
     const card = event.target.closest('.opportunity-card');
     if (card && !event.target.closest('a,button')) { openDetail(card.dataset.id); return; }
     const category = event.target.closest('[data-category]');
-    if (category) { state.category = category.dataset.category; state.view = 'all'; render(); }
+    if (category) { state.category = state.category === category.dataset.category ? 'all' : category.dataset.category; state.view = 'all'; render(); return; }
+    const format = event.target.closest('[data-format]');
+    if (format) { state.format = format.dataset.format; $('format-filter').value = state.format; render(); return; }
     const view = event.target.closest('[data-view]');
-    if (view) { state.view = view.dataset.view; render(); }
+    if (view) { state.view = view.dataset.view; if (state.view === 'all') state.category = 'all'; render(); }
     const quick = event.target.closest('[data-quick]');
     if (quick) { state.view = quick.dataset.quick; render(); closeMenu(); }
   });

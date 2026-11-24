@@ -35,7 +35,7 @@
       if (state.region && state.region !== 'all' && state.view !== 'saved' && (o.region || 'Global') !== state.region) return false;
       if (state.category !== 'all' && o.category !== state.category && !(o.categories || []).includes(state.category)) return false;
       if (state.kind !== 'all' && o.organizer.kind !== state.kind) return false;
-      if (state.format !== 'all' && o.format !== state.format) return false;
+      if (state.format !== 'all' && o.format !== state.format && !(o.format === 'Hybrid' && ['Online','In person'].includes(state.format))) return false;
       if (state.team === 'solo' && (!o.team || o.team.min > 1)) return false;
       if (state.team === 'team' && (!o.team || o.team.min === 1)) return false;
       if (query && ![o.title,o.summary,o.organizer.name,o.category,o.location,o.eligibility,...o.tags].join(' ').toLowerCase().includes(query)) return false;
