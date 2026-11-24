@@ -133,7 +133,7 @@
     if (key === heroKey) return;
     heroKey = key;
     if (!topPicks.length) { $('hero-shortlist').innerHTML = '<p>No opportunities listed yet.</p>'; return; }
-    $('hero-shortlist').innerHTML=topPicks.map((o,i)=>`<a class="hero-pick" href="./${escape(o.detailPath)}" aria-label="Open ${escape(o.title)}"><span class="pick-number">0${i+1}</span><span><span class="pick-label">${escape(o.organizer.name).toUpperCase()} / ${escape(o.category).toUpperCase()}</span><span class="pick-name">${escape(o.title)}</span></span><span class="pick-arrow" aria-hidden="true">↗</span></a>`).join('');
+    $('hero-shortlist').innerHTML=topPicks.map((o,i)=>`<a class="hero-pick" href="./${escape(o.detailPath)}" aria-label="Open ${escape(o.title)}"><span class="pick-number">0${i+1}</span><span><span class="pick-label">${escape(/research|internship/i.test(o.category) ? "Research" : o.category).toUpperCase()}</span><span class="pick-name">${escape(o.title)}</span></span><span class="pick-arrow" aria-hidden="true">↗</span></a>`).join('');
   }
   if ((state.kind !== 'all' || state.format !== 'all' || state.team !== 'all' || state.status !== 'all')) { $('advanced-filters').hidden = false; $('filter-toggle').setAttribute('aria-expanded',true); }
   render();setLayout(currentLayout);
