@@ -1,0 +1,21 @@
+{
+  "upsert": [
+    {
+      "id": "rp2350-hacking-challenge-2",
+      "url": "https://www.raspberrypi.com/rp2350-hacking-challenge-2/",
+      "sourceUrl": "https://www.raspberrypi.com/rp2350-hacking-challenge-2/",
+      "deadlineDate": "2026-10-31",
+      "deadlineTimezone": "Europe/London",
+      "deadlineLabel": "Entries must be received by midnight UK time on 31 Oct 2026; ends earlier if a winning entry arrives",
+      "eligibility": "Open to everyone except residents of Belarus, Crimea, Cuba, Donetsk and Luhansk, Iran, Russia, Syria and North Korea, and anyone under export-control or sanctions restrictions. One entry per person; under-18s need guardian approval. Needs hardware security equipment.",
+      "prize": {
+        "amount": 20000,
+        "currency": "USD",
+        "kind": "first",
+        "description": "US$20,000 cash, one prize, to the first documented working method."
+      },
+      "entryStatus": "open",
+      "researchAsOf": "2026-10-28"
+    }
+  ]
+}

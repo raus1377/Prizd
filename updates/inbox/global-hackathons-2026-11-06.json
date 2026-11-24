@@ -1,0 +1,20 @@
+{"upsert":[
+{"id":"ubc-2026-hackathon","title":"UBC 2026 Hackathon (University Blockchain Conference)","category":"Hackathon",
+"organizer":{"name":"University Blockchain Conference","kind":"Organization","website":"https://www.universityblockchain.org","prestige":45},
+"summary":"Online build week (13-20 Nov 2026) with top teams per track pitching live at the University Blockchain Conference finals at UT Austin on 21 Nov. Tracks: Agentic Payments & AI, DeFi & Onchain Apps, Consumer Apps.",
+"deadlineDate":"2026-11-20","deadlineTimezone":"UTC","deadlineLabel":"Submissions close","location":"Worldwide online; finals at UT Austin, Texas, USA","region":"Global","format":"Hybrid",
+"eligibility":"Experienced developers and first-time participants; solo or team. Country and age rules not confirmed (official page could not be read).",
+"team":null,
+"prize":{"amount":23000,"currency":"USD","kind":"pool","description":"More than US$23,000 in cash across main prizes and sponsor bounties (Gemini, Solana, Arc, QuickNode); US$12,000 across three main tracks (US$2,000 / 1,250 / 750 per track)."},
+"tags":["Web3","AI","Payments","Texas"],"url":"https://www.universityblockchain.org/programs/hackathon","sourceUrl":"https://web3voyager.com/event/ubc-2026-hackathon",
+"entryStatus":"check","researchAsOf":"2026-11-06","notes":["Details taken from an aggregator page; official page could not be opened. Submission cutoff time and timezone not stated."]},
+{"id":"ixh26-italian-xrpl-hackathon-2026","title":"IXH26 Italian XRPL Hackathon (Bari)","category":"Hackathon",
+"organizer":{"name":"XRPL Commons","kind":"Organization","website":"https://www.xrpl-commons.org","prestige":50},
+"summary":"In-person XRPL hackathon at the University of Bari, Italy, with three tracks: advanced cryptography for blockchain, XRPL applications and tokenisation of digital and real-world assets. Run with Ripple's University Blockchain Research Initiative and the Universities of Bari and Trento.",
+"deadlineDate":"2026-11-17","deadlineTimezone":"UTC","deadlineLabel":"Registration closes","location":"Bari, Italy","region":"Global","format":"In person",
+"eligibility":"Teams of three to eight. Eligible students may get accommodation support and travel reimbursement. Country and age rules not confirmed (official Luma page could not be read).",
+"team":{"min":3,"max":8},
+"prize":{"amount":12000,"currency":"EUR","usdEquivalent":13800,"kind":"pool","description":"EUR 12,000 in total, split across three tracks (EUR 2,000 / 1,200 / 800 per track)."},
+"tags":["Web3","XRPL","Italy"],"url":"https://luma.com/IXH26-xrpl-hackathon","sourceUrl":"https://web3voyager.com/event/ixh26-italian-xrpl-hackathon",
+"entryStatus":"check","researchAsOf":"2026-11-06","notes":["Aggregator pages disagree on event dates (20-21 vs 21-22 Nov); registration close 17 Nov per aggregator. Confirm on the Luma page. USD value approximate."]}
+]}

@@ -45,14 +45,16 @@ const publicSettings = { ...settings, categories: publicCategories, categoryPage
 function publicListing(o) {
   const labels = [o.category, ...(o.categories || [])].map(c => c === 'Research internship' ? 'Research' : c);
   const category = publicCategories.includes(labels[0]) ? labels[0] : publicCategories.find(c => labels.includes(c));
-  if (!category) return null;
-  return { ...o, originalCategory: o.category, category, categories: [...new Set(labels.filter(c => publicCategories.includes(c)))], detailPath: publicSettings.categoryPages[category].slug + '/' + o.id + '/' };
+  const displayCategory = category || o.category;
+  const page = settings.categoryPages[displayCategory];
+  return { ...o, originalCategory: o.category, category: displayCategory, categories: [...new Set(labels.filter(c => publicCategories.includes(c)))], detailPath: (page?.slug || displayCategory.toLowerCase().replace(/[^a-z0-9]+/g,'-')) + '/' + o.id + '/' };
 }
 const publicOpportunities = opportunities.map(publicListing).filter(Boolean);
-const publicArchived = archived.map(publicListing).filter(Boolean);
+const publicArchived = archived.map(o => publicListing({...o,entryStatus:'closed'})).filter(Boolean);
 const { backend: _privateBackend, ...browserSettings } = publicSettings;
-const data = { settings: browserSettings, organizers, opportunities: publicOpportunities, builtAt: new Date(now).toISOString() };
-const seo = buildSite({ settings: publicSettings, organizers, opportunities: publicOpportunities, archived: publicArchived, now, siteUrl });
+const data = { settings: browserSettings, organizers, opportunities: [...publicOpportunities, ...publicArchived], builtAt: new Date(now).toISOString() };
+const seoSettings = { ...publicSettings, categories: settings.categories, categoryPages: settings.categoryPages };
+const seo = buildSite({ settings: seoSettings, organizers, opportunities: publicOpportunities, archived: publicArchived, now, siteUrl });
 
 const dist = path.join(root, 'dist');
 await rm(dist, { recursive: true, force: true });

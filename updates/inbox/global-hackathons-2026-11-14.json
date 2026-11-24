@@ -1,0 +1,22 @@
+{"upsert":[
+{"id":"entrepreneurship-world-cup-2026-27","title":"Entrepreneurship World Cup 2026–27","category":"Product",
+"organizer":{"name":"Global Entrepreneurship Network","kind":"Organization","website":"https://www.genglobal.org/","prestige":70},
+"summary":"Global startup pitch competition with equity-free cash awards for idea, early and growth-stage startups, plus AI sub-tracks. Applications online; Global Finals planned in Riyadh in November 2027.",
+"deadlineDate":"2027-05-31","deadlineTimezone":"UTC","deadlineLabel":"Applications close",
+"location":"Online application; Global Finals in Riyadh","region":"Global","format":"Hybrid",
+"eligibility":"Open to startups at all stages (idea, early, growth) applying globally across tracks. Exact country and incorporation rules are on the official rules page; not checked.",
+"team":null,
+"prize":{"amount":1000000,"currency":"USD","kind":"pool","description":"About US$1M in equity-free cash awards across 12 winners: Early Stage grand prize $200,000 (runner-up $150,000, 3rd $90,000, 4th $50,000); Growth Stage $160,000 / $100,000; Idea Stage $30,000 / $20,000; four AI sub-tracks of $50,000 each. Currency shown as $ on the official page."},
+"tags":["Startup","Pitch","Global"],"url":"https://www.entrepreneurshipworldcup.com","sourceUrl":"https://www.entrepreneurshipworldcup.com",
+"entryStatus":"open","researchAsOf":"2026-11-14","notes":["Read from the official site: prizes, 31 May 2027 application close, selection July 2027. Rules and FAQ pages were not opened; a registration-window extension notice (Aug 2026) is linked from the site."]},
+{"id":"enveda-casmi-2026-kaggle","title":"Enveda CASMI 2026 — Molecule ID From Mass Spectra","category":"Research",
+"organizerId":"kaggle",
+"summary":"Kaggle competition to predict 2D chemical structures of small molecules detected in complex biological extracts from mass spectra, run with Enveda.",
+"deadlineDate":"2026-12-07","deadlineTimezone":"UTC","deadlineLabel":"Entry deadline (time not confirmed)",
+"location":"Online","region":"Global","format":"Online",
+"eligibility":"Check the Kaggle rules page for eligibility, team size and country restrictions; not confirmed.",
+"team":null,
+"prize":{"amount":50000,"currency":"USD","kind":"pool","description":"US$50,000 total prize pool reported from Kaggle's announcement; place-by-place breakdown not confirmed."},
+"tags":["Kaggle","Data science","Chemistry","Machine learning"],"url":"https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra","sourceUrl":"https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra/rules",
+"entryStatus":"check","researchAsOf":"2026-11-14","notes":["Prize pool and 7 Dec 2026 deadline come from a news summary of Kaggle's post; the Kaggle page confirms title and description only. Verify on the competition page."]}
+]}

@@ -1,0 +1,35 @@
+{
+  "id": "schubki-national-ai-hackathon-serenedb-track",
+  "title": "SchubKI National AI Hackathon — SereneDB track",
+  "category": "Hackathon",
+  "organizerId": "custom-schubki-serenedb",
+  "summary": "Build an AI system to identify recurring issues and root causes from log data.",
+  "deadline": null,
+  "location": "Online",
+  "format": "Online",
+  "eligibility": "Bachelor’s students eligible for SereneDB track; international eligibility unconfirmed.",
+  "team": {
+    "min": 2,
+    "max": 5
+  },
+  "prize": {
+    "amount": 3000,
+    "currency": "EUR",
+    "kind": "pool",
+    "description": "Reported total advertised prize pool; see official terms for breakdown."
+  },
+  "tags": [
+    "Hackathon"
+  ],
+  "url": "https://schubki.com/hackathons/national-ai-hackathon-2026",
+  "entryStatus": "check",
+  "notes": [
+    "Registration date 14 October and project cutoff 18 October, both at unspecified timezones.",
+    "Date-only expiration uses conservative Anywhere-on-Earth interpretation because timezone was not confirmed."
+  ],
+  "deadlineDate": "2026-10-14",
+  "deadlineTimezone": "Etc/GMT+12",
+  "eventEndDate": "2026-10-21",
+  "eventTimezone": "Etc/GMT+12",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

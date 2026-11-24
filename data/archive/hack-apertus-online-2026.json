@@ -1,0 +1,33 @@
+{
+  "id": "hack-apertus-online-2026",
+  "title": "Hack Apertus Online",
+  "category": "Hackathon",
+  "organizerId": "apertus",
+  "summary": "Build with, evaluate or red-team the open Apertus language model.",
+  "deadline": "2026-10-16T15:30:00+05:30",
+  "deadlineLabel": "Entry deadline",
+  "location": "Worldwide",
+  "format": "Online",
+  "eligibility": "International legal adults; Indian participants eligible under the reported rules.",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 10000,
+    "currency": "CHF",
+    "kind": "pool",
+    "description": "CHF10,000 cash plus separate credits / subscriptions."
+  },
+  "tags": [
+    "Open LLM",
+    "Evaluation",
+    "Red teaming"
+  ],
+  "url": "https://hackapertus.devpost.com/?utm_source=chatgpt.com",
+  "entryStatus": "open",
+  "notes": [],
+  "addedAt": "2026-10-11T12:03:46.462120+00:00",
+  "researchAsOf": "2026-10-10",
+  "sourceUrl": "https://hackapertus.devpost.com/rules?utm_source=chatgpt.com"
+}

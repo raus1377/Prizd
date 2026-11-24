@@ -1,0 +1,30 @@
+{
+  "id": "vercel-fast-forward-hackathon",
+  "title": "Vercel — Fast Forward Hackathon",
+  "category": "Hackathon",
+  "organizerId": "custom-vercel",
+  "summary": "Onsite app-building hackathon with agents, multimodal apps and WebXR tracks.",
+  "deadline": "2026-10-15T04:30:00+05:30",
+  "location": "San Francisco, USA",
+  "format": "In person",
+  "eligibility": "Host approval required; international admission and age conditions not verified.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Hackathon"
+  ],
+  "url": "https://luma.com/fastforwardhack",
+  "entryStatus": "check",
+  "notes": [
+    "Reported submission deadline 15 October 4:30 AM IST.",
+    "No remote participation confirmed."
+  ],
+  "eventEndDate": "2026-10-14",
+  "eventTimezone": "Etc/GMT+12",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

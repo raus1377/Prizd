@@ -1,0 +1,34 @@
+{
+  "id": "reforged-26-n8n",
+  "title": "Reforged ’26 — n8n",
+  "category": "Hackathon",
+  "organizerId": "custom-bpit-n8n",
+  "summary": "Agentic automation hackathon requiring an architecture and prototype submission.",
+  "deadline": null,
+  "location": "India · Delhi final",
+  "format": "Hybrid",
+  "eligibility": "Teams of 1–4; selected teams must attend BPIT Delhi on 30 October.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Hackathon"
+  ],
+  "url": "https://reforged.anveshan.dev/",
+  "entryStatus": "check",
+  "notes": [
+    "Exact registration cutoff time was not published."
+  ],
+  "deadlineDate": "2026-10-15",
+  "deadlineTimezone": "Asia/Kolkata",
+  "eventEndDate": "2026-10-30",
+  "eventTimezone": "Asia/Kolkata",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

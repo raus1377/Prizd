@@ -1,0 +1,32 @@
+{
+  "id": "robo-innovate-hackathon-2026",
+  "title": "robo.innovate Hackathon 2026",
+  "category": "Engineering",
+  "organizerId": "custom-tum-robo-innovate",
+  "summary": "Hands-on robotics and AI manipulation hackathon at Munich and Garmisch facilities.",
+  "deadline": null,
+  "location": "Munich and Garmisch, Germany",
+  "format": "In person",
+  "eligibility": "Open to students, researchers and robotics builders; visa and international admission need verification.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Engineering"
+  ],
+  "url": "https://roboinnovate.mirmi.tum.de/hackathon/hackathon-2026/",
+  "entryStatus": "check",
+  "notes": [
+    "Team sizes around 5–6 preferred, not a verified maximum.",
+    "Free registration; travel funding unconfirmed."
+  ],
+  "deadlineDate": "2026-10-13",
+  "deadlineTimezone": "Asia/Kolkata",
+  "eventEndDate": "2026-10-28",
+  "eventTimezone": "Etc/GMT+12",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}

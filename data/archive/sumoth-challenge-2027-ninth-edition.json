@@ -1,0 +1,32 @@
+{
+  "id": "sumoth-challenge-2027-ninth-edition",
+  "title": "SuMoth Challenge 2027 — Ninth Edition",
+  "category": "Engineering",
+  "organizerId": "custom-sumoth-association",
+  "summary": "University teams engineer and race sustainable foiling boats in Italy.",
+  "deadline": null,
+  "location": "Lake Garda, Italy",
+  "format": "In person",
+  "eligibility": "University-affiliated teams with faculty support and a university-linked legal structure.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Cash prize value is not established or is not applicable."
+  },
+  "tags": [
+    "Engineering"
+  ],
+  "url": "https://sumoth.org/editions/2027-edition/",
+  "entryStatus": "open",
+  "notes": [
+    "Registration intention 7 September–15 October; team declaration ends 31 October.",
+    "Conflicting June/July dates reported for the 2027 final."
+  ],
+  "deadlineDate": "2026-10-15",
+  "deadlineTimezone": "Asia/Kolkata",
+  "eventEndDate": "2027-07-08",
+  "eventTimezone": "Etc/GMT+12",
+  "addedAt": "2026-10-11T23:12:58.292Z"
+}
