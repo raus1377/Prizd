@@ -142,3 +142,17 @@ test('region and stipend prizes are validated; region defaults to Global',()=>{
   assert.equal(normalizeOpportunity(fixture(),organizer,settings,null,now).region,'Global');
   assert.equal(normalizeOpportunity(fixture({region:'India'}),organizer,settings,null,now).region,'India');
 });
+
+
+test('Hero picks one highest-ranked open listing per category in fixed order', () => {
+  const hack = fixture({id:'hack',category:'Hackathon',prizeUsd:10});
+  const betterHack = fixture({id:'better-hack',category:'Hackathon',prizeUsd:20});
+  const cases = fixture({id:'case',category:'Case competition',prizeUsd:100});
+  const otherCase = fixture({id:'other-case',category:'Case competition',prizeUsd:90});
+  const research = fixture({id:'research',category:'Research',prizeUsd:1});
+  const expired = fixture({id:'expired',category:'Hackathon',prizeUsd:1000,deadline:new Date(now-1).toISOString()});
+  const noLink = fixture({id:'no-link',category:'Research',prizeUsd:1000,url:null});
+  const picks = globalThis.Prizd.heroPicks;
+  assert.deepEqual(picks([cases,otherCase,hack,betterHack,research,expired,noLink],now).map(o=>o.id),['better-hack','case','research']);
+  assert.deepEqual(picks([cases,otherCase,hack],now).map(o=>o.id),['hack','case']);
+});
