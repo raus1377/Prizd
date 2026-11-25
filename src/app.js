@@ -87,6 +87,10 @@
     $('empty-message').textContent = state.view === 'saved' && savedCount === 0 ? 'Tap the bookmark on any opportunity to start your shortlist.' : 'Try a different filter. Your next opportunity might be one click away.';
     document.querySelectorAll('.card-reveal').forEach(el => observer ? observer.observe(el) : el.classList.add('visible'));
     syncURL();
+    const catalogParams = new URLSearchParams();
+    for (const key of Object.keys(allowed)) if (state[key] !== defaults[key]) catalogParams.set(key,state[key]);
+    if (state.search) catalogParams.set('q',state.search);
+    $('view-more').href = root + 'opportunities/' + (catalogParams.size ? '?' + catalogParams : '');
   }
   const account = window.PrizdAccount;
   const gated = () => Boolean(account && account.enabled);
@@ -122,7 +126,6 @@
     const quick = event.target.closest('[data-quick]');
     if (quick) { state.view = quick.dataset.quick; render(); closeMenu(); }
   });
-  $('view-more').addEventListener('click',() => { location.assign(root + 'opportunities/' + location.search); });
   $('paid-only').addEventListener('change',event => { state.paid = event.target.checked ? 'yes' : 'no'; render(); });
   $('search').addEventListener('input',event => { state.search = event.target.value; render(); });
   for (const [key,id] of [['kind','kind-filter'],['format','format-filter'],['team','team-filter'],['status','status-filter'],['sort','sort']]) $(id).addEventListener('change',event => { state[key] = event.target.value; render(); });
