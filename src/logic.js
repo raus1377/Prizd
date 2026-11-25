@@ -23,6 +23,10 @@
       return result || deadlineValue(a) - deadlineValue(b) || a.title.localeCompare(b.title);
     });
   }
+  function heroPicks(items, now) {
+    const ranked = rank(items.filter(o => o.url && isActionable(o, now)));
+    return ['Hackathon', 'Case competition', 'Research'].map(category => ranked.find(o => o.category === category)).filter(Boolean);
+  }
   function select(items, state, saved, now, newWindowDays = 7) {
     const query = (state.search || '').trim().toLowerCase();
     return rank(items.filter(o => {
@@ -58,5 +62,5 @@
     if (o.team.max === null) return o.team.min === 1 ? 'Solo / team' : `At least ${o.team.min} members`;
     return o.team.min === o.team.max ? `${o.team.min} participant${o.team.min === 1 ? '' : 's'}` : `${o.team.min}–${o.team.max} participants`;
   }
-  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, isPaid, prizeText, prizeKind, teamText, isInternship, supportText };
+  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, heroPicks, isPaid, prizeText, prizeKind, teamText, isInternship, supportText };
 })();

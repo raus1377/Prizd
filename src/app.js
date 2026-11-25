@@ -2,7 +2,7 @@
   'use strict';
   const data = window.__PRIZD_DATA__;
   if (!data) { document.getElementById('result-count').textContent = 'Data could not load. Please refresh.'; return; }
-  const { isNew, isClosed, isActionable, entryStatus, rank, select, prizeText, prizeKind, teamText, isInternship, supportText, DAY } = window.Prizd;
+  const { isNew, isClosed, isActionable, entryStatus, rank, select, heroPicks, prizeText, prizeKind, teamText, isInternship, supportText, DAY } = window.Prizd;
   const $ = id => document.getElementById(id);
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const settings = data.settings;
@@ -128,7 +128,7 @@
   $('grid-view').addEventListener('click',() => setLayout('grid'));$('list-view').addEventListener('click',() => setLayout('list'));
   let heroKey = null;
   function renderHero() {
-    const topPicks = rank(opportunities.filter(o => o.url && isActionable(o,now))).slice(0,3);
+    const topPicks = heroPicks(opportunities,now);
     const key = topPicks.map(o => o.id).join(',');
     if (key === heroKey) return;
     heroKey = key;
