@@ -1,0 +1,19 @@
+{"upsert":[{
+"id":"enveda-casmi-2026-molecule-id-from-mass-spectra",
+"title":"Enveda CASMI 2026 — Molecule ID From Mass Spectra",
+"category":"Hackathon",
+"organizer":{"name":"Enveda x Kaggle","kind":"Company","website":"https://www.enveda.com","prestige":60},
+"summary":"Online Kaggle ML competition: predict 2-D chemical structures from mass spectrometry data. Entry (rules acceptance) by 7 Dec 2026 23:59 UTC; final submissions close 14 Dec 2026 23:59 UTC.",
+"deadline":"2026-12-07T23:59:00+00:00",
+"location":"Online (worldwide)",
+"format":"Online",
+"eligibility":"Anyone with a Kaggle account aged 18+ (or age of majority); excluded: Crimea, Donetsk/Luhansk, Cuba, Iran, North Korea and sanctioned persons. Solo or teams up to 5.",
+"team":{"min":1,"max":5},
+"prize":{"amount":50000,"currency":"USD","kind":"pool","rewardType":"cash","description":"US$50,000 cash pool for top five: $16,000 / $12,000 / $9,000 / $7,000 / $6,000."},
+"tags":["AI","Kaggle","Machine learning","Chemistry"],
+"url":"https://www.startupgrantsindia.com/enveda-casmi-2026-mass-spectra-challenge",
+"region":"Global",
+"entryStatus":"open",
+"notes":["Details confirmed from Kaggle's announcement and a detailed listing page; Kaggle rules tab is binding."],
+"researchAsOf":"2026-11-25"
+}]}
