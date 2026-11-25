@@ -1,0 +1,28 @@
+{
+  "id": "hackwithaditya",
+  "title": "HackWithAditya",
+  "category": "Hackathon",
+  "organizerId": "organizer-not-specified",
+  "summary": "College teams of 4–6. Earlier cutoff 11:45 pm IST.",
+  "deadline": "2026-11-25T23:45:00+05:30",
+  "location": "Andhra Pradesh, India",
+  "format": "To confirm",
+  "eligibility": "College teams of 4–6. Earlier cutoff 11:45 pm IST. See official source for full eligibility.",
+  "team": {
+    "min": 4,
+    "max": 6
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize amount not supplied."
+  },
+  "tags": [],
+  "url": "https://hackwithaditya.devpost.com/rules",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

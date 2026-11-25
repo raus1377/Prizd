@@ -1,0 +1,30 @@
+{
+  "id": "swiggy-food-for-thought-2-0-swiggy",
+  "title": "Food for Thought 2.0 – Swiggy",
+  "category": "Case competition",
+  "organizerId": "swiggy",
+  "summary": "Same-college teams of 2–4; business case and prototype video.",
+  "deadline": null,
+  "deadlineDate": "2026-12-02",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Same-college teams of 2–4; business case and prototype video. See official source for full eligibility.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize amount not supplied."
+  },
+  "tags": [],
+  "url": "https://www.foodforthoughtchallenge.in/",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

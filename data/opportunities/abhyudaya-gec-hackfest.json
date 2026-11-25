@@ -1,0 +1,28 @@
+{
+  "id": "abhyudaya-gec-hackfest",
+  "title": "ABHYUDAYA GEC Hackfest",
+  "category": "Hackathon",
+  "organizerId": "organizer-not-specified",
+  "summary": "Eight-hour offline hackathon.",
+  "deadline": null,
+  "startDate": "2026-12-05",
+  "location": "Challakere, India",
+  "format": "In person",
+  "eligibility": "Eight-hour offline hackathon. See official source for full eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize amount not supplied."
+  },
+  "tags": [],
+  "url": "https://abhyudaya.devfolio.co/overview",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [
+    "Published event start: 2026-12-05. Exact registration cutoff not supplied; confirm on official page."
+  ],
+  "researchAsOf": "2026-11-25"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "techacks-5-0",
+  "title": "Techacks 5.0",
+  "category": "Hackathon",
+  "organizerId": "organizer-not-specified",
+  "summary": "Offline; organizer-hosted Devfolio registration page; selection may apply.",
+  "deadline": null,
+  "startDate": "2027-01-15",
+  "location": "Rajpura, India",
+  "format": "In person",
+  "eligibility": "Offline; organizer-hosted Devfolio registration page; selection may apply. See official source for full eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize amount not supplied."
+  },
+  "tags": [],
+  "url": "https://techacks05.devfolio.co/",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [
+    "Published event start: 2027-01-15. Exact registration cutoff not supplied; confirm on official page."
+  ],
+  "researchAsOf": "2026-11-25"
+}

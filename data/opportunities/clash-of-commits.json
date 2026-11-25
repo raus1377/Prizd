@@ -1,0 +1,28 @@
+{
+  "id": "clash-of-commits",
+  "title": "Clash of Commits",
+  "category": "Hackathon",
+  "organizerId": "organizer-not-specified",
+  "summary": "Offline; organizer-hosted Devfolio registration page; selection may apply.",
+  "deadline": null,
+  "startDate": "2026-12-04",
+  "location": "Chennai, India",
+  "format": "In person",
+  "eligibility": "Offline; organizer-hosted Devfolio registration page; selection may apply. See official source for full eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize amount not supplied."
+  },
+  "tags": [],
+  "url": "https://clash-of-commits.devfolio.co/",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [
+    "Published event start: 2026-12-04. Exact registration cutoff not supplied; confirm on official page."
+  ],
+  "researchAsOf": "2026-11-25"
+}
