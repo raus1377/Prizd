@@ -1,0 +1,30 @@
+{
+  "id": "chandigarh-university-lighthouse-hackathon",
+  "title": "LightHouse - Hackathon",
+  "category": "Hackathon",
+  "organizerId": "chandigarh-university",
+  "summary": "LightHouse - Hackathon, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-31",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "New Delhi, India",
+  "format": "Hybrid",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 2,
+    "max": 5
+  },
+  "prize": {
+    "amount": 510000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://tally.so/r/1Wd0MM",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

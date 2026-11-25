@@ -1,0 +1,30 @@
+{
+  "id": "iiit-lucknow-ai-kaushal-hackathon-2026",
+  "title": "AI Kaushal Hackathon 2026",
+  "category": "Hackathon",
+  "organizerId": "iiit-lucknow",
+  "summary": "AI Kaushal Hackathon 2026, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-27",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Lucknow, India",
+  "format": "Hybrid",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 500000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://www.inmobi.com/ai-kaushal",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

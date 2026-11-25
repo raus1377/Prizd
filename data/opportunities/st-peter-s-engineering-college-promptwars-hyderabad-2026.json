@@ -1,0 +1,32 @@
+{
+  "id": "st-peter-s-engineering-college-promptwars-hyderabad-2026",
+  "title": "PromptWars Hyderabad 2026",
+  "category": "Hackathon",
+  "organizerId": "st-peter-s-engineering-college",
+  "summary": "PromptWars Hyderabad 2026, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-07",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Hyderabad, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://innotechhub.in",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

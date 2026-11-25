@@ -1,0 +1,27 @@
+{
+  "id": "au-small-finance-bank-aureka-hackathon-by-au-bank",
+  "title": "AUreka: Hackathon by AU Bank",
+  "category": "Hackathon",
+  "organizerId": "au-small-finance-bank",
+  "summary": "AUreka: Hackathon by AU Bank, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-02",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://www.hackerearth.com/challenges/competitive/aureka-find-the-insight-find-your-future/",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

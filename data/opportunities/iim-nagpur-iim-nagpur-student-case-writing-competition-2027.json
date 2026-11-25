@@ -1,0 +1,29 @@
+{
+  "id": "iim-nagpur-iim-nagpur-student-case-writing-competition-2027",
+  "title": "IIM Nagpur Student Case Writing Competition 2027",
+  "category": "Case competition",
+  "organizerId": "iim-nagpur",
+  "summary": "IIM Nagpur Student Case Writing Competition 2027, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2027-01-05",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Nagpur, India",
+  "format": "To confirm",
+  "eligibility": "Check official eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://www.iimnagpur.ac.in/CoE/CRC/conferences-workshops/",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "loyola-college-chennai-strathack",
+  "title": "StratHack",
+  "category": "Hackathon",
+  "organizerId": "loyola-college-chennai",
+  "summary": "StratHack, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2027-01-24",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Chennai, India",
+  "format": "Hybrid",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 2,
+    "max": 3
+  },
+  "prize": {
+    "amount": 50000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://strategiaevent.com",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

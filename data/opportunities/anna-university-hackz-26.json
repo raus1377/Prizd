@@ -1,0 +1,30 @@
+{
+  "id": "anna-university-hackz-26",
+  "title": "HackZ'26",
+  "category": "Hackathon",
+  "organizerId": "anna-university",
+  "summary": "HackZ'26, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-15",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": 183000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://hackz.cseaceg.org.in",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

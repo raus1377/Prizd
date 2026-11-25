@@ -1,0 +1,30 @@
+{
+  "id": "fr-c-rodrigues-institute-of-technology-overclock-2027",
+  "title": "OVERCLOCK 2027",
+  "category": "Hackathon",
+  "organizerId": "fr-c-rodrigues-institute-of-technology",
+  "summary": "OVERCLOCK 2027, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-15",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Navi Mumbai, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": 75000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://overclock-fcrit.vercel.app",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

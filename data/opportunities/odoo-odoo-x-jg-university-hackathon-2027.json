@@ -1,0 +1,27 @@
+{
+  "id": "odoo-odoo-x-jg-university-hackathon-2027",
+  "title": "Odoo x JG University Hackathon 2027",
+  "category": "Hackathon",
+  "organizerId": "odoo",
+  "summary": "Odoo x JG University Hackathon 2027, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-27",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Ahmedabad, India",
+  "format": "To confirm",
+  "eligibility": "Check official eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://hackathon.odoo.com/event/odoo-x-jg-university-hackathon-2027-41/register",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

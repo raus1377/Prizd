@@ -1,0 +1,32 @@
+{
+  "id": "mmmut-gorakhpur-redstone-rush-12-hour-open-innovation-hackathon",
+  "title": "RedStone Rush 12 Hour Open Innovation Hackathon",
+  "category": "Hackathon",
+  "organizerId": "mmmut-gorakhpur",
+  "summary": "RedStone Rush 12 Hour Open Innovation Hackathon, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-25",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Gorakhpur, India",
+  "format": "Hybrid",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 3,
+    "max": 5
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://mmmut.app",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "hackathon-raptors-agentware-72-hour-hackathon",
+  "title": "Agentware 72-Hour Hackathon",
+  "category": "Hackathon",
+  "organizerId": "hackathon-raptors",
+  "summary": "Agentware 72-Hour Hackathon, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-27",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 160000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://raptors.dev",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

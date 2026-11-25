@@ -1,0 +1,32 @@
+{
+  "id": "iiit-bhubaneswar-craft-n-code",
+  "title": "Craft N Code",
+  "category": "Hackathon",
+  "organizerId": "iiit-bhubaneswar",
+  "summary": "Craft N Code, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2027-01-08",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Multiple states, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": 50000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://d3fest.techsoc-iiitbbsr.com",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

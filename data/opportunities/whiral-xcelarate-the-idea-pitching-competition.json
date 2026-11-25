@@ -1,0 +1,32 @@
+{
+  "id": "whiral-xcelarate-the-idea-pitching-competition",
+  "title": "Xcelarate - The Idea Pitching Competition",
+  "category": "Case competition",
+  "organizerId": "whiral",
+  "summary": "Xcelarate - The Idea Pitching Competition, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-30",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Delhi, India",
+  "format": "Hybrid",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 5
+  },
+  "prize": {
+    "amount": 150000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://forms.gle/pqcvPtyFmdAC64jt7",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

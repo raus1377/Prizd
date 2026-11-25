@@ -1,0 +1,32 @@
+{
+  "id": "mmmut-gorakhpur-nexathon-continuum-2027-ideathon",
+  "title": "Nexathon - Continuum 2027 Ideathon",
+  "category": "Case competition",
+  "organizerId": "mmmut-gorakhpur",
+  "summary": "Nexathon - Continuum 2027 Ideathon, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-25",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Gorakhpur, India",
+  "format": "Hybrid",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://mmmut.app",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

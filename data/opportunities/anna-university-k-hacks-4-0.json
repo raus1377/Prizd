@@ -1,0 +1,32 @@
+{
+  "id": "anna-university-k-hacks-4-0",
+  "title": "K Hacks 4.0",
+  "category": "Hackathon",
+  "organizerId": "anna-university",
+  "summary": "K Hacks 4.0, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-27",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Chennai, India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": 600000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://cegtechforum.in",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

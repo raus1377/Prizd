@@ -1,0 +1,30 @@
+{
+  "id": "rv-college-of-engineering-eureka-26-national-project-expo",
+  "title": "Eureka '26 – National Project Expo",
+  "category": "Case competition",
+  "organizerId": "rv-college-of-engineering",
+  "summary": "Eureka '26 – National Project Expo, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-26",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Bengaluru, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 25000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://eureka-2026.vercel.app",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

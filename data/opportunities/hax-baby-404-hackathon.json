@@ -1,0 +1,30 @@
+{
+  "id": "hax-baby-404-hackathon",
+  "title": "404 Hackathon",
+  "category": "Hackathon",
+  "organizerId": "hax-baby",
+  "summary": "404 Hackathon, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-27",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 3
+  },
+  "prize": {
+    "amount": 1085000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://hax.baby",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

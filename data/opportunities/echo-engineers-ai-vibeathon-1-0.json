@@ -1,0 +1,32 @@
+{
+  "id": "echo-engineers-ai-vibeathon-1-0",
+  "title": "AI Vibeathon 1.0",
+  "category": "Hackathon",
+  "organizerId": "echo-engineers",
+  "summary": "AI Vibeathon 1.0, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-17",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Delhi, India",
+  "format": "Hybrid",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 50000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://echo-engineers.vercel.app",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

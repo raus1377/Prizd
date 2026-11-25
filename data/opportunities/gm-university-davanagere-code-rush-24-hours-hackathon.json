@@ -1,0 +1,32 @@
+{
+  "id": "gm-university-davanagere-code-rush-24-hours-hackathon",
+  "title": "Code Rush – 24 Hours Hackathon",
+  "category": "Hackathon",
+  "organizerId": "gm-university-davanagere",
+  "summary": "Code Rush – 24 Hours Hackathon, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-30",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Davanagere, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://erp.gmit.info/hdfc_gmsir/gmsir/gmsir_events.php?event=IGNITRON2026",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

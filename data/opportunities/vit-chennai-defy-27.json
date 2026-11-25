@@ -1,0 +1,30 @@
+{
+  "id": "vit-chennai-defy-27",
+  "title": "Defy'27",
+  "category": "Hackathon",
+  "organizerId": "vit-chennai",
+  "summary": "Defy'27, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-14",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Chennai, India",
+  "format": "Hybrid",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 4,
+    "max": 6
+  },
+  "prize": {
+    "amount": 100000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://defy.daocommunity.in",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

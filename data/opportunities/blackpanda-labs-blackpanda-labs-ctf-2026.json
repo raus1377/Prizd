@@ -1,0 +1,30 @@
+{
+  "id": "blackpanda-labs-blackpanda-labs-ctf-2026",
+  "title": "BlackPanda Labs CTF 2026",
+  "category": "Hackathon",
+  "organizerId": "blackpanda-labs",
+  "summary": "BlackPanda Labs CTF 2026, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-08",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 2
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://blackpandalabs.in",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

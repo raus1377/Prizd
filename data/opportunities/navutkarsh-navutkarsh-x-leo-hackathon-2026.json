@@ -1,0 +1,30 @@
+{
+  "id": "navutkarsh-navutkarsh-x-leo-hackathon-2026",
+  "title": "NavUtkarsh x Leo Hackathon 2026",
+  "category": "Hackathon",
+  "organizerId": "navutkarsh",
+  "summary": "NavUtkarsh x Leo Hackathon 2026, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-01",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Boisar, India",
+  "format": "Hybrid",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 30000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://navutkarsh.pages.dev",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

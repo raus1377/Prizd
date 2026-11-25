@@ -1,0 +1,30 @@
+{
+  "id": "karma-enterprises-rack-it-up-2026",
+  "title": "Rack It Up 2026",
+  "category": "Hackathon",
+  "organizerId": "karma-enterprises",
+  "summary": "Rack It Up 2026, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-08",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://rackitup.karmaenterprises.tech",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

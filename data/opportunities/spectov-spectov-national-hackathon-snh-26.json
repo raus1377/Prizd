@@ -1,0 +1,27 @@
+{
+  "id": "spectov-spectov-national-hackathon-snh-26",
+  "title": "SpectoV National Hackathon (SNH '26)",
+  "category": "Hackathon",
+  "organizerId": "spectov",
+  "summary": "SpectoV National Hackathon (SNH '26), listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-30",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://snh.hiringspectov.com/",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

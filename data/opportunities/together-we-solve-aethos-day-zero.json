@@ -1,0 +1,30 @@
+{
+  "id": "together-we-solve-aethos-day-zero",
+  "title": "AETHOS - Day Zero",
+  "category": "Hackathon",
+  "organizerId": "together-we-solve",
+  "summary": "AETHOS - Day Zero, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2027-01-08",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://aethos-zero.pages.dev",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "iiit-allahabad-opencode-2026",
+  "title": "OpenCode 2026",
+  "category": "Hackathon",
+  "organizerId": "iiit-allahabad",
+  "summary": "OpenCode 2026, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-13",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": 80000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://events.geekhaven.in",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}
