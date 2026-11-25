@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { validateSettings, validateOpportunity, gitAddedAt, normalizeOpportunity } from './model.mjs';
 import { buildSite, esc } from './seo.mjs';
+import '../src/logic.js';
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
 const readJson = async relative => JSON.parse(await readFile(path.join(root, relative), 'utf8'));
@@ -49,10 +50,10 @@ function publicListing(o) {
   const page = settings.categoryPages[displayCategory];
   return { ...o, originalCategory: o.category, category: displayCategory, categories: [...new Set(labels.filter(c => publicCategories.includes(c)))], detailPath: (page?.slug || displayCategory.toLowerCase().replace(/[^a-z0-9]+/g,'-')) + '/' + o.id + '/' };
 }
-const publicOpportunities = opportunities.map(publicListing).filter(Boolean);
+const publicOpportunities = opportunities.filter(o => !globalThis.Prizd.isClosed(o, now)).map(publicListing).filter(Boolean);
 const publicArchived = archived.map(o => publicListing({...o,entryStatus:'closed'})).filter(Boolean);
 const { backend: _privateBackend, ...browserSettings } = publicSettings;
-const data = { settings: browserSettings, organizers, opportunities: [...publicOpportunities, ...publicArchived], builtAt: new Date(now).toISOString() };
+const data = { settings: browserSettings, organizers, opportunities: publicOpportunities, builtAt: new Date(now).toISOString() };
 const seoSettings = { ...publicSettings, categories: settings.categories, categoryPages: settings.categoryPages };
 const seo = buildSite({ settings: seoSettings, organizers, opportunities: publicOpportunities, archived: publicArchived, now, siteUrl });
 

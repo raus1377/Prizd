@@ -40,13 +40,13 @@ test('every opportunity gets a page, hubs with 3+ listings are indexable, thin h
 test('listings without an official link, archived listings and the India page are handled', () => {
   const noLink = make('nolink', { url: null });
   const old = make('old-edition', { deadline: new Date(now - 30 * DAY).toISOString() });
-  const site = buildSite({ settings, organizers: [organizer], opportunities: [...opportunities, noLink], archived: [old, make('a')], now, siteUrl: 'https://prizd.example' });
+  const site = buildSite({ settings, organizers: [organizer], opportunities: [...opportunities, noLink, make('expired-active', { deadline: new Date(now - DAY).toISOString() })], archived: [old, make('a')], now, siteUrl: 'https://prizd.example' });
   assert.match(site.files.get('hackathons/nolink/index.html'), /Official link coming soon/);
   assert.doesNotMatch(site.files.get('hackathons/nolink/index.html'), /href="null"|href="undefined"/);
-  const archivedPage = site.files.get('hackathons/old-edition/index.html');
-  assert.match(archivedPage, /status-closed/);
-  assert.match(site.files.get('sitemap.xml'), /hackathons\/old-edition\//);
-  assert.match(site.files.get('hackathons/index.html'), /Past and closed[\s\S]*old-edition/);
+  assert.equal(site.files.has('hackathons/old-edition/index.html'), false);
+  assert.equal(site.files.has('hackathons/expired-active/index.html'), false);
+  assert.doesNotMatch(site.files.get('sitemap.xml'), /hackathons\/old-edition\//);
+  assert.doesNotMatch(site.files.get('hackathons/index.html'), /Past and closed|old-edition/);
   assert.equal([...site.files.keys()].filter(k => k.includes('/a/index.html')).length, 1); // an archived duplicate id never replaces the active listing
   const india = site.files.get('india/index.html');
   assert.match(india, /<h1>Opportunities in India<\/h1>/);
@@ -127,7 +127,7 @@ test('the real repository data builds into pages whose internal links all resolv
   }
   const site = buildSite({ settings: realSettings, organizers, opportunities: real, archived, now, siteUrl: 'https://prizd.example' });
   const nestedHubs = (realSettings.keywordPages || []).filter(p => p.slug.includes('/')).length;
-  assert.equal([...site.files.keys()].filter(k => /\/.+\/index\.html$/.test(k)).length, real.length + archived.length + nestedHubs);
+  assert.equal([...site.files.keys()].filter(k => /\/.+\/index\.html$/.test(k)).length, real.filter(o => !globalThis.Prizd.isClosed(o, now)).length + nestedHubs);
   const keys = new Set(site.files.keys());
   for (const [file, html] of site.files) {
     if (!file.endsWith('.html')) continue;

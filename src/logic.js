@@ -29,8 +29,10 @@
       if (state.view === 'new' && !isNew(o, now, newWindowDays)) return false;
       if (state.view === 'saved' && !saved.has(o.id)) return false;
       const status=entryStatus(o,now);
+      if (status === 'closed') return false;
+      if (state.status === 'closed') return false;
       if (state.status === 'open' && state.view !== 'saved' && status !== 'open') return false;
-      if (['upcoming','check','closed'].includes(state.status) && status !== state.status) return false;
+      if (['upcoming','check'].includes(state.status) && status !== state.status) return false;
       if (state.status === 'closing' && (!isActionable(o,now) || deadlineValue(o) === Infinity || deadlineValue(o) > now + 7 * DAY)) return false;
       if (state.region && state.region !== 'all' && state.view !== 'saved' && (o.region || 'Global') !== state.region) return false;
       if (state.category !== 'all' && o.category !== state.category && !(o.categories || []).includes(state.category)) return false;

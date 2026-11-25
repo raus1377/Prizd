@@ -10,7 +10,7 @@
   const params = new URLSearchParams(location.search);
   const defaults = { view:'all', category:'all', kind:'all', format:'all', paid:'no', team:'all', status:'all', sort:settings.defaultSort, search:'' };
   const state = { ...defaults };
-  const allowed = {view:['all','new','saved'],category:['all',...settings.categories],kind:['all','Company','College','Organization','Community'],format:['all','Online','In person','Hybrid','To confirm'],paid:['no','yes'],team:['all','solo','team'],status:['open','all','closing','upcoming','check','closed'],sort:['featured','prestige','prize','deadline','newest']};
+  const allowed = {view:['all','new','saved'],category:['all',...settings.categories],kind:['all','Company','College','Organization','Community'],format:['all','Online','In person','Hybrid','To confirm'],paid:['no','yes'],team:['all','solo','team'],status:['open','all','closing','upcoming','check'],sort:['featured','prestige','prize','deadline','newest']};
   for (const key of Object.keys(allowed)) if (allowed[key].includes(params.get(key))) state[key] = params.get(key);
   state.search = params.get('q') || '';
   let saved;
@@ -61,7 +61,7 @@
     renderHero();
     const open = opportunities.filter(o => isActionable(o,now));
     const newItems = open.filter(o => isNew(o,now,settings.newWindowDays));
-    const savedCount = opportunities.filter(o => saved.has(o.id)).length;
+    const savedCount = opportunities.filter(o => !isClosed(o,now) && saved.has(o.id)).length;
     const items = select(opportunities,state,saved,now,settings.newWindowDays);
     $('stat-open').textContent = String(open.length).padStart(2,'0');
     $('stat-new').textContent = String(newItems.length).padStart(2,'0');

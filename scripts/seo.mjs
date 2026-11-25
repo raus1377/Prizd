@@ -84,10 +84,9 @@ export function buildSite({ settings, organizers, opportunities, archived = [], 
   const today = new Date(now).toISOString().slice(0, 10);
   const seoTitle = settings.seoTitle || `${brand} — ${settings.tagline || 'The Opportunity Index'}`;
   const seoDescription = settings.seoDescription || settings.description;
-  const activeIds = new Set(opportunities.map(o => o.id));
-  const archivedOnly = new Set(archived.filter(o => !activeIds.has(o.id)).map(o => o.id));
-  const all = [...opportunities, ...archived.filter(o => archivedOnly.has(o.id))]; // archived listings keep their URL as "Closed" pages
-  const status = o => archivedOnly.has(o.id) ? 'closed' : P.entryStatus(o, now);
+  // Closed and archived records remain in the private build inputs, not the public site.
+  const all = opportunities.filter(o => !P.isClosed(o, now));
+  const status = o => P.entryStatus(o, now);
   const inCategory = category => all.filter(o => o.category === category || (o.categories || []).includes(category));
   const hubs = settings.categories.map(c => ({ ...categoryInfo(settings, c, year), list: inCategory(c) })).filter(h => h.list.length > 0);
   for (const hub of hubs) hub.indexable = hub.list.length >= 3; // thin pages stay out of the index
@@ -182,7 +181,7 @@ ${body}
     }];
   };
 
-  // ---- one page per opportunity (active and archived)
+  // ---- one page per current opportunity
   for (const o of all) {
     const hub = hubFor(o.category);
     const s = status(o);
@@ -229,16 +228,14 @@ ${related.length ? `<section class="related"><h2>More ${esc(hub.navName.toLowerC
     const b = '../'.repeat(hub.slug.split('/').length);
     const filterQuery = hub.keywordPage ? hub.homeFilter : hub.region ? `region=${encodeURIComponent(hub.region)}` : `category=${encodeURIComponent(hub.category)}`;
     const active = ranked.filter(o => status(o) !== 'closed');
-    const past = ranked.filter(o => status(o) === 'closed');
     const description = clip(`${hub.intro} ${active.length} open now.`, 158);
     const path = `${hub.slug}/`;
     const body = `<nav class="crumbs" aria-label="Breadcrumb"><a href="${b}">${esc(brand)}</a><span aria-hidden="true">/</span><span aria-current="page">${esc(hub.navName)}</span></nav>
 <h1>${esc(hub.h1)}</h1>
 <p class="lede">${esc(hub.intro)}</p>
-<p class="counts"><b>${active.length}</b> open or upcoming · <b>${past.length}</b> past</p>
+<p class="counts"><b>${active.length}</b> open or upcoming</p>
 <p class="actions"><a class="cta" href="${b}?${filterQuery}#opportunities">Filter and search ${esc(hub.navName.toLowerCase())} <span aria-hidden="true">↗</span></a></p>
-${active.length ? `<ul class="rows">${active.map(o => row(o, b)).join('')}</ul>` : '<p class="empty">No open listings right now. Check the past entries below or come back soon.</p>'}
-${past.length ? `<h2>Past and closed</h2><ul class="rows">${past.map(o => row(o, b)).join('')}</ul>` : ''}
+${active.length ? `<ul class="rows">${active.map(o => row(o, b)).join('')}</ul>` : '<p class="empty">No open listings right now. Come back soon.</p>'}
 <section class="signup-band" data-signup data-source="hub:${esc(hub.slug)}" data-title="Get ${esc(hub.navName.toLowerCase())} in your inbox." hidden></section>
 <section class="related"><h2>Browse other types</h2><ul class="tags">${allHubs.filter(h => h.indexable && h !== hub).map(h => `<li><a href="${b}${h.slug}/">${esc(h.navName)}</a></li>`).join('')}</ul></section>`;
     if (files.has(`${path}index.html`)) throw new Error(`seo: page path collision at ${path}`);
