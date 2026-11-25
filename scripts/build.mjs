@@ -99,6 +99,7 @@ const catalog = catalogSource
   .replace(/(src|href)="\.\.\/([\w-]+\.(?:js|css))"/g, (_, attr, asset) => attr + '="../' + asset + '?v=' + now + '"');
 await mkdir(path.join(dist, 'opportunities'), {recursive:true});
 await writeFile(path.join(dist, 'opportunities/index.html'), catalog);
+if (!catalog.includes('All <em>opportunities.</em>') || catalog.includes('id="hero-heading"')) throw new Error('Dedicated catalog page was not generated correctly');
 
 for (const [relative, content] of seo.files) {
   const target = path.join(dist, relative);
