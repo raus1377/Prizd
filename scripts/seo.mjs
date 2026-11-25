@@ -151,11 +151,11 @@ ${tags}
 <body class="page">
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="topline" aria-hidden="true"></div>
-<header class="page-head"><a class="page-brand" href="${base}" aria-label="${esc(brand)} home">${esc(brand.toLowerCase())}<em>.</em></a><nav class="page-nav" aria-label="Main">${navHubs.map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}<a href="${base}submit/">Contribute</a><a href="${base}#opportunities">Search the index ↗</a><button type="button" class="signin-btn" data-account-button hidden>Sign in</button></nav></header>
+<header class="page-head"><a class="page-brand" href="${base}" aria-label="${esc(brand)} home">${esc(brand.toLowerCase())}<em>.</em></a><nav class="page-nav" aria-label="Main">${navHubs.map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}<a href="${base}#opportunities">Search the index ↗</a><button type="button" class="signin-btn" data-account-button hidden>Sign in</button></nav></header>
 <main id="main">
 ${body}
 </main>
-<footer class="page-foot"><a class="page-brand" href="${base}">${esc(brand.toLowerCase())}<em>.</em></a><nav aria-label="Browse by type">${allHubs.filter(h => h.indexable).map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}<a href="${base}submit/">Submit an opportunity</a></nav><p>An independent index. Always confirm rules and deadlines on the official page.</p></footer>
+<footer class="page-foot"><a class="page-brand" href="${base}">${esc(brand.toLowerCase())}<em>.</em></a><nav aria-label="Browse by type">${allHubs.filter(h => h.indexable).map(h => `<a href="${base}${h.slug}/">${esc(h.navName)}</a>`).join('')}</nav><p>An independent index. Always confirm rules and deadlines on the official page.</p></footer>
 </body>
 </html>
 `;
@@ -282,24 +282,7 @@ ${active.length ? `<ul class="rows">${active.map(o => row(o, b)).join('')}</ul>`
 </div>`
   }));
 
-  // ---- submit-an-opportunity page: gives organizers a way in, and a reason to link back
-  const issueUrl = settings.repoUrl ? `${settings.repoUrl}/issues/new?template=submit-opportunity.yml` : '';
-  const mailUrl = settings.contactEmail ? `mailto:${settings.contactEmail}?subject=${encodeURIComponent(`Submit an opportunity to ${brand}`)}` : '';
-  files.set('submit/index.html', layout({
-    base: '../', title: `Submit a Hackathon or Competition | ${brand}`, description: clip(`Run a hackathon, case competition or research programme for students? Submit it to ${brand} for free. We list the prize, deadline and eligibility and link to your official page.`, 158), path: 'submit/',
-    body: `<nav class="crumbs" aria-label="Breadcrumb"><a href="../">${esc(brand)}</a><span aria-hidden="true">/</span><span aria-current="page">Submit an opportunity</span></nav>
-<h1>Contribute to Prizd</h1>
-<p class="lede">Anyone can suggest an opportunity, report an error or improve the website. Contributions are public on GitHub and reviewed before publication.</p>
-<h2>What we need</h2>
-<ul><li>The official page or registration link</li><li>The name of the organizer</li><li>The prize or stipend, the deadline and who can apply</li></ul>
-<p class="actions">${issueUrl ? `<a class="cta" href="${esc(issueUrl)}" target="_blank" rel="noopener noreferrer">Submit an opportunity (issue) <span aria-hidden="true">↗</span></a>` : ''}${mailUrl ? `<a class="cta" href="${esc(mailUrl)}">Submit by email</a>` : ''}</p>
-<h2>Report a problem or contribute code</h2>
-<p>Found outdated information or a website bug? Open an issue. To add or edit listings yourself, fork the repository, follow the contribution guide and open a pull request against main. A GitHub account is required, but a Prizd account is not.</p>
-<p class="actions">${settings.repoUrl ? `<a class="cta" href="${esc(settings.repoUrl)}/issues/new">Report an issue ↗</a><a class="cta" href="${esc(settings.repoUrl)}/fork">Fork &amp; contribute ↗</a><a class="text-link" href="${esc(settings.repoUrl)}/compare">Open a pull request ↗</a><a class="text-link" href="${esc(settings.repoUrl)}/blob/main/CONTRIBUTING.md">Contribution guide ↗</a>` : ''}</p>
-<h2>Already listed?</h2>
-<p>Every listing has its own page here. Linking to it from your event page or announcement helps students find you, and helps ${esc(brand)} reach more of them.</p>`
-  }));
-  if (settings.indexNowKey) files.set(`${settings.indexNowKey}.txt`, settings.indexNowKey);
+  // Contribution submissions are disabled until a private intake is available.
 
   // ---- 404, robots, sitemap
   files.set('404.html', `<!doctype html>
@@ -309,7 +292,7 @@ ${active.length ? `<ul class="rows">${active.map(o => row(o, b)).join('')}</ul>`
 `);
   if (site) {
     files.set('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);
-    const urls = [{ loc: abs(''), lastmod: today }, { loc: abs('submit/'), lastmod: today }];
+    const urls = [{ loc: abs(''), lastmod: today }];
     for (const hub of allHubs) if (hub.indexable) urls.push({ loc: abs(`${hub.slug}/`), lastmod: today });
     for (const o of all) urls.push({ loc: abs(pathOf(o)), lastmod: lastModified(o, today) });
     files.set('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${esc(u.loc)}</loc><lastmod>${u.lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`);
@@ -325,7 +308,6 @@ ${active.length ? `<ul class="rows">${active.map(o => row(o, b)).join('')}</ul>`
       <div class="browse-grid">${allHubs.filter(h => h.indexable).map(h => `<a href="${h.slug}/"><span>${esc(h.navName)}</span><b>${h.list.length}</b></a>`).join('')}</div>
       <h3 class="browse-sub">Latest additions</h3>
       <ul class="browse-latest">${newest.map(o => `<li><a href="${pathOf(o)}">${esc(o.title)}</a><span>${esc(o.organizer.name)} · ${esc(prizePhrase(o))}</span></li>`).join('')}</ul>
-      <p class="browse-sub">Running a competition? <a href="submit/">Submit it to ${esc(brand)}</a>.</p>
     </section>`;
   const homeHead = [
     abs('') ? `<link rel="canonical" href="${esc(abs(''))}">` : '',

@@ -52,7 +52,7 @@ function publicListing(o) {
 }
 const publicOpportunities = opportunities.filter(o => !globalThis.Prizd.isClosed(o, now)).map(publicListing).filter(Boolean);
 const publicArchived = archived.map(o => publicListing({...o,entryStatus:'closed'})).filter(Boolean);
-const { backend: _privateBackend, ...browserSettings } = publicSettings;
+const { backend: _privateBackend, repoUrl: _repoUrl, ...browserSettings } = publicSettings;
 const data = { settings: browserSettings, organizers, opportunities: publicOpportunities, builtAt: new Date(now).toISOString() };
 const seoSettings = { ...publicSettings, categories: settings.categories, categoryPages: settings.categoryPages };
 const seo = buildSite({ settings: seoSettings, organizers, opportunities: publicOpportunities, archived: publicArchived, now, siteUrl });
