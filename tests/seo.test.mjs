@@ -160,7 +160,7 @@ test('listing and category pages carry the signup slot and the privacy page exis
   assert.match(site.files.get('privacy/index.html'), /double opt-in/);
 });
 
-test('keyword landing pages, the submit page, the IndexNow key and Event markup', () => {
+test('keyword landing pages, disabled public submissions, the IndexNow key and Event markup', () => {
   const kwSettings = { ...settings, repoUrl: 'https://github.com/o/r', indexNowKey: 'abcdef1234567890',
     keywordPages: [
       { slug: 'hackathons/cash-prize', title: 'Cash hackathons in {year}', h1: 'Cash hackathons', intro: 'Intro.', categories: ['Hackathon'], cashPrize: true },
@@ -179,7 +179,9 @@ test('keyword landing pages, the submit page, the IndexNow key and Event markup'
   assert.ok(cash.includes('href="../../p1') === false && cash.includes('href="../../hackathons/p1/"'));
   assert.ok(site.files.get('case-studies/index.html').includes('Big Case Study Cup'));
   assert.match(site.files.get('sitemap.xml'), /hackathons\/cash-prize\//);
-  assert.ok(site.files.get('submit/index.html').includes('issues/new?template=submit-opportunity.yml'));
+  assert.equal(site.files.has('submit/index.html'), false);
+  assert.doesNotMatch(site.files.get('sitemap.xml'), /\/submit\//);
+  assert.doesNotMatch(site.home.browse, /submit\//);
   assert.equal(site.files.get('abcdef1234567890.txt'), 'abcdef1234567890');
   const ld = id => site.files.get(`hackathons/${id}/index.html`).match(/application\/ld\+json">(.*?)<\/script>/)[1];
   assert.ok(JSON.parse(ld('p1'))['@graph'].some(n => n['@type'] === 'Event' && n.startDate === '2026-12-05'));
