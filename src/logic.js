@@ -33,6 +33,14 @@
     const ranked = rank(items.filter(o => o.url && isActionable(o, now)));
     return ['Hackathon', 'Case competition', 'Research'].map(category => ranked.find(o => o.category === category)).filter(Boolean);
   }
+  // The unfiltered landing grid reserves the first six slots by primary category.
+  function homeOrder(items, mixed) {
+    if (!mixed) return items;
+    const first = [['Hackathon',3],['Case competition',2],['Research',1]]
+      .flatMap(([category,count]) => items.filter(o => o.category === category).slice(0,count));
+    const chosen = new Set(first.map(o => o.id));
+    return [...first, ...items.filter(o => !chosen.has(o.id))];
+  }
   function select(items, state, saved, now, newWindowDays = 7) {
     const query = (state.search || '').trim().toLowerCase();
     return rank(items.filter(o => {
@@ -68,5 +76,5 @@
     if (o.team.max === null) return o.team.min === 1 ? 'Solo / team' : `At least ${o.team.min} members`;
     return o.team.min === o.team.max ? `${o.team.min} participant${o.team.min === 1 ? '' : 's'}` : `${o.team.min}–${o.team.max} participants`;
   }
-  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, heroPicks, cardLocation, isPaid, prizeText, prizeKind, teamText, isInternship, supportText };
+  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, heroPicks, cardLocation, homeOrder, isPaid, prizeText, prizeKind, teamText, isInternship, supportText };
 })();

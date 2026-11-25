@@ -167,3 +167,13 @@ test('Card location displays online or the supplied local place without a redund
   assert.equal(cardLocation({format:'To confirm',location:'India'}),'India');
   assert.equal(cardLocation({format:'To confirm'}),'Location to confirm');
 });
+
+
+test('Homepage orders three hackathons, two cases and one research before remaining listings', () => {
+  const items = ['Others','Hackathon','Hackathon','Hackathon','Hackathon','Case competition','Case competition','Case competition','Research','Research'].map((category,i)=>fixture({id:String(i),category}));
+  const {homeOrder} = globalThis.Prizd;
+  const ordered=homeOrder(items,true);
+  assert.deepEqual(ordered.slice(0,6).map(o=>o.category),['Hackathon','Hackathon','Hackathon','Case competition','Case competition','Research']);
+  assert.equal(new Set(ordered.map(o=>o.id)).size,items.length);
+  assert.deepEqual(homeOrder(items,false),items);
+});

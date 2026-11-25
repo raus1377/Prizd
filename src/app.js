@@ -2,7 +2,7 @@
   'use strict';
   const data = window.__PRIZD_DATA__;
   if (!data) { document.getElementById('result-count').textContent = 'Data could not load. Please refresh.'; return; }
-  const { isNew, isClosed, isActionable, entryStatus, rank, select, heroPicks, cardLocation, prizeText, prizeKind, teamText, isInternship, supportText, DAY } = window.Prizd;
+  const { isNew, isClosed, isActionable, entryStatus, rank, select, heroPicks, cardLocation, homeOrder, prizeText, prizeKind, teamText, isInternship, supportText, DAY } = window.Prizd;
   const $ = id => document.getElementById(id);
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const settings = data.settings;
@@ -20,6 +20,9 @@
   try { currentLayout = (localStorage.getItem('prizd-layout') || localStorage.getItem('open-call-layout')) === 'list' ? 'list' : 'grid'; } catch { /* Browsing still works without storage. */ }
   let now = Date.now();
   let toastTimer;
+  const PAGE_SIZE = 6;
+  let visibleLimit = PAGE_SIZE;
+  let previousFilters = null;
   $('brand-name').textContent = settings.name;
   document.title = settings.seoTitle || `${settings.name} — The Opportunity Index`;
   $('footer-year').textContent = new Date().getFullYear();
@@ -62,7 +65,14 @@
     const open = opportunities.filter(o => isActionable(o,now));
     const newItems = open.filter(o => isNew(o,now,settings.newWindowDays));
     const savedCount = opportunities.filter(o => !isClosed(o,now) && saved.has(o.id)).length;
+    const filterKey = JSON.stringify(state);
+    if (filterKey !== previousFilters) { visibleLimit = PAGE_SIZE; previousFilters = filterKey; }
     const items = select(opportunities,state,saved,now,settings.newWindowDays);
+    const mixed = state.view === 'all' && state.category === 'all' && !state.search.trim();
+    const ordered = homeOrder(items,mixed);
+    const visible = ordered.slice(0,visibleLimit);
+    $('view-more').hidden = visible.length >= items.length;
+    $('view-more').textContent = 'VIEW MORE OPPORTUNITIES (' + (items.length - visible.length) + ' remaining)';
     $('stat-open').textContent = String(open.length).padStart(2,'0');
     $('stat-new').textContent = String(newItems.length).padStart(2,'0');
     $('stat-organizers').textContent = String(new Set(open.map(o => o.organizerId)).size).padStart(2,'0');
@@ -74,7 +84,7 @@
     $('paid-only').checked = state.paid === 'yes';
     document.querySelectorAll('[data-format]').forEach(el => { el.classList.toggle('active',el.dataset.format === state.format); el.setAttribute('aria-pressed',el.dataset.format === state.format); });
     document.querySelectorAll('.category-filters [data-category]').forEach(el => { el.classList.toggle('active',el.dataset.category === state.category); el.setAttribute('aria-pressed',el.dataset.category === state.category); });
-    $('opportunity-grid').innerHTML = items.map(card).join('');
+    $('opportunity-grid').innerHTML = visible.map(card).join('');
     $('empty-state').hidden = items.length > 0;
     $('empty-message').textContent = state.view === 'saved' && savedCount === 0 ? 'Tap the bookmark on any opportunity to start your shortlist.' : 'Try a different filter. Your next opportunity might be one click away.';
     document.querySelectorAll('.card-reveal').forEach(el => observer ? observer.observe(el) : el.classList.add('visible'));
@@ -95,6 +105,7 @@
     if (o) location.assign('./' + o.detailPath);
   }
   function reset() {
+    visibleLimit = PAGE_SIZE;
     Object.assign(state,defaults);
     $('search').value = '';
     for (const [key,id] of [['kind','kind-filter'],['format','format-filter'],['team','team-filter'],['status','status-filter'],['sort','sort']]) $(id).value = state[key];
@@ -114,6 +125,7 @@
     const quick = event.target.closest('[data-quick]');
     if (quick) { state.view = quick.dataset.quick; render(); closeMenu(); }
   });
+  $('view-more').addEventListener('click',() => { visibleLimit += PAGE_SIZE; render(); });
   $('paid-only').addEventListener('change',event => { state.paid = event.target.checked ? 'yes' : 'no'; render(); });
   $('search').addEventListener('input',event => { state.search = event.target.value; render(); });
   for (const [key,id] of [['kind','kind-filter'],['format','format-filter'],['team','team-filter'],['status','status-filter'],['sort','sort']]) $(id).addEventListener('change',event => { state[key] = event.target.value; render(); });
