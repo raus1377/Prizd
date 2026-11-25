@@ -82,6 +82,24 @@ home = home
   .replace(/(src|href)="\.\/([\w-]+\.(?:js|css))"/g, (_, attr, asset) => `${attr}="./${asset}?v=${now}"`);
 await writeFile(path.join(dist, 'index.html'), home);
 
+// Dedicated full catalog: reuse the accessible filters, without the landing-page hero.
+const catalogSource = await readFile(path.join(root, 'src/index.html'), 'utf8');
+const catalog = catalogSource
+  .replace('{{SEO_TITLE}}', 'All Opportunities | Prizd')
+  .replace('{{SEO_DESCRIPTION}}', 'Browse and filter all current opportunities.')
+  .replace('<!--SEO_HEAD-->', '<meta name="robots" content="noindex,follow">')
+  .replace(/<section id="top" class="hero"[\s\S]*?<\/section>/, '<div id="top"><div id="hero-shortlist" hidden></div></div>')
+  .replace(/<div class="band" aria-hidden="true">[\s\S]*?<\/div><\/div>/, '')
+  .replace(/<div class="index-heading">[\s\S]*?<\/div>/, '<div class="index-heading"><h2 id="index-title">All <em>opportunities.</em></h2><p><a href="../">← Back to homepage</a></p></div>')
+  .replace('<!--BROWSE-->', '')
+  .replace(/<section id="about"[\s\S]*?<\/section>/, '')
+  .replace(/href="#(?:browse|about)"/g, 'href="../#browse"')
+  .replace(/href="#top" class="brand/g, 'href="../" class="brand')
+  .replace(/(src|href)="\.\//g, '$1="../')
+  .replace(/(src|href)="\.\.\/([\w-]+\.(?:js|css))"/g, (_, attr, asset) => attr + '="../' + asset + '?v=' + now + '"');
+await mkdir(path.join(dist, 'opportunities'), {recursive:true});
+await writeFile(path.join(dist, 'opportunities/index.html'), catalog);
+
 for (const [relative, content] of seo.files) {
   const target = path.join(dist, relative);
   await mkdir(path.dirname(target), { recursive: true });
