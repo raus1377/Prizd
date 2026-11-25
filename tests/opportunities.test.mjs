@@ -48,10 +48,10 @@ test('Search and category, organizer, format and team filters combine', () => {
   assert.deepEqual(select([one,two],{...state,search:'CLIMATE',kind:'College',format:'Online',team:'solo'},new Set(),now).map(x=>x.id),['test-call']);
   assert.deepEqual(select([one,two],{...state,category:'Product',team:'team'},new Set(),now).map(x=>x.id),['two']);
 });
-test('Saved collection retains past deadlines; closing soon excludes them and unknown dates', () => {
+test('Saved collection excludes past deadlines; closing soon excludes them and unknown dates', () => {
   const closed=fixture({id:'past',deadline:new Date(now-1).toISOString()});
   const unknown=fixture({id:'unknown',deadline:null});
-  assert.deepEqual(select([closed,unknown],{...state,view:'saved'},new Set(['past']),now).map(x=>x.id),['past']);
+  assert.deepEqual(select([closed,unknown],{...state,view:'saved'},new Set(['past']),now).map(x=>x.id),[]);
   assert.deepEqual(select([closed,unknown,fixture()],{...state,status:'closing'},new Set(),now).map(x=>x.id),['test-call']);
 });
 test('Prize comparisons normalize currency instead of comparing nominal amounts', () => {
@@ -69,13 +69,15 @@ test('A date-only deadline expires after that calendar day in the specified time
   assert.equal(isClosed(day,Date.parse('2026-10-11T18:29:59Z')),false);
   assert.equal(isClosed(day,Date.parse('2026-10-11T18:30:00Z')),true);
 });
-test('Upcoming, uncertain and closed entries have separate collections and never appear as open', () => {
+test('Upcoming and uncertain entries have separate collections; closed entries are hidden', () => {
   const upcoming=fixture({id:'future',entryStatus:'upcoming',opensOn:'2026-10-12'});
   const check=fixture({id:'check',entryStatus:'check'});
   const closed=fixture({id:'closed',entryStatus:'closed'});
   const items=[fixture(),upcoming,check,closed];
   assert.deepEqual(select(items,state,new Set(),now).map(o=>o.id),['test-call']);
-  for(const [status,id] of [['upcoming','future'],['check','check'],['closed','closed']]) assert.deepEqual(select(items,{...state,status},new Set(),now).map(o=>o.id),[id]);
+  for(const [status,id] of [['upcoming','future'],['check','check']]) assert.deepEqual(select(items,{...state,status},new Set(),now).map(o=>o.id),[id]);
+  assert.deepEqual(select(items,{...state,status:'all'},new Set(),now).map(o=>o.id).sort(),['check','future','test-call']);
+  assert.deepEqual(select(items,{...state,status:'closed'},new Set(),now),[]);
   assert.equal(entryStatus(upcoming,Date.parse('2026-10-11T18:30:00Z')),'open');
   assert.equal(isActionable(check,now),false);
 });
