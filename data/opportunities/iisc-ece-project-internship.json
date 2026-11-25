@@ -1,0 +1,27 @@
+{
+  "id": "iisc-ece-project-internship",
+  "title": "IISc ECE project internship",
+  "category": "Research",
+  "organizerId": "iisc",
+  "summary": "Group supports project-related internships throughout the year.",
+  "deadline": null,
+  "location": "Bengaluru, India",
+  "format": "To confirm",
+  "eligibility": "Group supports project-related internships throughout the year. See linked source for full eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Funding amount not supplied."
+  },
+  "tags": [],
+  "url": "https://ece.iisc.ac.in/~nextgenwrl/Internship_Opportunities.html",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Standing intake; current vacancy and application availability not confirmed."
+  ],
+  "researchAsOf": "2026-11-25"
+}

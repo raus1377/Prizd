@@ -1,0 +1,27 @@
+{
+  "id": "iss-research-and-fieldwork-internship",
+  "title": "ISS research and fieldwork internship",
+  "category": "Research",
+  "organizerId": "iss",
+  "summary": "Host accepts ongoing enquiries; project or supervisor dependent.",
+  "deadline": null,
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Host accepts ongoing enquiries; project or supervisor dependent. See linked source for full eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": 0,
+    "currency": "INR",
+    "kind": "none",
+    "rewardType": "unknown",
+    "description": "Unpaid or self-funded."
+  },
+  "tags": [],
+  "url": "https://issin.org/vacancy/call-for-unpaid-internship/",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Standing intake; current vacancy and application availability not confirmed."
+  ],
+  "researchAsOf": "2026-11-25"
+}

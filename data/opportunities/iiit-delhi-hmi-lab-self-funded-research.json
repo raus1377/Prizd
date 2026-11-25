@@ -1,0 +1,27 @@
+{
+  "id": "iiit-delhi-hmi-lab-self-funded-research",
+  "title": "IIIT Delhi HMI Lab self-funded research",
+  "category": "Research",
+  "organizerId": "iiit-delhi",
+  "summary": "Self-funded applications encouraged throughout the year.",
+  "deadline": null,
+  "location": "New Delhi, India",
+  "format": "To confirm",
+  "eligibility": "Self-funded applications encouraged throughout the year. See linked source for full eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": 0,
+    "currency": "INR",
+    "kind": "none",
+    "rewardType": "unknown",
+    "description": "Unpaid or self-funded."
+  },
+  "tags": [],
+  "url": "https://hmi.iiitd.edu.in/join_us.html",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Standing intake; current vacancy and application availability not confirmed."
+  ],
+  "researchAsOf": "2026-11-25"
+}

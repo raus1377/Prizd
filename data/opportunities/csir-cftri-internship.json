@@ -1,0 +1,27 @@
+{
+  "id": "csir-cftri-internship",
+  "title": "CSIR–CFTRI internship",
+  "category": "Research",
+  "organizerId": "csir-cftri",
+  "summary": "Applications accepted throughout the year.",
+  "deadline": null,
+  "location": "Mysuru, India",
+  "format": "To confirm",
+  "eligibility": "Applications accepted throughout the year. See linked source for full eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Funding amount not supplied."
+  },
+  "tags": [],
+  "url": "https://www.cftri.res.in/internship",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Standing intake; current vacancy and application availability not confirmed."
+  ],
+  "researchAsOf": "2026-11-25"
+}

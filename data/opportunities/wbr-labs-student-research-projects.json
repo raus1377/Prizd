@@ -1,0 +1,27 @@
+{
+  "id": "wbr-labs-student-research-projects",
+  "title": "WBR Labs student research projects",
+  "category": "Research",
+  "organizerId": "wbr-labs",
+  "summary": "Internships and full/mini projects throughout the year.",
+  "deadline": null,
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Internships and full/mini projects throughout the year. See linked source for full eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Funding amount not supplied."
+  },
+  "tags": [],
+  "url": "https://wbrlabs.in/internships-and-projects/",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Standing intake; current vacancy and application availability not confirmed."
+  ],
+  "researchAsOf": "2026-11-25"
+}

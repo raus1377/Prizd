@@ -1,0 +1,27 @@
+{
+  "id": "nicsi-winter-paid-technical-internship",
+  "title": "NICSI winter paid technical internship",
+  "category": "Research",
+  "organizerId": "nicsi",
+  "summary": "January–June batch.",
+  "deadline": null,
+  "deadlineDate": "2026-12-20",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "January–June batch. See linked source for full eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "stipend",
+    "rewardType": "cash",
+    "description": "Funding indicated; amount not supplied."
+  },
+  "tags": [],
+  "url": "https://nicsi.nic.in/nicsi/pdfs/internship/NICSI_Internship_Scheme_Updated_20_nov_2026.pdf",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

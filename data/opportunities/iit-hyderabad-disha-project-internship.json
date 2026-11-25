@@ -1,0 +1,27 @@
+{
+  "id": "iit-hyderabad-disha-project-internship",
+  "title": "IIT Hyderabad DISHA project internship",
+  "category": "Research",
+  "organizerId": "iit-hyderabad",
+  "summary": "Rolling application deadline.",
+  "deadline": null,
+  "location": "Hyderabad, India",
+  "format": "To confirm",
+  "eligibility": "Rolling application deadline. See linked source for full eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Funding amount not supplied."
+  },
+  "tags": [],
+  "url": "https://comp.iith.ac.in/assets/files/Internship-Opportunity-DISHA-Project.pdf",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Standing intake; current vacancy and application availability not confirmed."
+  ],
+  "researchAsOf": "2026-11-25"
+}
