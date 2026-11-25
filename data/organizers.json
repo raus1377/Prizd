@@ -781,5 +781,14 @@
     "monogram": "NA",
     "color": "#444444",
     "website": "https://www.niti.gov.in/work-niti/opportunities"
+  },
+  {
+    "id": "circuitfeed",
+    "name": "CircuitFeed",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CF",
+    "color": "#444444",
+    "website": "https://www.circuitfeed.tech/"
   }
 ]

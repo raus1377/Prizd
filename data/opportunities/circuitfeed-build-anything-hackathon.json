@@ -1,0 +1,38 @@
+{
+  "id": "circuitfeed-build-anything-hackathon",
+  "title": "Build Anything Hackathon",
+  "category": "Hackathon",
+  "organizerId": "circuitfeed",
+  "summary": "Build a project using the UnoRouter API, submit a GitHub repository and include a working demo. Free online hackathon in the CircuitFeed Build Series.",
+  "deadline": null,
+  "deadlineDate": "2026-12-12",
+  "deadlineTimezone": "Asia/Kolkata",
+  "opensOn": "2026-11-07",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Participants aged 18 or older from India. Solo developers and teams may enter; each team member must register individually.",
+  "team": {
+    "min": 1,
+    "max": null
+  },
+  "prize": {
+    "amount": 175,
+    "currency": "USD",
+    "kind": "pool",
+    "rewardType": "credits",
+    "description": "UnoRouter credits: first $100, second $50, third $25. Eligible submissions receive participation certificates; special certificates for the top three teams."
+  },
+  "tags": [
+    "API",
+    "Software development",
+    "AI"
+  ],
+  "url": "https://www.circuitfeed.tech/hackathon/build-with-unorouter",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [
+    "Free to enter.",
+    "Registration and submission deadline: 12 December 2026; exact cutoff time not supplied."
+  ],
+  "researchAsOf": "2026-11-25"
+}
