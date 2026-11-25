@@ -1,0 +1,30 @@
+{
+  "id": "asian-school-of-business-ideathon-8-0-international-business-plan-competition-2026",
+  "title": "Ideathon 8.0: International Business Plan Competition 2026",
+  "category": "Case competition",
+  "organizerId": "asian-school-of-business",
+  "summary": "Ideathon 8.0: International Business Plan Competition 2026, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-25",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Noida, India",
+  "format": "Hybrid",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 3
+  },
+  "prize": {
+    "amount": 50000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://www.asb.edu.in",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

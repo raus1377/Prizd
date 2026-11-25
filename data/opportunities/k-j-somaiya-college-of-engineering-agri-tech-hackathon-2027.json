@@ -1,0 +1,30 @@
+{
+  "id": "k-j-somaiya-college-of-engineering-agri-tech-hackathon-2027",
+  "title": "Agri-Tech Hackathon 2027",
+  "category": "Hackathon",
+  "organizerId": "k-j-somaiya-college-of-engineering",
+  "summary": "Agri-Tech Hackathon 2027, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-27",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Mumbai, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 3,
+    "max": 4
+  },
+  "prize": {
+    "amount": 350000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://ecesa-agritech2027.vercel.app",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

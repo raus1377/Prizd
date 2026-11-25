@@ -1,0 +1,30 @@
+{
+  "id": "university-of-engineering-and-management-kolkata-refract-1-0-hackathon",
+  "title": "REFRACT 1.0 Hackathon",
+  "category": "Hackathon",
+  "organizerId": "university-of-engineering-and-management-kolkata",
+  "summary": "REFRACT 1.0 Hackathon, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2027-01-09",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Kolkata, India",
+  "format": "Hybrid",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 45000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://refractindia.tech",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

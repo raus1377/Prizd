@@ -1,0 +1,27 @@
+{
+  "id": "texus-2027",
+  "title": "Texus 2027",
+  "category": "Hackathon",
+  "organizerId": "organizer-not-specified",
+  "summary": "Texus 2027, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2027-01-14",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Chennai, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://texus27.devfolio.co",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

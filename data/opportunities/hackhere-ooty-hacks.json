@@ -1,0 +1,30 @@
+{
+  "id": "hackhere-ooty-hacks",
+  "title": "Ooty Hacks",
+  "category": "Hackathon",
+  "organizerId": "hackhere",
+  "summary": "Ooty Hacks, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-17",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Ooty, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://ootyhacks.hackhere.in",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "l-oreal-l-oreal-brandstorm-2027",
+  "title": "L'Oréal Brandstorm 2027",
+  "category": "Case competition",
+  "organizerId": "l-oreal",
+  "summary": "L'Oréal Brandstorm 2027, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2027-01-13",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 3,
+    "max": 3
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://brandstorm.loreal.com/en",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

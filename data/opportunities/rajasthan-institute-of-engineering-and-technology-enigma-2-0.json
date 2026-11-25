@@ -1,0 +1,30 @@
+{
+  "id": "rajasthan-institute-of-engineering-and-technology-enigma-2-0",
+  "title": "Enigma 2.0",
+  "category": "Hackathon",
+  "organizerId": "rajasthan-institute-of-engineering-and-technology",
+  "summary": "Enigma 2.0, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-15",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Jaipur, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": 23000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://www.enigmariet.com",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

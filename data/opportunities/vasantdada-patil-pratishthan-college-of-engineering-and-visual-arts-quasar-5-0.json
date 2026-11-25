@@ -1,0 +1,32 @@
+{
+  "id": "vasantdada-patil-pratishthan-college-of-engineering-and-visual-arts-quasar-5-0",
+  "title": "Quasar 5.0",
+  "category": "Hackathon",
+  "organizerId": "vasantdada-patil-pratishthan-college-of-engineering-and-visual-arts",
+  "summary": "Quasar 5.0, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-21",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Mumbai, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": 150000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://quasar-vppcoe.vercel.app/#hero",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

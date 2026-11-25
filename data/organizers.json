@@ -1582,5 +1582,635 @@
     "monogram": "YM",
     "color": "#444444",
     "website": "https://www.yrgmerf.org"
+  },
+  {
+    "id": "zeliot",
+    "name": "Zeliot",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "Z",
+    "color": "#444444",
+    "website": "https://condense.io"
+  },
+  {
+    "id": "droidecks",
+    "name": "Droidecks",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "D",
+    "color": "#444444",
+    "website": "https://droidecks.sbs"
+  },
+  {
+    "id": "siddaganga-institute-of-technology",
+    "name": "Siddaganga Institute of Technology",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SI",
+    "color": "#444444",
+    "website": "https://www.wiecode2k26.tech"
+  },
+  {
+    "id": "hax-baby",
+    "name": "haX baby",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "HB",
+    "color": "#444444",
+    "website": "https://hax.baby"
+  },
+  {
+    "id": "iiit-lucknow",
+    "name": "IIIT Lucknow",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IL",
+    "color": "#444444",
+    "website": "https://www.inmobi.com"
+  },
+  {
+    "id": "hackathon-raptors",
+    "name": "Hackathon Raptors",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "HR",
+    "color": "#444444",
+    "website": "https://raptors.dev"
+  },
+  {
+    "id": "maya-devi-university",
+    "name": "Maya Devi University",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "MD",
+    "color": "#444444",
+    "website": "https://www.hackathon.mdu.edu.in"
+  },
+  {
+    "id": "bms-institute-of-technology-and-management",
+    "name": "BMS Institute of Technology and Management",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "BI",
+    "color": "#444444",
+    "website": "https://codered26.xyz"
+  },
+  {
+    "id": "groww",
+    "name": "Groww",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "G",
+    "color": "#444444",
+    "website": "https://www.hackerearth.com"
+  },
+  {
+    "id": "anna-university",
+    "name": "Anna University",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "AU",
+    "color": "#444444",
+    "website": "https://cegtechforum.in"
+  },
+  {
+    "id": "vidyavardhaka-college-of-engineering",
+    "name": "Vidyavardhaka College of Engineering",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "VC",
+    "color": "#444444",
+    "website": "https://sustain-iq-ivc.vercel.app"
+  },
+  {
+    "id": "gm-university-davanagere",
+    "name": "GM University Davanagere",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "GU",
+    "color": "#444444",
+    "website": "https://erp.gmit.info"
+  },
+  {
+    "id": "jain-college-of-engineering-technology",
+    "name": "Jain College of Engineering & Technology",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "JC",
+    "color": "#444444",
+    "website": "https://hk-seven-psi.vercel.app"
+  },
+  {
+    "id": "softlink-global-ltd",
+    "name": "Softlink Global Ltd",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SG",
+    "color": "#444444",
+    "website": "https://www.softlinkglobal.com"
+  },
+  {
+    "id": "spectov",
+    "name": "SpectoV",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "S",
+    "color": "#444444",
+    "website": "https://snh.hiringspectov.com"
+  },
+  {
+    "id": "edxcellence-llp",
+    "name": "EDXcellence LLP",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "EL",
+    "color": "#444444",
+    "website": "https://edxcellence.org.in"
+  },
+  {
+    "id": "navutkarsh",
+    "name": "navutkarsh",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "N",
+    "color": "#444444",
+    "website": "https://navutkarsh.pages.dev"
+  },
+  {
+    "id": "hindustan-institute-of-technology-and-science",
+    "name": "Hindustan Institute of Technology and Science",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "HI",
+    "color": "#444444",
+    "website": "https://protothon-2k26.vercel.app"
+  },
+  {
+    "id": "au-small-finance-bank",
+    "name": "AU Small Finance Bank",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "AS",
+    "color": "#444444",
+    "website": "https://www.hackerearth.com"
+  },
+  {
+    "id": "hackhere",
+    "name": "Hackhere",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "H",
+    "color": "#444444",
+    "website": "https://forms.gle"
+  },
+  {
+    "id": "lets-code-community",
+    "name": "Lets Code Community",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "LC",
+    "color": "#444444",
+    "website": "https://www.lets-code.co.in"
+  },
+  {
+    "id": "iit-ropar",
+    "name": "IIT Ropar",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IR",
+    "color": "#444444",
+    "website": "https://iitrpr.ac.in"
+  },
+  {
+    "id": "vit-chennai",
+    "name": "VIT Chennai",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "VC",
+    "color": "#444444",
+    "website": "https://doomforge.180dcvitc.org"
+  },
+  {
+    "id": "guru-nanak-dev-engineering-college-bidar",
+    "name": "Guru Nanak Dev Engineering College Bidar",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "GN",
+    "color": "#444444",
+    "website": "https://spectrum10.vercel.app"
+  },
+  {
+    "id": "st-peter-s-engineering-college",
+    "name": "St. Peter's Engineering College",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SP",
+    "color": "#444444",
+    "website": "https://innotechhub.in"
+  },
+  {
+    "id": "blackpanda-labs",
+    "name": "BlackPanda Labs",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "BL",
+    "color": "#444444",
+    "website": "https://blackpandalabs.in"
+  },
+  {
+    "id": "karma-enterprises",
+    "name": "Karma Enterprises",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "KE",
+    "color": "#444444",
+    "website": "https://rackitup.karmaenterprises.tech"
+  },
+  {
+    "id": "makers-need-more",
+    "name": "Makers Need More",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "MN",
+    "color": "#444444",
+    "website": "https://www.makersneedmore.com"
+  },
+  {
+    "id": "jadavpur-university",
+    "name": "Jadavpur University",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "JU",
+    "color": "#444444",
+    "website": "https://kernel.illumine-ju-it.in"
+  },
+  {
+    "id": "st-vincent-pallotti-college-of-engineering-and-technology",
+    "name": "St. Vincent Pallotti College of Engineering and Technology",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SV",
+    "color": "#444444",
+    "website": "https://technexsvpcet.com"
+  },
+  {
+    "id": "acciojob",
+    "name": "AccioJob",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "A",
+    "color": "#444444",
+    "website": "https://go.acciojob.com"
+  },
+  {
+    "id": "iit-bhubaneswar",
+    "name": "IIT Bhubaneswar",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IB",
+    "color": "#444444",
+    "website": "https://code-relay-5.0.webnd-iitbbs.in"
+  },
+  {
+    "id": "nerdconf",
+    "name": "NERDCONF",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "N",
+    "color": "#444444",
+    "website": "https://merryshipmas.com"
+  },
+  {
+    "id": "atlas-skilltech-university",
+    "name": "ATLAS SkillTech University",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "AS",
+    "color": "#444444",
+    "website": "https://atlasuniversity.edu.in"
+  },
+  {
+    "id": "learnix-labs",
+    "name": "Learnix Labs",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "LL",
+    "color": "#444444",
+    "website": "https://learnixlabs.in"
+  },
+  {
+    "id": "rajasthan-institute-of-engineering-and-technology",
+    "name": "Rajasthan Institute of Engineering and Technology",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "RI",
+    "color": "#444444",
+    "website": "https://www.enigmariet.com"
+  },
+  {
+    "id": "fr-c-rodrigues-institute-of-technology",
+    "name": "Fr. C. Rodrigues Institute of Technology",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "FC",
+    "color": "#444444",
+    "website": "https://overclock-fcrit.vercel.app"
+  },
+  {
+    "id": "quantumard",
+    "name": "Quantumard",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "Q",
+    "color": "#444444",
+    "website": "https://qnh.quantumard.com"
+  },
+  {
+    "id": "skill2career",
+    "name": "Skill2Career",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "S",
+    "color": "#444444",
+    "website": "https://www.skill2career.in.net"
+  },
+  {
+    "id": "echo-engineers",
+    "name": "ECHO ENGINEERS",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "EE",
+    "color": "#444444",
+    "website": "https://echo-engineers.vercel.app"
+  },
+  {
+    "id": "institute-of-chemical-technology-mumbai",
+    "name": "Institute of Chemical Technology Mumbai",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IO",
+    "color": "#444444",
+    "website": "https://vortexict.in"
+  },
+  {
+    "id": "iiit-bhubaneswar",
+    "name": "IIIT Bhubaneswar",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IB",
+    "color": "#444444",
+    "website": "https://d3fest.techsoc-iiitbbsr.com"
+  },
+  {
+    "id": "odoo-gitam",
+    "name": "Odoo / GITAM",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "O/",
+    "color": "#444444",
+    "website": "https://hackathon.odoo.com"
+  },
+  {
+    "id": "vasantdada-patil-pratishthan-college-of-engineering-and-visual-arts",
+    "name": "Vasantdada Patil Pratishthan College of Engineering and Visual Arts",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "VP",
+    "color": "#444444",
+    "website": "https://quasar-vppcoe.vercel.app"
+  },
+  {
+    "id": "campus-code",
+    "name": "Campus Code",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CC",
+    "color": "#444444",
+    "website": "https://campuscode.co.in"
+  },
+  {
+    "id": "mmmut-gorakhpur",
+    "name": "MMMUT Gorakhpur",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "MG",
+    "color": "#444444",
+    "website": "https://mmmut.app"
+  },
+  {
+    "id": "k-j-somaiya-college-of-engineering",
+    "name": "K. J. Somaiya College of Engineering",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "KJ",
+    "color": "#444444",
+    "website": "https://ecesa-agritech2027.vercel.app"
+  },
+  {
+    "id": "odoo",
+    "name": "Odoo",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "O",
+    "color": "#444444",
+    "website": "https://hackathon.odoo.com"
+  },
+  {
+    "id": "riwa-creatives",
+    "name": "Riwa Creatives",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "RC",
+    "color": "#444444",
+    "website": "https://riwacreatives.in"
+  },
+  {
+    "id": "chandigarh-university",
+    "name": "Chandigarh University",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CU",
+    "color": "#444444",
+    "website": "https://tally.so"
+  },
+  {
+    "id": "together-we-solve",
+    "name": "Together We Solve",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "TW",
+    "color": "#444444",
+    "website": "https://aethos-zero.pages.dev"
+  },
+  {
+    "id": "university-of-engineering-and-management-kolkata",
+    "name": "University of Engineering and Management Kolkata",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "UO",
+    "color": "#444444",
+    "website": "https://refractindia.tech"
+  },
+  {
+    "id": "odoo-jbit",
+    "name": "Odoo / JBIT",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "O/",
+    "color": "#444444",
+    "website": "https://hackathon.odoo.com"
+  },
+  {
+    "id": "student-tribe",
+    "name": "Student Tribe",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "ST",
+    "color": "#444444",
+    "website": "https://studenttribe.in"
+  },
+  {
+    "id": "iim-nagpur",
+    "name": "IIM Nagpur",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IN",
+    "color": "#444444",
+    "website": "https://www.iimnagpur.ac.in"
+  },
+  {
+    "id": "l-oreal",
+    "name": "L’Oréal",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "L",
+    "color": "#444444",
+    "website": "https://brandstorm.loreal.com"
+  },
+  {
+    "id": "asian-school-of-business",
+    "name": "Asian School of Business",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "AS",
+    "color": "#444444",
+    "website": "https://www.asb.edu.in"
+  },
+  {
+    "id": "rv-college-of-engineering",
+    "name": "RV College of Engineering",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "RC",
+    "color": "#444444",
+    "website": "https://eureka-2026.vercel.app"
+  },
+  {
+    "id": "mdi-gurgaon",
+    "name": "MDI Gurgaon",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "MG",
+    "color": "#444444",
+    "website": "https://mdi-delphique.com"
+  },
+  {
+    "id": "eo-mumbai",
+    "name": "EO Mumbai",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "EM",
+    "color": "#444444",
+    "website": "https://eonetwork.org"
+  },
+  {
+    "id": "whiral",
+    "name": "Whiral",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "W",
+    "color": "#444444",
+    "website": "https://forms.gle"
+  },
+  {
+    "id": "techno-india-university",
+    "name": "Techno India University",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "TI",
+    "color": "#444444",
+    "website": "https://takshila.club"
+  },
+  {
+    "id": "icfai-business-school-pune",
+    "name": "ICFAI Business School Pune",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IB",
+    "color": "#444444",
+    "website": "https://ibsindia.org"
+  },
+  {
+    "id": "nfte",
+    "name": "NFTE",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "N",
+    "color": "#444444",
+    "website": "https://innovation.nfte.com"
+  },
+  {
+    "id": "hireveinai-innovations",
+    "name": "HireveinAI Innovations",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "HI",
+    "color": "#444444",
+    "website": "https://www.hireveinai.com"
+  },
+  {
+    "id": "iim-bangalore",
+    "name": "IIM Bangalore",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IB",
+    "color": "#444444",
+    "website": "https://docs.google.com"
+  },
+  {
+    "id": "parul-university",
+    "name": "Parul University",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "PU",
+    "color": "#444444",
+    "website": "https://docs.google.com"
+  },
+  {
+    "id": "jai-hind-college",
+    "name": "Jai Hind College",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "JH",
+    "color": "#444444",
+    "website": "https://forms.gle"
+  },
+  {
+    "id": "unisys-india",
+    "name": "Unisys India",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "UI",
+    "color": "#444444",
+    "website": "https://www.unisys.com"
+  },
+  {
+    "id": "gitam-university",
+    "name": "GITAM University",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "GU",
+    "color": "#444444",
+    "website": "https://aiworkshop.gitam.edu"
   }
 ]

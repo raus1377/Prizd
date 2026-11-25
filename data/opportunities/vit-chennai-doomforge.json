@@ -1,0 +1,30 @@
+{
+  "id": "vit-chennai-doomforge",
+  "title": "DoomForge",
+  "category": "Hackathon",
+  "organizerId": "vit-chennai",
+  "summary": "DoomForge, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-06",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Chennai, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 3
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://doomforge.180dcvitc.org",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

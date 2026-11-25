@@ -1,0 +1,29 @@
+{
+  "id": "iit-bombay-trade-rush-techfest",
+  "title": "Trade Rush (Techfest)",
+  "category": "Case competition",
+  "organizerId": "iit-bombay",
+  "summary": "Trade Rush (Techfest), listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-27",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Mumbai, India",
+  "format": "To confirm",
+  "eligibility": "Check official eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://techfest.org/competitions/Trade-rush",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

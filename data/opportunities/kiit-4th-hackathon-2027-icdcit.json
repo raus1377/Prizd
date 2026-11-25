@@ -1,0 +1,27 @@
+{
+  "id": "kiit-4th-hackathon-2027-icdcit",
+  "title": "4th Hackathon 2027 (ICDCIT)",
+  "category": "Hackathon",
+  "organizerId": "kiit",
+  "summary": "4th Hackathon 2027 (ICDCIT), listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-30",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Bhubaneswar, India",
+  "format": "To confirm",
+  "eligibility": "Check official eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://icdcit.kiit.ac.in/4th-hackathon-compilation-2027/",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

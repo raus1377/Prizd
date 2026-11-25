@@ -1,0 +1,30 @@
+{
+  "id": "jain-college-of-engineering-technology-hackignite-1-0-24-hours-national-level-hackathon",
+  "title": "Hackignite 1.0 – 24 Hours National Level Hackathon",
+  "category": "Hackathon",
+  "organizerId": "jain-college-of-engineering-technology",
+  "summary": "Hackignite 1.0 – 24 Hours National Level Hackathon, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-30",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Hubballi, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 3,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://hk-seven-psi.vercel.app",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

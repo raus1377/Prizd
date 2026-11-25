@@ -1,0 +1,32 @@
+{
+  "id": "gm-university-davanagere-prompt-to-prototype-2k26",
+  "title": "Prompt to Prototype 2k26",
+  "category": "Case competition",
+  "organizerId": "gm-university-davanagere",
+  "summary": "Prompt to Prototype 2k26, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-30",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Davanagere, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 3,
+    "max": 4
+  },
+  "prize": {
+    "amount": 9000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://erp.gmit.info/hdfc_gmsir/gmsir/gmsir_events.php?event=IGNITRON2026",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}

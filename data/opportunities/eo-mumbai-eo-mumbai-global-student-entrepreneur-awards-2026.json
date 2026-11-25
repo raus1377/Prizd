@@ -1,0 +1,30 @@
+{
+  "id": "eo-mumbai-eo-mumbai-global-student-entrepreneur-awards-2026",
+  "title": "EO Mumbai Global Student Entrepreneur Awards 2026",
+  "category": "Case competition",
+  "organizerId": "eo-mumbai",
+  "summary": "EO Mumbai Global Student Entrepreneur Awards 2026, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-11-30",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://eonetwork.org/gsea",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "gitam-university-gitam-national-ai-challenge-2027",
+  "title": "GITAM National AI Challenge 2027",
+  "category": "Case competition",
+  "organizerId": "gitam-university",
+  "summary": "GITAM National AI Challenge 2027, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2027-05-23",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Visakhapatnam, India",
+  "format": "In person",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 4
+  },
+  "prize": {
+    "amount": 2000000,
+    "currency": "INR",
+    "kind": "pool",
+    "rewardType": "cash",
+    "description": "Cash prize listed in the supplied workbook; confirm breakdown."
+  },
+  "tags": [],
+  "url": "https://aiworkshop.gitam.edu",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

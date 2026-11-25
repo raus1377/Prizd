@@ -1,0 +1,30 @@
+{
+  "id": "parul-university-startup-idea-pitching",
+  "title": "Startup Idea Pitching",
+  "category": "Case competition",
+  "organizerId": "parul-university",
+  "summary": "Startup Idea Pitching, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-20",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 1,
+    "max": 1
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://docs.google.com/forms/d/e/1FAIpQLScQ1LS-UxheG_Jg4rq0z6dF9Coh6K2WvL5ko-KwXU7pAkVdsQ/viewform",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

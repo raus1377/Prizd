@@ -1,0 +1,32 @@
+{
+  "id": "skill2career-ideathon-futurex",
+  "title": "IDEATHON- FutureX",
+  "category": "Hackathon",
+  "organizerId": "skill2career",
+  "summary": "IDEATHON- FutureX, listed in the 25 November competition tracker.",
+  "deadline": null,
+  "deadlineDate": "2026-12-16",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "India",
+  "format": "Online",
+  "eligibility": "Check official eligibility requirements.",
+  "team": {
+    "min": 2,
+    "max": 4
+  },
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Not supplied."
+  },
+  "tags": [],
+  "url": "https://www.skill2career.in.net",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [
+    "Workbook reports incomplete link verification or a deadline requiring confirmation."
+  ],
+  "researchAsOf": "2026-11-25"
+}
