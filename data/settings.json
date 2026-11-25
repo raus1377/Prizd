@@ -23,7 +23,8 @@
     "Consulting",
     "Research internship",
     "Policy",
-    "Writing"
+    "Writing",
+    "Others"
   ],
   "categoryPages": {
     "Hackathon": {
@@ -121,6 +122,12 @@
       "title": "Writing Competitions & Essay Contests in {year}",
       "h1": "Writing competitions",
       "intro": "Essay, article and creative-writing contests, with prize, deadline and eligibility on every listing."
+    },
+    "Others": {
+      "slug": "other-competitions",
+      "title": "Other Student Competitions in {year} — Prizes & Deadlines",
+      "h1": "Other competitions",
+      "intro": "Ideathons, startup pitches, innovation challenges, trading contests, project expos and other competitions outside hackathons and case competitions."
     }
   },
   "regionPages": {},
