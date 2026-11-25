@@ -1,0 +1,27 @@
+{
+  "id": "bric-nibmg-fellow",
+  "title": "BRIC–NIBMG Fellow",
+  "category": "Research",
+  "organizerId": "bric-nibmg",
+  "summary": "Contractual fellowship.",
+  "deadline": null,
+  "deadlineDate": "2026-12-16",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Kalyani, India",
+  "format": "To confirm",
+  "eligibility": "Contractual fellowship. See linked source for full eligibility requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Funding amount not supplied."
+  },
+  "tags": [],
+  "url": "https://www.nibmg.ac.in/uploads/423f880193e90baf188b56a3e801e3a2.pdf",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

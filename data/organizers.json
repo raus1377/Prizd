@@ -862,5 +862,725 @@
     "monogram": "W",
     "color": "#444444",
     "website": "https://wealthnest.ai"
+  },
+  {
+    "id": "central-university-of-rajasthan",
+    "name": "Central University of Rajasthan",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "CU",
+    "color": "#444444",
+    "website": "https://curaj.ac.in"
+  },
+  {
+    "id": "iiser-bhopal",
+    "name": "IISER Bhopal",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IB",
+    "color": "#444444",
+    "website": "https://www.iiserb.ac.in"
+  },
+  {
+    "id": "bric-nibmg",
+    "name": "BRIC NIBMG",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "BN",
+    "color": "#444444",
+    "website": "https://www.nibmg.ac.in"
+  },
+  {
+    "id": "mnnit-allahabad",
+    "name": "MNNIT Allahabad",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "MA",
+    "color": "#444444",
+    "website": "https://www.mnnit.ac.in"
+  },
+  {
+    "id": "iiser-tirupati",
+    "name": "IISER Tirupati",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IT",
+    "color": "#444444",
+    "website": "https://www.iisertirupati.ac.in"
+  },
+  {
+    "id": "icmr-nitvar",
+    "name": "ICMR NITVAR",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IN",
+    "color": "#444444",
+    "website": "https://www.nari-icmr.res.in"
+  },
+  {
+    "id": "iict",
+    "name": "IICT",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://iict.edu.in"
+  },
+  {
+    "id": "india-space-lab",
+    "name": "India Space Lab",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IS",
+    "color": "#444444",
+    "website": "https://www.iitbbs.ac.in"
+  },
+  {
+    "id": "iit-roorkee",
+    "name": "IIT Roorkee",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IR",
+    "color": "#444444",
+    "website": "https://www.iitr.ac.in"
+  },
+  {
+    "id": "iit-indore",
+    "name": "IIT Indore",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "II",
+    "color": "#444444",
+    "website": "https://www.iiti.ac.in"
+  },
+  {
+    "id": "iit-kanpur",
+    "name": "IIT Kanpur",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IK",
+    "color": "#444444",
+    "website": "https://iitk.ac.in"
+  },
+  {
+    "id": "iiser-thiruvananthapuram",
+    "name": "IISER Thiruvananthapuram",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IT",
+    "color": "#444444",
+    "website": "https://www.iisertvm.ac.in"
+  },
+  {
+    "id": "iit-gandhinagar",
+    "name": "IIT Gandhinagar",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IG",
+    "color": "#444444",
+    "website": "https://drive.google.com"
+  },
+  {
+    "id": "nit-calicut",
+    "name": "NIT Calicut",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "NC",
+    "color": "#444444",
+    "website": "https://nitc.ac.in"
+  },
+  {
+    "id": "bits-pilani",
+    "name": "BITS Pilani",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "BP",
+    "color": "#444444",
+    "website": "https://www.bits-pilani.ac.in"
+  },
+  {
+    "id": "nicsi",
+    "name": "NICSI",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "N",
+    "color": "#444444",
+    "website": "https://nicsi.nic.in"
+  },
+  {
+    "id": "university-of-hyderabad",
+    "name": "University of Hyderabad",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "UO",
+    "color": "#444444",
+    "website": "https://uohyd.ac.in"
+  },
+  {
+    "id": "jnu",
+    "name": "JNU",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "J",
+    "color": "#444444",
+    "website": "https://jnu.ac.in"
+  },
+  {
+    "id": "wadia-institute-of-himalayan-geology",
+    "name": "Wadia Institute of Himalayan Geology",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "WI",
+    "color": "#444444",
+    "website": "https://www.wihg.res.in"
+  },
+  {
+    "id": "aptransco",
+    "name": "APTRANSCO",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "A",
+    "color": "#444444",
+    "website": "https://aptransco.gov.in"
+  },
+  {
+    "id": "ashoka-university-acpet",
+    "name": "Ashoka University ACPET",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "AU",
+    "color": "#444444",
+    "website": "https://www.acpet.ashoka.edu.in"
+  },
+  {
+    "id": "bid4d",
+    "name": "BiD4D",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "B",
+    "color": "#444444",
+    "website": "https://www.bid4d.in"
+  },
+  {
+    "id": "bureau-of-indian-standards",
+    "name": "Bureau of Indian Standards",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "BO",
+    "color": "#444444",
+    "website": "https://www.bis.gov.in"
+  },
+  {
+    "id": "cens",
+    "name": "CeNS",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "C",
+    "color": "#444444",
+    "website": "https://www.cens.res.in"
+  },
+  {
+    "id": "central-institute-of-indian-languages",
+    "name": "Central Institute of Indian Languages",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CI",
+    "color": "#444444",
+    "website": "https://ciil.gov.in"
+  },
+  {
+    "id": "centre-for-mental-health-law-policy",
+    "name": "Centre for Mental Health Law & Policy",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CF",
+    "color": "#444444",
+    "website": "https://cmhlp.org"
+  },
+  {
+    "id": "centre-for-social-and-economic-progress",
+    "name": "Centre for Social and Economic Progress",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CF",
+    "color": "#444444",
+    "website": "https://csep.org"
+  },
+  {
+    "id": "centre-of-policy-research-and-governance",
+    "name": "Centre of Policy Research and Governance",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CO",
+    "color": "#444444",
+    "website": "https://www.cprgindia.org"
+  },
+  {
+    "id": "chirag-jain-group",
+    "name": "Chirag Jain group",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CJ",
+    "color": "#444444",
+    "website": "https://at-cg.github.io"
+  },
+  {
+    "id": "christ-university",
+    "name": "CHRIST University",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "CU",
+    "color": "#444444",
+    "website": "https://christuniversity.in"
+  },
+  {
+    "id": "control-arms-foundation-of-india",
+    "name": "Control Arms Foundation of India",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CA",
+    "color": "#444444",
+    "website": "https://cafi-online.org"
+  },
+  {
+    "id": "iit-delhi",
+    "name": "IIT Delhi",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "ID",
+    "color": "#444444",
+    "website": "https://sit.iitd.ac.in"
+  },
+  {
+    "id": "cryptomize",
+    "name": "CryptoMize",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "C",
+    "color": "#444444",
+    "website": "https://cryptomize.com"
+  },
+  {
+    "id": "csir-cftri",
+    "name": "CSIR CFTRI",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CC",
+    "color": "#444444",
+    "website": "https://www.cftri.res.in"
+  },
+  {
+    "id": "csir-crri",
+    "name": "CSIR CRRI",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CC",
+    "color": "#444444",
+    "website": "https://crridom.gov.in"
+  },
+  {
+    "id": "csir-niscpr",
+    "name": "CSIR NIScPR",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CN",
+    "color": "#444444",
+    "website": "https://www.niscpr.res.in"
+  },
+  {
+    "id": "digital-empowerment-foundation",
+    "name": "Digital Empowerment Foundation",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "DE",
+    "color": "#444444",
+    "website": "https://defindia.org"
+  },
+  {
+    "id": "gmdc-science-and-research-center",
+    "name": "GMDC Science and Research Center",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "GS",
+    "color": "#444444",
+    "website": "https://gsrc.res.in"
+  },
+  {
+    "id": "gurujal",
+    "name": "GuruJal",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "G",
+    "color": "#444444",
+    "website": "https://www.gurujal.org"
+  },
+  {
+    "id": "idrbt",
+    "name": "IDRBT",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://www.idrbt.ac.in"
+  },
+  {
+    "id": "iiit-delhi",
+    "name": "IIIT Delhi",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "ID",
+    "color": "#444444",
+    "website": "https://hmi.iiitd.edu.in"
+  },
+  {
+    "id": "iisc",
+    "name": "IISc",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://ece.iisc.ac.in"
+  },
+  {
+    "id": "iiser-mohali",
+    "name": "IISER Mohali",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IM",
+    "color": "#444444",
+    "website": "https://bionapiiserm.wixsite.com"
+  },
+  {
+    "id": "iist",
+    "name": "IIST",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://www.iist.ac.in"
+  },
+  {
+    "id": "iit-guwahati",
+    "name": "IIT Guwahati",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "IG",
+    "color": "#444444",
+    "website": "https://fac.iitg.ac.in"
+  },
+  {
+    "id": "inst",
+    "name": "INST",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://inst.ac.in"
+  },
+  {
+    "id": "institute-for-studies-in-industrial-development",
+    "name": "Institute for Studies in Industrial Development",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IF",
+    "color": "#444444",
+    "website": "https://isid.org.in"
+  },
+  {
+    "id": "institute-of-chinese-studies",
+    "name": "Institute of Chinese Studies",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IO",
+    "color": "#444444",
+    "website": "https://www.icsin.org"
+  },
+  {
+    "id": "institute-of-development-studies-jaipur",
+    "name": "Institute of Development Studies Jaipur",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IO",
+    "color": "#444444",
+    "website": "https://idsj.org"
+  },
+  {
+    "id": "institute-of-peace-and-conflict-studies",
+    "name": "Institute of Peace and Conflict Studies",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IO",
+    "color": "#444444",
+    "website": "https://www.ipcs.org"
+  },
+  {
+    "id": "internet-freedom-foundation",
+    "name": "Internet Freedom Foundation",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "IF",
+    "color": "#444444",
+    "website": "https://internetfreedom.in"
+  },
+  {
+    "id": "isard",
+    "name": "ISARD",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://isardorg.in"
+  },
+  {
+    "id": "iss",
+    "name": "ISS",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://issin.org"
+  },
+  {
+    "id": "koan-advisory",
+    "name": "Koan Advisory",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "KA",
+    "color": "#444444",
+    "website": "https://www.koanadvisory.com"
+  },
+  {
+    "id": "law-commission-of-india",
+    "name": "Law Commission of India",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "LC",
+    "color": "#444444",
+    "website": "https://cdnbbsr.s3waas.gov.in"
+  },
+  {
+    "id": "national-biodiversity-authority",
+    "name": "National Biodiversity Authority",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "NB",
+    "color": "#444444",
+    "website": "https://www.nbaindia.nic.in"
+  },
+  {
+    "id": "national-institute-of-solar-energy",
+    "name": "National Institute of Solar Energy",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "NI",
+    "color": "#444444",
+    "website": "https://nise.res.in"
+  },
+  {
+    "id": "nayaneethi-policy-collective",
+    "name": "Nayaneethi Policy Collective",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "NP",
+    "color": "#444444",
+    "website": "https://www.nayaneethi.com"
+  },
+  {
+    "id": "ncra-tifr",
+    "name": "NCRA TIFR",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "NT",
+    "color": "#444444",
+    "website": "https://indrayani.ncra.tifr.res.in"
+  },
+  {
+    "id": "neurodegeneration-research-lab",
+    "name": "Neurodegeneration Research Lab",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "NR",
+    "color": "#444444",
+    "website": "https://sites.google.com"
+  },
+  {
+    "id": "neuronanomed-lab",
+    "name": "NeuroNanoMed Lab",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "NL",
+    "color": "#444444",
+    "website": "https://jnest.in"
+  },
+  {
+    "id": "nimhans",
+    "name": "NIMHANS",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "N",
+    "color": "#444444",
+    "website": "https://www.musiccognitionlab.org"
+  },
+  {
+    "id": "power-foundation-of-india",
+    "name": "Power Foundation of India",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "PF",
+    "color": "#444444",
+    "website": "https://powerfoundation.org.in"
+  },
+  {
+    "id": "prajnya",
+    "name": "Prajnya",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "P",
+    "color": "#444444",
+    "website": "https://cms.prajnya.in"
+  },
+  {
+    "id": "project-39a",
+    "name": "Project 39A",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "P3",
+    "color": "#444444",
+    "website": "https://project39a.com"
+  },
+  {
+    "id": "psg-institute-of-advanced-studies",
+    "name": "PSG Institute of Advanced Studies",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "PI",
+    "color": "#444444",
+    "website": "https://www.psgias.ac.in"
+  },
+  {
+    "id": "international-institute-of-migration-and-development",
+    "name": "International Institute of Migration and Development",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "II",
+    "color": "#444444",
+    "website": "https://iimad.org"
+  },
+  {
+    "id": "shillim-institute",
+    "name": "Shillim Institute",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SI",
+    "color": "#444444",
+    "website": "https://shilliminstitute.org"
+  },
+  {
+    "id": "shishir-ny-robotics-lab",
+    "name": "Shishir NY robotics lab",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SN",
+    "color": "#444444",
+    "website": "https://www.shishirny.com"
+  },
+  {
+    "id": "software-freedom-law-center-india",
+    "name": "Software Freedom Law Center India",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SF",
+    "color": "#444444",
+    "website": "https://sflc.in"
+  },
+  {
+    "id": "srm-university-ap",
+    "name": "SRM University AP",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SU",
+    "color": "#444444",
+    "website": "https://www.srmap.edu.in"
+  },
+  {
+    "id": "sustainability-lab",
+    "name": "Sustainability Lab",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SL",
+    "color": "#444444",
+    "website": "https://sustainability-lab.github.io"
+  },
+  {
+    "id": "sustainable-futures-collaborative",
+    "name": "Sustainable Futures Collaborative",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "SF",
+    "color": "#444444",
+    "website": "https://www.sustainablefutures.org"
+  },
+  {
+    "id": "town-and-country-planning-organisation",
+    "name": "Town and Country Planning Organisation",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "TA",
+    "color": "#444444",
+    "website": "https://tcpo.gov.in"
+  },
+  {
+    "id": "university-of-delhi",
+    "name": "University of Delhi",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "UO",
+    "color": "#444444",
+    "website": "https://cps.iic.du.ac.in"
+  },
+  {
+    "id": "upasi-tea-research-foundation",
+    "name": "UPASI Tea Research Foundation",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "UT",
+    "color": "#444444",
+    "website": "https://www.upasitearesearch.org"
+  },
+  {
+    "id": "vidhi-centre-for-legal-policy",
+    "name": "Vidhi Centre for Legal Policy",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "VC",
+    "color": "#444444",
+    "website": "https://vidhilegalpolicy.in"
+  },
+  {
+    "id": "wbr-labs",
+    "name": "WBR Labs",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "WL",
+    "color": "#444444",
+    "website": "https://wbrlabs.in"
+  },
+  {
+    "id": "wildlife-conservation-biology-research-foundation",
+    "name": "Wildlife & Conservation Biology Research Foundation",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "W&",
+    "color": "#444444",
+    "website": "https://www.wcbresearch.org"
+  },
+  {
+    "id": "yrg-merf",
+    "name": "YRG MERF",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "YM",
+    "color": "#444444",
+    "website": "https://www.yrgmerf.org"
   }
 ]
