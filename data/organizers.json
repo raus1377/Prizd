@@ -691,5 +691,95 @@
     "monogram": "VB",
     "color": "#444444",
     "website": "https://jamao.in/e/codeverse-2-0-hackathon"
+  },
+  {
+    "id": "climate-sentinel-foundation",
+    "name": "Climate Sentinel Foundation",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CS",
+    "color": "#444444",
+    "website": "https://climatesentinelfoundation.org/career/"
+  },
+  {
+    "id": "adhyayan-foundation",
+    "name": "Adhyayan Foundation for Policy and Research",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "AF",
+    "color": "#444444",
+    "website": "https://afpr.in/opportunities/"
+  },
+  {
+    "id": "prs-legislative-research",
+    "name": "PRS Legislative Research",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "PL",
+    "color": "#444444",
+    "website": "https://prsindia.org/careers/opportunities-at-prs"
+  },
+  {
+    "id": "nit-goa",
+    "name": "NIT Goa",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "NG",
+    "color": "#444444",
+    "website": "https://nitgoa.ac.in/placementcell/Internship%20Policy%20for%20B.Tech.pdf"
+  },
+  {
+    "id": "centre-for-civil-society",
+    "name": "Centre for Civil Society",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "CF",
+    "color": "#444444",
+    "website": "https://ccs.in/internship"
+  },
+  {
+    "id": "wri-india",
+    "name": "WRI India",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "WI",
+    "color": "#444444",
+    "website": "https://wri.wd501.myworkdayjobs.com/en-US/WRI_India/job/Intern---Sustainable-Agriculture_2026-JR100546"
+  },
+  {
+    "id": "nit-srinagar",
+    "name": "NIT Srinagar",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "NS",
+    "color": "#444444",
+    "website": "https://nitsri.ac.in/uploaded_files/Advertisement_Student_Internship_-_to_upload_website.pdf"
+  },
+  {
+    "id": "national-centre-for-disease-control",
+    "name": "National Centre for Disease Control",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "NC",
+    "color": "#444444",
+    "website": "https://ncdc.mohfw.gov.in/includes/Work_With_Us/internship.php"
+  },
+  {
+    "id": "iucaa",
+    "name": "IUCAA",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "I",
+    "color": "#444444",
+    "website": "https://inat.iucaa.in/INAT2027/ApplyOnline.jsp"
+  },
+  {
+    "id": "niti-aayog",
+    "name": "NITI Aayog",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "NA",
+    "color": "#444444",
+    "website": "https://www.niti.gov.in/work-niti/opportunities"
   }
 ]

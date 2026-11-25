@@ -1,0 +1,28 @@
+{
+  "id": "prs-legislative-research-internship",
+  "title": "Data or Research Internship",
+  "category": "Research",
+  "organizerId": "prs-legislative-research",
+  "summary": "Legislative research or data analysis; 4–8 weeks, rolling. Prepare PDF résumé and SOP up to 500 words.",
+  "deadline": null,
+  "location": "New Delhi, India",
+  "format": "In person",
+  "eligibility": "Data track requires programming and data skills; check official criteria.",
+  "team": null,
+  "prize": {
+    "amount": 0,
+    "currency": "INR",
+    "kind": "none",
+    "rewardType": "unknown",
+    "description": "Unpaid"
+  },
+  "tags": [
+    "Policy",
+    "Data Science"
+  ],
+  "url": "https://prsindia.org/careers/opportunities-at-prs",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

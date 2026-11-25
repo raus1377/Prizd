@@ -1,23 +1,26 @@
 {
   "id": "iiit-hyderabad-nlp-lab-research-internship",
-  "title": "NLP Lab Research Internship",
+  "title": "Saṁbhāṣaṇa Research Group Internship",
   "category": "Research",
   "organizerId": "iiit-hyderabad",
-  "summary": "NLP research lab opportunity; specific lab and application details not supplied.",
+  "summary": "Indian-language NLP, computational linguistics and knowledge graphs. Complete form then email CV and project interest to hrishikeshrt@iiit.ac.in.",
   "deadline": null,
   "location": "Hyderabad, India",
   "format": "To confirm",
-  "eligibility": "External students accepted according to supplied text.",
+  "eligibility": "External students accepted.",
   "team": null,
   "prize": {
     "amount": null,
     "currency": "INR",
     "kind": "undisclosed",
     "rewardType": "unknown",
-    "description": "Funding not supplied."
+    "description": "Some projects funded; amount unspecified"
   },
-  "tags": [],
-  "url": null,
+  "tags": [
+    "NLP",
+    "AI"
+  ],
+  "url": "https://ltrc.iiit.ac.in/sambhashana/join/",
   "region": "India",
   "entryStatus": "check",
   "notes": [],
