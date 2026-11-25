@@ -1,0 +1,28 @@
+{
+  "id": "dsce-udaya-2-0",
+  "title": "UDAYA 2.0",
+  "category": "Hackathon",
+  "organizerId": "dsce",
+  "summary": "12-hour college hackathon at DSCE.",
+  "deadline": null,
+  "startDate": "2026-12-04",
+  "location": "Bengaluru, India",
+  "format": "To confirm",
+  "eligibility": "12-hour college hackathon at DSCE. See official source for full eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize amount not supplied."
+  },
+  "tags": [],
+  "url": "https://udaya-2-o.devfolio.co/",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [
+    "Published event start: 2026-12-04. Exact registration cutoff not supplied; confirm on official page."
+  ],
+  "researchAsOf": "2026-11-25"
+}

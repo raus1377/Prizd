@@ -1,0 +1,28 @@
+{
+  "id": "hackodisha-6-0",
+  "title": "hackodisha-6.0",
+  "category": "Hackathon",
+  "organizerId": "organizer-not-specified",
+  "summary": "Online; organizer-hosted Devfolio registration page; selection may apply.",
+  "deadline": null,
+  "startDate": "2026-12-11",
+  "location": "Online, India",
+  "format": "Online",
+  "eligibility": "Online; organizer-hosted Devfolio registration page; selection may apply. See official source for full eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize amount not supplied."
+  },
+  "tags": [],
+  "url": "https://hackodisha-6a.devfolio.co/",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [
+    "Published event start: 2026-12-11. Exact registration cutoff not supplied; confirm on official page."
+  ],
+  "researchAsOf": "2026-11-25"
+}

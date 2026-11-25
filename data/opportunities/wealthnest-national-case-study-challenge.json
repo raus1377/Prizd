@@ -1,0 +1,27 @@
+{
+  "id": "wealthnest-national-case-study-challenge",
+  "title": "WealthNest National Case Study Challenge",
+  "category": "Case competition",
+  "organizerId": "wealthnest",
+  "summary": "Management and growth or product engineering and AI; one event, two tracks.",
+  "deadline": null,
+  "deadlineDate": "2026-12-06",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Online /, India",
+  "format": "Online",
+  "eligibility": "Management and growth or product engineering and AI; one event, two tracks. See official source for full eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize amount not supplied."
+  },
+  "tags": [],
+  "url": "https://wealthnest.ai/national-case-study-challenge/",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}

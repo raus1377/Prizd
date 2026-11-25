@@ -790,5 +790,77 @@
     "monogram": "CF",
     "color": "#444444",
     "website": "https://www.circuitfeed.tech/"
+  },
+  {
+    "id": "gdg-on-campus-dr-d-y-patil-institute-of-technology",
+    "name": "GDG on Campus Dr D Y Patil Institute of Technology",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "GO",
+    "color": "#444444",
+    "website": "https://gdg.community.dev"
+  },
+  {
+    "id": "mnit-jaipur",
+    "name": "MNIT Jaipur",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "MJ",
+    "color": "#444444",
+    "website": "https://miic.mnit.ac.in"
+  },
+  {
+    "id": "dsce",
+    "name": "DSCE",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "D",
+    "color": "#444444",
+    "website": "https://udaya-2-o.devfolio.co"
+  },
+  {
+    "id": "hackerrank",
+    "name": "HackerRank",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "H",
+    "color": "#444444",
+    "website": "https://luma.com"
+  },
+  {
+    "id": "kotlin-user-group-pune",
+    "name": "Kotlin User Group Pune",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "KU",
+    "color": "#444444",
+    "website": "https://hack2skill.com"
+  },
+  {
+    "id": "swiggy",
+    "name": "Swiggy",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "S",
+    "color": "#444444",
+    "website": "https://www.foodforthoughtchallenge.in"
+  },
+  {
+    "id": "kiit",
+    "name": "KIIT",
+    "kind": "College",
+    "prestige": 50,
+    "monogram": "K",
+    "color": "#444444",
+    "website": "https://sld.kiit.ac.in"
+  },
+  {
+    "id": "wealthnest",
+    "name": "WealthNest",
+    "kind": "Organization",
+    "prestige": 50,
+    "monogram": "W",
+    "color": "#444444",
+    "website": "https://wealthnest.ai"
   }
 ]

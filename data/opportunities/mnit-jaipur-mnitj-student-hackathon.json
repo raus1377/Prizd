@@ -1,0 +1,27 @@
+{
+  "id": "mnit-jaipur-mnitj-student-hackathon",
+  "title": "MNITJ Student Hackathon",
+  "category": "Hackathon",
+  "organizerId": "mnit-jaipur",
+  "summary": "Registration deadline extended on official innovation centre page.",
+  "deadline": null,
+  "deadlineDate": "2026-12-05",
+  "deadlineTimezone": "Asia/Kolkata",
+  "location": "Jaipur, India",
+  "format": "To confirm",
+  "eligibility": "Registration deadline extended on official innovation centre page. See official source for full eligibility.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Prize amount not supplied."
+  },
+  "tags": [],
+  "url": "https://miic.mnit.ac.in/events/detail/mnitj-student-hackathon-2026",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-25"
+}
