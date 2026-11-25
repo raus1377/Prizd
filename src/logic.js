@@ -23,6 +23,12 @@
       return result || deadlineValue(a) - deadlineValue(b) || a.title.localeCompare(b.title);
     });
   }
+  function cardLocation(o) {
+    if (o.format === 'Online') return 'Online';
+    const place = String(o.location || '').trim().replace(/\s*,\s*(India|USA|United States|Worldwide)$/i, '').trim();
+    if (!place) return 'Location to confirm';
+    return place;
+  }
   function heroPicks(items, now) {
     const ranked = rank(items.filter(o => o.url && isActionable(o, now)));
     return ['Hackathon', 'Case competition', 'Research'].map(category => ranked.find(o => o.category === category)).filter(Boolean);
@@ -62,5 +68,5 @@
     if (o.team.max === null) return o.team.min === 1 ? 'Solo / team' : `At least ${o.team.min} members`;
     return o.team.min === o.team.max ? `${o.team.min} participant${o.team.min === 1 ? '' : 's'}` : `${o.team.min}–${o.team.max} participants`;
   }
-  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, heroPicks, isPaid, prizeText, prizeKind, teamText, isInternship, supportText };
+  globalThis.Prizd = { DAY, isNew, isClosed, isActionable, entryStatus, rank, select, heroPicks, cardLocation, isPaid, prizeText, prizeKind, teamText, isInternship, supportText };
 })();

@@ -2,7 +2,7 @@
   'use strict';
   const data = window.__PRIZD_DATA__;
   if (!data) { document.getElementById('result-count').textContent = 'Data could not load. Please refresh.'; return; }
-  const { isNew, isClosed, isActionable, entryStatus, rank, select, heroPicks, prizeText, prizeKind, teamText, isInternship, supportText, DAY } = window.Prizd;
+  const { isNew, isClosed, isActionable, entryStatus, rank, select, heroPicks, cardLocation, prizeText, prizeKind, teamText, isInternship, supportText, DAY } = window.Prizd;
   const $ = id => document.getElementById(id);
   const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const settings = data.settings;
@@ -49,7 +49,7 @@
     const d=deadlineText(o), isSaved=saved.has(o.id), status=entryStatus(o,now);
     return `<article class="opportunity-card card-reveal" style="transition-delay:${Math.min(index%3,2)*55}ms" data-id="${escape(o.id)}">
       <div class="card-top"><span class="organizer-icon" style="color:${o.organizer.color}" aria-hidden="true">${escape(o.organizer.monogram)}</span><div class="card-tags">${isNew(o,now,settings.newWindowDays)?'<span class="small-badge new-badge">NEW</span>':''}${status!=='open'?`<span class="small-badge status-${status}">${statusLabel(o).toUpperCase()}</span>`:''}</div><button class="save-button" data-save="${escape(o.id)}" aria-label="${isSaved?'Remove from':'Save to'} shortlist: ${escape(o.title)}" aria-pressed="${isSaved}">${bookmark(isSaved)}</button></div>
-      <div class="card-main"><div class="card-organizer">${escape(o.organizer.name)}<span></span>${escape(o.organizer.kind)}</div><h3 class="card-title"><a href="./${escape(o.detailPath)}">${escape(o.title)}</a></h3><p class="card-summary">${escape(o.summary)}</p></div>
+      <div class="card-main"><div class="card-organizer">${escape(o.organizer.name)}<span></span>${escape(cardLocation(o))}</div><h3 class="card-title"><a href="./${escape(o.detailPath)}">${escape(o.title)}</a></h3><p class="card-summary">${escape(o.summary)}</p></div>
       <div class="card-meta"><span>${escape(o.category)}</span><span>${escape(o.format)}</span>${isInternship(o)?'':`<span>${escape(teamText(o))}</span>`}</div>
       <div class="card-bottom"><div><span class="prize-label">${prizeKind(o)}</span><span class="prize-value">${escape(prizeText(o))}</span></div><div class="deadline${d.urgent?' urgent':''}"><strong>${d.date}</strong>${d.remaining}</div></div>
       <div class="card-actions"><a href="./${escape(o.detailPath)}" aria-label="Read about ${escape(o.title)}">READ MORE <span>↗</span></a></div>

@@ -156,3 +156,14 @@ test('Hero picks one highest-ranked open listing per category in fixed order', (
   assert.deepEqual(picks([cases,otherCase,hack,betterHack,research,expired,noLink],now).map(o=>o.id),['better-hack','case','research']);
   assert.deepEqual(picks([cases,otherCase,hack],now).map(o=>o.id),['hack','case']);
 });
+
+
+test('Card location displays online or the supplied local place without a redundant country suffix', () => {
+  const { cardLocation } = globalThis.Prizd;
+  assert.equal(cardLocation({format:'Online',location:'India'}),'Online');
+  assert.equal(cardLocation({format:'In person',location:'Mumbai, India'}),'Mumbai');
+  assert.equal(cardLocation({format:'Hybrid',location:'Pune, India'}),'Pune');
+  assert.equal(cardLocation({format:'To confirm',location:'Chennai, India'}),'Chennai');
+  assert.equal(cardLocation({format:'To confirm',location:'India'}),'India');
+  assert.equal(cardLocation({format:'To confirm'}),'Location to confirm');
+});
