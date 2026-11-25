@@ -21,8 +21,8 @@
   let now = Date.now();
   let toastTimer;
   const PAGE_SIZE = 6;
-  let visibleLimit = PAGE_SIZE;
-  let previousFilters = null;
+  const fullCatalog = /\/opportunities\/(?:index\.html)?$/.test(location.pathname);
+  const root = fullCatalog ? '../' : './';
   $('brand-name').textContent = settings.name;
   document.title = settings.seoTitle || `${settings.name} — The Opportunity Index`;
   $('footer-year').textContent = new Date().getFullYear();
@@ -52,10 +52,10 @@
     const d=deadlineText(o), isSaved=saved.has(o.id), status=entryStatus(o,now);
     return `<article class="opportunity-card card-reveal" style="transition-delay:${Math.min(index%3,2)*55}ms" data-id="${escape(o.id)}">
       <div class="card-top"><span class="organizer-icon" style="color:${o.organizer.color}" aria-hidden="true">${escape(o.organizer.monogram)}</span><div class="card-tags">${isNew(o,now,settings.newWindowDays)?'<span class="small-badge new-badge">NEW</span>':''}${status!=='open'?`<span class="small-badge status-${status}">${statusLabel(o).toUpperCase()}</span>`:''}</div><button class="save-button" data-save="${escape(o.id)}" aria-label="${isSaved?'Remove from':'Save to'} shortlist: ${escape(o.title)}" aria-pressed="${isSaved}">${bookmark(isSaved)}</button></div>
-      <div class="card-main"><div class="card-organizer">${escape(o.organizer.name)}<span></span>${escape(cardLocation(o))}</div><h3 class="card-title"><a href="./${escape(o.detailPath)}">${escape(o.title)}</a></h3><p class="card-summary">${escape(o.summary)}</p></div>
+      <div class="card-main"><div class="card-organizer">${escape(o.organizer.name)}<span></span>${escape(cardLocation(o))}</div><h3 class="card-title"><a href="${root}${escape(o.detailPath)}">${escape(o.title)}</a></h3><p class="card-summary">${escape(o.summary)}</p></div>
       <div class="card-meta"><span>${escape(o.category)}</span><span>${escape(o.format)}</span>${isInternship(o)?'':`<span>${escape(teamText(o))}</span>`}</div>
       <div class="card-bottom"><div><span class="prize-label">${prizeKind(o)}</span><span class="prize-value">${escape(prizeText(o))}</span></div><div class="deadline${d.urgent?' urgent':''}"><strong>${d.date}</strong>${d.remaining}</div></div>
-      <div class="card-actions"><a href="./${escape(o.detailPath)}" aria-label="Read about ${escape(o.title)}">READ MORE <span>↗</span></a></div>
+      <div class="card-actions"><a href="${root}${escape(o.detailPath)}" aria-label="Read about ${escape(o.title)}">READ MORE <span>↗</span></a></div>
     </article>`;
   }
   function render() {
@@ -65,13 +65,11 @@
     const open = opportunities.filter(o => isActionable(o,now));
     const newItems = open.filter(o => isNew(o,now,settings.newWindowDays));
     const savedCount = opportunities.filter(o => !isClosed(o,now) && saved.has(o.id)).length;
-    const filterKey = JSON.stringify(state);
-    if (filterKey !== previousFilters) { visibleLimit = PAGE_SIZE; previousFilters = filterKey; }
     const items = select(opportunities,state,saved,now,settings.newWindowDays);
     const mixed = state.view === 'all' && state.category === 'all' && !state.search.trim();
     const ordered = homeOrder(items,mixed);
-    const visible = ordered.slice(0,visibleLimit);
-    $('view-more').hidden = visible.length >= items.length;
+    const visible = fullCatalog ? items : ordered.slice(0,PAGE_SIZE);
+    $('view-more').hidden = fullCatalog || visible.length >= items.length;
     $('view-more').textContent = 'VIEW MORE OPPORTUNITIES (' + (items.length - visible.length) + ' remaining)';
     $('stat-open').textContent = String(open.length).padStart(2,'0');
     $('stat-new').textContent = String(newItems.length).padStart(2,'0');
@@ -102,10 +100,9 @@
   }
   function openDetail(id) {
     const o = opportunities.find(x => x.id === id);
-    if (o) location.assign('./' + o.detailPath);
+    if (o) location.assign(root + o.detailPath);
   }
   function reset() {
-    visibleLimit = PAGE_SIZE;
     Object.assign(state,defaults);
     $('search').value = '';
     for (const [key,id] of [['kind','kind-filter'],['format','format-filter'],['team','team-filter'],['status','status-filter'],['sort','sort']]) $(id).value = state[key];
@@ -125,7 +122,7 @@
     const quick = event.target.closest('[data-quick]');
     if (quick) { state.view = quick.dataset.quick; render(); closeMenu(); }
   });
-  $('view-more').addEventListener('click',() => { visibleLimit += PAGE_SIZE; render(); });
+  $('view-more').addEventListener('click',() => { location.assign(root + 'opportunities/' + location.search); });
   $('paid-only').addEventListener('change',event => { state.paid = event.target.checked ? 'yes' : 'no'; render(); });
   $('search').addEventListener('input',event => { state.search = event.target.value; render(); });
   for (const [key,id] of [['kind','kind-filter'],['format','format-filter'],['team','team-filter'],['status','status-filter'],['sort','sort']]) $(id).addEventListener('change',event => { state[key] = event.target.value; render(); });
@@ -145,7 +142,7 @@
     if (key === heroKey) return;
     heroKey = key;
     if (!topPicks.length) { $('hero-shortlist').innerHTML = '<p>No opportunities listed yet.</p>'; return; }
-    $('hero-shortlist').innerHTML=topPicks.map((o,i)=>`<a class="hero-pick" href="./${escape(o.detailPath)}" aria-label="Open ${escape(o.title)}"><span class="pick-number">0${i+1}</span><span><span class="pick-label">${escape(/research|internship/i.test(o.category) ? "Research" : o.category).toUpperCase()}</span><span class="pick-name">${escape(o.title)}</span></span><span class="pick-arrow" aria-hidden="true">↗</span></a>`).join('');
+    $('hero-shortlist').innerHTML=topPicks.map((o,i)=>`<a class="hero-pick" href="${root}${escape(o.detailPath)}" aria-label="Open ${escape(o.title)}"><span class="pick-number">0${i+1}</span><span><span class="pick-label">${escape(/research|internship/i.test(o.category) ? "Research" : o.category).toUpperCase()}</span><span class="pick-name">${escape(o.title)}</span></span><span class="pick-arrow" aria-hidden="true">↗</span></a>`).join('');
   }
   if ((state.kind !== 'all' || state.format !== 'all' || state.team !== 'all' || state.status !== 'all')) { $('advanced-filters').hidden = false; $('filter-toggle').setAttribute('aria-expanded',true); }
   render();setLayout(currentLayout);
