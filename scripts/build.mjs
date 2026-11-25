@@ -41,12 +41,12 @@ for (const file of archiveFiles) {
 // The public site address: SITE_URL (set by the GitHub Actions workflow) wins over settings.siteUrl.
 const siteUrl = (process.env.SITE_URL || settings.siteUrl || '').replace(/\/+$/, '');
 if (!siteUrl) console.warn('⚠ No site URL: canonical tags, structured data and sitemap.xml are skipped. Set SITE_URL or "siteUrl" in data/settings.json.');
-const publicCategories = ['Hackathon', 'Research', 'Case competition'];
-const publicSettings = { ...settings, categories: publicCategories, categoryPages: Object.fromEntries(publicCategories.map(c => [c, settings.categoryPages[c]])), regionPages: {}, keywordPages: [], seoTitle: 'Prizd — Hackathons, Research Opportunities & Case Competitions', seoDescription: 'Discover hackathons, research opportunities and case competitions. Compare eligibility, funding and deadlines, then apply on the official page.' };
+const publicCategories = ['Hackathon', 'Research', 'Case competition', 'Others'];
+const publicSettings = { ...settings, categories: publicCategories, categoryPages: Object.fromEntries(publicCategories.map(c => [c, settings.categoryPages[c]])), regionPages: {}, keywordPages: [], seoTitle: 'Prizd — Hackathons, Research & Competitions', seoDescription: 'Discover hackathons, research opportunities, case competitions and other contests. Compare eligibility, funding and deadlines, then apply on the official page.' };
 function publicListing(o) {
   const labels = [o.category, ...(o.categories || [])].map(c => c === 'Research internship' ? 'Research' : c);
   const category = publicCategories.includes(labels[0]) ? labels[0] : publicCategories.find(c => labels.includes(c));
-  const displayCategory = category || o.category;
+  const displayCategory = category || (o.category === 'Internship' ? 'Research' : 'Others');
   const page = settings.categoryPages[displayCategory];
   return { ...o, originalCategory: o.category, category: displayCategory, categories: [...new Set(labels.filter(c => publicCategories.includes(c)))], detailPath: (page?.slug || displayCategory.toLowerCase().replace(/[^a-z0-9]+/g,'-')) + '/' + o.id + '/' };
 }
