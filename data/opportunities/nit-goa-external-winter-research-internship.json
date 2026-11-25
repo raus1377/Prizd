@@ -1,0 +1,27 @@
+{
+  "id": "nit-goa-external-winter-research-internship",
+  "title": "External Winter Research Internship Request",
+  "category": "Research",
+  "organizerId": "nit-goa",
+  "summary": "Policy permits requests to faculty, department head or placement cell with bio-data and project proposal; 4–8 weeks. No advertised seat count.",
+  "deadline": null,
+  "location": "Goa, India",
+  "format": "In person",
+  "eligibility": "External students; supervisor acceptance required.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Funding unconfirmed"
+  },
+  "tags": [
+    "Engineering"
+  ],
+  "url": "https://nitgoa.ac.in/placementcell/Internship%20Policy%20for%20B.Tech.pdf",
+  "region": "India",
+  "entryStatus": "check",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

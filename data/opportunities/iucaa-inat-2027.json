@@ -1,0 +1,29 @@
+{
+  "id": "iucaa-inat-2027",
+  "title": "INAT-2027 Astronomy and Astrophysics PhD Scholarship",
+  "category": "Research",
+  "organizerId": "iucaa",
+  "summary": "Funded doctoral research route; written test 17 January 2027.",
+  "deadline": null,
+  "deadlineDate": "2026-11-30",
+  "location": "Pune, India",
+  "format": "In person",
+  "eligibility": "Qualifying degree by July 2027; specified subjects and 55% marks rule.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "rewardType": "unknown",
+    "description": "Funded doctoral route; amount unspecified"
+  },
+  "tags": [
+    "Physics",
+    "Astronomy"
+  ],
+  "url": "https://inat.iucaa.in/INAT2027/ApplyOnline.jsp",
+  "region": "India",
+  "entryStatus": "open",
+  "notes": [],
+  "researchAsOf": "2026-11-24"
+}

@@ -3,21 +3,25 @@
   "title": "Computational Finance Research Internship",
   "category": "Research",
   "organizerId": "madras-school-of-economics",
-  "summary": "Remote computational-finance research internship mentioned in supplied text; individual application details absent.",
+  "summary": "Financial networks in Python/R, LLM text analysis and interactive research tools. Email CV and preferred track to aritra.pan@mse.ac.in.",
   "deadline": null,
-  "location": "Remote, India",
-  "format": "Online",
-  "eligibility": "Check research supervisor's eligibility.",
+  "location": "Remote or Chennai, India",
+  "format": "To confirm",
+  "eligibility": "UG/PG students; small annual intake.",
   "team": null,
   "prize": {
     "amount": null,
     "currency": "INR",
     "kind": "undisclosed",
     "rewardType": "unknown",
-    "description": "Funding not supplied."
+    "description": "Funding unpublished"
   },
-  "tags": [],
-  "url": null,
+  "tags": [
+    "Finance",
+    "Data Science",
+    "NLP"
+  ],
+  "url": "https://aritra.ai/opportunities.html",
   "region": "India",
   "entryStatus": "check",
   "notes": [],
