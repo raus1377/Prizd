@@ -291,6 +291,7 @@ ${active.length ? `<ul class="rows">${active.map(o => row(o, b)).join('')}</ul>`
 <body><main><h1>404<span style="color:#d04476">.</span></h1><p>That page has moved or never existed.</p><p><a href="${esc(site || '.')}/">Back to ${esc(brand)}</a></p></main></body></html>
 `);
   if (site) {
+    if (settings.indexNowKey) files.set(`${settings.indexNowKey}.txt`, settings.indexNowKey);
     files.set('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);
     const urls = [{ loc: abs(''), lastmod: today }];
     for (const hub of allHubs) if (hub.indexable) urls.push({ loc: abs(`${hub.slug}/`), lastmod: today });
