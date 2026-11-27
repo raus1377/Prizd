@@ -1,0 +1,27 @@
+{
+  "id": "iim-kozhikode-inquizzitive-finance",
+  "title": "InQuizzitive (finance)",
+  "category": "Others",
+  "organizerId": "iim-kozhikode",
+  "summary": "IIM Kozhikode",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Check organizer requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Rs 40K"
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "6 Dec"
+  ],
+  "researchAsOf": "2026-11-27",
+  "deadlineDate": "2026-12-06"
+}

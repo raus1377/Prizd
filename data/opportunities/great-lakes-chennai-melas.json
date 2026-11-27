@@ -1,0 +1,27 @@
+{
+  "id": "great-lakes-chennai-melas",
+  "title": "MELAS",
+  "category": "Others",
+  "organizerId": "organizer-not-specified",
+  "summary": "Great Lakes Chennai",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Check organizer requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Rs 30K"
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "9 Feb 2027"
+  ],
+  "researchAsOf": "2026-11-27",
+  "deadlineDate": "2027-02-09"
+}

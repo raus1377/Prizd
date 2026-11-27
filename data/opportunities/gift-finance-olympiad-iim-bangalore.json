@@ -1,0 +1,26 @@
+{
+  "id": "gift-finance-olympiad-iim-bangalore",
+  "title": "GIFT Finance Olympiad (IIM Bangalore)",
+  "category": "Others",
+  "organizerId": "organizer-not-specified",
+  "summary": "PG only, teams of 4",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Check organizer requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "-"
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "Regionals 30 Nov Kolkata, 5 Dec Mumbai"
+  ],
+  "researchAsOf": "2026-11-27"
+}

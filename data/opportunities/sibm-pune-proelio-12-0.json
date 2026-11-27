@@ -1,0 +1,28 @@
+{
+  "id": "sibm-pune-proelio-12-0",
+  "title": "PRoelio 12.0",
+  "category": "Case competition",
+  "organizerId": "organizer-not-specified",
+  "summary": "SIBM Pune — PR case. Eligibility unverified.",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "1-3",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Rs 75K winner"
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "9 Dec"
+  ],
+  "researchAsOf": "2026-11-27",
+  "sourceUrl": "https://www.imtiim.com/casecomp.html",
+  "deadlineDate": "2026-12-09"
+}

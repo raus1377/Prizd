@@ -1,0 +1,26 @@
+{
+  "id": "techfest-iit-bombay",
+  "title": "Techfest, IIT Bombay",
+  "category": "Others",
+  "organizerId": "organizer-not-specified",
+  "summary": "Perceptron and India@71/100 closed; finals 15-18 Dec. ThetaShift robotics registration 6 Dec.",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Check organizer requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Not stated"
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "16-18 Dec"
+  ],
+  "researchAsOf": "2026-11-27"
+}

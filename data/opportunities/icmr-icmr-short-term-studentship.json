@@ -1,0 +1,27 @@
+{
+  "id": "icmr-icmr-short-term-studentship",
+  "title": "ICMR Short Term Studentship",
+  "category": "Research",
+  "organizerId": "organizer-not-specified",
+  "summary": "ICMR — MBBS/BDS per listing. Needs a faculty guide.",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Individual",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Rs 10K/month for 2 months"
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "30 Nov or Jan 2027 (conflict)"
+  ],
+  "researchAsOf": "2026-11-27",
+  "sourceUrl": "https://internshipshub.in/research/icmr-sts-research-internship"
+}

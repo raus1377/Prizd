@@ -1,0 +1,27 @@
+{
+  "id": "iit-madras-shaastra-biz-quiz",
+  "title": "Shaastra Biz Quiz",
+  "category": "Others",
+  "organizerId": "iit-madras",
+  "summary": "IIT Madras",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Check organizer requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Rs 20K"
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "29 Nov"
+  ],
+  "researchAsOf": "2026-11-27",
+  "deadlineDate": "2026-11-29"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "myas-sai-olympic-history-and-values-quiz",
+  "title": "Olympic History and Values Quiz",
+  "category": "Others",
+  "organizerId": "organizer-not-specified",
+  "summary": "MYAS + SAI",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Check organizer requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Hampers"
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "12 Jan 2027"
+  ],
+  "researchAsOf": "2026-11-27",
+  "deadlineDate": "2027-01-12"
+}

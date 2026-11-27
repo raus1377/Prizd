@@ -1,0 +1,27 @@
+{
+  "id": "sakec-mumbai-chipmonk-hackathon-2-0",
+  "title": "ChipMonk Hackathon 2.0",
+  "category": "Hackathon",
+  "organizerId": "organizer-not-specified",
+  "summary": "SAKEC Mumbai — ECE UG from 2nd year, hardware. Rs 499 per team.",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Solo or 2-4",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "No prize listed"
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "30 Nov; submission 20 Dec"
+  ],
+  "researchAsOf": "2026-11-27",
+  "sourceUrl": "https://internshala.com/competitions/chipmonk-hackathon-2-0/"
+}

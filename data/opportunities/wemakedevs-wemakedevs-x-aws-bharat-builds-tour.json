@@ -1,0 +1,26 @@
+{
+  "id": "wemakedevs-wemakedevs-x-aws-bharat-builds-tour",
+  "title": "WeMakeDevs x AWS Bharat Builds Tour",
+  "category": "Hackathon",
+  "organizerId": "organizer-not-specified",
+  "summary": "WeMakeDevs — University students in India. Watch for remaining stops.",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Not read",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "About Rs 1 crore total, Rs 20L per event"
+  },
+  "tags": [],
+  "url": "https://www.wemakedevs.org/aws",
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "Six hybrid stops Sep-Dec 2026, dates per city"
+  ],
+  "researchAsOf": "2026-11-27"
+}

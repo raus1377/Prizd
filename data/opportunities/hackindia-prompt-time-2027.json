@@ -1,0 +1,27 @@
+{
+  "id": "hackindia-prompt-time-2027",
+  "title": "PROMPT TIME 2027",
+  "category": "Hackathon",
+  "organizerId": "organizer-not-specified",
+  "summary": "HackIndia — Voice, image and video AI. Free, online.",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Solo to 7",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Prizes not quantified"
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "Registration about 28 Feb 2027 (tentative); hacking 1-28 Mar"
+  ],
+  "researchAsOf": "2026-11-27",
+  "sourceUrl": "https://internshala.com/competitions/prompt-time-2027-ai-hackathon/"
+}

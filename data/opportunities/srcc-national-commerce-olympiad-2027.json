@@ -1,0 +1,27 @@
+{
+  "id": "srcc-national-commerce-olympiad-2027",
+  "title": "National Commerce Olympiad 2027",
+  "category": "Others",
+  "organizerId": "organizer-not-specified",
+  "summary": "SRCC",
+  "location": "India",
+  "format": "To confirm",
+  "eligibility": "Check organizer requirements.",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "INR",
+    "kind": "undisclosed",
+    "description": "Rs 1L"
+  },
+  "tags": [],
+  "url": null,
+  "region": "India",
+  "deadline": null,
+  "entryStatus": "check",
+  "notes": [
+    "31 Dec"
+  ],
+  "researchAsOf": "2026-11-27",
+  "deadlineDate": "2026-12-31"
+}
