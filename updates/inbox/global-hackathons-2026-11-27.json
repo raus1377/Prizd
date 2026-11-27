@@ -1,0 +1,35 @@
+{
+  "upsert": [
+    {
+      "id": "enveda-casmi-2026-molecule-id-kaggle",
+      "title": "Enveda CASMI 2026 – Molecule ID From Mass Spectra (Kaggle)",
+      "category": "Research",
+      "organizer": {
+        "name": "Enveda",
+        "kind": "Company",
+        "website": "https://www.enveda.com",
+        "prestige": 60
+      },
+      "summary": "Online machine-learning competition on Kaggle, co-hosted with Kaggle: predict the 2D chemical structures of small molecules detected in complex biological extracts from LC-MS/MS spectra.",
+      "deadline": null,
+      "deadlineDate": "2026-12-07",
+      "deadlineTimezone": "UTC",
+      "location": "Online",
+      "format": "Online",
+      "eligibility": "Entry deadline reported as December 7, 2026 (timezone not confirmed). Check the Kaggle rules page for eligibility and team limits.",
+      "team": null,
+      "prize": {
+        "amount": 50000,
+        "currency": "USD",
+        "kind": "pool",
+        "rewardType": "cash",
+        "description": "$50,000 prize pool reported by Kaggle; place-by-place breakdown not confirmed."
+      },
+      "tags": ["Kaggle", "Machine learning", "Chemistry"],
+      "url": "https://www.kaggle.com/competitions/enveda-CASMI26-molecule-id-mass-spectra",
+      "region": "Global",
+      "entryStatus": "check",
+      "notes": ["Prize pool and Dec 7 deadline taken from a summary of Kaggle's announcement; the Kaggle rules page could not be read in full, so confirm prize split, deadline time and eligibility there."]
+    }
+  ]
+}
