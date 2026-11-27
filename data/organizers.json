@@ -429,7 +429,7 @@
     "prestige": 50,
     "monogram": "ON",
     "color": "#444444",
-    "website": null
+    "website": "https://hack2skill.com/event/promptwars-x-sphoorthy/"
   },
   {
     "id": "bit-mesra",
@@ -2212,5 +2212,176 @@
     "monogram": "GU",
     "color": "#444444",
     "website": "https://aiworkshop.gitam.edu"
+  },
+  {
+    "id": "coderave",
+    "name": "CODERAVE",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "CO",
+    "color": "#242424",
+    "website": "https://coderave-2.devfolio.co/schedule"
+  },
+  {
+    "id": "ciphercop",
+    "name": "CipherCop",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "CI",
+    "color": "#242424",
+    "website": "https://ciphercop.net/"
+  },
+  {
+    "id": "makeathon",
+    "name": "Makeathon",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "MA",
+    "color": "#242424",
+    "website": "https://makeathon-9.devfolio.co/schedule"
+  },
+  {
+    "id": "gdg-on-campus-nmiet",
+    "name": "GDG on Campus NMIET",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "GD",
+    "color": "#242424",
+    "website": "https://gdg.community.dev/events/details/google-gdg-on-campus-nutan-maharashtra-institute-of-engineering-and-technology-pune-india-presents-promptwars-x-abc-nmiet-vibe-coding-hackathon-2026/"
+  },
+  {
+    "id": "upcoming-engineer",
+    "name": "Upcoming Engineer",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "UP",
+    "color": "#242424",
+    "website": "https://luma.com/4yrfvx30"
+  },
+  {
+    "id": "aditya-institute-of-technology-and-management",
+    "name": "Aditya Institute of Technology and Management",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "AD",
+    "color": "#242424",
+    "website": "https://alumni.adityatekkali.edu.in/newsroom/news/AVISHKAR-SEASON-4-NATIONAL-LEVEL-HACKATHON"
+  },
+  {
+    "id": "buildicy",
+    "name": "Buildicy",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "BU",
+    "color": "#242424",
+    "website": "https://blackout-2026.devpost.com/"
+  },
+  {
+    "id": "dr-mahalingam-college-of-engineering-and-technology",
+    "name": "Dr Mahalingam College of Engineering and Technology",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "DR",
+    "color": "#242424",
+    "website": "https://hackathon.drmcet.ac.in/"
+  },
+  {
+    "id": "all-india-management-association",
+    "name": "All India Management Association",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "AL",
+    "color": "#242424",
+    "website": "https://research.aima.in/registration"
+  },
+  {
+    "id": "central-university-of-haryana",
+    "name": "Central University of Haryana",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "CE",
+    "color": "#242424",
+    "website": "https://file.cuh.ac.in/recruitment/advt_no_6b043acc91b5c.pdf"
+  },
+  {
+    "id": "axidots",
+    "name": "Axidots",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "AX",
+    "color": "#242424",
+    "website": "https://www.axidots.com/innovation-challenge-2026?lang=en"
+  },
+  {
+    "id": "mygov",
+    "name": "MyGov",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "MY",
+    "color": "#242424",
+    "website": "https://quiz.mygov.in/quiz/bharatiya-gyan-quiz-on-metallurgy-chemistry/"
+  },
+  {
+    "id": "national-law-university-jodhpur",
+    "name": "National Law University Jodhpur",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "NA",
+    "color": "#242424",
+    "website": "https://www.nlujodhpur.ac.in/public/front/nlu_files/NLUJ_36621792405675.pdf"
+  },
+  {
+    "id": "cms-college",
+    "name": "CMS College",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "CM",
+    "color": "#242424",
+    "website": "https://cmscollege.edu.in/sc/dr-apj-abdul-kalam-trophy-talent-hunt-2026/"
+  },
+  {
+    "id": "all-india-council-for-technical-skill-development",
+    "name": "All India Council for Technical Skill Development",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "AL",
+    "color": "#242424",
+    "website": "https://www.aictsd.com/wp-content/uploads/2026/11/RNMC-Notification.pdf"
+  },
+  {
+    "id": "christ-college-rajkot",
+    "name": "Christ College Rajkot",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "CH",
+    "color": "#242424",
+    "website": "https://event.christcollegerajkot.edu.in/?r=event&slug=spandan-2026-state-level-inter-school-competition"
+  },
+  {
+    "id": "iim-ranchi",
+    "name": "IIM Ranchi",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "II",
+    "color": "#242424",
+    "website": "https://iimranchi.ac.in/startup-conclave-dec2026/"
+  },
+  {
+    "id": "hrit-university",
+    "name": "HRIT University",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "HR",
+    "color": "#242424",
+    "website": "https://www.hrituniversity.edu.in/tech-vaganza"
+  },
+  {
+    "id": "transparence",
+    "name": "Transparence",
+    "kind": "Organization",
+    "prestige": 40,
+    "monogram": "TR",
+    "color": "#242424",
+    "website": "https://www.transparence.in/registration-form.php"
   }
 ]

@@ -1,0 +1,27 @@
+{
+  "id": "ciphercop-2026",
+  "summary": "Online screenings ended 25 November.",
+  "deadline": null,
+  "location": "Hyderabad",
+  "region": "India",
+  "format": "To confirm",
+  "eligibility": "Online screenings ended 25 November.",
+  "tags": [],
+  "entryStatus": "closed",
+  "title": "CipherCop 2026",
+  "category": "Hackathon",
+  "notes": [
+    "30 Nov–1 Dec final · Finalists only."
+  ],
+  "url": "https://ciphercop.net/",
+  "researchAsOf": "2026-11-27",
+  "organizerId": "ciphercop",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize information has not been verified."
+  },
+  "addedAt": "2026-11-27T08:30:00.734Z"
+}

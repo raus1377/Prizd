@@ -1,0 +1,29 @@
+{
+  "id": "coderave-2-0",
+  "summary": "Applications begin during this search window.",
+  "deadline": null,
+  "location": "India",
+  "region": "India",
+  "format": "To confirm",
+  "eligibility": "Applications begin during this search window.",
+  "tags": [],
+  "entryStatus": "upcoming",
+  "title": "CODERAVE 2.0",
+  "category": "Hackathon",
+  "notes": [
+    "1 Dec opens · 15 Jan closes · Opens this week."
+  ],
+  "url": "https://coderave-2.devfolio.co/schedule",
+  "researchAsOf": "2026-11-27",
+  "opensOn": "2026-12-01",
+  "deadlineDate": "2027-01-15",
+  "organizerId": "coderave",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize information has not been verified."
+  },
+  "addedAt": "2026-11-27T08:30:00.734Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "makeathon-9-0",
+  "summary": "Organizer schedule. Two-day build starts 30 January.",
+  "deadline": null,
+  "location": "India",
+  "region": "India",
+  "format": "To confirm",
+  "eligibility": "Organizer schedule. Two-day build starts 30 January.",
+  "tags": [],
+  "entryStatus": "upcoming",
+  "title": "Makeathon 9.0",
+  "category": "Hackathon",
+  "notes": [
+    "1 Dec opens · 5 Jan closes · Opens this week."
+  ],
+  "url": "https://makeathon-9.devfolio.co/schedule",
+  "researchAsOf": "2026-11-27",
+  "opensOn": "2026-12-01",
+  "deadlineDate": "2027-01-05",
+  "organizerId": "makeathon",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize information has not been verified."
+  },
+  "addedAt": "2026-11-27T08:30:00.734Z"
+}

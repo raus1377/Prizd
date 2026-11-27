@@ -1,0 +1,27 @@
+{
+  "id": "aima-india-case-league-west-and-north-zones",
+  "summary": "Check regional rules and seat availability.",
+  "deadline": null,
+  "location": "Online / New Delhi",
+  "region": "India",
+  "format": "Online",
+  "eligibility": "Check regional rules and seat availability.",
+  "tags": [],
+  "entryStatus": "check",
+  "title": "AIMA–ICRC India Case League",
+  "category": "Case competition",
+  "notes": [
+    "3 Dec West zone · 9 Dec North zone · Check registration."
+  ],
+  "url": "https://research.aima.in/registration",
+  "researchAsOf": "2026-11-27",
+  "organizerId": "all-india-management-association",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize information has not been verified."
+  },
+  "addedAt": "2026-11-27T08:30:00.734Z"
+}

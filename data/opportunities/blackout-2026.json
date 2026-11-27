@@ -1,0 +1,27 @@
+{
+  "id": "blackout-2026",
+  "summary": "12-hour in-person mystery hackathon.",
+  "deadline": null,
+  "location": "Coimbatore",
+  "region": "India",
+  "format": "To confirm",
+  "eligibility": "12-hour in-person mystery hackathon.",
+  "tags": [],
+  "entryStatus": "check",
+  "title": "BLACKOUT 2026",
+  "category": "Hackathon",
+  "notes": [
+    "28–29 Nov event · Round in window."
+  ],
+  "url": "https://blackout-2026.devpost.com/",
+  "researchAsOf": "2026-11-27",
+  "organizerId": "buildicy",
+  "team": null,
+  "prize": {
+    "amount": null,
+    "currency": "USD",
+    "kind": "undisclosed",
+    "description": "Prize information has not been verified."
+  },
+  "addedAt": "2026-11-27T08:30:00.734Z"
+}
