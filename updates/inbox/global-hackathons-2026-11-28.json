@@ -1,0 +1,42 @@
+{
+  "upsert": [
+    {
+      "id": "nfl-big-data-bowl-2027",
+      "title": "NFL Big Data Bowl 2027",
+      "category": "Hackathon",
+      "organizer": {"name": "National Football League (NFL)", "kind": "Organization", "website": "https://operations.nfl.com/the-game/big-data-bowl", "prestige": 85},
+      "summary": "Kaggle data-science competition on NFL tracking data, with separate Open and University tracks and a Grand Prize presented at the 2027 NFL Scouting Combine.",
+      "deadline": "2027-01-06T23:59:00+00:00",
+      "location": "Worldwide (online)",
+      "format": "Online",
+      "eligibility": "Anyone with a Kaggle account aged 18+ (or age of majority where they live); India not excluded. Residents of Crimea, DNR/LNR, Cuba, Iran, North Korea and sanctioned persons are excluded.",
+      "team": {"min": 1, "max": 5},
+      "prize": {"amount": 100000, "currency": "USD", "kind": "pool", "rewardType": "cash", "description": "US$100,000 cash: Open Track $45,000, University Track $45,000 (3 finalists $10,000 each, 3 runners-up $5,000 each per track) and a $10,000 Grand Prize."},
+      "tags": ["Data Science", "Kaggle", "Sports Analytics"],
+      "url": "https://operations.nfl.com/the-game/big-data-bowl",
+      "sourceUrl": "https://www.startupgrantsindia.com/nfl-big-data-bowl-2027",
+      "region": "Global",
+      "entryStatus": "open",
+      "researchAsOf": "2026-11-28"
+    },
+    {
+      "id": "google-kaggle-name-that-llm",
+      "title": "Name That LLM: Identify the Model Behind the Text (Google x Kaggle)",
+      "category": "Hackathon",
+      "organizer": {"name": "Google (Kaggle)", "kind": "Company", "website": "https://www.kaggle.com", "prestige": 90},
+      "summary": "Kaggle machine-learning competition sponsored by Google: build a model that identifies which LLM produced a given text.",
+      "deadline": "2027-01-13T23:59:00+00:00",
+      "location": "Worldwide (online)",
+      "format": "Online",
+      "eligibility": "Anyone with a Kaggle account aged 18+; India not excluded. Residents of Crimea, DNR/LNR, Cuba, Iran, North Korea and sanctioned persons are excluded.",
+      "team": {"min": 1, "max": 5},
+      "prize": {"amount": 50000, "currency": "USD", "kind": "pool", "rewardType": "cash", "description": "US$50,000 cash: top 10 places win $5,000 each."},
+      "tags": ["AI", "Machine Learning", "Kaggle", "LLM"],
+      "url": "https://www.startupgrantsindia.com/google-name-that-llm-kaggle-competition",
+      "region": "Global",
+      "entryStatus": "check",
+      "notes": ["Details taken from an aggregator summary; confirm on the Kaggle competition page."],
+      "researchAsOf": "2026-11-28"
+    }
+  ]
+}
